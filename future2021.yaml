@@ -1,0 +1,40 @@
+enabled: true
+production-mode: true
+favicon:
+  user/themes/future2021/images/Grav_logo.png:
+    name: Grav_logo.png
+    type: image/png
+    size: 15355
+    path: user/themes/future2021/images/Grav_logo.png
+blog_page: /blog
+slogan: 'AYUDA DE GRAV EN ESPAÑOL'
+custom_logo:
+  user/themes/future2021/images/logo/Grav_logo.png:
+    name: Grav_logo.png
+    type: image/png
+    size: 15355
+    path: user/themes/future2021/images/logo/Grav_logo.png
+custom_logo_mobile: {  }
+footer:
+  title: ABOUT
+  description: 'Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod amet placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at phasellus sed ultricies.'
+  copyright_text: 'DESIGN: <a href="https://html5up.net/" target="_blank">HTML5 UP</a>. IMAGES: <a href="http://wallpaperswide.com/" target="_blank">WALLPAPESWIDE</a>.'
+  button_url: about
+  button_text: 'Show more'
+social:
+  -
+    name: Twitter
+    url: 'https://www.twitter.com'
+    icon: 'fa fa-twitter'
+  -
+    name: Facebook
+    url: 'https://www.facebook.com'
+    icon: 'fa fa-facebook'
+  -
+    name: Instagram
+    url: 'https://www.instagram.com'
+    icon: 'fa fa-instagram'
+dropdown:
+  enabled: true
+miniposts: true
+miniposts_number: 3

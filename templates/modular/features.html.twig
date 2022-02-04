@@ -1,0 +1,30 @@
+<section id="features">
+{% set columns = page.header.class == 'standard' ? 'col-4 col-6-medium col-12-small' : 'col-6 col-12-small'  %}
+<header>
+    <h2>{{ page.title }}</h2>
+</header>
+    {{ content|raw }}
+
+    
+     <div class="row gtr-uniform">
+    {% for feature in page.header.features %}
+   
+        <div class="{{columns}}">
+        <article class="box">
+            {% if feature.image %}<span class="image fit"><img src="{{page.media[feature.image].url}}" alt="{{feature.title}}" /></span>{% endif %}
+            <header>
+            {% if feature.title %}<h3>{{feature.title}}</h3>{% endif %}
+            {% if feature.text %}<p>{{feature.text|raw}}</p>{% endif %}
+            {% if feature.buttonurl %}<p><a href="{{feature.buttonurl}}" class="button fit" target={% if feature.buttonurl_target %}"_blank"{% endif%}>{{feature.buttontext}}</a></p>{% endif %}
+            </header>
+            
+
+            
+        </article>
+        </div>
+    
+    {% endfor %}
+    </div>
+     
+</section>
+<br>

@@ -1,0 +1,36 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block menu %}
+  {% include 'partials/sidebar_right.html.twig' %}
+{% endblock %}
+
+{% block content %}
+
+    <article class="post">
+        <header>
+            <div class="title">
+            <h2>{{ page.header.title }}</h2>	
+            </div>
+        </header>
+    {{ page.content|raw}}
+    <!-- Portfolio -->
+    {% block portfolio %}  
+        <section>   
+        <div class="row">
+        {% for item in page.header.images %} 
+            <div class="{{columns}} portfolio_item">
+                <a href="{{page.media[item.image].url}}" class="glightbox" data-width="100vw" data-zoomable="true" data-glightbox='title: {{item.title}}; description: {{item.description|raw}}'>
+                    <span class="image fit"><img src="{{page.media[item.thumb].url}}" alt="image" /></span>
+                </a>
+            </div>
+        {% endfor %}
+
+        </div>
+        </section>
+    {% endblock %}
+    </article>
+
+    <section id="footer" class="align-center">
+        {% include 'partials/footer.html.twig' %}
+    </section>
+{% endblock %}

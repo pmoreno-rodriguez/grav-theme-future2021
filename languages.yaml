@@ -1,0 +1,249 @@
+en:
+  FUTURE:
+    ADMIN:
+      THEME:
+        DROPDOWN_MENU: Dropdown in navbar
+        PRODUCTION_MODE: Production Mode
+        PRODUCTION_MODE_HELP: When enabled, Future will render with minified CSS
+        FAVICON: Choose your own favicon
+        CUSTOM_LOGO: Custom Logo
+        CUSTOM_LOGO_DESCRIPTION: Will be used instead of default logo `theme://images/grav-logo.svg`
+        CUSTOM_LOGO_MOBILE: Mobile Custom Logo
+        SLOGAN: Slogan
+        BLOG_DEFAULTS: Blog Defaults
+        BLOG_PAGE: Blog Page
+        BLOG_PAGE_DESCRIPTION: The route to the blog page when working with blog sidebar
+        MINIPOSTS: Enable Miniposts in Sidebar
+        MINIPOSTS_NUMBER: Miniposts number to show
+        MINIPOSTS_NUMBER_DESCRIPTION: Number of miniposts that will be showed in sidebar
+        FOOTER: Footer
+        FOOTER_TITLE: Footer Title
+        FOOTER_DESCRIPTION: Footer Description
+        FOOTER_COPYRIGHT: Copyright Text
+        FOOTER_BUTTON_TEXT: Button Text
+        FOOTER_BUTTON_URL: Button URL
+        FOOTER_SOCIALS_ICONS: Social Icons
+        FOOTER_SOCIALS_ICON_NAME: Social Name
+        FOOTER_SOCIALS_ICON_URL: URL Link to Social
+        FOOTER_SOCIALS_ICON_ICON: Icon to Social
+      DEFAULT:
+        PRIMARY_IMAGE: Primary image
+      MODULAR:
+        BANNER:
+          BANNER_TAB: Banner
+          BANNER_SUBTITLE: Subtitle
+          BANNER_BUTTON_TEXT: Button Text
+          BANNER_BUTTON_URL: Button URL
+          BANNER_IMAGE: Image
+          BANNER_IMAGE_DESCRIPTION: Select one image
+        FEATURES:
+          FEATURES_TAB: Features
+          FEATURES_LAYOUT: Layout
+          FEATURES_LAYOUT_TWOCOLS: Medium   = 2 / 1 columns
+          FEATURES_LAYOUT_THREECOLS: Standard  = 3 / 2 / 1 columns
+          FEATURES_HEADER: Features
+          FEATURES_IMAGE: Image
+          FEATURES_TITLE: Title
+          FEATURES_TEXT: Text
+          FEATURES_BUTTON_TEXT: Button Text
+          FEATURES_BUTTON_URL: Button URL
+          FEATURES_BUTTON_URL_TARGET: Open URL in a new window
+          
+
+      BLOG:
+        BLOG_TAB: Blog Config
+        BLOG_CONTENT_TITLE: Content Definition
+        BLOG_CONTENT_ITEMS: Items
+        BLOG_CONTENT_ITEMS_LIMIT: Max Item Count
+        BLOG_CONTENT_ITEMS_ORDER_BY: Order By
+        BLOG_CONTENT_ITEMS_ORDER_BY_DATE: Date
+        BLOG_CONTENT_ITEMS_ORDER_BY_TITLE: Title
+        BLOG_CONTENT_ITEMS_ORDER_BY_FOLDER: Folder
+        BLOG_CONTENT_ITEMS_ORDER_BY_DEFAULT: Default
+        BLOG_CONTENT_ITEMS_ORDER_DIR: Order
+        BLOG_CONTENT_ITEMS_ORDER_DIR_ASC: Ascending
+        BLOG_CONTENT_ITEMS_ORDER_DIR_DESC: Descending
+        BLOG_CONTENT_ITEMS_PAGINATION: Pagination
+        BLOG_CONTENT_ITEMS_URL_TAXONOMY_FILTERS: URL Taxonomy Filters
+      ITEM:
+        ITEM_TAB: Blog Item
+        ITEM_OPTIONS: Options
+        ITEM_SUMMARY: Summary Item
+        ITEM_SUMMARY_ENABLED: Enabled Summary
+        ITEM_SUMMARY_FORMAT: Summary Format
+        ITEM_SUMMARY_FORMAT_SHORT: Use the first occurence of delimter or size
+        ITEM_SUMMARY_FORMAT_LONG: Summary delimiter will be ignored
+        ITEM_SUMMARY_SIZE: Size
+        ITEM_SUMMARY_DELIMITER: Summary Delimiter
+        ITEM_ORDER: Minipost Order
+        ITEM_SUBTITLE: Subtitle
+        ITEM_AVATAR: Avatar Image
+      PORTFOLIO:
+        PORTFOLIO_TAB: Portfolio
+        PORTFOLIO_TITLE: Portfolio Images
+        PORTFOLIO_LAYOUT: Layout
+        PORTFOLIO_LAYOUT_TWOCOLS: Medium   = 2 / 1 columns
+        PORTOFOLIO_LAYOUT_THREECOLS: Standard  = 3 / 2 / 1 columns
+        PORTFOLIO_IMAGES: Images
+        PORTFOLIO_IMAGE: Image
+        PORTFOLIO_IMAGE_TITLE: Title
+        PORTFOLIO_IMAGE_DESCRIPTION: Description
+        PORTFOLIO_IMAGE_THUMB: Thumbnails
+        
+    BLOG:
+      ITEM:
+        CONTINUE_READING: Continue reading...
+        NEXT_POST: Next Post
+        PREV_POST: Previous Post
+      PAGINATION:
+        PREVIOUS: Previous
+        NEXT: Next
+
+    SIDEBAR:
+      SIMPLE_SEARCH:
+        HEADLINE: Search
+      RELATED_POSTS:
+        HEADLINE: Related Posts
+      RANDOM_ARTICLE:
+        HEADLINE: Random Article
+        FEELING_LUCKY: I'm Feeling Lucky!
+      SOME_TEXT_WIDGET:
+        HEADLINE: Some Text Widget
+      TAGS:
+        HEADLINE: Tags
+      POPULAR_TAGS:
+        HEADLINE: Popular Tags
+      ARCHIVES:
+        HEADLINE: Archives
+      SYNDICATE:
+        HEADLINE: Syndicate
+    LOGIN: Log in
+    LATESTPOSTS: Latest posts
+    FEATURED: Featured
+    PRIVACY: By using this form you agree to our
+    FORM_SUMMARY: Here is the summary of what you wrote to us
+
+es:
+  FUTURE:
+    ADMIN:
+      THEME:
+        DROPDOWN_MENU: Menu Desplegable
+        PRODUCTION_MODE: Modo Producción
+        PRODUCTION_MODE_HELP: Si está activado, Future cargará con CSS minificado
+        FAVICON: Elige tu propio favicon
+        CUSTOM_LOGO: Logo personalizado
+        CUSTOM_LOGO_DESCRIPTION: Este logo se usará en lugar del log por defecto `theme://images/grav-logo.svg`
+        CUSTOM_LOGO_MOBILE: Logo personalizado para dispositivos móviles
+        SLOGAN: Slogan
+        BLOG_DEFAULTS: Opciones de Blog
+        BLOG_PAGE: Página de Blog
+        BLOG_PAGE_DESCRIPTION: Ruta de la página de Blog cuando funciona con el blog de barra lateral
+        MINIPOSTS: Activar Miniposts en la barra lateral
+        MINIPOSTS_NUMBER: Número de miniposts a mostrar
+        MINIPOSTS_NUMBER_DESCRIPTION: Número de miniposts que se mostrarán en la barra lateral
+        FOOTER: Pie de página
+        FOOTER_TITLE: Título del pie de página
+        FOOTER_DESCRIPTION: Descripción del pie de página
+        FOOTER_COPYRIGHT: Texto del Copyright
+        FOOTER_BUTTON_TEXT: Texto del botón
+        FOOTER_BUTTON_URL: URL del botón
+        FOOTER_SOCIALS_ICONS: Iconos Redes Sociales
+        FOOTER_SOCIALS_ICON_NAME: Nombre de Red Social
+        FOOTER_SOCIALS_ICON_URL: URL Link to Social
+        FOOTER_SOCIALS_ICON_ICON: Icono de Red Social
+      DEFAULT:
+        PRIMARY_IMAGE: Imagen principal
+      MODULAR:
+        BANNER:
+          BANNER_TAB: Banner
+          BANNER_SUBTITLE: Subtítulo
+          BANNER_BUTTON_TEXT: Texto del botón
+          BANNER_BUTTON_URL: URL del botón
+          BANNER_IMAGE: Imagen
+          BANNER_IMAGE_DESCRIPTION: Seleccione una imagen
+        FEATURES:
+          FEATURES_TAB: Funciones
+          FEATURES_LAYOUT: Diseño
+          FEATURES_LAYOUT_TWOCOLS: Medio   = 2 / 1 columnas
+          FEATURES_LAYOUT_THREECOLS: Estándar  = 3 / 2 / 1 columnas
+          FEATURES_HEADER: Funciones
+          FEATURES_IMAGE: Imagen
+          FEATURES_TITLE: Título
+          FEATURES_TEXT: Texto
+          FEATURES_BUTTON_TEXT: Texto del botón
+          FEATURES_BUTTON_URL: URL del botón
+          FEATURES_BUTTON_URL_TARGET: Abrir la URL en una nueva ventana
+
+      BLOG:
+        BLOG_TAB: Configuración del Blog
+        BLOG_CONTENT_TITLE: Definición de Contenido
+        BLOG_CONTENT_ITEMS: Artículos
+        BLOG_CONTENT_ITEMS_LIMIT: Límite máximo de artículos
+        BLOG_CONTENT_ITEMS_ORDER_BY: Ordenar por
+        BLOG_CONTENT_ITEMS_ORDER_BY_DATE: Fecha
+        BLOG_CONTENT_ITEMS_ORDER_BY_TITLE: Título
+        BLOG_CONTENT_ITEMS_ORDER_BY_FOLDER: Carpeta
+        BLOG_CONTENT_ITEMS_ORDER_BY_DEFAULT: Por defecto
+        BLOG_CONTENT_ITEMS_ORDER_DIR: Orden
+        BLOG_CONTENT_ITEMS_ORDER_DIR_ASC: Ascendente
+        BLOG_CONTENT_ITEMS_ORDER_DIR_DESC: Descendente
+        BLOG_CONTENT_ITEMS_PAGINATION: Paginación
+        BLOG_CONTENT_ITEMS_URL_TAXONOMY_FILTERS: Filtros de taxonomía por URL
+      ITEM:
+        ITEM_TAB: Artículo de Blog
+        ITEM_OPTIONS: Opciones
+        ITEM_SUMMARY: Resumen de Artículo
+        ITEM_SUMMARY_ENABLED: Activar Resumen
+        ITEM_SUMMARY_FORMAT: Formato de Resumen
+        ITEM_SUMMARY_FORMAT_SHORT: Utilizar la primera aparición de delimitador o tamaño
+        ITEM_SUMMARY_FORMAT_LONG: Se ignorará el delimitador de resumen
+        ITEM_SUMMARY_SIZE: Tamaño
+        ITEM_SUMMARY_DELIMITER: Delimitador de Resumen
+        ITEM_ORDER: Orden del Minipost
+        ITEM_SUBTITLE: Subtítulo
+        ITEM_AVATAR: Imagen de Avatar
+      PORTFOLIO:
+        PORTFOLIO_TAB: Portafolio
+        PORTFOLIO_TITLE: Imágenes de Portafolio
+        PORTFOLIO_LAYOUT: Diseño
+        PORTFOLIO_LAYOUT_TWOCOLS: Medio   = 2 / 1 columnas
+        PORTOFOLIO_LAYOUT_THREECOLS: Estándar  = 3 / 2 / 1 columnas
+        PORTFOLIO_IMAGES: Imágenes
+        PORTFOLIO_IMAGE: Imagen
+        PORTFOLIO_IMAGE_TITLE: Título
+        PORTFOLIO_IMAGE_DESCRIPTION: Descripción
+        PORTFOLIO_IMAGE_THUMB: Miniatura
+
+             
+    BLOG:
+      ITEM:
+        CONTINUE_READING: Continuar leyendo...
+        NEXT_POST: Siguiente Entrada
+        PREV_POST: Entrada Anterior
+      PAGINATION:
+        PREVIOUS: Anterior
+        NEXT: Siguiente
+    SIDEBAR:
+      SIMPLE_SEARCH:
+        HEADLINE: Buscar
+      RELATED_POSTS:
+        HEADLINE: Entradas Relacionadas
+      RANDOM_ARTICLE:
+        HEADLINE: Artículo Aleatorio
+        FEELING_LUCKY: Voy a tener suerte!
+      SOME_TEXT_WIDGET:
+        HEADLINE: Algunos Widget de Texto
+      TAGS:
+        HEADLINE: Etiquetas
+      POPULAR_TAGS:
+        HEADLINE: Etiquetas Populares
+      ARCHIVES:
+        HEADLINE: Últimas entradas
+      SYNDICATE:
+        HEADLINE: Distribuir
+    LOGIN: Iniciar sesión
+    LATESTPOSTS: Últimos posts
+    FEATURED: Destacados
+    PRIVACY: Al usar este formulario estás de acuerdo con nuestra
+    FORM_SUMMARY: Aquí está el resumen de lo que nos escribió.
+

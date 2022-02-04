@@ -1,0 +1,37 @@
+title: Generic Page
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        content:
+          type: tab
+          fields:
+            header.options:
+              type: columns
+              ordering@: header.title
+              fields:
+                header.content:
+                  type: column
+                  fields:
+                    header.subtitle:
+                      type: text
+                      style: vertical
+                      label: FUTURE.ADMIN.ITEM.ITEM_SUBTITLE
+                header.image:
+                  type: column
+                  fields:
+                    header.primaryImage:
+                      type: pagemediaselect
+                      label: FUTURE.ADMIN.DEFAULT.PRIMARY_IMAGE
+                      preview_images: true
+                    header.avatarImage:
+                      ordering@: header.primaryImage
+                      type: pagemediaselect
+                      label: FUTURE.ADMIN.ITEM.ITEM_AVATAR
+                      preview_images: true

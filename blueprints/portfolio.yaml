@@ -1,0 +1,60 @@
+extends@: default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+
+        portfolio:
+          type: tab
+          title: FUTURE.ADMIN.PORTFOLIO.PORTFOLIO_TAB
+
+          fields:
+
+            content_title:
+              type: spacer
+              title: FUTURE.ADMIN.PORTFOLIO.PORTFOLIO_TITLE
+
+            header.class:
+              type: select
+              label: FUTURE.ADMIN.PORTFOLIO.PORTFOLIO_LAYOUT
+              default: standard
+              size: medium
+              options:
+                medium: FUTURE.ADMIN.PORTFOLIO.PORTFOLIO_LAYOUT_TWOCOLS
+                standard: FUTURE.ADMIN.PORTFOLIO.PORTOFOLIO_LAYOUT_THREECOLS
+                
+            header.images:
+              type: list
+              style: vertical
+              label: FUTURE.ADMIN.PORTFOLIO.PORTFOLIO_IMAGES
+              collapsed: true
+              fields:
+                .image:
+                   type: pagemediaselect
+                   label: FUTURE.ADMIN.PORTFOLIO.PORTFOLIO_IMAGE
+                   preview_images: true
+                   accept:
+                    - .png
+                    - .jpg
+                    - .gif
+                    - .svg
+                .title:
+                   type: text
+                   label: FUTURE.ADMIN.PORTFOLIO.PORTFOLIO_IMAGE_TITLE
+                .description:
+                   type: text
+                   label: FUTURE.ADMIN.PORTFOLIO.PORTFOLIO_IMAGE_DESCRIPTION
+                .thumb:
+                   type: filepicker
+                   folder: 'self@'
+                   label: FUTURE.ADMIN.PORTFOLIO.PORTFOLIO_IMAGE_THUMB
+                   preview_images: true
+                   accept:
+                    - .png
+                    - .jpg
+                    - .gif
+                    - .svg

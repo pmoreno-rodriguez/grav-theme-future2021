@@ -1,0 +1,46 @@
+title: Features
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        features:
+          type: tab
+          title: FUTURE.ADMIN.MODULAR.FEATURES.FEATURES_TAB
+          fields:
+            header.class:
+              type: select
+              label: FUTURE.ADMIN.MODULAR.FEATURES.FEATURES_LAYOUT
+              default: standard
+              size: medium
+              options:
+                medium: FUTURE.ADMIN.MODULAR.FEATURES.FEATURES_LAYOUT_TWOCOLS
+                standard: FUTURE.ADMIN.MODULAR.FEATURES.FEATURES_LAYOUT_THREECOLS
+            header.features:
+              name: features
+              type: list
+              label: FUTURE.ADMIN.MODULAR.FEATURES.FEATURES_HEADER
+              fields:
+                .image:
+                  type: pagemediaselect
+                  label: FUTURE.ADMIN.MODULAR.FEATURES.FEATURES_IMAGE
+                  preview_images: true
+                .title:
+                  type: text
+                  label: FUTURE.ADMIN.MODULAR.FEATURES.FEATURES_TITLE
+                .text:
+                  type: textarea
+                  autofocus: true
+                  label: FUTURE.ADMIN.MODULAR.FEATURES.FEATURES_TEXT
+                  maxlength: 500
+                  rows: 5
+                .buttontext:
+                  type: text
+                  label: FUTURE.ADMIN.MODULAR.FEATURES.FEATURES_BUTTON_TEXT
+                .buttonurl:
+                  type: text
+                  label: FUTURE.ADMIN.MODULAR.FEATURES.FEATURES_BUTTON_URL
+                .buttonurl_target:
+                  type: checkbox
+                  label: FUTURE.ADMIN.MODULAR.FEATURES.FEATURES_BUTTON_URL_TARGET

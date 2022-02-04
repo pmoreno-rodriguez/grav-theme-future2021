@@ -1,0 +1,56 @@
+title: Item
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+
+      fields:
+        blog:
+          type: tab
+          title: FUTURE.ADMIN.ITEM.ITEM_TAB
+
+          fields:
+
+            summary:
+              type: section
+              title: FUTURE.ADMIN.ITEM.ITEM_SUMMARY
+              underline: true
+
+
+            header.summary.enabled:
+              type: toggle
+              toggleable: true
+              label: FUTURE.ADMIN.ITEM.ITEM_SUMMARY_ENABLED
+              highlight: 1
+              options:
+                1: Enabled
+                0: Disabled
+
+            header.summary.format:
+              type: select
+              toggleable: true
+              label: FUTURE.ADMIN.ITEM.ITEM_SUMMARY_FORMAT
+              classes: fancy
+              options:
+                'short': FUTURE.ADMIN.ITEM.ITEM_SUMMARY_FORMAT_SHORT
+                'long': FUTURE.ADMIN.ITEM.ITEM_SUMMARY_FORMAT_LONG
+
+            header.summary.size:
+              type: text
+              toggleable: true
+              label: FUTURE.ADMIN.ITEM.ITEM_SUMMARY_SIZE
+              classes: large
+              placeholder: 300
+              validate:
+                type: int
+                min: 1
+
+            header.summary.delimiter:
+              type: text
+              toggleable: true
+              label: FUTURE.ADMIN.ITEM.ITEM_SUMMARY_DELIMITER
+              classes: large
+              placeholder: ===

@@ -1,0 +1,14 @@
+{% extends 'partials/base.html.twig' %}
+{% block content %}
+  <article class="post">
+    <header>
+    	<div class="title">
+      <h2>{{ page.header.title }}</h2>	
+  	</div>
+      <div class="meta">                            
+      </div>
+      </header>
+    {{ content|raw }}
+    {% include "forms/form.html.twig" %}
+  </article>
+{% endblock %}

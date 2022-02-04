@@ -1,0 +1,87 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+{% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
+{% set favicon = theme_config.favicon ? theme_config.favicon|first : { type:'image/png', path: url('theme://images/logo.png') } %}
+{% set customlogo = theme_config.custom_logo ? theme_config.custom_logo|first : {type:'image/png', path: url('theme://images/logo.png') } %}
+{% set new_base_url = base_url_absolute ~ theme_config.blog_page %}
+
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
+	<head>
+		{% block head deferred %}
+			<title>{% if page.title %}{{ page.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+			<meta charset="utf-8" />
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+			{% include 'partials/metadata.html.twig' %}
+			<link rel="icon" type="{{ favicon.type }}" href="{{ url( favicon.path ) }}"/>
+			<link rel="canonical" href="{{ page.url(true, true) }}" />
+		{% endblock head %}
+
+		{% block stylesheets %}	
+			{% do assets.addCss('theme://assets/css/main'~compress) %}
+			{% do assets.addCss('theme://assets/css/font-awesome.min.css') %}
+			{% do assets.addCss('theme://assets/css/custom.css', 10) %}
+			{% if page.template() == 'portfolio' %} 
+				 {% do assets.addCss('theme://assets/css/glightbox.min.css') %}
+			{% endif %}
+		{% endblock %}
+		{{ assets.css()|raw }}
+		
+		{% block javascripts %}
+			{% do assets.add('jquery',101) %}
+			{% do assets.addJs('theme://assets/js/browser.min.js', {group:'bottom'}) %}
+			{% do assets.addJs('theme://assets/js/breakpoints.min.js', {group:'bottom'}) %}
+			{% do assets.addJs('theme://assets/js/util.js', {group:'bottom'}) %}
+			{% do assets.addJs('theme://assets/js/main.js', {group:'bottom'}) %}
+			{% do assets.addJs('theme://assets/js/custom.js', {group:'bottom'}) %}
+			{% if page.template() == 'portfolio' %}
+				{% do assets.addJs('theme://assets/js/glightbox.min.js', {group:'bottom'}) %}
+			{% endif %}
+		{% endblock %}
+		{{ assets.js()|raw }}
+
+	</head>
+	<body class="is-preload">
+	<!-- Wrapper -->
+		<div id="wrapper">
+
+		{% block header %}
+            {% include 'partials/header.html.twig' %}
+        {% endblock %}
+
+        {% block body %}
+        	
+	        {% block menu %}{% endblock %}
+      
+            {% block main %}
+				<div id="main">
+					{% block content %}{% endblock %}
+				</div>
+					{% block sidebar %}{% endblock %}
+			{% endblock %}
+				
+        {% endblock %}
+
+		{% block bottom %}
+			{{ assets.js('bottom')|raw }}
+			{% if page.template() == 'portfolio' %} 
+				<script>
+				    const lightbox = GLightbox({
+				    touchNavigation: true,
+				    loop: true,
+				    autoplayVideos: true,
+				    openEffect: 'zoom',
+				    closeEffect: 'fade'
+				});
+				</script>
+			{% endif %}		
+		{% endblock %}
+		</div>
+		<a id="back-to-top" href="#"><i class="fa fa-chevron-up"></i></a>
+	</body>
+</html>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->

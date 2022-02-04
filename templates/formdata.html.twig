@@ -1,0 +1,17 @@
+{% extends 'partials/base.html.twig' %}
+{% block content %}
+    <article class="post">
+      	<div class="title">
+        <h2>{{ form.message }}</h2>	
+    	</div>
+        <div class="meta">
+        <time class="published" datetime="{{form.date|date("Y-m-d")}}">{{ form.date|date("M j, Y")}}</time>                              
+        </div>
+       </header>
+      <p>{{'FUTURE.FORM_SUMMARY'|t}}</p>
+
+      {{ content|raw }}
+
+      {% include "forms/data.html.twig" %}
+    </article>
+{% endblock %}

@@ -1,0 +1,176 @@
+name: Future 2021
+slug: future2021
+type: theme
+version: 1.0.0
+description: Grav Future Imperfect by HTML5 UP (Version 2021)
+icon:  microchip
+author:
+  name: Pedro Moreno
+  email: webmaster@juanvillen.es
+  url: 
+homepage: https://github.com/pmoreno-rodriguez/future2021
+demo: http://future.juanvillen.es
+keywords: future imperfect, html5up, theme, core, modern, fast, responsive, html5, css3
+bugs: https://github.com/pmoreno-rodriguez/future2021/issues
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
+
+form:
+  validation: loose
+
+  fields:
+    dropdown.enabled:
+        type: toggle
+        label: FUTURE.ADMIN.THEME.DROPDOWN_MENU
+        highlight: 1
+        default: 0
+        options:
+          1: PLUGIN_ADMIN.ENABLED
+          0: PLUGIN_ADMIN.DISABLED
+        validate:
+          type: bool    
+    production-mode:
+      type: toggle
+      label: FUTURE.ADMIN.THEME.PRODUCTION_MODE
+      help: FUTURE.ADMIN.THEME.PRODUCTION_MODE_HELP
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    favicon:
+      type: file
+      label: FUTURE.ADMIN.THEME.FAVICON
+      destination: 'theme@:/images'
+      multiple: false
+      avoid_overwriting: false
+      random_name: false
+      toggleable: true
+      filesize: 3
+      accept: ['image/png', '.ico']
+ 
+    custom_logo:
+      type: file
+      label: FUTURE.ADMIN.THEME.CUSTOM_LOGO
+      size: large
+      destination: 'theme://images/logo'
+      multiple: false
+      markdown: true
+      description: FUTURE.ADMIN.THEME.CUSTOM_LOGO_DESCRIPTION
+      accept:
+        - image/png
+
+    custom_logo_mobile:
+      type: file
+      label: FUTURE.ADMIN.THEME.CUSTOM_LOGO_MOBILE
+      size: large
+      destination: 'theme://images/logo'
+      multiple: false
+      accept:
+        - image/png
+        
+    slogan:
+      type: text
+      label: FUTURE.ADMIN.THEME.SLOGAN
+
+    blog_section:
+      type: columns
+      fields:
+        blog_fields:
+          type: column
+          fields:
+            blog:
+              type: fieldset
+              collapsible: true
+              collapsed: true
+              icon: rss
+              title: FUTURE.ADMIN.THEME.BLOG_DEFAULTS
+              fields:
+
+                blog_page:
+                  type: text
+                  label: FUTURE.ADMIN.THEME.BLOG_PAGE
+                  help: FUTURE.ADMIN.THEME.BLOG_PAGE_DESCRIPTION
+                  size: medium
+                  default: '/blog'
+
+                miniposts:
+                  type: toggle
+                  label: FUTURE.ADMIN.THEME.MINIPOSTS
+                  highlight: 1
+                  default: 1
+                  options:
+                    1: PLUGIN_ADMIN.ENABLED
+                    0: PLUGIN_ADMIN.DISABLED
+                  validate:
+                    type: bool
+
+                miniposts_number:
+                  type: range
+                  label: FUTURE.ADMIN.THEME.MINIPOSTS_NUMBER
+                  description: FUTURE.ADMIN.THEME.MINIPOSTS_NUMBER_DESCRIPTION
+                  default: 3
+                  validate:
+                    min: 1
+                    max: 5
+        
+    footer_section:
+      type: columns
+      fields:
+        footer_fields:
+          type: column
+          fields:
+            footer:
+              type: fieldset
+              collapsible: true
+              collapsed: true
+              icon: list-alt
+              title: FUTURE.ADMIN.THEME.FOOTER
+              fields:
+                footer.title:
+                  type: text
+                  label: FUTURE.ADMIN.THEME.FOOTER_TITLE
+                footer.description:
+                  type: textarea
+                  rows: 5
+                  markdown: true
+                  label: FUTURE.ADMIN.THEME.FOOTER_DESCRIPTION
+                footer.copyright_text:
+                  type: text
+                  label: FUTURE.ADMIN.THEME.FOOTER_COPYRIGHT
+                footer.button_text:
+                  type: text
+                  label: FUTURE.ADMIN.THEME.FOOTER_BUTTON_TEXT
+                footer.button_url:
+                  type: text
+                  label: FUTURE.ADMIN.THEME.FOOTER_BUTTON_URL
+    social_icons:
+        type: fieldset
+        collapsible: true
+        collapsed: true
+        icon: share-alt
+        title: FUTURE.ADMIN.THEME.FOOTER_SOCIALS_ICONS
+        fields:
+          social:
+            name: social
+            type: list
+            style: vertical
+            collapsed: false
+            max: 5
+            fields:
+              .name:
+                type: text
+                label: FUTURE.ADMIN.THEME.FOOTER_SOCIALS_ICON_NAME
+              .url:
+                type: text
+                label: FUTURE.ADMIN.THEME.FOOTER_SOCIALS_ICON_URL
+              .icon:
+                type: iconpicker
+                label: FUTURE.ADMIN.THEME.FOOTER_SOCIALS_ICON_ICON
+
+

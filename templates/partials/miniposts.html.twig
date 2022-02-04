@@ -1,0 +1,28 @@
+<section>
+<header class="">
+        <h3>{{ 'FUTURE.FEATURED'|t }}</h3>
+    </header>
+    <div class="mini-posts">
+    {%  set slice_miniposts = config.theme.miniposts_number %}
+    {% for p in page.evaluate({'@taxonomy.category':'minipost'}).order('header.order', 'asc').slice(0,slice_miniposts) %}
+    <article class="mini-post">
+        <header>
+            <h3><a href="{{ p.url }}">{{ p.title }}</a></h3>
+            <time class="published" datetime="2015-10-20">{{ p.date|date("M j, Y")}}</time>
+            <a href="{{ p.url }}" class="author"><img src="{{ p.media[p.header.avatarImage].url}}" alt="" /></a>
+        </header>
+        <a href="{{ p.url }}" class="image">
+            
+            {% if p.header.primaryImage %}
+            {{ p.media[p.header.primaryImage].cropZoom(1038,437).loading('lazy').html('',p.title)|raw}}
+            {% else %}
+            {{p.media.images|first.cropZoom(1038,437).loading('lazy').html('',p.title)|raw}}
+            {% endif %}
+        </a>
+    </article>
+    
+    {% endfor %}
+    </div>
+</section>
+<!-- End of featured Section -->
+
