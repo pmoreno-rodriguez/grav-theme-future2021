@@ -1,0 +1,20 @@
+/* Feautres */
+
+#features {
+
+        header {
+            p {
+                font-family: _font(family);
+                font-weight: _font(weight);
+                font-size: inherit;
+                letter-spacing: _font(no-kerning);
+                line-height: inherit;
+                margin-top: 1em;
+                text-transform: initial;
+            }
+            h3 {
+                margin-top: 0em;
+            }
+        }
+                    
+}

@@ -1,0 +1,10 @@
+/* Logo */@at-root
+
+#header .logo {
+    font-family: _font(family-heading);
+    font-size: 1.3em;
+    font-weight: _font(weight-heading-bold);
+    @include breakpoint('<=small') {
+    font-size: 1em;
+    }
+}
