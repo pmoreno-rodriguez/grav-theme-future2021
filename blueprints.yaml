@@ -8,10 +8,10 @@ author:
   name: Pedro Moreno
   email: webmaster@juanvillen.es
   url: 
-homepage: https://github.com/pmoreno-rodriguez/future2021
+homepage: https://github.com/pmoreno-rodriguez/grav-theme-future2021
 demo: http://future.juanvillen.es
 keywords: future imperfect, html5up, theme, core, modern, fast, responsive, html5, css3
-bugs: https://github.com/pmoreno-rodriguez/future2021/issues
+bugs: https://github.com/pmoreno-rodriguez/grav-theme-future2021/issues
 license: MIT
 
 dependencies:
