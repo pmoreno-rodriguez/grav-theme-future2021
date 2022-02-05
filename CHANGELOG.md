@@ -1,7 +1,7 @@
 # v1.0.1
 ## 02/05/2022
 
-1. [](#fixed)
+1. [](#bugfix)
     * Updated CSS Styles to show FontAwesome 5
 
 # v1.0.0
