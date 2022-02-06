@@ -7,12 +7,12 @@ icon:  microchip
 author:
   name: Pedro Moreno
   email: webmaster@juanvillen.es
-  url: 
+  url: https://github.com/pmoreno-rodriguez/grav-theme-future2021
 homepage: https://github.com/pmoreno-rodriguez/grav-theme-future2021
 demo: http://future.juanvillen.es
 keywords: future imperfect, html5up, theme, core, modern, fast, responsive, html5, css3
 bugs: https://github.com/pmoreno-rodriguez/grav-theme-future2021/issues
-license: MIT
+license: CC-BY-3.0
 
 dependencies:
   - { name: grav, version: '>=1.6.0' }
