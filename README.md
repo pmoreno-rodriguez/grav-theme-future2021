@@ -39,6 +39,7 @@ Redesigned from scratch (version 2021)
     - Features Modular view template
     - Banner Modular view template
     - Contact Modular view template
+    - Portfolio view template
 
 
 # Installation
