@@ -11,16 +11,19 @@
     <article class="post">
       <header>
         <div class="title">
-        <h2>{{ page.header.title }}</h2>    
+        <h2>{{ page.header.title }}</h2>  
+        {% if page.header.subtitle %}
+          <p>{{ page.header.subtitle }}</p>
+        {% endif %}
         </div>
         </header>
 
-            {% if big_header %}
-                {{ page.media.images|first.cropResize(1038,437).html(page.title, page.title, 'image featured')|raw }}
-            {% else %}
-                {{ page.media.images|first.cropZoom(1038,437).html(page.title, page.title, 'image featured')|raw }}
-            {% endif %}
-        {{ page.content}}
+        {% if page.header.primaryImage %}
+            {{ page.media[page.header.primaryImage].cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}
+        {% else %}
+            {{ page.media.images|first.cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}
+        {% endif %}
+        {{ page.content|raw}}
         {% for module in page.collection() %}
             {{ module.content|raw }}
         {% endfor %}
