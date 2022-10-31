@@ -1,36 +1,26 @@
 name: Future 2021
 slug: future2021
 type: theme
-version: 1.0.1
+version: 1.0.2
 description: Grav Future Imperfect by HTML5 UP (Version 2021)
 icon:  microchip
 author:
   name: Pedro Moreno
   email: webmaster@juanvillen.es
-  url: https://github.com/pmoreno-rodriguez/grav-theme-future2021
+  url: 
 homepage: https://github.com/pmoreno-rodriguez/grav-theme-future2021
 demo: http://future.juanvillen.es
 keywords: future imperfect, html5up, theme, core, modern, fast, responsive, html5, css3
 bugs: https://github.com/pmoreno-rodriguez/grav-theme-future2021/issues
-license: CC-BY-3.0
+license: MIT
 
 dependencies:
-  - { name: grav, version: '>=1.6.0' }
+  - { name: grav, version: '>=1.7.0' }
 
 form:
   validation: loose
 
-  fields:
-    dropdown.enabled:
-        type: toggle
-        label: FUTURE.ADMIN.THEME.DROPDOWN_MENU
-        highlight: 1
-        default: 0
-        options:
-          1: PLUGIN_ADMIN.ENABLED
-          0: PLUGIN_ADMIN.DISABLED
-        validate:
-          type: bool    
+  fields:    
     production-mode:
       type: toggle
       label: FUTURE.ADMIN.THEME.PRODUCTION_MODE
@@ -109,6 +99,13 @@ form:
                     0: PLUGIN_ADMIN.DISABLED
                   validate:
                     type: bool
+                miniposts_category:
+                  type: text
+                  markdown: true
+                  label: FUTURE.ADMIN.THEME.MINIPOSTS_CATEGORY
+                  description: FUTURE.ADMIN.THEME.MINIPOSTS_CATEGORY_DESCRIPTION
+                  size: medium
+                  default: 'minipost'
 
                 miniposts_number:
                   type: range
@@ -172,5 +169,3 @@ form:
               .icon:
                 type: iconpicker
                 label: FUTURE.ADMIN.THEME.FOOTER_SOCIALS_ICON_ICON
-
-
