@@ -1,5 +1,7 @@
 {% extends 'partials/base.html.twig' %}
 
+{% set columns = page.header.layout == 'standard' ? 'col-4 col-6-medium col-12-small' : 'col-6 col-12-small'  %}
+
 {% block menu %}
   {% include 'partials/sidebar_right.html.twig' %}
 {% endblock %}
@@ -9,14 +11,21 @@
     <article class="post">
         <header>
             <div class="title">
-            <h2>{{ page.header.title }}</h2>	
+            <h2>{{ page.header.title }}</h2>
+            {% if page.header.subtitle %}
+                <p>{{ page.header.subtitle }}</p>
+            {% endif %}	
             </div>
         </header>
-    {{ page.content|raw}}
+        {% if page.header.primaryImage %}
+            {{ page.media[page.header.primaryImage].cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}
+        {% endif %}
+        
+        {{ page.content|raw}}
     <!-- Portfolio -->
     {% block portfolio %}  
         <section>   
-        <div class="row">
+        <div class="row aln-center">
         {% for item in page.header.images %} 
             <div class="{{columns}} portfolio_item">
                 <a href="{{page.media[item.image].url}}" class="glightbox" data-width="100vw" data-zoomable="true" data-glightbox='title: {{item.title}}; description: {{item.description|raw}}'>
