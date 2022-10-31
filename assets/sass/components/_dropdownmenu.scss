@@ -17,7 +17,7 @@
             a {
                 font-family: _font(family-heading);
                 font-size: 0.8em;
-                font-weight: _font(weight-medium);
+                font-weight: _font(weight);
                 letter-spacing: 0.15em;
                 @include vendor('display', 'block');
                 border-bottom: none;
