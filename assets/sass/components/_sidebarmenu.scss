@@ -37,13 +37,13 @@ ul.menulink > li a span {
     transition: color 0.2s ease;
     font-size: 0.9em;
     text-transform: uppercase;
-    font-weight: _font(weight-medium);
+    font-weight: _font(weight);
 }
 ul.menulink > li a span li {
     -webkit-transition: color 0.2s ease;
     transition: color 0.2s ease;
     font-size: 0.8em;
-    font-weight: _font(weight-medium);
+    font-weight: _font(weight);
     text-transform: uppercase;
 }
 
@@ -62,7 +62,7 @@ ul.subitem > li a span {
     -webkit-transition: color 0.2s ease;
     transition: color 0.2s ease;
     font-size: 0.9em;
-    font-weight: _font(weight-medium);
+    font-weight: _font(weight);
     text-transform: capitalize;
     margin-bottom: 0;
 }
@@ -79,7 +79,7 @@ ul.subitem_hide > li a span {
     -webkit-transition: color 0.2s ease;
     transition: color 0.2s ease;
     margin-bottom: 0;
-    font-weight: _font(weight-medium);
+    font-weight: _font(weight);
     text-transform: capitalize;
 }
 ul.subitem_hide > li {
