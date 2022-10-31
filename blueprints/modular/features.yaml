@@ -9,7 +9,7 @@ form:
           type: tab
           title: FUTURE.ADMIN.MODULAR.FEATURES.FEATURES_TAB
           fields:
-            header.class:
+            header.layout:
               type: select
               label: FUTURE.ADMIN.MODULAR.FEATURES.FEATURES_LAYOUT
               default: standard
