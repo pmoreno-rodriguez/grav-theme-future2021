@@ -18,7 +18,7 @@ form:
               type: spacer
               title: FUTURE.ADMIN.PORTFOLIO.PORTFOLIO_TITLE
 
-            header.class:
+            header.layout:
               type: select
               label: FUTURE.ADMIN.PORTFOLIO.PORTFOLIO_LAYOUT
               default: standard
