@@ -1,7 +1,7 @@
 enabled: true
 production-mode: true
 favicon:
-  user/themes/future2021/images/Grav_logo.png:
+  user/themes/future2021/images/logo/Grav_logo.png:
     name: Grav_logo.png
     type: image/png
     size: 15355
