@@ -5,7 +5,7 @@ favicon:
     name: Grav_logo.png
     type: image/png
     size: 15355
-    path: user/themes/future2021/images/Grav_logo.png
+    path: user/themes/future2021/images/logo/Grav_logo.png
 blog_page: /blog
 slogan: 'AYUDA DE GRAV EN ESPAÑOL'
 custom_logo:
@@ -34,7 +34,5 @@ social:
     name: Instagram
     url: 'https://www.instagram.com'
     icon: 'fa fa-instagram'
-dropdown:
-  enabled: true
 miniposts: true
 miniposts_number: 3
