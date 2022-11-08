@@ -1,7 +1,6 @@
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
 {% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
-{% set favicon = theme_config.favicon ? theme_config.favicon|first : { type:'image/png', path: url('theme://images/logo.png') } %}
-{% set customlogo = theme_config.custom_logo ? theme_config.custom_logo|first : {type:'image/png', path: url('theme://images/logo.png') } %}
+{% set favicon = theme_config.favicon ? theme_config.favicon|first : { type:'image/png', path: url('theme://images/favicon.png') } %}
 {% set new_base_url = base_url_absolute ~ theme_config.blog_page %}
 
 <!DOCTYPE html>
@@ -19,7 +18,7 @@
 
 		{% block stylesheets %}	
 			{% do assets.addCss('theme://assets/css/main'~compress) %}
-			{% do assets.addCss('theme://assets/css/font-awesome.min.css') %}
+			{% do assets.addCss('theme://assets/css/fontawesome-all.min.css') %}
 			{% do assets.addCss('theme://assets/css/custom.css', 10) %}
 			{% if page.template() == 'portfolio' %} 
 				 {% do assets.addCss('theme://assets/css/glightbox.min.css') %}
@@ -62,6 +61,8 @@
 				
         {% endblock %}
 
+		<a id="back-to-top" href="#"><i class="fa fa-chevron-up"></i></a>
+
 		{% block bottom %}
 			{{ assets.js('bottom')|raw }}
 			{% if page.template() == 'portfolio' %} 
@@ -77,7 +78,6 @@
 			{% endif %}		
 		{% endblock %}
 		</div>
-		<a id="back-to-top" href="#"><i class="fa fa-chevron-up"></i></a>
 	</body>
 </html>
 <!--

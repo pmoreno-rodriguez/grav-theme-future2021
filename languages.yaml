@@ -2,9 +2,10 @@ en:
   FUTURE:
     ADMIN:
       THEME:
-        DROPDOWN_MENU: Dropdown in navbar
+        DROPDOWN_MENU: Dropdown menu
         PRODUCTION_MODE: Production Mode
         PRODUCTION_MODE_HELP: When enabled, Future will render with minified CSS
+        HEADER_SECTION: Header Section
         FAVICON: Choose your own favicon
         CUSTOM_LOGO: Custom Logo
         CUSTOM_LOGO_DESCRIPTION: Will be used instead of default logo `theme://images/grav-logo.svg`
@@ -16,6 +17,8 @@ en:
         MINIPOSTS: Enable Miniposts in Sidebar
         MINIPOSTS_NUMBER: Miniposts number to show
         MINIPOSTS_NUMBER_DESCRIPTION: Number of miniposts that will be showed in sidebar
+        MINIPOSTS_CATEGORY: Miniposts category
+        MINIPOSTS_CATEGORY_DESCRIPTION: Set name to miniposts category.<br />`You must include this name in Options->Taxonomy->Category`
         FOOTER: Footer
         FOOTER_TITLE: Footer Title
         FOOTER_DESCRIPTION: Footer Description
@@ -130,6 +133,7 @@ es:
         DROPDOWN_MENU: Menu Desplegable
         PRODUCTION_MODE: Modo Producción
         PRODUCTION_MODE_HELP: Si está activado, Future cargará con CSS minificado
+        HEADER_SECTION: Sección de encabezado
         FAVICON: Elige tu propio favicon
         CUSTOM_LOGO: Logo personalizado
         CUSTOM_LOGO_DESCRIPTION: Este logo se usará en lugar del log por defecto `theme://images/grav-logo.svg`
@@ -141,6 +145,8 @@ es:
         MINIPOSTS: Activar Miniposts en la barra lateral
         MINIPOSTS_NUMBER: Número de miniposts a mostrar
         MINIPOSTS_NUMBER_DESCRIPTION: Número de miniposts que se mostrarán en la barra lateral
+        MINIPOSTS_CATEGORY: Categoría para miniposts
+        MINIPOSTS_CATEGORY_DESCRIPTION: Establezca un nombre para la categoría de miniposts.<br />`Deberá incluir este nombre en Opciones->Taxonomía->Categoría`
         FOOTER: Pie de página
         FOOTER_TITLE: Título del pie de página
         FOOTER_DESCRIPTION: Descripción del pie de página

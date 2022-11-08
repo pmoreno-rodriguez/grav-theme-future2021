@@ -40,10 +40,13 @@ Redesigned from scratch (version 2021)
     - Banner Modular view template
     - Contact Modular view template
 
-
 # Installation
 
 Installing the Future 2021 theme can be done in one of two ways. Our GPM (Grav Package Manager) installation method enables you to quickly and easily install the theme with a simple terminal command, while the manual method enables you to do so via a zip file.
+
+# Demo page
+
+[http://future.juanvillen.es/](http://future.juanvillen.es/)
 
 # Future plans
 

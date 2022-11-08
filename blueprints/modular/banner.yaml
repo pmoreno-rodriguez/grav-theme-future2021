@@ -5,13 +5,19 @@ form:
   fields:
     tabs:
       fields:
+        content:
+          type: tab
+          fields:
+            header.options:
+              fields:
+                header.content:
+                  fields:
+                    header.primaryImage:
+                      unset@: true
         banner:
           type: tab
           title: FUTURE.ADMIN.MODULAR.BANNER.BANNER_TAB
           fields:
-            header.subtitle:
-              type: text
-              label: FUTURE.ADMIN.MODULAR.BANNER.BANNER_SUBTITLE
             header.buttontext:
               type: text
               label: FUTURE.ADMIN.MODULAR.BANNER.BANNER_BUTTON_TEXT

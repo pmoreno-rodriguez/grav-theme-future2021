@@ -51,40 +51,6 @@
 			}
 		}
 
-		// .links {
-		// 	@include vendor('flex', '1');
-		// 	border-left: solid 1px _palette(border);
-		// 	height: inherit;
-		// 	line-height: inherit;
-		// 	margin-left: 1.5em;
-		// 	overflow: hidden;
-		// 	padding-left: 1.5em;
-
-		// 	ul {
-		// 		li {
-		// 			border-left: solid 1px _palette(border);
-		// 			line-height: 1;
-		// 			margin-left: 1em;
-		// 			padding-left: 1em;
-
-		// 			&:first-child {
-		// 				border-left: 0;
-		// 				margin-left: 0;
-		// 				padding-left: 0;
-		// 			}
-
-		// 			a {
-		// 				border-bottom: 0;
-		// 				font-family: _font(family-heading);
-		// 				font-size: 0.7em;
-		// 				font-weight: _font(weight-heading);
-		// 				letter-spacing: _font(kerning-heading);
-		// 				text-transform: uppercase;
-		// 			}
-		// 		}
-		// 	}
-		// }
-
 		.main {
 			height: inherit;
 			line-height: inherit;
