@@ -3,6 +3,9 @@
 <section id="features">
 <header>
     <h2>{{ page.title }}</h2>
+    {% if page.header.subtitle %}
+        <p>{{ page.header.subtitle }}</p>
+    {% endif %}
 </header>
     {{ content|raw }}
 

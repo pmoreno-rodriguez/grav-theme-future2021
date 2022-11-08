@@ -2,5 +2,17 @@
 
 <ul>
     {{ macros.nav_loop(pages) }}
-</ul>
 
+    {% if theme_var('displaycustommenus.enabled') %}
+        {% for mitem in theme_var('custommenu') %}
+            <li>
+                <a href="{{ mitem.url }}" target="{{ mitem.target }}">
+                    {% if mitem.icon %}
+                        <i class="fa fa-{{ mitem.icon }}"></i>
+                    {% endif %}
+                    <span>{{ mitem.text }}</span>
+                </a>
+            </li>
+        {% endfor %}
+    {% endif %}
+</ul>

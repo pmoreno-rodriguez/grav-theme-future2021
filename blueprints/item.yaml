@@ -54,3 +54,9 @@ form:
               label: FUTURE.ADMIN.ITEM.ITEM_SUMMARY_DELIMITER
               classes: large
               placeholder: ===
+
+            header.avatarImage:
+              type: pagemediaselect
+              toggleable: true
+              label: FUTURE.ADMIN.ITEM.ITEM_AVATAR
+              preview_images: true

@@ -12,10 +12,15 @@ homepage: https://github.com/pmoreno-rodriguez/grav-theme-future2021
 demo: http://future.juanvillen.es
 keywords: future imperfect, html5up, theme, core, modern, fast, responsive, html5, css3
 bugs: https://github.com/pmoreno-rodriguez/grav-theme-future2021/issues
-license: MIT
+license: CC-BY-3.0
 
 dependencies:
-  - { name: grav, version: '>=1.7.0' }
+  - { name: grav, version: '>=1.6.0' }
+  - archives
+  - breadcrumbs
+  - pagination
+  - simplesearch
+  - taxonomylist
 
 form:
   validation: loose
@@ -32,6 +37,11 @@ form:
         0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
+
+    header_section:
+      type: section
+      title: FUTURE.ADMIN.THEME.HEADER_SECTION
+      underline: true
 
     favicon:
       type: file
@@ -53,7 +63,7 @@ form:
       markdown: true
       description: FUTURE.ADMIN.THEME.CUSTOM_LOGO_DESCRIPTION
       accept:
-        - image/png
+        - image/*
 
     custom_logo_mobile:
       type: file
@@ -62,7 +72,7 @@ form:
       destination: 'theme://images/logo'
       multiple: false
       accept:
-        - image/png
+        - image/*
         
     slogan:
       type: text
@@ -169,3 +179,49 @@ form:
               .icon:
                 type: iconpicker
                 label: FUTURE.ADMIN.THEME.FOOTER_SOCIALS_ICON_ICON
+    custommenu_options:
+      type: fieldset
+      collapsible: true
+      collapsed: true
+      icon: bars
+      title: 'Custom Menu Items'
+      fields:
+        displaycustommenus.enabled:
+          type: toggle
+          label: 'Display Custom Menu Items'
+          help: 'Determines if any defined custom menu entries are displayed in the menubar.'
+          default: 0
+          highlight: 1
+          options:
+            '0': No
+            '1': Yes
+          validate:
+            type: bool
+        custommenu:
+          name: menu
+          type: list
+          label: 'Custom Menu Items'
+          fields:
+            .text:
+              type: text
+              label: Text
+              description: 'Text label for menu item.'
+            .icon:
+              type: text
+              label: Icon
+              description: 'Font Awesome icon for menu item.'
+            .url:
+              type: text
+              label: URL
+              description: 'URL for menu item.'
+            .target:
+              type: select
+              label: Target
+              default: _self
+              size: medium
+              options:
+                _blank: 'Open in a new window'
+                _parent: 'Open in the parent frame'
+                _top: 'Open in the full body of the window'
+                _self: 'Open in the same frame as clicked'
+

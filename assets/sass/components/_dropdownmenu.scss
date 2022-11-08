@@ -21,7 +21,7 @@
                 letter-spacing: 0.15em;
                 @include vendor('display', 'block');
                 border-bottom: none;
-                padding: 0.3rem 0.8rem;
+                padding: 0 0.8rem;
                 height: inherit; 
                 
             }
@@ -40,10 +40,10 @@
                     
                     a {
                     font-family: _font(family-heading);
-                    font-size: 0.7em;
+                    font-size: 0.8em;
                     font-weight: _font(weight);
                     letter-spacing: 0.15em;
-                    text-transform: initial;
+                    text-transform: uppercase;
                     @include vendor('display', 'block');
                     border-bottom: none;
                     padding: 0.3rem 0.8rem;
@@ -81,7 +81,7 @@
                     @include vendor('flex-wrap', 'nowrap');
                     min-width: 15em;
                     border: solid 1px rgba(160, 160, 160, 0.3);
-                    background-color: _palette(bg-alt);
+                    background-color: _palette(bg);
                     box-shadow: 0 0.05rem 1rem _palette(border-dropdown) !important;
                 }
                 

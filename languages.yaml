@@ -2,8 +2,10 @@ en:
   FUTURE:
     ADMIN:
       THEME:
+        DROPDOWN_MENU: Dropdown menu
         PRODUCTION_MODE: Production Mode
         PRODUCTION_MODE_HELP: When enabled, Future will render with minified CSS
+        HEADER_SECTION: Header Section
         FAVICON: Choose your own favicon
         CUSTOM_LOGO: Custom Logo
         CUSTOM_LOGO_DESCRIPTION: Will be used instead of default logo `theme://images/grav-logo.svg`
@@ -131,6 +133,7 @@ es:
         DROPDOWN_MENU: Menu Desplegable
         PRODUCTION_MODE: Modo Producción
         PRODUCTION_MODE_HELP: Si está activado, Future cargará con CSS minificado
+        HEADER_SECTION: Sección de encabezado
         FAVICON: Elige tu propio favicon
         CUSTOM_LOGO: Logo personalizado
         CUSTOM_LOGO_DESCRIPTION: Este logo se usará en lugar del log por defecto `theme://images/grav-logo.svg`
@@ -249,3 +252,4 @@ es:
     FEATURED: Destacados
     PRIVACY: Al usar este formulario estás de acuerdo con nuestra
     FORM_SUMMARY: Aquí está el resumen de lo que nos escribió.
+

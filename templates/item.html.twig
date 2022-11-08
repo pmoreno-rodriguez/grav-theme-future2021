@@ -1,29 +1,31 @@
 {% embed 'partials/base.html.twig' %}
-	{% set base_url = page.parent.url %}
-  {% set feed_url = base_url %}
+    {% set base_url = page.parent.url %}
+    {% set feed_url = base_url %}
+    {% set show_breadcrumbs = header_var('show_breadcrumbs', [page, blog]) %}
 
-  {% if base_url == '/' %}
-      {% set base_url = '' %}
-  {% endif %}
-
-  {% if base_url == base_url_relative %}
-      {% set feed_url = base_url~'/'~page.parent.slug %}
-  {% endif  %}
-   
-  {% block menu %}
-    {% include 'partials/sidebar_right.html.twig' %}
-  {% endblock %}
-
-	{% block content %}
-    {% if config.plugins.breadcrumbs.enabled %}
-        {% include 'partials/breadcrumbs.html.twig' %}
+    {% if base_url == '/' %}
+        {% set base_url = '' %}
     {% endif %}
 
-	   {% include 'partials/blog_item.html.twig' with {'truncate':false,'big_header':true} %}
+    {% if base_url == base_url_relative %}
+        {% set feed_url = base_url~'/'~page.parent.slug %}
+    {% endif  %}
+    
+    {% block menu %}
+        {% include 'partials/sidebar_right.html.twig' %}
+    {% endblock %}
 
-     <section id="footer" class="align-center">
-        {% include 'partials/footer.html.twig' %}
-    </section>
-	{% endblock %}
+        {% block content %}
+        
+        {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
+            {% include 'partials/breadcrumbs.html.twig' %}
+        {% endif %}
+
+        {% include 'partials/blog_item.html.twig' with {'truncate':false} %}
+
+        <section id="footer" class="align-center">
+            {% include 'partials/footer.html.twig' %}
+        </section>
+        {% endblock %}
 
 {% endembed %}

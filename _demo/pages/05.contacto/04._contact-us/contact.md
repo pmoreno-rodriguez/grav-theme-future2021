@@ -1,7 +1,5 @@
 ---
 title: 'Contacta con nosotros'
-routable: false
-cache_enable: false
 form:
     name: contact-form
     template: form-messages

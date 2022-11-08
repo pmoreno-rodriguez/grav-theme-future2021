@@ -42,7 +42,7 @@ images:
         description: 'Description 6'
         thumb: thumb_magic_butterfly-wallpaper-1920x1080.jpg
 published: true
-class: standard
+layout: standard
 ---
 
-## Some pictures for your portfolio
+## [center]Some pictures for your portfolio[/center]

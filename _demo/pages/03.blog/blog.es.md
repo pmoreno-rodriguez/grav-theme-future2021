@@ -10,5 +10,6 @@ content:
     pagination: true
     url_taxonomy_filters: true
 sidebar: true
+show_breadcrumbs: false
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: 'Privacy Policy'
+title: 'Política de Privacidad'
 primaryImage: privacy-policy.jpg
 media_order: privacy-policy.jpg
 visible: false

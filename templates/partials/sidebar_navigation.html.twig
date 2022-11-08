@@ -1,35 +1,40 @@
 {% block menu_navigation %}		
 	{% macro loop(page) %}
-		{% for p in page.children.visible %}
+	{% for p in page.children.visible %}
 			{% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
+			{% if p.children.visible.count > 0 %}
 				<li class="{{ current_page }}">
-					{% if p.routable == false and p.children.count > 0%}
 					<a class="dropdown-btn">
 						{% if p.header.icon %}<i class="fa fa-{{ p.header.icon }}"></i>{% endif %}
-						<i class="fa fa-caret-down"></i>
-						<span>{{ p.menu }}</span>
+						<span>{{ p.menu }}{% if p.routable ?? false %}&nbsp;<i class="fa fa-caret-down"></i>{% endif %}</span>
 					</a>
 					<ul class="subitem_hide">
 						{{ _self.loop(p) }}
 					</ul>
-					{% else %}
+				</li>
+			{% else %}
+				<li class="{{ current_page }}">
 					<a href="{{ p.url }}">
 						{% if p.header.icon %}<i class="fa fa-{{ p.header.icon }}"></i>{% endif %}
 						<span>{{ p.menu }}</span>
 					</a>
-					{% endif %}												
 				</li>
+			{% endif %}
 		{% endfor %}
 	{% endmacro %}
 	<ul class="menulink">
-			{{ _self.loop(pages) }}
-	    {% for mitem in site.menu %}
-			<li>
-				<a href="{{ mitem.url }}">
-					{% if mitem.icon %}<i class="fa fa-{{ mitem.icon }}"></i>{% endif %}
-					{{ mitem.text }}
-				</a>
-			</li>
-		{% endfor %}
+		{{ _self.loop(pages) }}
+	    {% if theme_var('displaycustommenus.enabled') %}
+			{% for mitem in theme_var('menu') %}
+				<li>
+					<a href="{{ mitem.url }}" target="{{ mitem.target }}">
+						{% if mitem.icon %}
+							<i class="fa fa-{{ mitem.icon }}"></i>
+						{% endif %}
+						<span>{{ mitem.text }}</span>
+					</a>
+				</li>
+			{% endfor %}
+		{% endif %}
 	</ul>   
 {% endblock %}	

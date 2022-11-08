@@ -1,14 +1,16 @@
+/* Styles for Back to Top button */
+
 #back-to-top {
     display: inline-block;
-    font-family: 'FontAwesome';
+    font-family: 'Font Awesome 5 Free';
     font-weight: 400;
     font-style: normal;
-    font-size: 2em;
-    line-height: 1.3em;
+    font-size: 1.5em;
+    line-height: 1.5em;
     background-color: #ab1d35;
     color: #fff;
-    width: 50px;
-    height: 50px;
+    width: 1.5em;
+    height: 1.5em;
     text-align: center;
     border-radius: 4px;
     position: fixed;
@@ -35,6 +37,7 @@
     visibility: visible;
   }
 
+/* Styles for Langswitcher plugin */
 
 #header .main ul li.langswitcher > a {
       text-decoration: none;
@@ -46,3 +49,36 @@
 @media screen and (max-width: 736px) {
     #header .main ul li.langswitcher {
       display: none; } }
+
+/* Styles to show Font Awesome 5 Free in shortcode core notices */
+
+.sc-notice > div:before {
+    position: absolute;
+    top: 2px;
+    color: #fff;
+    font-family: 'Font Awesome 5 Free';
+    content: '\f05a';
+    left: 10px;
+}
+
+/* Styles to support svg images in search results */
+
+.search-row {
+  display: flex;
+  align-items: top;
+  
+}
+.search-image img {
+  overflow:hidden;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: 0 100%;
+}
+@media only all and (max-width: 47.938em) {
+  .search-image img {display:none;} 
+}
+.search-item {
+  margin-left: 30px;
+  margin-bottom: 50px;
+}

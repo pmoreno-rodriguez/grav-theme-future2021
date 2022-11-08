@@ -25,5 +25,6 @@ features:
         buttonurl_target: '1'
 media_order: 'Elements14-c1.svg,Elements14-b1.svg,Elements14-a1.svg'
 class: standard
+layout: standard
 ---
 
