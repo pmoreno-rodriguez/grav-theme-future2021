@@ -51,7 +51,6 @@ en:
           FEATURES_BUTTON_TEXT: Button Text
           FEATURES_BUTTON_URL: Button URL
           FEATURES_BUTTON_URL_TARGET: Open URL in a new window
-          
 
       BLOG:
         BLOG_TAB: Blog Config
@@ -92,7 +91,7 @@ en:
         PORTFOLIO_IMAGE_TITLE: Title
         PORTFOLIO_IMAGE_DESCRIPTION: Description
         PORTFOLIO_IMAGE_THUMB: Thumbnails
-        
+
     BLOG:
       ITEM:
         CONTINUE_READING: Continue reading...
@@ -123,8 +122,135 @@ en:
     LOGIN: Log in
     LATESTPOSTS: Latest posts
     FEATURED: Featured
-    PRIVACY: By using this form you agree to our
+    PRIVACY: By using this form you agree our terms
     FORM_SUMMARY: Here is the summary of what you wrote to us
+
+de:
+  FUTURE:
+    ADMIN:
+      THEME:
+        DROPDOWN_MENU: Dropdown-Menü
+        PRODUCTION_MODE: Produktionsmodus
+        PRODUCTION_MODE_HELP: Wenn aktiviert, wird Future mit minimiertem CSS geladen
+        HEADER_SECTION: Kopfbereich
+        FAVICON: Wählen Sie Ihr eigenes Favicon
+        CUSTOM_LOGO: Benutzerdefiniertes Logo
+        CUSTOM_LOGO_DESCRIPTION: Dieses Logo wird anstelle des Standardprotokolls `theme://images/grav-logo.svg` verwendet
+        CUSTOM_LOGO_MOBILE: Benutzerdefiniertes Logo für Mobilgeräte
+        SLOGAN: Motto
+        BLOG_DEFAULTS: Blog-Optionen
+        BLOG_PAGE: Blog-Seite
+        BLOG_PAGE_DESCRIPTION: Der Pfad zur Blog-Seite wenn die Blog-Seitenleiste aktiv ist
+        MINIPOSTS: Aktivieren Sie Miniposts in der Seitenleiste
+        MINIPOSTS_NUMBER: Anzahl der anzuzeigenden Miniposts
+        MINIPOSTS_NUMBER_DESCRIPTION: Anzahl der in der Seitenleiste anzuzeigenden Miniposts
+        MINIPOSTS_CATEGORY: Kategorie für Miniposts
+        MINIPOSTS_CATEGORY_DESCRIPTION: Legen Sie einen Namen für die Miniposts-Kategorie fest.<br />`Sie müssen diesen Namen in Optionen->Taxonomie->Kategorie einfügen`
+        FOOTER: Fusszeile
+        FOOTER_TITLE: Fusszeilentitel
+        FOOTER_DESCRIPTION: Fusszeilentext
+        FOOTER_COPYRIGHT: Copyright-Text
+        FOOTER_BUTTON_TEXT: Schaltflächentext
+        FOOTER_BUTTON_URL: Schaltflächen-URL
+        FOOTER_SOCIALS_ICONS: Symbole für soziale Medien
+        FOOTER_SOCIALS_ICON_NAME: Name des sozialen Netzwerks
+        FOOTER_SOCIALS_ICON_URL: URL-Link zum sozialen Netzwerk
+        FOOTER_SOCIALS_ICON_ICON: Symbol des sozialen Netzwerks
+      DEFAULT:
+        PRIMARY_IMAGE: Hauptbild
+      MODULAR:
+        BANNER:
+          BANNER_TAB: Banner
+          BANNER_SUBTITLE: Bildbeschriftung
+          BANNER_BUTTON_TEXT: Schaltflächentext
+          BANNER_BUTTON_URL: Schaltflächen-URL
+          BANNER_IMAGE: Bild
+          BANNER_IMAGE_DESCRIPTION: Wählen Sie ein Bild aus
+        FEATURES:
+          FEATURES_TAB: Funktionen
+          FEATURES_LAYOUT: Layout
+          FEATURES_LAYOUT_TWOCOLS: Mittel   = 2 / 1 Spalten
+          FEATURES_LAYOUT_THREECOLS: Standard  = 3 / 2 / 1 Spalten
+          FEATURES_HEADER: Funktionen
+          FEATURES_IMAGE: Bild
+          FEATURES_TITLE: Titel
+          FEATURES_TEXT: Text
+          FEATURES_BUTTON_TEXT: Schaltflächentext
+          FEATURES_BUTTON_URL: Schaltflächen-URL
+          FEATURES_BUTTON_URL_TARGET: Öffnen Sie die URL in einem neuen Fenster
+
+      BLOG:
+        BLOG_TAB: Blog-Einstellungen
+        BLOG_CONTENT_TITLE: Content Definition
+        BLOG_CONTENT_ITEMS: Artikel
+        BLOG_CONTENT_ITEMS_LIMIT: Maximale Artikel-Anzahl
+        BLOG_CONTENT_ITEMS_ORDER_BY: Sortieren nach
+        BLOG_CONTENT_ITEMS_ORDER_BY_DATE: Datum
+        BLOG_CONTENT_ITEMS_ORDER_BY_TITLE: Titel
+        BLOG_CONTENT_ITEMS_ORDER_BY_FOLDER: Verzeichnis
+        BLOG_CONTENT_ITEMS_ORDER_BY_DEFAULT: Standard
+        BLOG_CONTENT_ITEMS_ORDER_DIR: Reihenfolge
+        BLOG_CONTENT_ITEMS_ORDER_DIR_ASC: Aufsteigend
+        BLOG_CONTENT_ITEMS_ORDER_DIR_DESC: Absteigend
+        BLOG_CONTENT_ITEMS_PAGINATION: Seitennummerierung
+        BLOG_CONTENT_ITEMS_URL_TAXONOMY_FILTERS: Taxonomie filtern nach URL
+      ITEM:
+        ITEM_TAB: Blog-Artikel
+        ITEM_OPTIONS: Optionen
+        ITEM_SUMMARY: Artikelzusammenfassung
+        ITEM_SUMMARY_ENABLED: Zusammenfassung aktivieren
+        ITEM_SUMMARY_FORMAT: Zusammenfassungsformat
+        ITEM_SUMMARY_FORMAT_SHORT: Verwenden Sie das erste Vorkommen des Trennzeichens oder der Größe
+        ITEM_SUMMARY_FORMAT_LONG: Zusammenfassungsbegrenzer wird ignoriert
+        ITEM_SUMMARY_SIZE: Größe
+        ITEM_SUMMARY_DELIMITER: Zusammenfassungsbegrenzer
+        ITEM_ORDER: Minipost-Reihenfolge
+        ITEM_SUBTITLE: Untertitel
+        ITEM_AVATAR: Avatar-Bild
+      PORTFOLIO:
+        PORTFOLIO_TAB: Portfolio
+        PORTFOLIO_TITLE: Portfolio-Bild
+        PORTFOLIO_LAYOUT: Layout
+        PORTFOLIO_LAYOUT_TWOCOLS: Mittel   = 2 / 1 Spalten
+        PORTOFOLIO_LAYOUT_THREECOLS: Standard  = 3 / 2 / 1 Spalten
+        PORTFOLIO_IMAGES: Bilder
+        PORTFOLIO_IMAGE: Bild
+        PORTFOLIO_IMAGE_TITLE: Titel
+        PORTFOLIO_IMAGE_DESCRIPTION: Beschreibung
+        PORTFOLIO_IMAGE_THUMB: Miniaturansicht
+
+    BLOG:
+      ITEM:
+        CONTINUE_READING: Weiterlesen...
+        NEXT_POST: Nächster Eintrag
+        PREV_POST: Vorheriger Eintrag
+      PAGINATION:
+        PREVIOUS: Vorherige
+        NEXT: Nächste
+
+    SIDEBAR:
+      SIMPLE_SEARCH:
+        HEADLINE: Suche
+      RELATED_POSTS:
+        HEADLINE: Verwandte Einträge
+      RANDOM_ARTICLE:
+        HEADLINE: Zufälliger Artikel
+        FEELING_LUCKY: Ich habe Glück!
+      SOME_TEXT_WIDGET:
+        HEADLINE: Ein Text-Widget
+      TAGS:
+        HEADLINE: Schlagworte
+      POPULAR_TAGS:
+        HEADLINE: beliebte Schlagworte
+      ARCHIVES:
+        HEADLINE: Letzte Einträge
+      SYNDICATE:
+        HEADLINE: Verteilen
+    LOGIN: Einloggen
+    LATESTPOSTS: Letzte Beiträge
+    FEATURED: Hervorgehoben
+    PRIVACY: Durch die Nutzung dieses Formulars stimmen Sie unseren Bedingungen zu
+    FORM_SUMMARY: Hier ist die Zusammenfassung dessen, was Sie uns geschrieben haben
 
 es:
   FUTURE:
@@ -220,7 +346,6 @@ es:
         PORTFOLIO_IMAGE_DESCRIPTION: Descripción
         PORTFOLIO_IMAGE_THUMB: Miniatura
 
-             
     BLOG:
       ITEM:
         CONTINUE_READING: Continuar leyendo...
@@ -229,6 +354,7 @@ es:
       PAGINATION:
         PREVIOUS: Anterior
         NEXT: Siguiente
+
     SIDEBAR:
       SIMPLE_SEARCH:
         HEADLINE: Buscar
@@ -251,5 +377,5 @@ es:
     LATESTPOSTS: Últimos posts
     FEATURED: Destacados
     PRIVACY: Al usar este formulario estás de acuerdo con nuestra
-    FORM_SUMMARY: Aquí está el resumen de lo que nos escribió.
+    FORM_SUMMARY: Aquí está el resumen de lo que nos escribió
 
