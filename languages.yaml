@@ -135,7 +135,7 @@ de:
         HEADER_SECTION: Kopfbereich
         FAVICON: Wählen Sie Ihr eigenes Favicon
         CUSTOM_LOGO: Benutzerdefiniertes Logo
-        CUSTOM_LOGO_DESCRIPTION: Dieses Logo wird anstelle des Standardprotokolls `theme://images/grav-logo.svg` verwendet
+        CUSTOM_LOGO_DESCRIPTION: Dieses Logo wird anstelle des Standardlogos `theme://images/grav-logo.svg` verwendet
         CUSTOM_LOGO_MOBILE: Benutzerdefiniertes Logo für Mobilgeräte
         SLOGAN: Motto
         BLOG_DEFAULTS: Blog-Optionen
