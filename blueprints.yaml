@@ -30,11 +30,11 @@ form:
       type: toggle
       label: FUTURE.ADMIN.THEME.PRODUCTION_MODE
       help: FUTURE.ADMIN.THEME.PRODUCTION_MODE_HELP
-      highlight: 1
       default: 1
+      highlight: 1
       options:
-        1: PLUGIN_ADMIN.ENABLED
         0: PLUGIN_ADMIN.DISABLED
+        1: PLUGIN_ADMIN.ENABLED
       validate:
         type: bool
 
@@ -193,8 +193,8 @@ form:
           default: 0
           highlight: 1
           options:
-            '0': No
-            '1': Yes
+            0: PLUGIN_ADMIN.DISABLED
+            1: PLUGIN_ADMIN.ENABLED
           validate:
             type: bool
         custommenu:
