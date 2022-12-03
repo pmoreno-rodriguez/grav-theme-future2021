@@ -13,7 +13,7 @@ en:
         SLOGAN: Slogan
         BLOG_DEFAULTS: Blog Defaults
         BLOG_PAGE: Blog Page
-        BLOG_PAGE_DESCRIPTION: The route to the blog page when working with blog sidebar
+        BLOG_PAGE_HELP: The route to the blog page when working with blog sidebar
         MINIPOSTS: Enable Miniposts in Sidebar
         MINIPOSTS_NUMBER: Miniposts number to show
         MINIPOSTS_NUMBER_DESCRIPTION: Number of miniposts that will be showed in sidebar
@@ -29,6 +29,20 @@ en:
         FOOTER_SOCIALS_ICON_NAME: Social Name
         FOOTER_SOCIALS_ICON_URL: URL Link to Social
         FOOTER_SOCIALS_ICON_ICON: Icon to Social
+        CUSTOM_MENU_TITLE: 'Custom Menu Items'
+        CUSTOM_MENU_ENABLE: 'Display Custom Menu Items'
+        CUSTOM_MENU_ENABLE_HELP: 'Determines if any defined custom menu entries are displayed in the menubar.'
+        CUSTOM_MENU_ITEM_TEXT: 'Text'
+        CUSTOM_MENU_ITEM_TEXT_DESCRIPTION: 'Text label for menu item.'
+        CUSTOM_MENU_ITEM_ICON: 'Icon'
+        CUSTOM_MENU_ITEM_ICON_DESCRIPTION: 'Font Awesome icon for menu item.'
+        CUSTOM_MENU_ITEM_URL: 'URL'
+        CUSTOM_MENU_ITEM_URL_DESCRIPTION: 'URL for menu item.'
+        CUSTOM_MENU_ITEM_TARGET: 'Target'
+        CUSTOM_MENU_ITEM_TARGET_BLANK: 'Open in a new window'
+        CUSTOM_MENU_ITEM_TARGET_PARENT: 'Open in the parent frame'
+        CUSTOM_MENU_ITEM_TARGET_SELF: 'Open in the same frame as clicked'
+        CUSTOM_MENU_ITEM_TARGET_TOP: 'Open in the full body of the window'
       DEFAULT:
         PRIMARY_IMAGE: Primary image
       MODULAR:
@@ -119,6 +133,7 @@ en:
         HEADLINE: Archives
       SYNDICATE:
         HEADLINE: Syndicate
+
     LOGIN: Log in
     LATESTPOSTS: Latest posts
     FEATURED: Featured
@@ -140,7 +155,7 @@ de:
         SLOGAN: Motto
         BLOG_DEFAULTS: Blog-Optionen
         BLOG_PAGE: Blog-Seite
-        BLOG_PAGE_DESCRIPTION: Der Pfad zur Blog-Seite wenn die Blog-Seitenleiste aktiv ist
+        BLOG_PAGE_HELP: Der Pfad zur Blog-Seite wenn die Blog-Seitenleiste aktiv ist
         MINIPOSTS: Aktivieren Sie Miniposts in der Seitenleiste
         MINIPOSTS_NUMBER: Anzahl der anzuzeigenden Miniposts
         MINIPOSTS_NUMBER_DESCRIPTION: Anzahl der in der Seitenleiste anzuzeigenden Miniposts
@@ -156,6 +171,20 @@ de:
         FOOTER_SOCIALS_ICON_NAME: Name des sozialen Netzwerks
         FOOTER_SOCIALS_ICON_URL: URL-Link zum sozialen Netzwerk
         FOOTER_SOCIALS_ICON_ICON: Symbol des sozialen Netzwerks
+        CUSTOM_MENU_TITLE: 'Benutzerdefinierte Menüpunkte'
+        CUSTOM_MENU_ENABLE: 'Benutzerdefinierte Menüpunkte aktivieren'
+        CUSTOM_MENU_ENABLE_HELP: 'Legt fest, ob definierte benutzerdefinierte Menüeinträge in der Menüleiste angezeigt werden.'
+        CUSTOM_MENU_ITEM_TEXT: 'Text'
+        CUSTOM_MENU_ITEM_TEXT_DESCRIPTION: 'Textbeschriftung für Menüpunkt.'
+        CUSTOM_MENU_ITEM_ICON: 'Symbol'
+        CUSTOM_MENU_ITEM_ICON_DESCRIPTION: 'FontAwesome-Symbol für Menüelement.'
+        CUSTOM_MENU_ITEM_URL: 'URL'
+        CUSTOM_MENU_ITEM_URL_DESCRIPTION: 'URL für Menüpunkt.'
+        CUSTOM_MENU_ITEM_TARGET: 'Ziel'
+        CUSTOM_MENU_ITEM_TARGET_BLANK: 'In neuem Fenster öffnen'
+        CUSTOM_MENU_ITEM_TARGET_PARENT: 'In übergeordnetem Frame öffnen'
+        CUSTOM_MENU_ITEM_TARGET_SELF: 'In selbem Frame öffnen'
+        CUSTOM_MENU_ITEM_TARGET_TOP: 'In vollem Fensterkörper öffnen'
       DEFAULT:
         PRIMARY_IMAGE: Hauptbild
       MODULAR:
@@ -246,6 +275,7 @@ de:
         HEADLINE: Letzte Einträge
       SYNDICATE:
         HEADLINE: Verteilen
+
     LOGIN: Einloggen
     LATESTPOSTS: Letzte Beiträge
     FEATURED: Hervorgehoben
@@ -267,7 +297,7 @@ es:
         SLOGAN: Slogan
         BLOG_DEFAULTS: Opciones de Blog
         BLOG_PAGE: Página de Blog
-        BLOG_PAGE_DESCRIPTION: Ruta de la página de Blog cuando funciona con el blog de barra lateral
+        BLOG_PAGE_HELP: Ruta de la página de Blog cuando funciona con el blog de barra lateral
         MINIPOSTS: Activar Miniposts en la barra lateral
         MINIPOSTS_NUMBER: Número de miniposts a mostrar
         MINIPOSTS_NUMBER_DESCRIPTION: Número de miniposts que se mostrarán en la barra lateral
@@ -373,6 +403,7 @@ es:
         HEADLINE: Últimas entradas
       SYNDICATE:
         HEADLINE: Distribuir
+
     LOGIN: Iniciar sesión
     LATESTPOSTS: Últimos posts
     FEATURED: Destacados
