@@ -1,0 +1,21 @@
+{# based on future2021 blog_item.html.twig and heavily stripped down #}
+
+<article class="post" itemprop="liveBlogUpdate" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    <div class="title">
+      <h2 itemprop="headline">{{ page.title }}</h2>
+    </div>
+    <div class="meta">
+      <time class="published" itemprop="datePublished" datetime="{{page.date|dateTranslate(grav.config.system.pages.dateformat.short)}}">{{ page.date|dateTranslate(grav.config.system.pages.dateformat.short)}}</time>
+    </div>
+  </header>
+
+  <div itemprop="articleBody">
+    {{ page.content|raw }}
+  </div>
+
+  <footer>
+    <ul class="stats"> {# for bottom spacing #}
+    </ul>
+  </footer>
+</article>
