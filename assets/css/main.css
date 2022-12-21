@@ -2036,11 +2036,12 @@ ul.icons li > * .label {
 ul.posts {
   list-style: none;
   padding: 0;
+  margin-bottom: 0.25rem;
 }
 ul.posts li {
   border-top: dotted 1px rgba(160, 160, 160, 0.3);
-  margin: 1.5em 0 0 0;
-  padding: 1.5em 0 0 0;
+  margin: 0.25em 0 0 0;
+  padding: 0.25em 0 0 0;
 }
 ul.posts li:first-child {
   border-top: 0;
@@ -2076,6 +2077,7 @@ ul.posts article header {
 ul.posts article header h3 {
   font-size: 0.7em;
   margin-top: 0.125em;
+  margin-bottom: 0.25em;
 }
 ul.posts article header .published {
   display: block;
@@ -2690,6 +2692,7 @@ table.alt tfoot {
 .menulink {
   margin: 0;
   padding: 0;
+  margin-top: -0.3rem;
 }
 
 ul.menulink > li,
