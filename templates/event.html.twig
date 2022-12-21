@@ -23,6 +23,9 @@
       <p>{{ page.header.subtitle }}</p>
     {% endif %}
     </div>
+    <div class="meta">
+      <time class="published" itemprop="datePublished" datetime="{{page.date|dateTranslate(grav.config.system.pages.dateformat.long)}}">{{ page.date|dateTranslate(grav.config.system.pages.dateformat.long)}}</time>
+    </div>
   </header>
 
 <div class="event-container">
