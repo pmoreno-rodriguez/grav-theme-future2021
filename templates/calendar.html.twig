@@ -1,0 +1,163 @@
+{% extends 'partials/base.html.twig' %}
+
+{% if page.header.show_breadcrumbs is defined %}
+    {% set show_breadcrumbs = page.header.show_breadcrumbs %}
+{% else %}
+    {% set show_breadcrumbs = true %}
+{% endif %}
+
+{% block menu %}
+    {% include 'partials/sidebar_right.html.twig' %}
+{% endblock %}
+
+{% block content %}
+    {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
+        {% include 'partials/breadcrumbs.html.twig' %}
+    {% endif %}
+
+<article class="post">
+  <header>
+    <div class="title">
+      <h2>{{ page.header.title }}</h2>
+    {% if page.header.subtitle %}
+      <p>{{ page.header.subtitle }}</p>
+    {% endif %}
+    </div>
+  </header>
+    {{ page.content|raw }}
+
+{% set prevYearUrl = page.url ~ '/year:' ~ calendar.prevYear|date('Y') ~ '/month:' ~ calendar.prevYear|date('m') %}
+{% set nextYearUrl = page.url ~ '/year:' ~ calendar.nextYear|date('Y') ~ '/month:' ~ calendar.nextYear|date('m') %}
+{% set prevMonthUrl = page.url ~ '/year:' ~ calendar.prev.date|date('Y') ~ '/month:' ~ calendar.prev.date|date('m') %}
+{% set nextMonthUrl = page.url ~ '/year:' ~ calendar.next.date|date('Y') ~ '/month:' ~ calendar.next.date|date('m') %}
+{% set currMonthUrl = page.url ~ '/year:' ~ now|date('Y') ~ '/month:' ~ now|date('m') %}
+
+{% set prevYearTitle = calendar.prevYear|dateTranslate(config.plugins.events.calendar.header) %}
+{% set nextYearTitle = calendar.nextYear|dateTranslate(config.plugins.events.calendar.header) %}
+{% set prevMonthTitle = calendar.prev.date|dateTranslate(config.plugins.events.calendar.header) %}
+{% set nextMonthTitle = calendar.next.date|dateTranslate(config.plugins.events.calendar.header) %}
+
+<div class="calendar-container clear-user-agent-styles">
+	<section class="calendar-table">
+		<table class="calendar">
+			<thead class="calendar-head">
+				<tr class="calendar-controls">
+					<th class="calendar-buttons">
+						<a href="{{ prevYearUrl }}" class="calendar-button" title="{{ prevYearTitle }}">&laquo;</a>
+					</th>
+					<th class="calendar-buttons">
+						<a href="{{ prevMonthUrl }}" class="calendar-button" title="{{ prevMonthTitle }}">&lsaquo;</a>
+					</th>
+					<th colspan="3" class="calendar-title">
+						<a href="{{ currMonthUrl }}" title="{{ 'PLUGIN_EVENTS.CALENDAR.TODAY'|t }}">
+						{{ calendar.date|dateTranslate(config.plugins.events.calendar.header) }}
+						</a>
+					</th>
+					<th class="calendar-buttons">
+						<a href="{{ nextMonthUrl }}" class="calendar-button" title="{{ nextMonthTitle }}">&rsaquo;</a>
+					</th>
+					<th class="calendar-buttons">
+						<a href="{{ nextYearUrl }}" class="calendar-button" title="{{ nextYearTitle }}">&raquo;</a>
+					</th>
+				</tr>
+				<tr class="calendar-headings">
+				{% set fdowOffset = config.plugins.events.calendar.first_dow %}
+				{% set dayChar = config.plugins.events.calendar.day_char %}
+				{% if dayChar == 0 %}
+					{% set dayChar = 1000 %}
+				{% endif %}
+				{% for day in range(0,6) %}
+					<th class="calendar-heading">{{ 'GRAV.DAYS_OF_THE_WEEK'|ta((fdowOffset+day) % 7)|slice(0, dayChar) }}</th>
+				{% endfor %}
+				</tr>
+			</thead>
+
+			<tbody class="calendar-body">
+				<tr class="calendar-line">
+				{% set startDow = (calendar.date|date('w') +6-fdowOffset) % 7 %}
+				{% set dow = startDow %}
+                                {% set month = "now"|date("F") %}
+                                {% set year = "now"|date("Y") %}
+				{% for day in range(1,calendar.daysInMonth) %}
+					{% if loop.first and startDow != 0 %}
+						<td colspan="{{ startDow }}"></td>
+					{% endif %}
+					<td class="calendar-cell">
+						<div class="calendar-events">
+						{% if calendar.events[calendar.year][calendar.month][day] != null %}
+							{% set title_date = calendar.month ~ '/' ~ day ~ '/' ~ calendar.year %}
+							<div class="calendar-day">
+								<a class="calendar-day-link{% if (day == calendar.currentDay) and (month == calendar.date|date("F")) and (year == calendar.date|date("Y")) %} calendar-active{% endif %}"
+									href="#!" title="{{ title_date|dateTranslate(config.plugins.events.calendar.anchor_title) }}">
+									{{ day }}
+								</a>
+							</div>
+						{% else %}
+							<div class="calendar-day{% if (day == calendar.currentDay) and (month == calendar.date|date("F")) and (year == calendar.date|date("Y")) %} calendar-active{% endif %}">
+								<span>{{ day }}</span>
+							</div>
+						{% endif %}
+
+							<div class="calendar-day-details">
+							{% set title_date = calendar.month ~ '/' ~ day ~ '/' ~ calendar.year %}
+								<h4 class="calendar-day">{{ title_date|dateTranslate(config.plugins.events.calendar.details.title) }}</h4>
+								<ul class="calendar-day-events">
+								{% for event in calendar.events[calendar.year][calendar.month][day] %}
+									{% if event.title %}
+										<li class="calendar-event">
+											{% include 'partials/event_calendar_item.html.twig' with { 'event': event } %}
+										</li>
+									{% endif %}
+								{% endfor %}
+								</ul>
+							</div>
+						</div>
+					</td>
+					{% if loop.last and dow != 6 %}
+						<td colspan="{{ 6 - dow }}">&nbsp;</td>
+					{% endif %}
+					{% if dow == 6 %}
+						{% set dow = 0 %}
+				</tr>
+				<tr class="calendar-line">
+					{% else %}
+						{% set dow = dow + 1 %}
+					{% endif %}
+				{% endfor %}
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<section class="calendar-details">
+		<div class="calendar-day-details">
+		{% set day = "now"|date("j") %}
+		{% set month = "now"|date("n") %}
+		{% set year = "now"|date("Y") %}
+			<h4 class="calendar-day">{{ "now"|dateTranslate(config.plugins.events.calendar.details.title) }}</h4>
+			<ul class="calendar-day-events">
+			{% if calendar.events[year][month][day] == null %}
+				<li>{{ "PLUGIN_EVENTS.CALENDAR.NO_EVENTS"|t }}</li>
+			{% else %}
+				{% for event in calendar.events[year][month][day] %}
+					{% if event.title %}
+						<li class="calendar-event">
+							{% include 'partials/event_calendar_item.html.twig' with { 'event': event } %}
+						</li>
+					{% endif %}
+				{% endfor %}
+			{% endif %}
+			</ul>
+		</div>
+
+		<p class="events-view-all">
+			<a href="{{ base_url_absolute ~ config.plugins.events.events_subpage }}">{{ "PLUGIN_EVENTS.CALENDAR.VIEW_ALL_EVENTS"|t }}</a>
+		</p>
+	</section>
+</div><!--.calendar-container-->
+</article>
+
+<section id="footer" class="align-center">
+    {% include 'partials/footer.html.twig' %}
+</section>
+{% endblock %}

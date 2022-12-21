@@ -1,49 +1,51 @@
-{% embed 'partials/base.html.twig' %}
+{% extends 'partials/base.html.twig' %}
 
-  {% set collection = page.collection() %}
-  {% set base_url = page.url %}
-  {% set feed_url = base_url %}
-  {% if page.header.show_breadcrumbs is defined %}
+{% set collection = page.collection() %}
+{% set base_url = page.url %}
+{% set feed_url = base_url %}
+{% if page.header.show_breadcrumbs is defined %}
     {% set show_breadcrumbs = page.header.show_breadcrumbs %}
-  {% else %}
-      {% set show_breadcrumbs = true %}
-  {% endif %}
-  {% if page.header.show_pagination is defined %}
-      {% set show_pagination = page.header.show_pagination %}
-  {% else %}
-      {% set show_pagination = true %}
-  {% endif %}
+{% else %}
+    {% set show_breadcrumbs = true %}
+{% endif %}
+{% if page.header.show_pagination is defined %}
+    {% set show_pagination = page.header.show_pagination %}
+{% else %}
+    {% set show_pagination = true %}
+{% endif %}
 
-  {% if base_url == '/' %}
+{% if base_url == '/' %}
     {% set base_url = '' %}
+{% endif %}
+
+{% if base_url == base_url_relative %}
+    {% set feed_url = base_url~'/'~page.slug %}
+{% endif  %}
+
+{% block menu %}
+    {% include 'partials/sidebar_right.html.twig' %}
+{% endblock %}
+
+{% block content %}
+  {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
+    {% include 'partials/breadcrumbs.html.twig' %}
+  {% endif %}
+{#
+  {% if show_pagination and config.plugins.pagination.enabled and collection.params.pagination %}
+    {% include 'partials/pagination.html.twig' with {base_url: page.url, pagination: collection.params.pagination} %}
+  {% endif %}
+#}
+  {% for child in collection %}
+    {% if child.header.hide is not defined or not child.header.hide %}
+      {% include 'partials/blog_item.html.twig' with {'page':child, 'truncate':true} %}
+    {% endif %}
+  {% endfor %}
+
+  {% if show_pagination and config.plugins.pagination.enabled and collection.params.pagination %}
+    {% include 'partials/pagination.html.twig' with {base_url: page.url, pagination: collection.params.pagination} %}
   {% endif %}
 
-  {% if base_url == base_url_relative %}
-    {% set feed_url = base_url~'/'~page.slug %}
-  {% endif  %}
-
-  {% block menu %}
-    {% include 'partials/sidebar_right.html.twig' %}
-  {% endblock %}
-  
-  {% block content %}
-    {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
-        {% include 'partials/breadcrumbs.html.twig' %}
-    {% endif %}
-
-    {% for child in collection %}
-      {% include 'partials/blog_item.html.twig' with {'page':child, 'truncate':true} %}
-    {% endfor %}
-
-    {% if show_pagination and config.plugins.pagination.enabled and collection.params.pagination %}
-      {% include 'partials/pagination.html.twig' with {base_url: page.url, pagination: collection.params.pagination} %}
-    {% endif %}
-  {% endblock %}
-
-  {% block sidebar %}
-    {% include 'partials/sidebar_left.html.twig' %}
-  {% endblock %}
-  
-{% endembed %}
-
-
+<section id="footer" class="align-center">
+    {% include 'partials/footer.html.twig' %}
+</section>
+{% endblock %}

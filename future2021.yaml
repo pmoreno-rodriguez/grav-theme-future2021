@@ -38,5 +38,5 @@ miniposts: true
 miniposts_number: 3
 latestposts: true
 miniposts_category: minipost
-displaycustommenus:
+custommenus:
   enabled: true

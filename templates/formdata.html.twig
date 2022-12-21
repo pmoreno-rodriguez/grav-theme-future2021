@@ -2,10 +2,10 @@
 {% block content %}
     <article class="post">
       	<div class="title">
-        <h2>{{ form.message }}</h2>	
+        <h2>{{ form.message }}</h2>
     	</div>
         <div class="meta">
-        <time class="published" datetime="{{form.date|date("Y-m-d")}}">{{ form.date|date("M j, Y")}}</time>                              
+        <time class="published" datetime="{{form.date|dateTranslate(grav.config.system.pages.dateformat.short)}}">{{ form.date|dateTranslate(grav.config.system.pages.dateformat.short)}}</time>
         </div>
        </header>
       <p>{{'FUTURE.FORM_SUMMARY'|t}}</p>

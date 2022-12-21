@@ -1,0 +1,21 @@
+{% set size = file.size/1024 %}
+{% set unit = "kB" %}
+{% if size > 1023 %}
+    {% set size = size/1024 %}
+    {% set unit = "MB" %}
+{% endif %}
+<td style="text-align: right; vertical-align: middle;">
+    <a href="{{ file.url }}">
+        <!--<ul class="icons">
+            <li><i class="fa fa-file-pdf"></i></li>
+        </ul>-->
+        <img src="https://github.com/r00t0vi4/mime-icons-packs/raw/master/mime-icons-pack-1/src/{{file.extension}}.png">
+    </a>
+</td>
+<td style="text-align: left; vertical-align: middle;">
+    <a href="{{ file.url }}">
+        {{ file.filename }}<br/>
+        {{ size|number_format(2, '.', ',') }}{{ unit }}  |
+        {{ file.modified|dateTranslate(grav.config.system.pages.dateformat.long) }}
+    </a>
+</td>

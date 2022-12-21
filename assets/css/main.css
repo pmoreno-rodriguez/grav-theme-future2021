@@ -2036,11 +2036,12 @@ ul.icons li > * .label {
 ul.posts {
   list-style: none;
   padding: 0;
+  margin-bottom: 0.25rem;
 }
 ul.posts li {
   border-top: dotted 1px rgba(160, 160, 160, 0.3);
-  margin: 1.5em 0 0 0;
-  padding: 1.5em 0 0 0;
+  margin: 0.25em 0 0 0;
+  padding: 0.25em 0 0 0;
 }
 ul.posts li:first-child {
   border-top: 0;
@@ -2076,6 +2077,7 @@ ul.posts article header {
 ul.posts article header h3 {
   font-size: 0.7em;
   margin-top: 0.125em;
+  margin-bottom: 0.25em;
 }
 ul.posts article header .published {
   display: block;
@@ -2175,6 +2177,12 @@ ul.posts article header > :last-child {
   border: solid 1px rgba(160, 160, 160, 0.3);
   margin: 0 0 3em 0;
   position: relative;
+}
+.post img {
+  max-width: 100%;
+}
+.post .modular-row.gallery-container {
+  margin-bottom: 2.75rem;
 }
 .post > header {
   display: -moz-flex;
@@ -2627,8 +2635,8 @@ table.alt tfoot {
   text-transform: uppercase;
   display: block;
   border-bottom: none;
-  padding: 0.3rem 0.8rem;
-  line-height: 2.5em;
+  padding: 0.5rem 0.8rem;
+  line-height: 1.5em;
 }
 #header .dropdown li ul li a:hover {
   color: #181818;
@@ -2684,6 +2692,7 @@ table.alt tfoot {
 .menulink {
   margin: 0;
   padding: 0;
+  margin-top: -0.3rem;
 }
 
 ul.menulink > li,
@@ -2994,19 +3003,6 @@ body.single #wrapper {
   overflow: hidden;
   position: relative;
   width: 4em;
-}
-#intro .logo:before {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100px' height='100px' viewBox='0 0 100 100' preserveAspectRatio='none' zoomAndPan='disable'%3E%3Cpolygon points='0,0 100,0 100,25 50,0 0,25' style='fill:%23f4f4f4' /%3E%3Cpolygon points='0,100 100,100 100,75 50,100 0,75'  style='fill:%23f4f4f4' /%3E%3C/svg%3E");
-  background-position: top left;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  content: "";
-  display: block;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
 }
 #intro .logo img {
   display: block;

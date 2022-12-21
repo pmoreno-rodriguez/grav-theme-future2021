@@ -23,8 +23,18 @@
       <p>{{ page.header.subtitle }}</p>
     {% endif %}
     </div>
+    <div class="meta">
+      <time class="published" itemprop="datePublished" datetime="{{page.date|dateTranslate(grav.config.system.pages.dateformat.long)}}">{{ page.date|dateTranslate(grav.config.system.pages.dateformat.long)}}</time>
+    </div>
   </header>
-    {{ page.content|raw }}
+
+<div class="event-container">
+	<section class="event-listing">
+	{% include 'partials/event_item.html.twig' with { 'event': page.parent, 'single': true } %}
+	</section>
+	{% include 'partials/events_sidebar.html.twig' with { 'page': page.parent } %}
+</div>
+
 </article>
 
 <section id="footer" class="align-center">

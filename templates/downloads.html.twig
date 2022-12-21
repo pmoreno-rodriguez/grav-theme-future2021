@@ -15,7 +15,29 @@
         {% include 'partials/breadcrumbs.html.twig' %}
     {% endif %}
 
-    {% include 'partials/blog_item.html.twig' with {'truncate':false} %}
+<article class="post">
+  <header>
+    <div class="title">
+      <h2>{{ page.header.title }}</h2>
+    {% if page.header.subtitle %}
+      <p>{{ page.header.subtitle }}</p>
+    {% endif %}
+    </div>
+  </header>
+    {{ page.content|raw}}
+
+  <table>
+  {% for file in page.media.files %}
+    {% for type in page.header.file_types %}
+      {% if file.extension == type.extension or type.extension == '*' %}
+      <tr>
+        {% include 'partials/download_item.html.twig' with {file: file} %}
+      </tr>
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+  </table>
+</article>
 
 <section id="footer" class="align-center">
     {% include 'partials/footer.html.twig' %}

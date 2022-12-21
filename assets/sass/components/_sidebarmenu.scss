@@ -5,23 +5,24 @@
 @media screen and (max-width: 980px) {
 
 #sidebarmenu {
-    display: block; } 
+    display: block; }
 }
 
 .menulink {
     margin: 0;
     padding: 0;
+    margin-top: -0.3rem;
 }
 
-ul.menulink  > li,
+ul.menulink > li,
 ul.menulink > li > ul
- {
+{
     list-style: none;
     font-family: _font(family-heading);
     padding: 0.1em 0 0 0;
     margin: 0em;
     line-height: 2.3em;
-     }
+}
 ul.menulink > li a.tags {
     border: dotted 1px rgba(119, 118, 118, 0.65);
     padding: 0.2em;
@@ -74,8 +75,9 @@ ul.subitem_hide {
     display:none;
 }
 ul.subitem_hide > li > ul,
-ul.subitem_hide > li a span {
-    
+ul.subitem_hide > li a span
+{
+
     -webkit-transition: color 0.2s ease;
     transition: color 0.2s ease;
     margin-bottom: 0;
@@ -85,8 +87,7 @@ ul.subitem_hide > li a span {
 ul.subitem_hide > li {
     list-style-type: none;
     margin-left: 0.4em;
-    
-    }
+}
 .dropdown-btn {
     cursor: pointer;
 }
