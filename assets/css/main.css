@@ -2176,6 +2176,12 @@ ul.posts article header > :last-child {
   margin: 0 0 3em 0;
   position: relative;
 }
+.post img {
+  max-width: 100%;
+}
+.post .modular-row.gallery-container {
+  margin-bottom: 2.75rem;
+}
 .post > header {
   display: -moz-flex;
   display: -ms-flex;
