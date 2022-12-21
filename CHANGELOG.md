@@ -1,3 +1,10 @@
+# v1.0.3
+## --/--/----
+
+1. [](#improved)
+   * Updated Fontawesome CSS.
+   * Updated Demo content
+   * 
 # v1.0.2
 ## 11/09/2022
 
