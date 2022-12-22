@@ -1,4 +1,4 @@
-{% block menu_navigation %}		
+{% block menu_navigation %}
 	{% macro loop(page) %}
 	{% for p in page.children.visible %}
 			{% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
@@ -24,7 +24,7 @@
 	{% endmacro %}
 	<ul class="menulink">
 		{{ _self.loop(pages) }}
-	    {% if theme_var('displaycustommenus.enabled') %}
+	    {% if theme_var('custommenus.enabled') %}
 			{% for mitem in theme_var('menu') %}
 				<li>
 					<a href="{{ mitem.url }}" target="{{ mitem.target }}">
@@ -36,5 +36,5 @@
 				</li>
 			{% endfor %}
 		{% endif %}
-	</ul>   
-{% endblock %}	
+	</ul>
+{% endblock %}

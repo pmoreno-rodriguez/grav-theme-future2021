@@ -15,7 +15,23 @@
         {% include 'partials/breadcrumbs.html.twig' %}
     {% endif %}
 
-    {% include 'partials/blog_item.html.twig' with {'truncate':false} %}
+<article class="post">
+  <header>
+    <div class="title">
+      <h2>{{ page.header.title }}</h2>
+    {% if page.header.subtitle %}
+      <p>{{ page.header.subtitle }}</p>
+    {% endif %}
+    </div>
+  </header>
+    {{ page.content|raw}}
+
+  <section>
+    <div class="modular-row gallery-container {{ page.header.class }}">
+      {{ unite_gallery(page.media.images) }}
+    </div>
+  </section>
+</article>
 
 <section id="footer" class="align-center">
     {% include 'partials/footer.html.twig' %}
