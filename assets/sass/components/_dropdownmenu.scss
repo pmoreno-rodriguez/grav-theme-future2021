@@ -1,19 +1,19 @@
 /* Dropdown menu in header */
 
 #header {
-
+    
     .dropdown {
     @include vendor('flex', '1');
     border-left: solid 1px _palette(border);
     height: inherit;
     line-height: inherit;
-    margin-left: _size(section-spacing-small);
+    margin-left: _size(section-spacing-small); 
         li {
             position: relative;
             float: left;
             text-transform: uppercase;
             font-size: 12pt;
-            height: inherit;
+            height: inherit; 
             a {
                 font-family: _font(family-heading);
                 font-size: 0.8em;
@@ -22,8 +22,8 @@
                 @include vendor('display', 'block');
                 border-bottom: none;
                 padding: 0 0.8rem;
-                height: inherit;
-
+                height: inherit; 
+                
             }
             ul {
                 position: absolute;
@@ -35,9 +35,9 @@
                 line-height: normal;
                 background-color: _palette(bg-dropdown);
                 box-shadow: 0 0.05rem 1rem _palette(border-dropdown) !important;
-
+                
                 li {
-
+                    
                     a {
                     font-family: _font(family-heading);
                     font-size: 0.8em;
@@ -46,25 +46,25 @@
                     text-transform: uppercase;
                     @include vendor('display', 'block');
                     border-bottom: none;
-                    padding: 0.5rem 0.8rem;
-                    line-height: 1.5em;
+                    padding: 0.3rem 0.8rem;
+                    line-height: 2.5em; 
 
                     &:hover {
                         color: #181818;
                         }
-                    }
+                    }   
                     ul {
                         left: 100%;
                         top: 0;
                     }
-
+                    
                 }
             }
-
+            
         }
         ul {
             li {
-
+    
                 margin-left: 0.5em;
                 padding-left: 0.5em;
 
@@ -84,14 +84,14 @@
                     background-color: _palette(bg);
                     box-shadow: 0 0.05rem 1rem _palette(border-dropdown) !important;
                 }
-
+                
             }
         }
     }
     @include breakpoint('<=medium') {
         .dropdown {
-            display: none;
-            }
+            display: none; 
+            } 
         }
     @include breakpoint('<=small') {
         .dropdown {
