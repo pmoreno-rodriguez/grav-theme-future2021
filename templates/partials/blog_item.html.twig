@@ -37,7 +37,6 @@
 {% elseif page.media.images %}
   <a href="{{ page.url }}" class="image featured">{{ page.media.images|first.cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}</a>
 {% endif %}
->>>>>>> parent of 9dc080b... Harmonize and modify twigs
 
 {% if page.header.blog_hide_body is not defined or not page.header.blog_hide_body %}
   <div itemprop="articleBody">
