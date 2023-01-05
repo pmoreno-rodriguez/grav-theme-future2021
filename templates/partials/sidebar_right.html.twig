@@ -37,7 +37,7 @@
 	{% if config.plugins.login.enabled %}
 	<section>
 		<ul class="actions stacked">
-			<li><a href="#" class="button large fit">{{ 'FUTURE.LOGIN'|t }}</a></li>
+			<li><a href="{{ base_url }}/admin" class="button large fit">{{ 'FUTURE.LOGIN'|t }}</a></li>
 		</ul>
 	</section>
 	{% endif %}
@@ -53,5 +53,5 @@
 	$(".dropdown-btn").click(function(){
 		$(this).next(".subitem_hide").slideToggle();
 	});
-{% endif %}			
+{% endif %}
 </script>

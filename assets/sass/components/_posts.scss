@@ -9,11 +9,12 @@
 	ul.posts {
 		list-style: none;
 		padding: 0;
+		margin-bottom: 0.25rem;
 
 		li {
 			border-top: dotted 1px _palette(border);
-			margin: (_size(element-margin) * 0.75) 0 0 0;
-			padding: (_size(element-margin) * 0.75) 0 0 0;
+			margin: (_size(element-margin) * 0.125) 0 0 0;
+			padding: (_size(element-margin) * 0.125) 0 0 0;
 
 			&:first-child {
 				border-top: 0;
@@ -46,6 +47,7 @@
 				h3 {
 					font-size: 0.7em;
 					margin-top: 0.125em;
+					margin-bottom: 0.25em;
 				}
 
 				.published {

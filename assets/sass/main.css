@@ -2635,8 +2635,8 @@ table.alt tfoot {
   text-transform: uppercase;
   display: block;
   border-bottom: none;
-  padding: 0.3rem 0.8rem;
-  line-height: 2.5em;
+  padding: 0.5rem 0.8rem;
+  line-height: 1.5em;
 }
 #header .dropdown li ul li a:hover {
   color: #181818;
