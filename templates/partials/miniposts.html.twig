@@ -6,16 +6,16 @@
         <h3>{{ 'FUTURE.FEATURED'|t }}</h3>
     </header>
     <div class="mini-posts">
-
+    
     {% for p in page.evaluate({'@taxonomy.category':miniposts_category}).order('header.order', 'asc').slice(0,miniposts_number) %}
     <article class="mini-post">
         <header>
             <h3><a href="{{ p.url }}">{{ p.title }}</a></h3>
-            <time class="published" datetime="{{p.date|dateTranslate(grav.config.system.pages.dateformat.short)}}">{{ p.date|dateTranslate(grav.config.system.pages.dateformat.short)}}</time>
+            <time class="published" datetime="2015-10-20">{{ p.date|date("M j, Y")}}</time>
             <a href="{{ p.url }}" class="author"><img src="{{ p.media[p.header.avatarImage].url}}" alt="" /></a>
         </header>
         <a href="{{ p.url }}" class="image">
-
+            
             {% if p.header.primaryImage %}
             {{ p.media[p.header.primaryImage].cropZoom(1038,437).loading('lazy').html('',p.title)|raw}}
             {% else %}
@@ -23,7 +23,7 @@
             {% endif %}
         </a>
     </article>
-
+    
     {% endfor %}
     </div>
 </section>
