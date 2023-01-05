@@ -1,20 +1,21 @@
 enabled: true
-production-mode: false
+production-mode: true
 favicon:
-  user/themes/future2021/images/logo/Grav_logo.png:
+  user/themes/future2021/images/Grav_logo.png:
     name: Grav_logo.png
     type: image/png
     size: 15355
-    path: user/themes/future2021/images/logo/Grav_logo.png
+    path: user/themes/future2021/images/Grav_logo.png
 blog_page: /blog
 slogan: 'AYUDA DE GRAV EN ESPAÑOL'
-custom_logo: {  }
-custom_logo_mobile:
+latestposts: true
+custom_logo:
   user/themes/future2021/images/logo/Grav_logo.png:
     name: Grav_logo.png
     type: image/png
     size: 15355
     path: user/themes/future2021/images/logo/Grav_logo.png
+custom_logo_mobile: {  }
 footer:
   title: ABOUT
   description: 'Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod amet placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at phasellus sed ultricies.'
@@ -34,17 +35,7 @@ social:
     name: Instagram
     url: 'https://www.instagram.com'
     icon: 'fa fa-instagram'
-miniposts: true
-miniposts_number: 3
-latestposts: true
-miniposts_category: minipost
-displaycustommenus:
-  enabled: false
 dropdown:
   enabled: true
-custommenu:
-  -
-    text: Grav
-    icon: arrow-circle-right
-    url: 'https://getgrav.org'
-    target: _blank
+miniposts: true
+miniposts_number: 3
