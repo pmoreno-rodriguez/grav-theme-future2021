@@ -1,13 +1,14 @@
 enabled: true
-production-mode: false
+production-mode: true
 favicon:
-  user/themes/future2021/images/logo/Grav_logo.png:
+  user/themes/future2021/images/Grav_logo.png:
     name: Grav_logo.png
     type: image/png
     size: 15355
-    path: user/themes/future2021/images/logo/Grav_logo.png
+    path: user/themes/future2021/images/Grav_logo.png
 blog_page: /blog
 slogan: 'AYUDA DE GRAV EN ESPAÑOL'
+latestposts: true
 custom_logo:
   user/themes/future2021/images/logo/Grav_logo.png:
     name: Grav_logo.png
@@ -34,9 +35,7 @@ social:
     name: Instagram
     url: 'https://www.instagram.com'
     icon: 'fa fa-instagram'
+dropdown:
+  enabled: true
 miniposts: true
 miniposts_number: 3
-latestposts: true
-miniposts_category: minipost
-displaycustommenus:
-  enabled: true
