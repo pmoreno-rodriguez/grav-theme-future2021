@@ -25,7 +25,7 @@
 	<ul class="menulink">
 		{{ _self.loop(pages) }}
 	    {% if theme_var('displaycustommenus.enabled') %}
-			{% for mitem in theme_var('menu') %}
+			{% for mitem in theme_var('custommenu') %}
 				<li>
 					<a href="{{ mitem.url }}" target="{{ mitem.target }}">
 						{% if mitem.icon %}

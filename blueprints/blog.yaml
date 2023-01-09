@@ -38,7 +38,7 @@ form:
               type: textarea
               yaml: true
               label: FUTURE.ADMIN.BLOG.BLOG_CONTENT_ITEMS
-              default: '-@self.children'
+              default: '@self.children'
               validate:
                 type: yaml
 
