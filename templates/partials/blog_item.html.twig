@@ -1,16 +1,12 @@
 <article class="post"  itemprop="liveBlogUpdate" itemscope itemtype="http://schema.org/BlogPosting">
-    
-    {% if page.header.metadata.author %}
-        {% set author =  page.header.metadata.author %}
-    {% elseif page.header.author %}
-        {% set author =  page.header.author %}
-    {% else %}
-        {% set author =  page.header.taxonomy.author[0] %}
-    {% endif %}
-    
-    {% if author %}
-    {% set avatar = author|replace(' ', '-')|lower %}
-    {% endif %}
+         {% if page.header.author %}
+         {% set author =  page.header.author %}
+         {% else %}
+         {% set author =  page.header.taxonomy.author[0] %}
+         {% endif %}
+         {% if author %}
+         {% set avatar = author|replace(' ', '-')|lower %}
+         {% endif %}
     
     <header>
     <div class="title">
@@ -37,9 +33,9 @@
     </header>
 
         {% if page.header.primaryImage %}
-              <a href="{{ page.url }}">{{ page.media[page.header.primaryImage].cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}</a>
+              <a href="{{ page.url }}" class="image featured">{{ page.media[page.header.primaryImage].cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}</a>
           {% else %}
-              <a href="{{ page.url }}">{{ page.media.images|first.cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}</a>
+              <a href="{{ page.url }}" class="image featured">{{ page.media.images|first.cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}</a>
         {% endif %}
 
          
@@ -60,7 +56,7 @@
     {% endif %}
 
    </div>
-   
+
     <footer>
     <ul class="actions">
     {% if truncate and page.summary != page.content %}
@@ -92,5 +88,6 @@
             </a></li>
     </ul>
 </footer>
+
 
 </article>
