@@ -13,14 +13,6 @@
 		margin: 0 0 _size(section-spacing) 0;
 		position: relative;
 
-		img {
-			max-width: 100%;
-		}
-
-		.modular-row.gallery-container {
-			margin-bottom: 2.75rem;
-		}
-
 		> header {
 			@include vendor('display', 'flex');
 			border-bottom: solid 1px _palette(border);
