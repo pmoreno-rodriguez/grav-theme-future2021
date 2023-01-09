@@ -1,9 +1,9 @@
 {% set miniposts_category = theme_var('miniposts_category') %}
-{%  set miniposts_number = config.theme.miniposts_number %}
+{% set miniposts_number = config.theme.miniposts_number %}
 
 <section>
 <header class="">
-        <h3>{{ 'FUTURE.FEATURED'|t }}</h3>
+    <h3>{{ 'FUTURE.FEATURED'|t }}</h3>
     </header>
     <div class="mini-posts">
     
@@ -11,7 +11,7 @@
     <article class="mini-post">
         <header>
             <h3><a href="{{ p.url }}">{{ p.title }}</a></h3>
-            <time class="published" datetime="2015-10-20">{{ p.date|date("M j, Y")}}</time>
+            <time class="published" datetime="{{p.date|date("Y-m-d")}}">{{ p.date|date("M j, Y")}}</time>
             <a href="{{ p.url }}" class="author"><img src="{{ p.media[p.header.avatarImage].url}}" alt="" /></a>
         </header>
         <a href="{{ p.url }}" class="image">
