@@ -9,24 +9,24 @@
 	</section>
 	<!-- Mini Posts -->
 	{% if theme_config.miniposts == true %}
-		{% block miniposts %}				
-				{% include 'partials/miniposts.html.twig' %}							
+		{% block miniposts %}
+			{% include 'partials/miniposts.html.twig' %}
 		{% endblock %}
 	{% endif %}
 	<!-- About -->
 	{% if theme_config.footer.title or theme_config.footer.description %}
-	<section class="blurb">
-		<h2>{{theme_config.footer.title}}</h2>
-		<p>{{theme_config.footer.description}}</p>
-		<ul class="actions">
-			<li><a href="{{theme_config.footer.button_url}}" class="button">{{theme_config.footer.button_text}}</a></li>
-		</ul>
-	</section>
+		<section class="blurb">
+			<h2>{{theme_config.footer.title}}</h2>
+			<p>{{theme_config.footer.description}}</p>
+			<ul class="actions">
+				<li><a href="{{theme_config.footer.button_url}}" class="button">{{theme_config.footer.button_text}}</a></li>
+			</ul>
+		</section>
 	{% endif %}
 	<!-- Footer -->
 	<section id="footer">
-	{% block footer %}
-		{% include 'partials/footer.html.twig' %}
-	{% endblock %}
-	</section> 
+		{% block footer %}
+			{% include 'partials/footer.html.twig' %}
+		{% endblock %}
+	</section>
 </section>

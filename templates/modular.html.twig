@@ -1,30 +1,32 @@
 {% extends 'partials/base.html.twig' %}
 
 {% set show_onpage_menu = header.onpage_menu == true or header.onpage_menu is null %}
-{% macro pageLinkName(text) %}{{ text|lower|replace({' ':'_'}) }}{% endmacro %}
+{% macro pageLinkName(text) %}
+  {{ text|lower|replace({' ':'_'}) }}
+{% endmacro %}
 
 {% block menu %}
   {% include 'partials/sidebar_right.html.twig' %}
 {% endblock %}
 
 {% block content %}
-    <article class="post">
-      <header>
-        <div class="title">
-        <h2>{{ page.header.title }}</h2>    
-        </div>
-        </header>
+  <article class="post">
+    <header>
+      <div class="title">
+        <h2>{{ page.header.title }}</h2>
+      </div>
+    </header>
 
-            {% if page.header.primaryImage %}
-                {{ page.media[page.header.primaryImage].cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}
-            {% else %}
-                {{ page.media.images|first.cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}
-            {% endif %}
-            {{ page.content|raw}}
-        {% for module in page.collection() %}
-            {{ module.content|raw }}
-        {% endfor %}
-    </article>
+    {% if page.header.primaryImage %}
+      {{ page.media[page.header.primaryImage].cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}
+    {% else %}
+      {{ page.media.images|first.cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}
+    {% endif %}
+    {{ page.content|raw}}
+    {% for module in page.collection() %}
+      {{ module.content|raw }}
+    {% endfor %}
+  </article>
 {% endblock %}
 
 {% block sidebar %}
@@ -32,5 +34,3 @@
     {% include 'partials/sidebar_left.html.twig' %}
   {% endif %}
 {% endblock %}
-
-
