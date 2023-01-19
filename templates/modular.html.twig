@@ -28,7 +28,9 @@
 {% endblock %}
 
 {% block sidebar %}
-  {% include 'partials/sidebar_left.html.twig' %}
+  {% if theme_config.sidebar == true %}
+    {% include 'partials/sidebar_left.html.twig' %}
+  {% endif %}
 {% endblock %}
 
 
