@@ -2,33 +2,30 @@
 {% set base_url = base_url|default(page.url) %}
 
 {% if pagination|length > 1 %}
-
-<ul class="actions pagination">
+  <ul class="actions pagination">
     {% if pagination.hasPrev %}
-        {% set url =  (base_url ~ pagination.params ~ pagination.prevUrl)|replace({'//':'/'}) %}
-        <li><a class="button large previous" rel="prev" href="{{ url }}">{{'FUTURE.BLOG.PAGINATION.PREVIOUS'|t}}</a></li>
+      {% set url =  (base_url ~ pagination.params ~ pagination.prevUrl)|replace({'//':'/'}) %}
+      <li><a class="button large previous" rel="prev" href="{{ url }}">{{'FUTURE.BLOG.PAGINATION.PREVIOUS'|t}}</a></li>
     {% else %}
-        <li><span class="disabled button large">{{'FUTURE.BLOG.PAGINATION.PREVIOUS'|t}}</span></li>
+      <li><span class="disabled button large">{{'FUTURE.BLOG.PAGINATION.PREVIOUS'|t}}</span></li>
     {% endif %}
 
     {% for paginate in pagination %}
-
-        {% if paginate.isCurrent %}
-            <li><span class="disabled button large">{{ paginate.number }}</span></li>
-        {% elseif paginate.isInDelta %}
-            {% set url = (base_url ~ pagination.params ~ paginate.url)|replace({'//':'/'}) %}
-            <li><a class="button large" href="{{ url }}">{{ paginate.number }}</a></li>
-        {% elseif paginate.isDeltaBorder %}
-            <li class="gap"><span>&hellip;</span></li>
-        {% endif %}
-
+      {% if paginate.isCurrent %}
+        <li><span class="disabled button large">{{ paginate.number }}</span></li>
+      {% elseif paginate.isInDelta %}
+        {% set url = (base_url ~ pagination.params ~ paginate.url)|replace({'//':'/'}) %}
+        <li><a class="button large" href="{{ url }}">{{ paginate.number }}</a></li>
+      {% elseif paginate.isDeltaBorder %}
+        <li class="gap"><span>&hellip;</span></li>
+      {% endif %}
     {% endfor %}
-    {% if pagination.hasNext %}
-        {% set url = (base_url ~ pagination.params ~ pagination.nextUrl)|replace({'//':'/'}) %}
-        <li><a class="button large next" rel="next" href="{{ url }}">{{'FUTURE.BLOG.PAGINATION.NEXT'|t}}</a></li>
-    {% else %}
-        <li><span class="disabled button large">{{'FUTURE.BLOG.PAGINATION.NEXT'|t}}</span></li>
-    {% endif %}
-</ul>
 
+    {% if pagination.hasNext %}
+      {% set url = (base_url ~ pagination.params ~ pagination.nextUrl)|replace({'//':'/'}) %}
+      <li><a class="button large next" rel="next" href="{{ url }}">{{'FUTURE.BLOG.PAGINATION.NEXT'|t}}</a></li>
+    {% else %}
+      <li><span class="disabled button large">{{'FUTURE.BLOG.PAGINATION.NEXT'|t}}</span></li>
+    {% endif %}
+  </ul>
 {% endif %}

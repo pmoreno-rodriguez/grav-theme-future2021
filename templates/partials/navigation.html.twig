@@ -1,18 +1,18 @@
 {% import 'macros/topmenu.html.twig' as macros %}
 
 <ul>
-    {{ macros.nav_loop(pages) }}
+  {{ macros.nav_loop(pages) }}
 
-    {% if theme_var('custommenus.enabled') %}
-        {% for mitem in theme_var('custommenu') %}
-            <li>
-                <a href="{{ mitem.url }}" target="{{ mitem.target }}">
-                    {% if mitem.icon %}
-                        <i class="fa fa-{{ mitem.icon }}"></i>
-                    {% endif %}
-                    <span>{{ mitem.text }}</span>
-                </a>
-            </li>
-        {% endfor %}
-    {% endif %}
+  {% if theme_var('custommenus.enabled') %}
+    {% for mitem in theme_var('custommenu') %}
+      <li>
+        <a href="{{ mitem.url }}" target="{{ mitem.target }}">
+          {% if mitem.icon %}
+            <i class="fa fa-{{ mitem.icon }}"></i>
+          {% endif %}
+          <span>{{ mitem.text }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  {% endif %}
 </ul>
