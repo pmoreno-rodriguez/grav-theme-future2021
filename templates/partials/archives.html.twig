@@ -1,27 +1,28 @@
 <section>
-    <ul class="posts">
+  <ul class="posts">
     {% for p in page.find(theme_config.blog_page).children.order('date', 'desc').slice(0, 5) %}
-    
-    {% if p.header.primaryImage %} 
-      {% set bannerimage = p.media[p.header.primaryImage]%}
-   {% else %}
-      {% set bannerimage = p.media.images|first %}
-   {% endif %}
-    <li>
+      {% if p.header.primaryImage %}
+        {% set bannerimage = p.media[p.header.primaryImage]%}
+      {% else %}
+        {% set bannerimage = p.media.images|first %}
+      {% endif %}
+      <li>
         <article>
-           <header>
-         <h3><a href="{{p.url}}">{{ p.title }}</a></h3>
-          {% if plugin.translate_date.enabled %}
-            <time class="published" datetime="{{ p.date|td(null, "Y-m-d") }}">{{ p.date|td }}</time>
-          {% else %}
-            <time class="published" datetime="{{ p.date|date("Y-m-d") }}">{{ p.date|date("M j, Y") }}</time>
-          {% endif %}
-        </header>
-        <a href="{{p.url}}" class="image">
+          <header>
+            <h3>
+              <a href="{{p.url}}">{{ p.title }}</a>
+            </h3>
+            {% if plugin.translate_date.enabled %}
+              <time class="published" datetime="{{ p.date|td(null, "Y-m-d") }}">{{ p.date|td }}</time>
+            {% else %}
+              <time class="published" datetime="{{ p.date|date("Y-m-d") }}">{{ p.date|date("M j, Y") }}</time>
+            {% endif %}
+          </header>
+          <a href="{{p.url}}" class="image">
             {{ bannerimage.cropZoom(64,64).quality(60).loading('lazy').html('',p.title)|raw }}
-        </a>
-       </article>
-    </li>
-   {% endfor %}
-   </ul>
+          </a>
+        </article>
+      </li>
+    {% endfor %}
+  </ul>
 </section>
