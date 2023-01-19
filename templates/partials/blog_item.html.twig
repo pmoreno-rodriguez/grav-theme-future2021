@@ -42,7 +42,7 @@
 
     {% if page.header.primaryImage %}
         <a href="{{ page.url }}">{{ page.media[page.header.primaryImage].cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}</a>
-    {% else %}
+    {% elseif page.media.images %}
         <a href="{{ page.url }}">{{ page.media.images|first.cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}</a>
     {% endif %}
 
