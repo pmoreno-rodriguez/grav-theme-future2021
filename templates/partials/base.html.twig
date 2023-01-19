@@ -19,7 +19,8 @@
 		{% block stylesheets %}	
 			{% do assets.addCss('theme://assets/css/main'~compress) %}
 			{% do assets.addCss('theme://assets/css/fontawesome-all.min.css') %}
-			{% do assets.addCss('theme://assets/css/custom.css', 10) %}
+			{% do assets.addCss('theme://assets/css/misc.css') %}
+			{% do assets.addCss('theme://assets/css/custom.css', 5) %}
 			{% if page.template() == 'portfolio' %} 
 				 {% do assets.addCss('theme://assets/css/glightbox.min.css') %}
 			{% endif %}

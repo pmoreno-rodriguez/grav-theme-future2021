@@ -16,7 +16,7 @@
     position: fixed;
     bottom: 30px;
     right: 30px;
-    transition: background-color .3s, 
+    transition: background-color .3s,
       opacity .5s, visibility .5s;
     opacity: 0;
     visibility: hidden;
@@ -66,7 +66,6 @@
 .search-row {
   display: flex;
   align-items: top;
-  
 }
 .search-image img {
   overflow:hidden;
@@ -76,7 +75,7 @@
   object-position: 0 100%;
 }
 @media only all and (max-width: 47.938em) {
-  .search-image img {display:none;} 
+  .search-image img {display:none;}
 }
 .search-item {
   margin-left: 30px;
