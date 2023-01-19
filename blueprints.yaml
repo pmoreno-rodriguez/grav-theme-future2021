@@ -20,7 +20,7 @@ dependencies:
 form:
   validation: loose
 
-  fields:    
+  fields:
     production-mode:
       type: toggle
       label: FUTURE.ADMIN.THEME.PRODUCTION_MODE
@@ -34,47 +34,54 @@ form:
         type: bool
 
     header_section:
-      type: section
-      title: FUTURE.ADMIN.THEME.HEADER_SECTION
-      underline: true
+      type: fieldset
+      collapsible: true
+      collapsed: true
+      icon: header
+      title: FUTURE.ADMIN.THEME.HEADER
+      fields:
 
-    favicon:
-      type: file
-      label: FUTURE.ADMIN.THEME.FAVICON
-      destination: 'theme@:/images'
-      multiple: false
-      avoid_overwriting: false
-      random_name: false
-      toggleable: true
-      filesize: 3
-      accept: ['image/png', '.ico']
- 
-    custom_logo:
-      type: file
-      label: FUTURE.ADMIN.THEME.CUSTOM_LOGO
-      size: large
-      destination: 'theme://images/logo'
-      multiple: false
-      markdown: true
-      description: FUTURE.ADMIN.THEME.CUSTOM_LOGO_DESCRIPTION
-      accept:
-        - image/*
+        favicon:
+          type: file
+          label: FUTURE.ADMIN.THEME.FAVICON
+          destination: 'theme@:/images'
+          multiple: false
+          avoid_overwriting: false
+          random_name: false
+          toggleable: true
+          filesize: 3
+          accept: ['image/png', '.ico']
 
-    custom_logo_mobile:
-      type: file
-      label: FUTURE.ADMIN.THEME.CUSTOM_LOGO_MOBILE
-      size: large
-      destination: 'theme://images/logo'
-      multiple: false
-      accept:
-        - image/*
-        
-    slogan:
-      type: text
-      label: FUTURE.ADMIN.THEME.SLOGAN
+        custom_logo:
+          type: file
+          label: FUTURE.ADMIN.THEME.CUSTOM_LOGO
+          size: large
+          destination: 'theme://images/logo'
+          multiple: false
+          markdown: true
+          description: FUTURE.ADMIN.THEME.CUSTOM_LOGO_DESCRIPTION
+          accept:
+            - image/*
+
+        custom_logo_mobile:
+          type: file
+          label: FUTURE.ADMIN.THEME.CUSTOM_LOGO_MOBILE
+          size: large
+          destination: 'theme://images/logo'
+          multiple: false
+          accept:
+            - image/*
+
+        slogan:
+          type: text
+          label: FUTURE.ADMIN.THEME.SLOGAN
 
     blog_section:
-      type: columns
+      type: fieldset
+      collapsible: true
+      collapsed: true
+      icon: rss
+      title: FUTURE.ADMIN.THEME.BLOG_DEFAULTS
       fields:
         blog_fields:
           type: column
@@ -87,136 +94,146 @@ form:
               title: FUTURE.ADMIN.THEME.BLOG_DEFAULTS
               fields:
 
-                blog_page:
-                  type: text
-                  label: FUTURE.ADMIN.THEME.BLOG_PAGE
-                  help: FUTURE.ADMIN.THEME.BLOG_PAGE_DESCRIPTION
-                  size: medium
-                  default: '/blog'
+        blog_page:
+          type: text
+          label: FUTURE.ADMIN.THEME.BLOG_PAGE
+          help: FUTURE.ADMIN.THEME.BLOG_PAGE_HELP
+          size: medium
+          default: '/blog'
 
-                miniposts:
-                  type: toggle
-                  label: FUTURE.ADMIN.THEME.MINIPOSTS
-                  highlight: 1
-                  default: 1
-                  options:
-                    1: PLUGIN_ADMIN.ENABLED
-                    0: PLUGIN_ADMIN.DISABLED
-                  validate:
-                    type: bool
-                miniposts_category:
-                  type: text
-                  markdown: true
-                  label: FUTURE.ADMIN.THEME.MINIPOSTS_CATEGORY
-                  description: FUTURE.ADMIN.THEME.MINIPOSTS_CATEGORY_DESCRIPTION
-                  size: medium
-                  default: 'minipost'
+        sidebar:
+          type: toggle
+          label: FUTURE.ADMIN.THEME.SIDEBAR
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
 
-                miniposts_number:
-                  type: range
-                  label: FUTURE.ADMIN.THEME.MINIPOSTS_NUMBER
-                  description: FUTURE.ADMIN.THEME.MINIPOSTS_NUMBER_DESCRIPTION
-                  default: 3
-                  validate:
-                    min: 1
-                    max: 5
-        
-    footer_section:
-      type: columns
-      fields:
-        footer_fields:
-          type: column
-          fields:
-            footer:
-              type: fieldset
-              collapsible: true
-              collapsed: true
-              icon: list-alt
-              title: FUTURE.ADMIN.THEME.FOOTER
-              fields:
-                footer.title:
-                  type: text
-                  label: FUTURE.ADMIN.THEME.FOOTER_TITLE
-                footer.description:
-                  type: textarea
-                  rows: 5
-                  markdown: true
-                  label: FUTURE.ADMIN.THEME.FOOTER_DESCRIPTION
-                footer.copyright_text:
-                  type: text
-                  label: FUTURE.ADMIN.THEME.FOOTER_COPYRIGHT
-                footer.button_text:
-                  type: text
-                  label: FUTURE.ADMIN.THEME.FOOTER_BUTTON_TEXT
-                footer.button_url:
-                  type: text
-                  label: FUTURE.ADMIN.THEME.FOOTER_BUTTON_URL
-    social_icons:
-        type: fieldset
-        collapsible: true
-        collapsed: true
-        icon: share-alt
-        title: FUTURE.ADMIN.THEME.FOOTER_SOCIALS_ICONS
-        fields:
-          social:
-            name: social
-            type: list
-            style: vertical
-            collapsed: false
+        miniposts:
+          type: toggle
+          label: FUTURE.ADMIN.THEME.MINIPOSTS
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+
+        miniposts_category:
+          type: text
+          markdown: true
+          label: FUTURE.ADMIN.THEME.MINIPOSTS_CATEGORY
+          description: FUTURE.ADMIN.THEME.MINIPOSTS_CATEGORY_DESCRIPTION
+          size: medium
+          default: 'minipost'
+
+        miniposts_number:
+          type: range
+          label: FUTURE.ADMIN.THEME.MINIPOSTS_NUMBER
+          description: FUTURE.ADMIN.THEME.MINIPOSTS_NUMBER_DESCRIPTION
+          default: 3
+          validate:
+            min: 1
             max: 5
-            fields:
-              .name:
-                type: text
-                label: FUTURE.ADMIN.THEME.FOOTER_SOCIALS_ICON_NAME
-              .url:
-                type: text
-                label: FUTURE.ADMIN.THEME.FOOTER_SOCIALS_ICON_URL
-              .icon:
-                type: iconpicker
-                label: FUTURE.ADMIN.THEME.FOOTER_SOCIALS_ICON_ICON
-    custommenu_options:
+
+    footer_section:
+      type: fieldset
+      collapsible: true
+      collapsed: true
+      icon: list-alt
+      title: FUTURE.ADMIN.THEME.FOOTER
+      fields:
+
+        footer.title:
+          type: text
+          label: FUTURE.ADMIN.THEME.FOOTER_TITLE
+        footer.description:
+          type: textarea
+          rows: 5
+          markdown: true
+          label: FUTURE.ADMIN.THEME.FOOTER_DESCRIPTION
+        footer.copyright_text:
+          type: text
+          label: FUTURE.ADMIN.THEME.FOOTER_COPYRIGHT
+        footer.button_text:
+          type: text
+          label: FUTURE.ADMIN.THEME.FOOTER_BUTTON_TEXT
+        footer.button_url:
+          type: text
+          label: FUTURE.ADMIN.THEME.FOOTER_BUTTON_URL
+
+    social_icons_section:
+      type: fieldset
+      collapsible: true
+      collapsed: true
+      icon: share-alt
+      title: FUTURE.ADMIN.THEME.FOOTER_SOCIALS_ICONS
+      fields:
+
+        social:
+          name: social
+          type: list
+          style: vertical
+          collapsed: false
+          max: 5
+          fields:
+            .name:
+              type: text
+              label: FUTURE.ADMIN.THEME.FOOTER_SOCIALS_ICON_NAME
+            .url:
+              type: text
+              label: FUTURE.ADMIN.THEME.FOOTER_SOCIALS_ICON_URL
+            .icon:
+              type: iconpicker
+              label: FUTURE.ADMIN.THEME.FOOTER_SOCIALS_ICON_ICON
+
+    custommenu_options_section:
       type: fieldset
       collapsible: true
       collapsed: true
       icon: bars
-      title: 'Custom Menu Items'
+      title: FUTURE.ADMIN.THEME.CUSTOM_MENU_TITLE
       fields:
+
         custommenus.enabled:
           type: toggle
-          label: 'Display Custom Menu Items'
-          help: 'Determines if any defined custom menu entries are displayed in the menubar.'
+          label: FUTURE.ADMIN.THEME.CUSTOM_MENU_ENABLE
+          help: FUTURE.ADMIN.THEME.CUSTOM_MENU_ENABLE_HELP
           default: 0
           highlight: 1
           options:
-            '0': No
-            '1': Yes
+            0: PLUGIN_ADMIN.DISABLED
+            1: PLUGIN_ADMIN.ENABLED
           validate:
             type: bool
         custommenu:
           name: menu
           type: list
-          label: 'Custom Menu Items'
+          label: FUTURE.ADMIN.THEME.CUSTOM_MENU_TITLE
           fields:
             .text:
               type: text
-              label: Text
-              description: 'Text label for menu item.'
+              label: FUTURE.ADMIN.THEME.CUSTOM_MENU_ITEM_TEXT
+              description: FUTURE.ADMIN.THEME.CUSTOM_MENU_ITEM_TEXT_DESCRIPTION
             .icon:
               type: text
-              label: Icon
-              description: 'Font Awesome icon for menu item.'
+              label: FUTURE.ADMIN.THEME.CUSTOM_MENU_ITEM_ICON
+              description: FUTURE.ADMIN.THEME.CUSTOM_MENU_ITEM_ICON_DESCRIPTION
             .url:
               type: text
-              label: URL
-              description: 'URL for menu item.'
+              label: FUTURE.ADMIN.THEME.CUSTOM_MENU_ITEM_URL
+              description: FUTURE.ADMIN.THEME.CUSTOM_MENU_ITEM_URL_DESCRIPTION
             .target:
               type: select
-              label: Target
+              label: FUTURE.ADMIN.THEME.CUSTOM_MENU_ITEM_TARGET
               default: _self
               size: medium
               options:
-                _blank: 'Open in a new window'
-                _parent: 'Open in the parent frame'
-                _top: 'Open in the full body of the window'
-                _self: 'Open in the same frame as clicked'
-
+                _blank: FUTURE.ADMIN.THEME.CUSTOM_MENU_ITEM_TARGET_BLANK
+                _parent: FUTURE.ADMIN.THEME.CUSTOM_MENU_ITEM_TARGET_PARENT
+                _self: FUTURE.ADMIN.THEME.CUSTOM_MENU_ITEM_TARGET_SELF
+                _top: FUTURE.ADMIN.THEME.CUSTOM_MENU_ITEM_TARGET_TOP

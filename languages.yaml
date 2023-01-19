@@ -5,7 +5,7 @@ en:
         DROPDOWN_MENU: Dropdown menu
         PRODUCTION_MODE: Production Mode
         PRODUCTION_MODE_HELP: When enabled, Future will render with minified CSS
-        HEADER_SECTION: Header Section
+        HEADER: Header
         FAVICON: Choose your own favicon
         CUSTOM_LOGO: Custom Logo
         CUSTOM_LOGO_DESCRIPTION: Will be used instead of default logo `theme://images/grav-logo.svg`
@@ -13,8 +13,9 @@ en:
         SLOGAN: Slogan
         BLOG_DEFAULTS: Blog Defaults
         BLOG_PAGE: Blog Page
-        BLOG_PAGE_DESCRIPTION: The route to the blog page when working with blog sidebar
-        MINIPOSTS: Enable Miniposts in Sidebar
+        BLOG_PAGE_HELP: The route to the blog page when working with blog sidebar
+        SIDEBAR: Show sidebar on blog page
+        MINIPOSTS: Show miniposts in sidebar
         MINIPOSTS_NUMBER: Miniposts number to show
         MINIPOSTS_NUMBER_DESCRIPTION: Number of miniposts that will be showed in sidebar
         MINIPOSTS_CATEGORY: Miniposts category
@@ -29,6 +30,20 @@ en:
         FOOTER_SOCIALS_ICON_NAME: Social Name
         FOOTER_SOCIALS_ICON_URL: URL Link to Social
         FOOTER_SOCIALS_ICON_ICON: Icon to Social
+        CUSTOM_MENU_TITLE: 'Custom Menu Items'
+        CUSTOM_MENU_ENABLE: 'Display Custom Menu Items'
+        CUSTOM_MENU_ENABLE_HELP: 'Determines if any defined custom menu entries are displayed in the menubar.'
+        CUSTOM_MENU_ITEM_TEXT: 'Text'
+        CUSTOM_MENU_ITEM_TEXT_DESCRIPTION: 'Text label for menu item.'
+        CUSTOM_MENU_ITEM_ICON: 'Icon'
+        CUSTOM_MENU_ITEM_ICON_DESCRIPTION: 'Font Awesome icon for menu item.'
+        CUSTOM_MENU_ITEM_URL: 'URL'
+        CUSTOM_MENU_ITEM_URL_DESCRIPTION: 'URL for menu item.'
+        CUSTOM_MENU_ITEM_TARGET: 'Target'
+        CUSTOM_MENU_ITEM_TARGET_BLANK: 'Open in a new window'
+        CUSTOM_MENU_ITEM_TARGET_PARENT: 'Open in the parent frame'
+        CUSTOM_MENU_ITEM_TARGET_SELF: 'Open in the same frame as clicked'
+        CUSTOM_MENU_ITEM_TARGET_TOP: 'Open in the full body of the window'
       DEFAULT:
         PRIMARY_IMAGE: Primary image
       MODULAR:
@@ -51,7 +66,6 @@ en:
           FEATURES_BUTTON_TEXT: Button Text
           FEATURES_BUTTON_URL: Button URL
           FEATURES_BUTTON_URL_TARGET: Open URL in a new window
-          
 
       BLOG:
         BLOG_TAB: Blog Config
@@ -92,7 +106,7 @@ en:
         PORTFOLIO_IMAGE_TITLE: Title
         PORTFOLIO_IMAGE_DESCRIPTION: Description
         PORTFOLIO_IMAGE_THUMB: Thumbnails
-        
+
     BLOG:
       ITEM:
         CONTINUE_READING: Continue reading...
@@ -120,11 +134,155 @@ en:
         HEADLINE: Archives
       SYNDICATE:
         HEADLINE: Syndicate
+
     LOGIN: Log in
     LATESTPOSTS: Latest posts
     FEATURED: Featured
-    PRIVACY: By using this form you agree to our
+    PRIVACY: By using this form you agree our terms
     FORM_SUMMARY: Here is the summary of what you wrote to us
+
+de:
+  FUTURE:
+    ADMIN:
+      THEME:
+        DROPDOWN_MENU: Dropdown-Menü
+        PRODUCTION_MODE: Produktionsmodus
+        PRODUCTION_MODE_HELP: Wenn aktiviert, wird Future mit minimiertem CSS geladen
+        HEADER: Kopfzeile
+        FAVICON: Wählen Sie Ihr eigenes Favicon
+        CUSTOM_LOGO: Benutzerdefiniertes Logo
+        CUSTOM_LOGO_DESCRIPTION: Dieses Logo wird anstelle des Standardlogos `theme://images/grav-logo.svg` verwendet
+        CUSTOM_LOGO_MOBILE: Benutzerdefiniertes Logo für Mobilgeräte
+        SLOGAN: Motto
+        BLOG_DEFAULTS: Blog-Optionen
+        BLOG_PAGE: Blog-Seite
+        BLOG_PAGE_HELP: Der Pfad zur Blog-Seite wenn die Blog-Seitenleiste aktiv ist
+        SIDEBAR: Seitenleiste auf der Blog-Seite zeigen
+        MINIPOSTS: Miniposts in der Seitenleiste zeigen
+        MINIPOSTS_NUMBER: Anzahl der anzuzeigenden Miniposts
+        MINIPOSTS_NUMBER_DESCRIPTION: Anzahl der in der Seitenleiste anzuzeigenden Miniposts
+        MINIPOSTS_CATEGORY: Kategorie für Miniposts
+        MINIPOSTS_CATEGORY_DESCRIPTION: Legen Sie einen Namen für die Miniposts-Kategorie fest.<br />`Sie müssen diesen Namen in Optionen->Taxonomie->Kategorie einfügen`
+        FOOTER: Fusszeile
+        FOOTER_TITLE: Fusszeilentitel
+        FOOTER_DESCRIPTION: Fusszeilentext
+        FOOTER_COPYRIGHT: Copyright-Text
+        FOOTER_BUTTON_TEXT: Schaltflächentext
+        FOOTER_BUTTON_URL: Schaltflächen-URL
+        FOOTER_SOCIALS_ICONS: Symbole für soziale Medien
+        FOOTER_SOCIALS_ICON_NAME: Name des sozialen Netzwerks
+        FOOTER_SOCIALS_ICON_URL: URL-Link zum sozialen Netzwerk
+        FOOTER_SOCIALS_ICON_ICON: Symbol des sozialen Netzwerks
+        CUSTOM_MENU_TITLE: 'Benutzerdefinierte Menüpunkte'
+        CUSTOM_MENU_ENABLE: 'Benutzerdefinierte Menüpunkte aktivieren'
+        CUSTOM_MENU_ENABLE_HELP: 'Legt fest, ob definierte benutzerdefinierte Menüeinträge in der Menüleiste angezeigt werden.'
+        CUSTOM_MENU_ITEM_TEXT: 'Text'
+        CUSTOM_MENU_ITEM_TEXT_DESCRIPTION: 'Textbeschriftung für Menüpunkt.'
+        CUSTOM_MENU_ITEM_ICON: 'Symbol'
+        CUSTOM_MENU_ITEM_ICON_DESCRIPTION: 'FontAwesome-Symbol für Menüelement.'
+        CUSTOM_MENU_ITEM_URL: 'URL'
+        CUSTOM_MENU_ITEM_URL_DESCRIPTION: 'URL für Menüpunkt.'
+        CUSTOM_MENU_ITEM_TARGET: 'Ziel'
+        CUSTOM_MENU_ITEM_TARGET_BLANK: 'In neuem Fenster öffnen'
+        CUSTOM_MENU_ITEM_TARGET_PARENT: 'In übergeordnetem Frame öffnen'
+        CUSTOM_MENU_ITEM_TARGET_SELF: 'In selbem Frame öffnen'
+        CUSTOM_MENU_ITEM_TARGET_TOP: 'In vollem Fensterkörper öffnen'
+      DEFAULT:
+        PRIMARY_IMAGE: Hauptbild
+      MODULAR:
+        BANNER:
+          BANNER_TAB: Banner
+          BANNER_SUBTITLE: Bildbeschriftung
+          BANNER_BUTTON_TEXT: Schaltflächentext
+          BANNER_BUTTON_URL: Schaltflächen-URL
+          BANNER_IMAGE: Bild
+          BANNER_IMAGE_DESCRIPTION: Wählen Sie ein Bild aus
+        FEATURES:
+          FEATURES_TAB: Funktionen
+          FEATURES_LAYOUT: Layout
+          FEATURES_LAYOUT_TWOCOLS: Mittel   = 2 / 1 Spalten
+          FEATURES_LAYOUT_THREECOLS: Standard  = 3 / 2 / 1 Spalten
+          FEATURES_HEADER: Funktionen
+          FEATURES_IMAGE: Bild
+          FEATURES_TITLE: Titel
+          FEATURES_TEXT: Text
+          FEATURES_BUTTON_TEXT: Schaltflächentext
+          FEATURES_BUTTON_URL: Schaltflächen-URL
+          FEATURES_BUTTON_URL_TARGET: Öffnen Sie die URL in einem neuen Fenster
+
+      BLOG:
+        BLOG_TAB: Blog-Einstellungen
+        BLOG_CONTENT_TITLE: Content Definition
+        BLOG_CONTENT_ITEMS: Artikel
+        BLOG_CONTENT_ITEMS_LIMIT: Maximale Artikel-Anzahl
+        BLOG_CONTENT_ITEMS_ORDER_BY: Sortieren nach
+        BLOG_CONTENT_ITEMS_ORDER_BY_DATE: Datum
+        BLOG_CONTENT_ITEMS_ORDER_BY_TITLE: Titel
+        BLOG_CONTENT_ITEMS_ORDER_BY_FOLDER: Verzeichnis
+        BLOG_CONTENT_ITEMS_ORDER_BY_DEFAULT: Standard
+        BLOG_CONTENT_ITEMS_ORDER_DIR: Reihenfolge
+        BLOG_CONTENT_ITEMS_ORDER_DIR_ASC: Aufsteigend
+        BLOG_CONTENT_ITEMS_ORDER_DIR_DESC: Absteigend
+        BLOG_CONTENT_ITEMS_PAGINATION: Seitennummerierung
+        BLOG_CONTENT_ITEMS_URL_TAXONOMY_FILTERS: Taxonomie filtern nach URL
+      ITEM:
+        ITEM_TAB: Blog-Artikel
+        ITEM_OPTIONS: Optionen
+        ITEM_SUMMARY: Artikelzusammenfassung
+        ITEM_SUMMARY_ENABLED: Zusammenfassung aktivieren
+        ITEM_SUMMARY_FORMAT: Zusammenfassungsformat
+        ITEM_SUMMARY_FORMAT_SHORT: Verwenden Sie das erste Vorkommen des Trennzeichens oder der Größe
+        ITEM_SUMMARY_FORMAT_LONG: Zusammenfassungsbegrenzer wird ignoriert
+        ITEM_SUMMARY_SIZE: Größe
+        ITEM_SUMMARY_DELIMITER: Zusammenfassungsbegrenzer
+        ITEM_ORDER: Minipost-Reihenfolge
+        ITEM_SUBTITLE: Untertitel
+        ITEM_AVATAR: Avatar-Bild
+      PORTFOLIO:
+        PORTFOLIO_TAB: Portfolio
+        PORTFOLIO_TITLE: Portfolio-Bild
+        PORTFOLIO_LAYOUT: Layout
+        PORTFOLIO_LAYOUT_TWOCOLS: Mittel   = 2 / 1 Spalten
+        PORTOFOLIO_LAYOUT_THREECOLS: Standard  = 3 / 2 / 1 Spalten
+        PORTFOLIO_IMAGES: Bilder
+        PORTFOLIO_IMAGE: Bild
+        PORTFOLIO_IMAGE_TITLE: Titel
+        PORTFOLIO_IMAGE_DESCRIPTION: Beschreibung
+        PORTFOLIO_IMAGE_THUMB: Miniaturansicht
+
+    BLOG:
+      ITEM:
+        CONTINUE_READING: Weiterlesen...
+        NEXT_POST: Nächster Eintrag
+        PREV_POST: Vorheriger Eintrag
+      PAGINATION:
+        PREVIOUS: Vorherige
+        NEXT: Nächste
+
+    SIDEBAR:
+      SIMPLE_SEARCH:
+        HEADLINE: Suche
+      RELATED_POSTS:
+        HEADLINE: Verwandte Einträge
+      RANDOM_ARTICLE:
+        HEADLINE: Zufälliger Artikel
+        FEELING_LUCKY: Ich habe Glück!
+      SOME_TEXT_WIDGET:
+        HEADLINE: Ein Text-Widget
+      TAGS:
+        HEADLINE: Schlagworte
+      POPULAR_TAGS:
+        HEADLINE: beliebte Schlagworte
+      ARCHIVES:
+        HEADLINE: Letzte Einträge
+      SYNDICATE:
+        HEADLINE: Verteilen
+
+    LOGIN: Einloggen
+    LATESTPOSTS: Letzte Beiträge
+    FEATURED: Hervorgehoben
+    PRIVACY: Durch die Nutzung dieses Formulars stimmen Sie unseren Bedingungen zu
+    FORM_SUMMARY: Hier ist die Zusammenfassung dessen, was Sie uns geschrieben haben
 
 es:
   FUTURE:
@@ -133,7 +291,7 @@ es:
         DROPDOWN_MENU: Menu Desplegable
         PRODUCTION_MODE: Modo Producción
         PRODUCTION_MODE_HELP: Si está activado, Future cargará con CSS minificado
-        HEADER_SECTION: Sección de encabezado
+        HEADER: Sección de encabezado
         FAVICON: Elige tu propio favicon
         CUSTOM_LOGO: Logo personalizado
         CUSTOM_LOGO_DESCRIPTION: Este logo se usará en lugar del log por defecto `theme://images/grav-logo.svg`
@@ -141,7 +299,7 @@ es:
         SLOGAN: Slogan
         BLOG_DEFAULTS: Opciones de Blog
         BLOG_PAGE: Página de Blog
-        BLOG_PAGE_DESCRIPTION: Ruta de la página de Blog cuando funciona con el blog de barra lateral
+        BLOG_PAGE_HELP: Ruta de la página de Blog cuando funciona con el blog de barra lateral
         MINIPOSTS: Activar Miniposts en la barra lateral
         MINIPOSTS_NUMBER: Número de miniposts a mostrar
         MINIPOSTS_NUMBER_DESCRIPTION: Número de miniposts que se mostrarán en la barra lateral
@@ -220,7 +378,6 @@ es:
         PORTFOLIO_IMAGE_DESCRIPTION: Descripción
         PORTFOLIO_IMAGE_THUMB: Miniatura
 
-             
     BLOG:
       ITEM:
         CONTINUE_READING: Continuar leyendo...
@@ -229,6 +386,7 @@ es:
       PAGINATION:
         PREVIOUS: Anterior
         NEXT: Siguiente
+
     SIDEBAR:
       SIMPLE_SEARCH:
         HEADLINE: Buscar
@@ -247,9 +405,10 @@ es:
         HEADLINE: Últimas entradas
       SYNDICATE:
         HEADLINE: Distribuir
+
     LOGIN: Iniciar sesión
     LATESTPOSTS: Últimos posts
     FEATURED: Destacados
     PRIVACY: Al usar este formulario estás de acuerdo con nuestra
-    FORM_SUMMARY: Aquí está el resumen de lo que nos escribió.
+    FORM_SUMMARY: Aquí está el resumen de lo que nos escribió
 
