@@ -181,7 +181,7 @@ form:
       icon: bars
       title: 'Custom Menu Items'
       fields:
-        displaycustommenus.enabled:
+        custommenus.enabled:
           type: toggle
           label: 'Display Custom Menu Items'
           help: 'Determines if any defined custom menu entries are displayed in the menubar.'
