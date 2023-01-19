@@ -1,10 +1,10 @@
 <section id="menu">
+	{% if config.plugins.simplesearch.enabled %}
 	<!-- Search -->
 	<section>
-		{% if config.plugins.simplesearch.enabled %}
-			{% include 'partials/simplesearch_searchbox_sidebar.html.twig' %}
-		{% endif %}
+		{% include 'partials/simplesearch_searchbox_sidebar.html.twig' %}
 	</section>
+	{% endif %}
 	<!-- Links -->
 	<section id="sidebarmenu">
 		{% include 'partials/sidebar_navigation.html.twig' %}
