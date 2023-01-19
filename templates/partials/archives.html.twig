@@ -11,7 +11,11 @@
         <article>
            <header>
          <h3><a href="{{p.url}}">{{ p.title }}</a></h3>
-        <time class="published" datetime="{{p.date|date("Y-m-d")}}">{{ p.date|date("M j, Y")}}</time>
+          {% if plugin.translate_date.enabled %}
+            <time class="published" datetime="{{ p.date|td(null, "Y-m-d") }}">{{ p.date|td }}</time>
+          {% else %}
+            <time class="published" datetime="{{ p.date|date("Y-m-d") }}">{{ p.date|date("M j, Y") }}</time>
+          {% endif %}
         </header>
         <a href="{{p.url}}" class="image">
             {{ bannerimage.cropZoom(64,64).quality(60).loading('lazy').html('',p.title)|raw }}

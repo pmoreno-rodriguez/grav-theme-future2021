@@ -13,7 +13,11 @@
         </div>
 
         <div class="search-details">
+        {% if plugin.translate_date.enabled %}
+            <span class="search-date">{{ page.date|td(null, config.system.pages.dateformat.short) }}</span>
+        {% else %}
             <span class="search-date">{{ page.date|date(config.system.pages.dateformat.short) }}</span>
+        {% endif %}
         </div>
 
         <p>{{ page.summary|truncate(200)|raw }}</p>
