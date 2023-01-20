@@ -32,6 +32,12 @@
       {% include 'partials/simplesearch_item.html.twig' with {'page':page} %}
     {% endfor %}
   </article>
+
+  {% if theme_config.sidebar == false %}
+    <section id="footer" class="align-center">
+      {% include 'partials/footer.html.twig' %}
+    </section>
+  {% endif %}
 {% endblock %}
 
 {% block sidebar %}
