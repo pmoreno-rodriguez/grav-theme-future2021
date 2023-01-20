@@ -46,9 +46,9 @@
   </header>
 
   {% if page.header.primaryImage %}
-    <a href="{{ page.url }}" class="image featured">{{ page.media[page.header.primaryImage].cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}</a>
+    <a href="{{ page.url }}">{{ page.media[page.header.primaryImage].cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}</a>
   {% elseif page.media.images %}
-    <a href="{{ page.url }}" class="image featured">{{ page.media.images|first.cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}</a>
+    <a href="{{ page.url }}">{{ page.media.images|first.cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}</a>
   {% endif %}
 
   <div itemprop="articleBody">
