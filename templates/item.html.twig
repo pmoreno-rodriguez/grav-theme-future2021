@@ -1,4 +1,4 @@
-{% embed 'partials/base.html.twig' %}
+{% extends 'partials/base.html.twig' %}
     {% set base_url = page.parent.url %}
     {% set feed_url = base_url %}
     {% set show_breadcrumbs = header_var('show_breadcrumbs', [page, blog]) %}
@@ -27,5 +27,3 @@
             {% include 'partials/footer.html.twig' %}
         </section>
         {% endblock %}
-
-{% endembed %}
