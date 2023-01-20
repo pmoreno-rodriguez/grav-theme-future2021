@@ -83,16 +83,6 @@ form:
       icon: rss
       title: FUTURE.ADMIN.THEME.BLOG_DEFAULTS
       fields:
-        blog_fields:
-          type: column
-          fields:
-            blog:
-              type: fieldset
-              collapsible: true
-              collapsed: true
-              icon: rss
-              title: FUTURE.ADMIN.THEME.BLOG_DEFAULTS
-              fields:
 
         blog_page:
           type: text
