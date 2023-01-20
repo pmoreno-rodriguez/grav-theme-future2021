@@ -3,16 +3,16 @@
 {% block header %}{% endblock %}
 
 {% block content %}
-<article class="post">
+  <article class="post">
     <header>
-        <div class="title"> 
-            <h1 class="logo"><a href="{{ home_url }}">{{ site.title }}</a></h1>
-            <h2>Error {{ page.header.http_response_code }}</h2>
-            <p>{{ page.content|raw }}</p>
-        </div>
+      <div class="title">
+        <h1 class="logo"><a href="{{ home_url }}">{{ site.title }}</a></h1>
+        <h2>Error {{ page.header.http_response_code }}</h2>
+        <p>{{ page.content|raw }}</p>
+      </div>
     </header>
-</article>
-<section id="footer" class="align-center">
-   {% include 'partials/footer.html.twig' %}
-</section>
+  </article>
+  <section id="footer" class="align-center">
+    {% include 'partials/footer.html.twig' %}
+  </section>
 {% endblock %}

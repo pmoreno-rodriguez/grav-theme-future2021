@@ -5,12 +5,12 @@
 {% endblock %}
 
 {% block content %}
-<article class="post">
+  <article class="post">
     <header>
-        <div class="title"> 
-            <h2><span class="icon fa-exclamation-triangle"></span> Error {{ page.header.http_response_code }}</h2>
-            <p>{{ page.content|raw }}</p>
-        </div>
+      <div class="title">
+        <h2><span class="icon fa-exclamation-triangle"></span> Error {{ page.header.http_response_code }}</h2>
+        <p>{{ page.content|raw }}</p>
+      </div>
     </header>
-</article>
+  </article>
 {% endblock %}

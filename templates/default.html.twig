@@ -8,22 +8,24 @@
   <article class="post">
     <header>
       <div class="title">
-      <h2>{{ page.header.title }}</h2>  
-      {% if page.header.subtitle %}
-        <p>{{ page.header.subtitle }}</p>
-      {% endif %}  
+        <h2>{{ page.header.title }}</h2>
+        {% if page.header.subtitle %}
+          <p>{{ page.header.subtitle }}</p>
+        {% endif %}
       </div>
+    </header>
 
-      </header>
-            {% if page.header.primaryImage %}
-                {{ page.media[page.header.primaryImage].cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}
-            {% else %}
-                {{ page.media.images|first.cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}
-            {% endif %}
-            {{ page.content|raw}}
-            
+    {% if page.header.primaryImage %}
+      {{ page.media[page.header.primaryImage].cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}
+    {% else %}
+      {{ page.media.images|first.cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}
+    {% endif %}
+
+    {{ page.content|raw }}
+
   </article>
+
   <section id="footer" class="align-center">
-          {% include 'partials/footer.html.twig' %}
-  </section> 
+    {% include 'partials/footer.html.twig' %}
+  </section>
 {% endblock %}

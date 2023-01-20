@@ -1,11 +1,11 @@
 <article class="post" itemprop="liveBlogUpdate" itemscope itemtype="http://schema.org/BlogPosting">
 
   {% if page.header.metadata.author %}
-    {% set author =  page.header.metadata.author %}
+    {% set author = page.header.metadata.author %}
   {% elseif page.header.author %}
-    {% set author =  page.header.author %}
+    {% set author = page.header.author %}
   {% else %}
-    {% set author =  page.header.taxonomy.author[0] %}
+    {% set author = page.header.taxonomy.author[0] %}
   {% endif %}
 
   {% if author %}
