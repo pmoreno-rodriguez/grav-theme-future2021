@@ -6,7 +6,7 @@ use Grav\Common\Theme;
 
 class Future2021 extends Theme
 {
-public function onThemeInitialized()
+    public function onThemeInitialized()
     {
 
     }
