@@ -31,8 +31,8 @@
       {% endif %}
     </div>
     <div class="meta">
-      {% if plugin.translate_date.enabled %}
-        <time class="published" itemprop="datePublished" datetime="{{ page.date|td(null, "Y-m-d") }}">{{ page.date|td }}</time>
+      {% if config.plugins["translate-date"].enabled %}
+        <time class="published" itemprop="datePublished" datetime="{{ page.date|td(null, "Y-m-d") }}">{{ page.date|td(null, "M j, Y") }}</time>
       {% else %}
         <time class="published" itemprop="datePublished" datetime="{{ page.date|date("Y-m-d") }}">{{ page.date|date("M j, Y") }}</time>
       {% endif %}

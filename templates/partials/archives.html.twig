@@ -12,8 +12,8 @@
             <h3>
               <a href="{{p.url}}">{{ p.title }}</a>
             </h3>
-            {% if plugin.translate_date.enabled %}
-              <time class="published" datetime="{{ p.date|td(null, "Y-m-d") }}">{{ p.date|td }}</time>
+            {% if config.plugins["translate-date"].enabled %}
+              <time class="published" datetime="{{ p.date|td(null, "Y-m-d") }}">{{ p.date|td(null, "M j, Y") }}</time>
             {% else %}
               <time class="published" datetime="{{ p.date|date("Y-m-d") }}">{{ p.date|date("M j, Y") }}</time>
             {% endif %}

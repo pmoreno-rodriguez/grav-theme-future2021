@@ -12,7 +12,7 @@
     </div>
 
     <div class="search-details">
-      {% if plugin.translate_date.enabled %}
+      {% if config.plugins["translate-date"].enabled %}
         <span class="search-date">{{ page.date|td(null, config.system.pages.dateformat.short) }}</span>
       {% else %}
         <span class="search-date">{{ page.date|date(config.system.pages.dateformat.short) }}</span>
