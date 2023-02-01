@@ -35,7 +35,7 @@
         <time class="published" itemprop="datePublished" datetime="{{ page.date|date("Y-m-d") }}">{{ page.date|date("M j, Y") }}</time>
       {% endif %}
       {% if author %}
-        <span itemprop="author" itemscope itemtype="http://schema.org/Person" />
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person"/>
         <a {% if page.taxonomy.author %}href="{{ base_url }}/author{{ config.system.param_sep }}{{ author }}" itemprop="url" {% endif %}class="author">
           <span class="name" rel="author">{{ author }}</span>
           {% if avatar %}<img src="{{ avatar }}" alt="{{ author }}" />{% endif %}
