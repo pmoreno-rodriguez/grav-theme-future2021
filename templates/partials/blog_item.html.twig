@@ -5,12 +5,10 @@
   {% elseif page.header.author %}
     {% set author = page.header.author %}
   {% else %}
-    {% set author = page.header.taxonomy.author[0] %}
+    {% set author = page.taxonomy.author[0] %}
   {% endif %}
 
-  {% if author %}
-    {% set avatar = author|replace(' ', '-')|lower %}
-  {% endif %}
+  {% set avatar = page.media[page.header.avatarImage].url|e %}
 
   <header>
     <div class="title">
@@ -37,9 +35,10 @@
         <time class="published" itemprop="datePublished" datetime="{{ page.date|date("Y-m-d") }}">{{ page.date|date("M j, Y") }}</time>
       {% endif %}
       {% if author %}
-        <a href="{{ base_url }}/author{{ config.system.param_sep }}{{ author }}" itemprop="keywords" class="author">{{ tag }}<span class="name" rel="author">{{ author }}</span>
-          {% if page.header.avatarImage %}<img src="{{ page.media[page.header.avatarImage].url|e}}" alt="{{ author }}"/>
-          {% endif %}
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person" />
+        <a {% if page.taxonomy.author %}href="{{ base_url }}/author{{ config.system.param_sep }}{{ author }}" itemprop="url" {% endif %}class="author">
+          <span class="name" rel="author">{{ author }}</span>
+          {% if avatar %}<img src="{{ avatar }}" alt="{{ author }}" />{% endif %}
         </a>
       {% endif %}
     </div>
