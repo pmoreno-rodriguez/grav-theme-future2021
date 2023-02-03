@@ -1,5 +1,6 @@
 <section class="search-row">
-  {% set banner = page.media[page.header.primaryImage].loading('lazy').html(page.title,page.title)|raw ?: page.media.images|first  %}
+  {% set title = page.title %}
+  {% set banner = page.media[page.header.primaryImage].loading('lazy').html(title,title)|raw ?: page.media.images.html(title,title)|raw|first  %}
 
   {% if banner %}
     <div class="search-image">
