@@ -1,9 +1,13 @@
+{% set image = page.media[page.header.image] ?: page.media.images|first %}
+{% set title = page.title|raw %}
+{% set subtitle = page.header.subtitle|raw %}
+
 <section id="banner">
   <div class="content">
     <header>
-      <h2>{{ page.title}}</h2>
-      {% if page.header.subtitle %}
-        <p>{{ page.header.subtitle }}</p>
+      <h2>{{ title}}</h2>
+      {% if subtitle %}
+        <p>{{ subtitle }}</p>
       {% endif %}
     </header>
 
@@ -13,13 +17,9 @@
       <li><a href="{{page.header.buttonurl}}" class="button">{{page.header.buttontext}}</a></li>
     </ul>
   </div>
-  {% if page.header.image %}
+  {% if image %}
     <span class="image object fit">
-      {{page.media[page.header.image].loading('lazy').html('',page.title)|raw}}
-    </span>
-  {% else %}
-    <span class="image object fit">
-      {{page.media[page.header.primaryImage].loading('lazy').html('',page.title)|raw}}
+      {{image.loading('lazy').html(title,title)|raw}}
     </span>
   {% endif %}
 </section>
