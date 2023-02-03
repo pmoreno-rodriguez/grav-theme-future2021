@@ -1,13 +1,21 @@
+{% set image = page.media[page.header.primaryImage] ?: page.media.images|first %}
+{% set title = page.title|raw %}
+{% set subtitle = page.header.subtitle|raw %}
 {% set columns = page.header.layout == 'standard' ? 'col-4 col-6-medium col-12-small' : 'col-6 col-12-small'  %}
 
 <section id="features">
   <header>
-    <h2>{{ page.title }}</h2>
-    {% if page.header.subtitle %}
-      <p>{{ page.header.subtitle }}</p>
+    <h2>{{ title }}</h2>
+    {% if subtitle %}
+      <p>{{ subtitle }}</p>
     {% endif %}
   </header>
-  {{ content|raw }}
+  
+  {% if image %}
+    {{ image.cropZoom(1038,437).loading('lazy').html(title, title, 'image featured')|raw }}
+  {% endif %}
+
+  {{ page.content|raw }}
 
   <div class="row gtr-uniform">
     {% for feature in page.header.features %}
