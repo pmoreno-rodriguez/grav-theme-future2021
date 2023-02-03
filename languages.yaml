@@ -108,6 +108,9 @@ en:
         PORTFOLIO_IMAGE_THUMB: Thumbnails
 
     BLOG:
+      LISTING_TITLE_CATEGORY: 'Posts in Category: '
+      LISTING_TITLE_TAG: 'Posts with Tag: '
+      LISTING_TITLE_AUTHOR: 'Posts written by Author: '
       ITEM:
         CONTINUE_READING: Continue reading...
         NEXT_POST: Next Post
@@ -251,6 +254,9 @@ de:
         PORTFOLIO_IMAGE_THUMB: Miniaturansicht
 
     BLOG:
+      LISTING_TITLE_CATEGORY: 'Beiträge in der Kategorie: '
+      LISTING_TITLE_TAG: 'Beiträge mit Tag: '
+      LISTING_TITLE_AUTHOR: 'Beiträge des Autors: '
       ITEM:
         CONTINUE_READING: Weiterlesen...
         NEXT_POST: Nächster Eintrag
@@ -379,6 +385,9 @@ es:
         PORTFOLIO_IMAGE_THUMB: Miniatura
 
     BLOG:
+      LISTING_TITLE_CATEGORY: 'Publicaciones en la categoría: '
+      LISTING_TITLE_TAG: 'Publicaciones con la etiqueta: '
+      LISTING_TITLE_AUTHOR: 'Publicaciones escritas por: '
       ITEM:
         CONTINUE_READING: Continuar leyendo...
         NEXT_POST: Siguiente Entrada
@@ -411,4 +420,3 @@ es:
     FEATURED: Destacados
     PRIVACY: Al usar este formulario estás de acuerdo con nuestra
     FORM_SUMMARY: Aquí está el resumen de lo que nos escribió
-
