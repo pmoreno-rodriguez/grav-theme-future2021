@@ -1,25 +1,24 @@
 <section class="search-row">
-  {% set title = page.title %}
-  {% set banner = page.media[page.header.primaryImage].loading('lazy').html(title,title)|raw ?: page.media.images.html(title,title)|raw|first  %}
 
-  {% if banner %}
-    <div class="search-image">
-      <a href="{{ page.url }}">{{ banner }}</a>
-    </div>
-  {% endif %}
-  <div class="search-item">
-    <div class="search-title">
-      <h3><a href="{{ page.url }}">{{ page.title }}</a></h3>
-    </div>
+    {% set title = page.title %}
+    {% set banner = page.media[page.header.primaryImage] ?: page.media.images|first %}   
 
-    <div class="search-details">
-      {% if config.plugins["translate-date"].enabled %}
-        <span class="search-date">{{ page.date|td(null, config.system.pages.dateformat.short) }}</span>
-      {% else %}
-        <span class="search-date">{{ page.date|date(config.system.pages.dateformat.short) }}</span>
-      {% endif %}
-    </div>
+    {% if banner %}
+        <div class="search-image">
+            <a href="{{ page.url }}">{{ banner.cropZoom(100,100).loading('lazy').html(title,title)|raw }}</a>
+        </div>
+    {% endif %}
+    <div class="search-item">
+        <div class="search-title">
+            <h3><a href="{{ page.url }}">{{ title|raw }}</a></h3>
+        </div>
 
-    <p>{{ page.summary|truncate(200)|raw }}</p>
-  </div>
+        <div class="search-details">
+            <span class="search-date">{{ page.date|date(config.system.pages.dateformat.short) }}</span>
+        </div>
+
+        <p>{{ page.summary|truncate(200)|raw }}</p>
+
+        <hr/>
+    </div>
 </section>
