@@ -1,16 +1,13 @@
 <section>
   <ul class="posts">
     {% for p in page.find(theme_config.blog_page).children.order('date', 'desc').slice(0, 5) %}
-      {% if p.header.primaryImage %}
-        {% set bannerimage = p.media[p.header.primaryImage]%}
-      {% else %}
-        {% set bannerimage = p.media.images|first %}
-      {% endif %}
+    {% set image = p.media[p.header.primaryImage] ?: p.media.images|first %}
+    {% set title = p.title|raw %}
       <li>
         <article>
           <header>
             <h3>
-              <a href="{{p.url}}">{{ p.title }}</a>
+              <a href="{{p.url}}">{{ title }}</a>
             </h3>
             {% if config.plugins["translate-date"].enabled %}
               <time class="published" datetime="{{ p.date|td(null, "Y-m-d") }}">{{ p.date|td(null, "M j, Y") }}</time>
@@ -19,7 +16,7 @@
             {% endif %}
           </header>
           <a href="{{p.url}}" class="image">
-            {{ bannerimage.cropZoom(64,64).quality(60).loading('lazy').html('',p.title)|raw }}
+            {{ image.cropZoom(64,64).quality(60).loading('lazy').html(title,title)|raw }}
           </a>
         </article>
       </li>
