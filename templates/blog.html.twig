@@ -13,7 +13,7 @@
 {% else %}
   {% set show_pagination = true %}
 {% endif %}
-{% set image = page.media[page.header.primaryImage] %}
+{% set image = page.media[page.header.primaryImage] ?: page.media.images|first %}
 {% set title = page.title|raw %}
 
 {# Set page title by taxonomy #}
@@ -52,8 +52,6 @@
 
     {% if image %}
       {{ image.cropZoom(1038,437).loading('lazy').html(title, title, 'image featured')|raw }}
-    {% else %}
-      {{ image|first.cropZoom(1038,437).loading('lazy').html(title,title, 'image featured')|raw }}
     {% endif %}
 
     {{ page.content|raw }}
