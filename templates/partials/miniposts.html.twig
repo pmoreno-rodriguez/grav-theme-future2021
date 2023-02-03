@@ -1,5 +1,6 @@
 {% set miniposts_category = theme_var('miniposts_category') %}
 {% set miniposts_number = config.theme.miniposts_number %}
+{% set lang = grav.language.getActive ?: grav.config.site.default_lang %}
 
 <section>
   <header class="">
@@ -7,25 +8,29 @@
   </header>
   <div class="mini-posts">
     {% for p in page.evaluate({'@taxonomy.category':miniposts_category}).order('header.order', 'asc').slice(0,miniposts_number) %}
+    {% set image = p.media[p.header.primaryImage] ?: p.media.images|first %}
+    {% set title = p.title|raw %}
       <article class="mini-post">
         <header>
           <h3>
             <a href="{{ p.url }}">{{ p.title }}</a>
           </h3>
           {% if config.plugins["translate-date"].enabled %}
-            <time class="published" datetime="{{ p.date|td(null, "Y-m-d") }}">{{ p.date|td(null, "M j, Y") }}</time>
+            <time class="published" itemprop="datePublished" datetime="{{ page.date|td(null, "Y-m-d") }}">{{ page.date|td(null, "M j, Y") }}</time>
+          {% elseif config.plugins["twig-extensions"].enabled %}
+            <time class="published" itemprop="datePublished" datetime="{{ page.date|localizeddate('medium', 'none', lang) }}">{{ page.date|localizeddate('medium', 'none', lang) }}</time>
           {% else %}
-            <time class="published" datetime="{{ p.date|date("Y-m-d") }}">{{ p.date|date("M j, Y") }}</time>
+            <time class="published" itemprop="datePublished" datetime="{{ page.date|date("Y-m-d") }}">{{ page.date|date("M j, Y") }}</time>
           {% endif %}
+        {% if avatar %}
           <a href="{{ p.url }}" class="author"><img src="{{ p.media[p.header.avatarImage].url}}" alt=""/></a>
+        {% endif %}
         </header>
+        {% if image %}
         <a href="{{ p.url }}" class="image">
-          {% if p.header.primaryImage %}
-            {{ p.media[p.header.primaryImage].cropZoom(1038,437).loading('lazy').html('',p.title)|raw}}
-          {% else %}
-            {{p.media.images|first.cropZoom(1038,437).loading('lazy').html('',p.title)|raw}}
-          {% endif %}
+            {{ image.cropZoom(1038,437).loading('lazy').html(title,title)|raw}}
         </a>
+        {% endif %}
       </article>
     {% endfor %}
   </div>
