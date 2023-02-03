@@ -13,15 +13,18 @@
 {% else %}
   {% set show_pagination = true %}
 {% endif %}
+{% set image = page.media[page.header.primaryImage] %}
+{% set title = page.title|raw %}
 
+{# Set page title by taxonomy #}
 {% if uri.param('category') %}
-  {% set page_title = theme_config.listing_title.taxonomy.category | default('Posts in Category: ') ~ uri.param('category') %}
+	{% set listing_title = 'FUTURE.BLOG.LISTING_TITLE_CATEGORY'|t ~ uri.param('category') %}
 {% elseif uri.param('tag') %}
-  {% set page_title = theme_config.listing_title.taxonomy.tag | default('Posts with Tag: ') ~ uri.param('tag') %}
+	{% set listing_title = 'FUTURE.BLOG.LISTING_TITLE_TAG'|t ~ uri.param('tag') %}
 {% elseif uri.param('author') %}
-  {% set page_title = theme_config.listing_title.taxonomy.author | default('Posts from Author: ') ~ uri.param('author') %}
+	{% set listing_title = 'FUTURE.BLOG.LISTING_TITLE_AUTHOR'|t ~ uri.param('author') %}
 {% else %}
-  {% set page_title = theme_config.listing_title.blog | default('') %}
+    {% set listing_title = page.header.subtitle|raw %}
 {% endif %}
 
 {% if base_url == '/' %}
@@ -37,13 +40,27 @@
 {% endblock %}
 
 {% block content %}
+
+    <header>
+      <div class="title">
+        <h2>{{ title }}</h2>
+        {% if listing_title %}
+          <p>{{ listing_title|raw }}</p>
+        {% endif %}
+      </div>
+    </header>
+
+    {% if image %}
+      {{ image.cropZoom(1038,437).loading('lazy').html(title, title, 'image featured')|raw }}
+    {% else %}
+      {{ image|first.cropZoom(1038,437).loading('lazy').html(title,title, 'image featured')|raw }}
+    {% endif %}
+
+    {{ page.content|raw }}
+  
   {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
     {% include 'partials/breadcrumbs.html.twig' %}
   {% endif %}
-
-  <h2>
-    {{page_title}}
-  </h2>
 
   {% for child in collection %}
     {% include 'partials/blog_item.html.twig' with {'page':child, 'truncate':true} %}
