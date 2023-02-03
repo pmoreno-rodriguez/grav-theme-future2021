@@ -82,3 +82,9 @@
   margin-left: 30px;
   margin-bottom: 50px;
 }
+
+/* Modified styles from Breadcrumbs */
+
+#breadcrumbs {
+  padding-inline-start: 0rem;
+}
