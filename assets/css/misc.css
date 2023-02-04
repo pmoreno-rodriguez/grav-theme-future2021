@@ -64,7 +64,6 @@
 /* Styles to support svg images in search results */
 
 .search-row {
-  border-bottom: none;
   display: flex;
   align-items: top;
 }
@@ -73,15 +72,20 @@
   object-fit: cover;
   object-position: 0 100%;
 }
+.search-image a {
+  border-bottom: none;
+}
 @media only all and (max-width: 47.938em) {
   .search-image img {display:none;}
 }
 .search-item {
   margin-left: 30px;
   margin-bottom: 50px;
+  border-bottom: solid 1px rgba(160, 160, 160, 0.3);
+  padding-bottom: 2em;
 }
 
-/* Modified styles from Breadcrumbs */
+/* Styles modified from Breadcrumbs */
 
 #breadcrumbs {
   padding-inline-start: 0rem;
