@@ -1,24 +1,31 @@
 {% macro nav_loop(page) %}
-{% import _self as macros %}
+  {% import _self as macros %}
   {% for p in page.children.visible %}
-        {% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
-        {% if p.children.visible.count > 0 %}
-            <li class="{{ current_page }}">
-                <a>
-                    {% if p.header.icon %}<i class="fa fa-{{ p.header.icon }}"></i>{% endif %}
-                    <span>{{ p.menu }}{% if p.routable ?? false %}&nbsp;<i class="fa fa-angle-down"></i>{% endif %}</span>
-                </a>
-                <ul>
-                    {{ macros.nav_loop(p) }}
-                </ul>
-            </li>
-        {% else %}
-            <li class="{{ current_page }}">
-                <a href="{{ p.url }}">
-                    {% if p.header.icon %}<i class="fa fa-{{ p.header.icon }}"></i>{% endif %}
-                    <span>{{ p.menu }}</span>
-                </a>
-            </li>
-        {% endif %}
-    {% endfor %}
+    {% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
+    {% if p.children.visible.count > 0 %}
+      <li class="{{ current_page }}">
+        <a>
+          {% if p.header.icon %}
+            <i class="fa fa-{{ p.header.icon }}"></i>
+          {% endif %}
+          <span>{{ p.menu }}
+            {% if p.routable ?? false %}&nbsp;<i class="fa fa-angle-down"></i>
+            {% endif %}
+          </span>
+        </a>
+        <ul>
+          {{ macros.nav_loop(p) }}
+        </ul>
+      </li>
+    {% else %}
+      <li class="{{ current_page }}">
+        <a href="{{ p.url }}">
+          {% if p.header.icon %}
+            <i class="fa fa-{{ p.header.icon }}"></i>
+          {% endif %}
+          <span>{{ p.menu }}</span>
+        </a>
+      </li>
+    {% endif %}
+  {% endfor %}
 {% endmacro %}

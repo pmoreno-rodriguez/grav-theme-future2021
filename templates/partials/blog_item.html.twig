@@ -1,93 +1,105 @@
-<article class="post"  itemprop="liveBlogUpdate" itemscope itemtype="http://schema.org/BlogPosting">
-    
-    {% if page.header.metadata.author %}
-        {% set author =  page.header.metadata.author %}
-    {% elseif page.header.author %}
-        {% set author =  page.header.author %}
-    {% else %}
-        {% set author =  page.taxonomy.author[0] %}
-    {% endif %}
-    
-    {% set avatar = page.media[page.header.avatarImage].url|e %}
-    
-    <header>
+<article class="post" itemprop="liveBlogUpdate" itemscope itemtype="http://schema.org/BlogPosting">
+
+  {% if page.header.metadata.author %}
+    {% set author = page.header.metadata.author %}
+  {% elseif page.header.author %}
+    {% set author = page.header.author %}
+  {% else %}
+    {% set author = page.taxonomy.author[0] %}
+  {% endif %}
+
+  {% set avatar = page.media[page.header.avatarImage].url|e %}
+
+  <header>
     <div class="title">
-    {% if page.header.link %}
+      {% if page.header.link %}
         <h2 itemprop="headline">
-            {% if page.header.continue_link is not sameas(false) %}
-                <a href="{{ page.url }}"></a>
-            {% endif %}
-            <a href="{{ page.header.link }}">{{ page.title }}</a>
+          {% if page.header.continue_link is not sameas(false) %}
+            <a href="{{ page.url }}"></a>
+          {% endif %}
+          <a href="{{ page.header.link }}">{{ page.title }}</a>
         </h2>
-        {% else %}
-        <h2 itemprop="headline"><a href="{{ page.url }}">{{ page.title }}</a></h2>
-    {% endif %}
-        {% if page.header.subtitle %}
+      {% else %}
+        <h2 itemprop="headline">
+          <a href="{{ page.url }}">{{ page.title }}</a>
+        </h2>
+      {% endif %}
+      {% if page.header.subtitle %}
         <p itemprop="alternativeHeadline">{{ page.header.subtitle|raw }}</p>
-        {% endif %}
+      {% endif %}
     </div>
     <div class="meta">
-        <time class="published" itemprop="datePublished" datetime="{{page.date|date("Y-m-d")}}">{{ page.date|date("M j, Y")}}</time>
-        {% if author %}
-            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <a {% if page.taxonomy.author %} href="{{ base_url }}/author{{ config.system.param_sep }}{{ author }}" itemprop="url" {% endif %} class="author"><span class="name" rel="author">{{ author }}</span>{% if avatar %}<img src="{{ avatar }}" alt="{{ author }}" />{% endif %}</a>            
-        {% endif %}
+      {% if config.plugins["translate-date"].enabled %}
+        <time class="published" itemprop="datePublished" datetime="{{ page.date|td(null, "Y-m-d") }}">{{ page.date|td(null, "M j, Y") }}</time>
+      {% else %}
+        <time class="published" itemprop="datePublished" datetime="{{ page.date|date("Y-m-d") }}">{{ page.date|date("M j, Y") }}</time>
+      {% endif %}
+      {% if author %}
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person"/>
+        <a {% if page.taxonomy.author %}href="{{ base_url }}/author{{ config.system.param_sep }}{{ author }}" itemprop="url" {% endif %}class="author">
+          <span class="name" rel="author">{{ author }}</span>
+          {% if avatar %}<img src="{{ avatar }}" alt="{{ author }}" />{% endif %}
+        </a>
+      {% endif %}
     </div>
-    </header>
+  </header>
 
-    {% if page.header.primaryImage %}
-        <a href="{{ page.url }}">{{ page.media[page.header.primaryImage].cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}</a>
-    {% else %}
-        <a href="{{ page.url }}">{{ page.media.images|first.cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}</a>
-    {% endif %}
+  {% if page.header.primaryImage %}
+    <a href="{{ page.url }}">{{ page.media[page.header.primaryImage].cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}</a>
+  {% elseif page.media.images %}
+    <a href="{{ page.url }}">{{ page.media.images|first.cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}</a>
+  {% endif %}
 
-    <div itemprop="articleBody">
- 
+  <div itemprop="articleBody">
     {% if page.header.continue_link is sameas(false) %}
-        {{ page.content|raw }}
-        {% if not truncate %}
+      {{ page.content|raw }}
+      {% if not truncate %}
         {% set show_prev_next = true %}
-        {% endif %}
+      {% endif %}
     {% elseif truncate and page.summary != page.content %}
-        {{ page.summary|raw }}
+      {{ page.summary|raw }}
     {% elseif truncate %}
-        {{ page.content|truncate(550)|raw }}
+      {{ page.content|truncate(550)|raw }}
     {% else %}
-        {{ page.content|raw }}
-        {% set show_prev_next = true %}
+      {{ page.content|raw }}
+      {% set show_prev_next = true %}
     {% endif %}
+  </div>
 
-   </div>
-
-    <footer>
+  <footer>
     <ul class="actions">
-    {% if truncate and page.summary != page.content %}
+      {% if truncate and page.summary != page.content %}
         <li><a href="{{ page.url }}" class="button">{{'FUTURE.BLOG.ITEM.CONTINUE_READING'|t}}</a></li>
-    {% elseif truncate %}
+      {% elseif truncate %}
         <li><a href="{{ page.url }}" class="button">{{'FUTURE.BLOG.ITEM.CONTINUE_READING'|t}}</a></li>
-    {% endif %}
+      {% endif %}
 
-    {% if show_prev_next %}
+      {% if show_prev_next %}
         {% if not page.isLast %}
-            <li><a class="button" href="{{ page.prevSibling.url }}"><i class="fa fa-chevron-left"></i> {{'FUTURE.BLOG.ITEM.PREV_POST'|t}}</a></li> 
+          <li>
+            <a class="button" href="{{ page.prevSibling.url }}">
+              <i class="fa fa-chevron-left"></i>
+              {{'FUTURE.BLOG.ITEM.PREV_POST'|t}}</a>
+          </li>
         {% endif %}
         {% if not page.isFirst %}
-            <li><a class="button" href="{{ page.nextSibling.url }}">{{'FUTURE.BLOG.ITEM.NEXT_POST'|t}} <i class="fa fa-chevron-right"></i></a></li>         
+          <li>
+            <a class="button" href="{{ page.nextSibling.url }}">{{'FUTURE.BLOG.ITEM.NEXT_POST'|t}}
+              <i class="fa fa-chevron-right"></i>
+            </a>
+          </li>
         {% endif %}
-            
-    {% endif %}
+      {% endif %}
+    </ul>
 
-    </ul>
     <ul class="stats">
-        {% if page.taxonomy.tag %}
+      {% if page.taxonomy.tag %}
         {% for tag in page.taxonomy.tag %}
-            <li><a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}" itemprop="keywords">{{ tag }}</a></li>
+          <li><a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}" itemprop="keywords">{{ tag }}</a></li>
         {% endfor %}
-        {% endif %}
-        <li><a href="https://twitter.com/share" data-url="{{ page.url(true) }}" data-text="{{ page.title }}" class="icon brands fa-twitter">
-            </a></li>
-        <li><a href="http://www.facebook.com/sharer.php?u={{ page.url(true) }}" class="icon brands fa-facebook">
-            </a></li>
+      {% endif %}
+      <li><a href="https://twitter.com/share" data-url="{{ page.url(true) }}" data-text="{{ page.title }}" class="icon brands fa-twitter"></a></li>
+      <li><a href="http://www.facebook.com/sharer.php?u={{ page.url(true) }}" class="icon brands fa-facebook"></a></li>
     </ul>
-</footer>
+  </footer>
 </article>

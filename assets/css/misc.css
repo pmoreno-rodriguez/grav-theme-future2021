@@ -16,7 +16,7 @@
     position: fixed;
     bottom: 30px;
     right: 30px;
-    transition: background-color .3s, 
+    transition: background-color .3s,
       opacity .5s, visibility .5s;
     opacity: 0;
     visibility: hidden;
@@ -66,19 +66,27 @@
 .search-row {
   display: flex;
   align-items: top;
-  
 }
 .search-image img {
   overflow:hidden;
-  width: 100px;
-  height: 100px;
   object-fit: cover;
   object-position: 0 100%;
 }
+.search-image a {
+  border-bottom: none;
+}
 @media only all and (max-width: 47.938em) {
-  .search-image img {display:none;} 
+  .search-image img {display:none;}
 }
 .search-item {
   margin-left: 30px;
   margin-bottom: 50px;
+  border-bottom: solid 1px rgba(160, 160, 160, 0.3);
+  padding-bottom: 2em;
+}
+
+/* Styles modified from Breadcrumbs */
+
+#breadcrumbs {
+  padding-inline-start: 0rem;
 }

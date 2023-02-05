@@ -1,23 +1,25 @@
 <header id="header">
-	<h1 class="logo"><a href="{{ home_url }}">{{ site.title }}</a></h1>
-	<nav class="dropdown">
-		{% block header_navigation %}
-			{% include 'partials/navigation.html.twig' %}
-		{% endblock %}
-	</nav>
-	<nav class="main">
-		{% block header_extra %}
-		<ul>
-			{% if config.plugins.langswitcher.enabled %}
-				{% include 'partials/langswitcher.html.twig' %}
-			{% endif %}
-			{% if config.plugins.simplesearch.enabled %}
-				{% include 'partials/simplesearch_searchbox.html.twig' %}
-			{% endif %}
-			<li class="menu">
-				<a class="fa-bars" href="#menu">Menu</a>
-			</li>
-		</ul>
-		{% endblock %}
-	</nav>
+  <h1 class="logo">
+    <a href="{{ home_url }}">{{ site.title }}</a>
+  </h1>
+  <nav class="dropdown">
+    {% block header_navigation %}
+      {% include 'partials/navigation.html.twig' %}
+    {% endblock %}
+  </nav>
+  <nav class="main">
+    {% block header_extra %}
+      <ul>
+        {% if config.plugins.langswitcher.enabled %}
+          {% include 'partials/langswitcher.html.twig' %}
+        {% endif %}
+        {% if config.plugins.simplesearch.enabled %}
+          {% include 'partials/simplesearch_searchbox.html.twig' %}
+        {% endif %}
+        <li class="menu">
+          <a class="fa-bars" href="#menu">Menu</a>
+        </li>
+      </ul>
+    {% endblock %}
+  </nav>
 </header>
