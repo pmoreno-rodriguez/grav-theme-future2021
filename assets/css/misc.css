@@ -68,9 +68,11 @@
   align-items: top;
 }
 .search-image img {
+  width: 100px;
+  height: 100px;
   overflow:hidden;
   object-fit: cover;
-  object-position: 0 100%;
+  object-position: 0% 100%;
 }
 .search-image a {
   border-bottom: none;
