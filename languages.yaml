@@ -80,7 +80,8 @@ en:
         BLOG_CONTENT_ITEMS_ORDER_DIR: Order
         BLOG_CONTENT_ITEMS_ORDER_DIR_ASC: Ascending
         BLOG_CONTENT_ITEMS_ORDER_DIR_DESC: Descending
-        BLOG_CONTENT_ITEMS_PAGINATION: Pagination
+        BLOG_CONTENT_ITEMS_BREADCRUMBS: Show Breadcrumbs
+        BLOG_CONTENT_ITEMS_PAGINATION: Show Pagination
         BLOG_CONTENT_ITEMS_URL_TAXONOMY_FILTERS: URL Taxonomy Filters
       ITEM:
         ITEM_TAB: Blog Item
@@ -226,6 +227,7 @@ de:
         BLOG_CONTENT_ITEMS_ORDER_DIR: Reihenfolge
         BLOG_CONTENT_ITEMS_ORDER_DIR_ASC: Aufsteigend
         BLOG_CONTENT_ITEMS_ORDER_DIR_DESC: Absteigend
+        BLOG_CONTENT_ITEMS_BREADCRUMBS: Paniermehl anzeigen
         BLOG_CONTENT_ITEMS_PAGINATION: Seitennummerierung
         BLOG_CONTENT_ITEMS_URL_TAXONOMY_FILTERS: Taxonomie filtern nach URL
       ITEM:
@@ -357,7 +359,8 @@ es:
         BLOG_CONTENT_ITEMS_ORDER_DIR: Orden
         BLOG_CONTENT_ITEMS_ORDER_DIR_ASC: Ascendente
         BLOG_CONTENT_ITEMS_ORDER_DIR_DESC: Descendente
-        BLOG_CONTENT_ITEMS_PAGINATION: Paginación
+        BLOG_CONTENT_ITEMS_BREADCRUMBS: Mostrar Migas de Pan
+        BLOG_CONTENT_ITEMS_PAGINATION: Mostrar Paginación
         BLOG_CONTENT_ITEMS_URL_TAXONOMY_FILTERS: Filtros de taxonomía por URL
       ITEM:
         ITEM_TAB: Artículo de Blog
