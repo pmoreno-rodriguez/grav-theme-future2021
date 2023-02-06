@@ -1,5 +1,5 @@
 {% extends 'partials/base.html.twig' %}
-
+{% set show_sidebar = header_var('show_sidebar')|defined(false)  %}
 {% set image = page.media[page.header.primaryImage] ?: page.media.images|first %}
 {% set title = page.title|raw %}
 {% set subtitle = page.header.subtitle|raw %}
@@ -27,7 +27,15 @@
 
   </article>
 
-  <section id="footer" class="align-center">
-    {% include 'partials/footer.html.twig' %}
-  </section>
+  {% if show_sidebar == false %}
+    <section id="footer" class="align-center">
+      {% include 'partials/footer.html.twig' %}
+    </section>
+  {% endif %}
+{% endblock %}
+
+{% block sidebar %}
+  {% if show_sidebar == true %}
+    {% include 'partials/sidebar_left.html.twig' %}
+  {% endif %}
 {% endblock %}
