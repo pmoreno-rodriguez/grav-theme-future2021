@@ -35,11 +35,17 @@
     </section>
   {% endif %}
   {% if config.plugins.login.enabled %}
+    
     <section>
+      {% if not grav.user.authenticated %}
       <ul class="actions stacked">
-        <li><a href="#" class="button large fit">{{ 'FUTURE.LOGIN'|t }}</a></li>
+        <li><a href="{{ base_url_absolute }}/login" class="button large fit">{{ 'FUTURE.LOGIN'|t }}</a></li>
       </ul>
+      {% else %}
+        {% include 'partials/login-status.html.twig' %}
+      {% endif %}
     </section>
+
   {% endif %}
 </section>
 <script>
