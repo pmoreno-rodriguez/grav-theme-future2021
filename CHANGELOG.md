@@ -1,3 +1,24 @@
+# v1.0.3
+## 06/02/2022
+
+1.  [](#bugfix)
+    * Fixed logo display when only mobile logo is chosen.
+    * Fixed bug in simplesearch item (added `striptags` filter in page.summary).
+    * Fixed demo content removing .es prefix.
+    * Fixed search results image with `|raw` filter.
+    * Fixed display of svg in search results.
+2.  [](#improved)
+    * Autoformatted some twigs (thanks @pikim).
+    * Improved the definition of variables in twig templates.
+    * Minimal options in future2021.yaml file.
+    * Added German translation (thanks @pikim).
+    * Renamed custom.css to misc.css.
+    * Update author and avatar variables in blog.
+3.  [](#new)
+    * Added filter by URI on results page by taxonomy.
+    * Added support for translate-date (thanks @pikim) and twig-extensions plugins.
+    * Allow disabling sidebar in all pages.
+    * Added support to Login Form
 # v1.0.2
 ## 11/09/2022
 
