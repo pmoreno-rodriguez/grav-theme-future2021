@@ -1,0 +1,10 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block menu %}
+  {% include 'partials/sidebar_right.html.twig' %}
+{% endblock %}
+
+{% block content %}
+    {% include 'partials/messages.html.twig' %}
+    {% include 'partials/login-form.html.twig' %}
+{% endblock %}
