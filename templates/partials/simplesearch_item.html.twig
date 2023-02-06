@@ -15,7 +15,7 @@
         <div class="search-details">
             <span class="search-date">{{ page.date|date(config.system.pages.dateformat.short) }}</span>
         </div>
-        {{ page.summary|striptags('img table')|truncate(300, true)|raw }} 
+        {{ page.summary|striptags|truncate(300, true)|raw }} 
     </div>
 
 </section>
