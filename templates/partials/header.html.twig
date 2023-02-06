@@ -10,7 +10,7 @@
   <nav class="main">
     {% block header_extra %}
       <ul>
-        {% if config.plugins.langswitcher.enabled %}
+        {% if config.plugins.langswitcher.enabled and system.languages.supported is not null %}
           {% include 'partials/langswitcher.html.twig' %}
         {% endif %}
         {% if config.plugins.simplesearch.enabled %}
