@@ -2199,7 +2199,6 @@ ul.posts article header > :last-child {
   -ms-flex-grow: 1;
   flex-grow: 1;
   -ms-flex: 1;
-  flex: 1;
   padding: 3.75em 3em 3.3em 3em;
 }
 .post > header .title h2 {
@@ -2298,7 +2297,6 @@ ul.posts article header > :last-child {
   }
   .post > header .title {
     -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
     margin: 0 0 2em 0;
     padding: 0;
     text-align: center;
@@ -2797,6 +2795,43 @@ ul.subitem_hide > li {
   font-size: 1.5em;
 }
 
+@media screen and (max-width: 980px) {
+  .post {
+    border-left: 0;
+    border-right: 0;
+    left: -3em;
+    width: calc(100% + 6em);
+  }
+  .post > header {
+    -moz-flex-direction: column;
+    flex-direction: column;
+    padding: 3.75em 3em 1.25em 3em;
+    border-left: 0;
+  }
+  .post > header .title {
+    -ms-flex: 0 1 auto;
+    margin: 0 0 2em 0;
+    padding: 0;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 736px) {
+  .heading {
+    padding: 1.5em 1.5em 0.1em 1.5em;
+    left: -1.5em;
+    margin: 0 0 2em 0;
+    width: calc(100% + 3em);
+  }
+  .heading > header {
+    padding: 3em 1.5em 0.5em 1.5em;
+    left: -1.5em;
+    margin: -1.5em 0 1.5em 0;
+    width: calc(100% + 3em);
+  }
+  .heading > header .title h2 {
+    font-size: 1.1em;
+  }
+}
 /* Header */
 body {
   padding-top: 3.5em;
