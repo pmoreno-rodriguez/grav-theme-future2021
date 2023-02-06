@@ -32,6 +32,18 @@ form:
         0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
+    
+    sidebar:
+      type: toggle
+      label: FUTURE.ADMIN.THEME.SIDEBAR
+      help: FUTURE.ADMIN.THEME.SIDEBAR_HELP
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
 
     header_section:
       type: fieldset
@@ -90,17 +102,6 @@ form:
           help: FUTURE.ADMIN.THEME.BLOG_PAGE_HELP
           size: medium
           default: '/blog'
-
-        sidebar:
-          type: toggle
-          label: FUTURE.ADMIN.THEME.SIDEBAR
-          highlight: 1
-          default: 1
-          options:
-            1: PLUGIN_ADMIN.ENABLED
-            0: PLUGIN_ADMIN.DISABLED
-          validate:
-            type: bool
 
         miniposts:
           type: toggle
