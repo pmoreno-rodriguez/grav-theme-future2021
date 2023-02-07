@@ -33,7 +33,6 @@
 {% endblock %}
 
 {% block content %}
-  <div class="heading">
     <header>
       <div class="title">
         <h2>{{ title }}</h2>
@@ -50,7 +49,6 @@
     {% endif %}
 
     {{ page.content|raw }}
-  </div>
 
   {% for child in collection %}
     {% include 'partials/blog_item.html.twig' with {'page':child, 'truncate':true} %}

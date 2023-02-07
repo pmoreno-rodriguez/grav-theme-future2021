@@ -19,9 +19,7 @@
 
 {% block content %}
   {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
-  <div class="heading">
     {% include 'partials/breadcrumbs.html.twig' %}
-  </div>
   {% endif %}
 
   {% include 'partials/blog_item.html.twig' with {'truncate':false} %}
