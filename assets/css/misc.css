@@ -92,6 +92,8 @@
 #breadcrumbs {
   padding-inline-start: 0rem;
   margin: 1em 0;
+  height: auto;
+  line-height: 2em;
 }
 #breadcrumbs span {
   padding: 0rem;
