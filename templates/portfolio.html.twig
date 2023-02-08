@@ -21,7 +21,9 @@
       </div>
     </header>
     {% if image %}
-      {{ image.cropZoom(1038,437).loading('lazy').html(title, title, 'image featured')|raw }}
+    <span class="image featured">
+      {{ image.cropZoom(1038,437).loading('lazy').html(title, title)|raw }}
+    </span>
     {% endif %}
 
     {{ page.content|raw}}

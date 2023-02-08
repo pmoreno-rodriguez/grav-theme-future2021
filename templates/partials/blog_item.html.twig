@@ -7,8 +7,10 @@
   {% else %}
     {% set author = page.taxonomy.author[0] %}
   {% endif %}
-
+  
   {% set avatar = page.media[page.header.avatarImage].url|e %}
+  {% set image = page.media[page.header.primaryImage] ?: page.media.images|first %}
+  {% set title = page.title|raw %}
 
   <header>
     <div class="title">
@@ -44,11 +46,11 @@
     </div>
   </header>
 
-  {% if page.header.primaryImage %}
-    <a href="{{ page.url }}">{{ page.media[page.header.primaryImage].cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}</a>
-  {% elseif page.media.images %}
-    <a href="{{ page.url }}">{{ page.media.images|first.cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}</a>
-  {% endif %}
+  {% if image %}
+    <span class="image featured">
+      {{ image.cropZoom(1038,437).loading('lazy').html(title, title)|raw }}
+    </span>
+    {% endif %}
 
   <div itemprop="articleBody">
     {% if page.header.continue_link is sameas(false) %}
