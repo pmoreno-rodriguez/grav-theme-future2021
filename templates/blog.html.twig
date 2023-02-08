@@ -14,6 +14,16 @@
       {% set show_pagination = true %}
   {% endif %}
 
+{% if uri.param('category') %}
+	{% set page_title = theme_config.listing_title.taxonomy.category | default('Posts in Category: ') ~ uri.param('category') %}
+{% elseif uri.param('tag') %}
+	{% set page_title = theme_config.listing_title.taxonomy.tag | default('Posts with Tag: ') ~ uri.param('tag') %}
+{% elseif uri.param('author') %}
+	{% set page_title = theme_config.listing_title.taxonomy.author | default('Posts from Author: ') ~ uri.param('author') %}
+{% else %}
+	{% set page_title = theme_config.listing_title.blog | default('') %}
+{% endif %}
+
   {% if base_url == '/' %}
     {% set base_url = '' %}
   {% endif %}
@@ -30,7 +40,11 @@
     {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
         {% include 'partials/breadcrumbs.html.twig' %}
     {% endif %}
-
+    
+    <h2>
+      {{page_title}}
+    </h2>
+    
     {% for child in collection %}
       {% include 'partials/blog_item.html.twig' with {'page':child, 'truncate':true} %}
     {% endfor %}
@@ -45,5 +59,3 @@
   {% endblock %}
   
 {% endembed %}
-
-
