@@ -1,4 +1,8 @@
 {% extends 'partials/base.html.twig' %}
+{% set show_sidebar = header_var('show_sidebar')|defined(false)  %}
+{% set image = page.media[page.header.primaryImage] ?: page.media.images|first %}
+{% set title = page.title|raw %}
+{% set subtitle = page.header.subtitle|raw %}
 
 {% block menu %}
   {% include 'partials/sidebar_right.html.twig' %}
@@ -8,27 +12,32 @@
   <article class="post">
     <header>
       <div class="title">
-      <h2>{{ page.header.title }}</h2>  
-      {% if page.header.subtitle %}
-        <p>{{ page.header.subtitle }}</p>
-      {% endif %}  
+        <h2>{{ title }}</h2>
+        {% if subtitle %}
+          <p>{{ subtitle }}</p>
+        {% endif %}
       </div>
+    </header>
+    
+    {% if image %}
+    <span class="image featured">
+      {{ image.cropZoom(1038,437).loading('lazy').html(title, title)|raw }}
+    </span>
+    {% endif %}
 
-      </header>
-            {% if page.header.primaryImage %}
-                {{ page.media[page.header.primaryImage].cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}
-            {% else %}
-                {{ page.media.images|first.cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}
-            {% endif %}
-            {{ page.content|raw}}
-            
+    {{ page.content|raw }}
+
   </article>
-  <section id="footer" class="align-center">
-      {% block footer %}
-          {% include 'partials/footer.html.twig' %}
-      {% endblock %}
-  </section> 
+
+  {% if show_sidebar == false %}
+    <section id="footer" class="align-center">
+      {% include 'partials/footer.html.twig' %}
+    </section>
+  {% endif %}
 {% endblock %}
 
-
-
+{% block sidebar %}
+  {% if show_sidebar == true %}
+    {% include 'partials/sidebar_left.html.twig' %}
+  {% endif %}
+{% endblock %}

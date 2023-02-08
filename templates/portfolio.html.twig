@@ -1,5 +1,8 @@
 {% extends 'partials/base.html.twig' %}
-
+{% set show_sidebar = header_var('show_sidebar')|defined(false)  %}
+{% set image = page.media[page.header.primaryImage] %}
+{% set title = page.title|raw %}
+{% set subtitle = page.header.subtitle|raw %}
 {% set columns = page.header.layout == 'standard' ? 'col-4 col-6-medium col-12-small' : 'col-6 col-12-small'  %}
 
 {% block menu %}
@@ -8,38 +11,48 @@
 
 {% block content %}
 
-    <article class="post">
-        <header>
-            <div class="title">
-            <h2>{{ page.header.title }}</h2>
-            {% if page.header.subtitle %}
-                <p>{{ page.header.subtitle }}</p>
-            {% endif %}	
-            </div>
-        </header>
-        {% if page.header.primaryImage %}
-            {{ page.media[page.header.primaryImage].cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}
+  <article class="post">
+    <header>
+      <div class="title">
+        <h2>{{ title }}</h2>
+        {% if subtitle %}
+          <p>{{ subtitle }}</p>
         {% endif %}
-        
-        {{ page.content|raw}}
+      </div>
+    </header>
+    {% if image %}
+    <span class="image featured">
+      {{ image.cropZoom(1038,437).loading('lazy').html(title, title)|raw }}
+    </span>
+    {% endif %}
+
+    {{ page.content|raw}}
+
     <!-- Portfolio -->
-    {% block portfolio %}  
-        <section>   
+    {% block portfolio %}
+      <section>
         <div class="row aln-center">
-        {% for item in page.header.images %} 
+          {% for item in page.header.images %}
             <div class="{{columns}} portfolio_item">
-                <a href="{{page.media[item.image].url}}" class="glightbox" data-width="100vw" data-zoomable="true" data-glightbox='title: {{item.title}}; description: {{item.description|raw}}'>
-                    <span class="image fit"><img src="{{page.media[item.thumb].url}}" alt="image" /></span>
-                </a>
+              <a href="{{page.media[item.image].url}}" class="glightbox" data-width="100vw" data-zoomable="true" data-glightbox='title: {{item.title}}; description: {{item.description|raw}}'>
+                <span class="image fit"><img src="{{page.media[item.thumb].url}}" alt="image"/></span>
+              </a>
             </div>
-        {% endfor %}
-
+          {% endfor %}
         </div>
-        </section>
+      </section>
     {% endblock %}
-    </article>
+  </article>
 
+  {% if show_sidebar == false %}
     <section id="footer" class="align-center">
-        {% include 'partials/footer.html.twig' %}
+      {% include 'partials/footer.html.twig' %}
     </section>
+  {% endif %}
+{% endblock %}
+
+{% block sidebar %}
+  {% if show_sidebar == true %}
+    {% include 'partials/sidebar_left.html.twig' %}
+  {% endif %}
 {% endblock %}

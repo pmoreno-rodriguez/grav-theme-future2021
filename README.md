@@ -51,3 +51,6 @@ Installing the Future 2021 theme can be done in one of two ways. Our GPM (Grav P
 # Future plans
 
 - ~~Translations English - Spanish for administration and front-end~~
+- Custom templates for Login plugin (login form, forgot form, etc.)
+- Improve the portfolio template with Glightbox JS features.
+- Create a Flex Directory for authors and avatars.

@@ -72,16 +72,18 @@ form:
             header.show_breadcrumbs:
               type: toggle
               toggleable: true
-              label: Show Breadcrumbs
+              label: FUTURE.ADMIN.BLOG.BLOG_CONTENT_ITEMS_BREADCRUMBS
               highlight: 1
+              default: 1
               options:
                 1: PLUGIN_ADMIN.ENABLED
                 0: PLUGIN_ADMIN.DISABLED
               validate:
                 type: bool
                 
-            header.content.pagination:
+            header.show_pagination:
               type: toggle
+              toggleable: true
               label: FUTURE.ADMIN.BLOG.BLOG_CONTENT_ITEMS_PAGINATION
               highlight: 1
               default: 1
@@ -93,6 +95,7 @@ form:
 
             header.content.url_taxonomy_filters:
               type: toggle
+              toggleable: true
               label: FUTURE.ADMIN.BLOG.BLOG_CONTENT_ITEMS_URL_TAXONOMY_FILTERS
               highlight: 1
               default: 1

@@ -1,34 +1,47 @@
 {% extends 'partials/base.html.twig' %}
+{% set show_sidebar = header_var('show_sidebar')|defined(false)  %}
+{% set image = page.media[page.header.primaryImage] ?: page.media.images|first %}
+{% set title = page.title|raw %}
+{% set subtitle = page.header.subtitle|raw %}
 
-{% set show_onpage_menu = header.onpage_menu == true or header.onpage_menu is null %}
-{% macro pageLinkName(text) %}{{ text|lower|replace({' ':'_'}) }}{% endmacro %}
+{# Commented code for future improvements in modular menu #}
+
+{# {% set show_onpage_menu = header.onpage_menu == true or header.onpage_menu is null %}
+{% macro pageLinkName(text) %}
+  {{ text|lower|replace({' ':'_'}) }}
+{% endmacro %} #}
 
 {% block menu %}
   {% include 'partials/sidebar_right.html.twig' %}
 {% endblock %}
 
 {% block content %}
-    <article class="post">
-      <header>
-        <div class="title">
-        <h2>{{ page.header.title }}</h2>    
-        </div>
-        </header>
+  <article class="post">
+    <header>
+      <div class="title">
+        <h2>{{ title }}</h2>
+        {% if subtitle %}
+          <p>{{ subtitle }}</p>
+        {% endif %}
+      </div>
+    </header>
 
-            {% if page.header.primaryImage %}
-                {{ page.media[page.header.primaryImage].cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}
-            {% else %}
-                {{ page.media.images|first.cropZoom(1038,437).loading('lazy').html(page.title, page.title, 'image featured')|raw }}
-            {% endif %}
-            {{ page.content|raw}}
-        {% for module in page.collection() %}
-            {{ module.content|raw }}
-        {% endfor %}
-    </article>
+    {% if image %}
+    <span class="image featured">
+      {{ image.cropZoom(1038,437).loading('lazy').html(title, title)|raw }}
+    </span>
+    {% endif %}
+
+    {{ page.content|raw}}
+
+    {% for module in page.collection() %}
+      {{ module.content|raw }}
+    {% endfor %}
+  </article>
 {% endblock %}
 
 {% block sidebar %}
-  {% include 'partials/sidebar_left.html.twig' %}
+  {% if show_sidebar == true %}
+    {% include 'partials/sidebar_left.html.twig' %}
+  {% endif %}
 {% endblock %}
-
-

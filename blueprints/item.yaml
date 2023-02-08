@@ -14,6 +14,17 @@ form:
 
           fields:
 
+            header.show_breadcrumbs:
+              type: toggle
+              toggleable: true
+              label: FUTURE.ADMIN.BLOG.BLOG_CONTENT_ITEMS_BREADCRUMBS
+              highlight: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+
             summary:
               type: section
               title: FUTURE.ADMIN.ITEM.ITEM_SUMMARY
