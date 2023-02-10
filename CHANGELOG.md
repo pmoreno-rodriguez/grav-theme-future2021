@@ -1,5 +1,5 @@
 # v1.0.3
-## 08/02/2022
+## 08/02/2023
 
 1.  [](#bugfix)
     * Fixed logo display when only mobile logo is chosen.
