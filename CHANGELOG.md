@@ -1,5 +1,5 @@
 # v1.0.3
-## 08/02/2023
+## 02/08/2023
 
 1.  [](#bugfix)
     * Fixed logo display when only mobile logo is chosen.
@@ -20,7 +20,7 @@
     * Allow disabling sidebar in all pages.
     * Added support to Login Form
 # v1.0.2
-## 11/09/2022
+## 09/11/2022
 
 1.  [](#bugfix)
     * Fixed code in sidebar_navigation.html.twig and topmenu.html.twig
@@ -35,13 +35,13 @@
     * Added option in theme to choose the miniposts category name.
     * New logo twig template
 # v1.0.1
-## 02/05/2022
+## 05/02/2022
 
 1.  [](#bugfix)
     * Updated CSS Styles to show FontAwesome 5
 
 # v1.0.0
-## 05/12/2021
+## 12/05/2021
 
 1.  [](#new)
     * Drop down menu functionality
