@@ -46,3 +46,12 @@ form:
                     0: PLUGIN_ADMIN.DISABLED
                   validate:
                     type: bool
+        advanced:
+          fields:
+            columns:
+              fields:
+                column1:
+                   fields:
+                     header.body_classes:
+                       markdown: true
+                       description: 'Available classes in Future2021 Theme:<br />`single`'
