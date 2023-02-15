@@ -33,26 +33,25 @@
 {% endblock %}
 
 {% block content %}
-    <header>
-      <div class="title">
-        <h2>{{ title }}</h2>
-        {% if listing_title %}
-          <p>{{ listing_title|raw }}</p>
-        {% endif %}
-      </div>
-    </header>
-    {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
-      {% include 'partials/breadcrumbs.html.twig' %}
-    {% endif %}
-    
+<article class="heading">
     {% if image %}
     <span class="image featured">
       {{ image.cropZoom(1038,437).loading('lazy').html(title, title)|raw }}
     </span>
     {% endif %}
-
+    <div class="title">
+      <h2>{{ title }}</h2>
+      {% if listing_title %}
+        <p>{{ listing_title|raw }}</p>
+      {% endif %}
+    </div>
+    
     {{ page.content|raw }}
-
+    
+    {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
+      {% include 'partials/breadcrumbs.html.twig' %}
+    {% endif %}
+</article>
   {% for child in collection %}
     {% include 'partials/blog_item.html.twig' with {'page':child, 'truncate':true} %}
   {% endfor %}
