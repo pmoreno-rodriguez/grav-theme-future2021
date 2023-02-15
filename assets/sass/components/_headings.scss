@@ -1,0 +1,88 @@
+/* CSS for Headings */
+/* by Pedro Moreno */
+
+.heading {
+
+    @include padding(_size(section-spacing), _size(section-spacing));
+    background: _palette(bg);
+    border: solid 1px _palette(border);
+    margin: 0 0 _size(section-spacing-small) 0;
+    position: relative;
+
+    #breadcrumbs {
+        font-family: _font(family-heading);
+        font-size: 0.6em;
+        font-weight: _font(weight-heading);
+        letter-spacing: _font(kerning-heading);
+        text-transform: uppercase;
+        margin-top: -1em;
+        height: _size(section-spacing);
+        line-height: _size(section-spacing);
+        padding-inline-start: 0;
+
+        span {
+            padding: 0;
+        }
+
+        i {
+            padding: 0 1em;
+            width: 0;
+        }
+    }
+
+    .title {
+
+        h2 {
+            font-weight: _font(weight-heading-extrabold);
+            font-size: 1.8em;
+        }
+        p {
+            font-family: _font(family-heading);
+            font-size: 0.8em;
+            font-weight: _font(weight-bold);
+            letter-spacing: _font(kerning-heading);
+            line-height: 2.5;
+            margin-top: -1em;
+            text-transform: uppercase;
+        }
+    }
+    @include breakpoint('<=medium') {
+        border-left: 0;
+        border-right: 0;
+        left: _size(section-spacing) * -1;
+        width: calc(100% + (#{_size(section-spacing)} * 2));
+
+        #breadcrumbs {
+            margin: 0 0 _size(element-margin) 0;
+            padding: 0;
+            text-align: center;
+        }
+        .title {
+            -ms-flex: 0 1 auto;
+            margin: 0 0 _size(element-margin) 0;
+            padding: 0;
+            text-align: center;
+        }
+    }
+    @include breakpoint('<=small') {
+        @include padding(_size(section-spacing-small), _size(section-spacing-small));
+        left: _size(section-spacing-small) * -1;
+        margin: 0 0 _size(element-margin) 0;
+        width: calc(100% + (#{_size(section-spacing-small)} * 2));
+
+        .title {
+            h2 {
+                font-size: 1.1em;
+            }
+        }
+        
+    }
+
+    @include breakpoint('<=small') {
+        > .image.featured {
+            margin-left: _size(section-spacing-small) * -1;
+            margin-top: calc(#{_size(section-spacing-small) * -1} - 1px);
+            width: calc(100% + #{_size(section-spacing-small) * 2});
+        }
+    }
+}
