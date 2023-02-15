@@ -2006,6 +2006,14 @@ ul.actions.fit li > * {
 ul.actions.fit.stacked {
   width: 100%;
 }
+@media screen and (max-width: 736px) {
+  ul.actions {
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+  }
+}
 @media screen and (max-width: 480px) {
   ul.actions:not(.fixed) {
     -moz-flex-direction: column;
@@ -2035,17 +2043,17 @@ ul.actions.fit.stacked {
     padding-top: 0;
   }
   ul.actions:not(.fixed) li input[type=submit],
-ul.actions:not(.fixed) li input[type=reset],
-ul.actions:not(.fixed) li input[type=button],
-ul.actions:not(.fixed) li button,
-ul.actions:not(.fixed) li .button {
+  ul.actions:not(.fixed) li input[type=reset],
+  ul.actions:not(.fixed) li input[type=button],
+  ul.actions:not(.fixed) li button,
+  ul.actions:not(.fixed) li .button {
     width: 100%;
   }
   ul.actions:not(.fixed) li input[type=submit].icon:before,
-ul.actions:not(.fixed) li input[type=reset].icon:before,
-ul.actions:not(.fixed) li input[type=button].icon:before,
-ul.actions:not(.fixed) li button.icon:before,
-ul.actions:not(.fixed) li .button.icon:before {
+  ul.actions:not(.fixed) li input[type=reset].icon:before,
+  ul.actions:not(.fixed) li input[type=button].icon:before,
+  ul.actions:not(.fixed) li button.icon:before,
+  ul.actions:not(.fixed) li .button.icon:before {
     margin-left: -0.5em;
   }
 }
@@ -2325,7 +2333,11 @@ ul.posts article header > :last-child {
 .post > footer .stats {
   cursor: default;
   list-style: none;
-  padding: 0;
+  padding: 0 1em;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
 }
 .post > footer .stats li {
   border-left: solid 1px rgba(160, 160, 160, 0.3);
@@ -2334,7 +2346,6 @@ ul.posts article header > :last-child {
   font-size: 0.6em;
   font-weight: 400;
   letter-spacing: 0.25em;
-  line-height: 1;
   margin: 0 0 0 2em;
   padding: 0 0 0 2em;
   text-transform: uppercase;
@@ -2349,6 +2360,28 @@ ul.posts article header > :last-child {
 }
 .post > footer .stats li .icon:before {
   margin-right: 0.75em;
+}
+.post > footer .share {
+  cursor: default;
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+}
+.post > footer .share li {
+  border-left: solid 1px rgba(160, 160, 160, 0.3);
+  display: inline-block;
+  font-size: larger;
+  font-weight: 400;
+  margin: 0 0 0 1em;
+  padding: 0 0 0 1em;
+  text-transform: uppercase;
+}
+.post > footer .share li:first-child {
+  border-left: 0;
+  margin-left: 0;
+  padding-left: 0;
 }
 @media screen and (max-width: 980px) {
   .post {
@@ -2435,6 +2468,16 @@ ul.posts article header > :last-child {
   .post > header .title h2 {
     font-size: 1.1em;
   }
+  .post > footer {
+    -moz-align-items: -moz-stretch;
+    -webkit-align-items: -webkit-stretch;
+    -ms-align-items: -ms-stretch;
+    align-items: stretch;
+    -moz-flex-direction: column-reverse;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
 }
 @media screen and (max-width: 480px) {
   .post > header .meta {
@@ -2459,23 +2502,6 @@ ul.posts article header > :last-child {
     margin-left: -1.5em;
     margin-top: calc(-1.5em - 1px);
     width: calc(100% + 3em);
-  }
-  .post > footer {
-    -moz-align-items: -moz-stretch;
-    -webkit-align-items: -webkit-stretch;
-    -ms-align-items: -ms-stretch;
-    align-items: stretch;
-    -moz-flex-direction: column-reverse;
-    -webkit-flex-direction: column-reverse;
-    -ms-flex-direction: column-reverse;
-    flex-direction: column-reverse;
-  }
-  .post > footer .stats {
-    text-align: center;
-  }
-  .post > footer .stats li {
-    margin: 0 0 0 1.25em;
-    padding: 0 0 0 1.25em;
   }
 }
 
@@ -2705,18 +2731,16 @@ table.alt tfoot {
   position: relative;
   float: left;
   text-transform: uppercase;
-  font-size: 12pt;
+  font-size: 14pt;
   height: inherit;
 }
 #header .dropdown li a {
   font-family: "Raleway", Helvetica, sans-serif;
-  font-size: 0.8em;
+  font-size: 0.7em;
   font-weight: 400;
-  letter-spacing: 0.15em;
-  display: block;
+  letter-spacing: 0.2em;
   border-bottom: none;
   padding: 0 0.8rem;
-  height: inherit;
 }
 #header .dropdown li ul {
   position: absolute;
@@ -2731,11 +2755,10 @@ table.alt tfoot {
 }
 #header .dropdown li ul li a {
   font-family: "Raleway", Helvetica, sans-serif;
-  font-size: 0.8em;
+  font-size: 0.7em;
   font-weight: 400;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  display: block;
   border-bottom: none;
   padding: 0.3rem 0.8rem;
   line-height: 2.5em;
@@ -2892,6 +2915,84 @@ ul.subitem_hide > li {
 .fa-caret-down {
   float: right;
   padding-right: 8px;
+}
+
+/* CSS for Headings */
+/* by Pedro Moreno */
+.heading {
+  padding: 3em 3em 1em 3em;
+  background: #ffffff;
+  border: solid 1px rgba(160, 160, 160, 0.3);
+  margin: 0 0 1.5em 0;
+  position: relative;
+}
+.heading #breadcrumbs {
+  font-family: "Raleway", Helvetica, sans-serif;
+  font-size: 0.6em;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-top: -1em;
+  height: 3em;
+  line-height: 3em;
+  padding-inline-start: 0;
+}
+.heading #breadcrumbs span {
+  padding: 0;
+}
+.heading #breadcrumbs i {
+  padding: 0 1em;
+  width: 0;
+}
+.heading .title h2 {
+  font-weight: 900;
+  font-size: 1.8em;
+}
+.heading .title p {
+  font-family: "Raleway", Helvetica, sans-serif;
+  font-size: 0.8em;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  line-height: 2.5;
+  margin-top: -1em;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 980px) {
+  .heading {
+    border-left: 0;
+    border-right: 0;
+    left: -3em;
+    width: calc(100% + (3em * 2));
+  }
+  .heading #breadcrumbs {
+    margin: 0 0 2em 0;
+    padding: 0;
+    text-align: center;
+  }
+  .heading .title {
+    -ms-flex: 0 1 auto;
+    margin: 0 0 2em 0;
+    padding: 0;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 736px) {
+  .heading {
+    padding: 1.5em 1.5em 0.1em 1.5em;
+    left: -1.5em;
+    margin: 0 0 2em 0;
+    width: calc(100% + (1.5em * 2));
+  }
+  .heading .title h2 {
+    font-size: 1.1em;
+  }
+}
+@media screen and (max-width: 736px) {
+  .heading > .image.featured {
+    margin-left: -1.5em;
+    margin-top: calc(-1.5em - 1px);
+    width: calc(100% + 3em);
+  }
 }
 
 /* Header */
@@ -3293,4 +3394,4 @@ body.is-menu-visible #menu {
   #menu > * {
     padding: 1.5em;
   }
-}/*# sourceMappingURL=main.css.map */
+}
