@@ -108,7 +108,7 @@
       ] %}
       {% for item in share %}
           {% if item.enabled|defined(true) %}
-              <li><a class="icon brands {{ item.icon }}" target="_blank" href="{{- item.url -}}{{- item.params|url_encode-}}" {% if item.action is defined %}data-action="{{ item.action }}"{% endif %} aria-label="{{ item.name|capitalize }}" title="{{ item.name|capitalize }}"></a></li>
+              <li><a class="icon brands {{ item.icon }}" target="_blank" href="{{- item.url -}}{{- item.params|url_encode-}}" {% if item.action is defined %}data-action="{{ item.action }}"{% endif %} aria-label="{{ 'FUTURE.MISC.SHARE_ON'|t }} {{ item.name|capitalize }}" title="{{ 'FUTURE.MISC.SHARE_ON'|t }} {{item.name|capitalize }}"></a></li>
           {% endif %}
       {% endfor %}
     </ul>

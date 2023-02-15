@@ -218,6 +218,8 @@ en:
     FEATURED: Featured
     PRIVACY: By using this form you agree our terms
     FORM_SUMMARY: Here is the summary of what you wrote to us
+    MISC:
+      SHARE_ON: Share on
 
 de:
   FUTURE:
@@ -436,6 +438,8 @@ de:
     FEATURED: Hervorgehoben
     PRIVACY: Durch die Nutzung dieses Formulars stimmen Sie unseren Bedingungen zu
     FORM_SUMMARY: Hier ist die Zusammenfassung dessen, was Sie uns geschrieben haben
+    MISC:
+      SHARE_ON: 
 
 es:
   FUTURE:
@@ -643,3 +647,5 @@ es:
     FEATURED: Destacados
     PRIVACY: Al usar este formulario estás de acuerdo con nuestra
     FORM_SUMMARY: Aquí está el resumen de lo que nos escribió
+    MISC:
+      SHARE_ON: Compartir en 
