@@ -14,6 +14,18 @@ form:
 
           fields:
 
+            options_title:
+              type: section
+              underline: true
+              title: FUTURE.ADMIN.ITEM.ITEM_OPTIONS
+
+            header.avatarImage:
+              type: pagemediaselect
+              toggleable: true
+              size: medium
+              label: FUTURE.ADMIN.ITEM.ITEM_AVATAR
+              preview_images: true
+
             header.show_breadcrumbs:
               type: toggle
               toggleable: true
@@ -66,8 +78,3 @@ form:
               classes: large
               placeholder: ===
 
-            header.avatarImage:
-              type: pagemediaselect
-              toggleable: true
-              label: FUTURE.ADMIN.ITEM.ITEM_AVATAR
-              preview_images: true
