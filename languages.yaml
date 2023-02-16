@@ -11,6 +11,14 @@ en:
         CUSTOM_LOGO_DESCRIPTION: Will be used instead of default logo `theme://images/grav-logo.svg`
         CUSTOM_LOGO_MOBILE: Mobile Custom Logo
         SLOGAN: Slogan
+        MENU:
+          TITLE: Top Menu Configuration
+          LANGSWITCHER: Enable Langswitcher icon
+          LANGSWITCHER_HELP: With Langswitcher plugin enabled and multi-language setup in your site, you can enable or disable the langswitcher functionality appearing in the top menu.
+          SEARCH: Enable Search icon
+          SEARCH_HELP: With SimpleSearch plugin enabled you can enable or disable the search block in top menu.
+          LOGIN: Enable Login icon
+          LOGIN_HELP: You can enable or disable Login icon in top menu, to show login status.
         BLOG_DEFAULTS: Blog Defaults
         BLOG_PAGE: Blog Page
         BLOG_PAGE_HELP: The route to the blog page when working with blog sidebar
@@ -212,8 +220,6 @@ en:
         HEADLINE: Archives
       SYNDICATE:
         HEADLINE: Syndicate
-
-    LOGIN: Log in
     LATESTPOSTS: Latest posts
     FEATURED: Featured
     PRIVACY: By using this form you agree our terms
@@ -234,6 +240,14 @@ de:
         CUSTOM_LOGO_DESCRIPTION: Dieses Logo wird anstelle des Standardlogos `theme://images/grav-logo.svg` verwendet
         CUSTOM_LOGO_MOBILE: Benutzerdefiniertes Logo für Mobilgeräte
         SLOGAN: Motto
+        MENU:
+          TITLE: 
+          LANGSWITCHER: 
+          LANGSWITCHER_HELP: 
+          SEARCH: 
+          SEARCH_HELP: 
+          LOGIN: 
+          LOGIN_HELP: 
         BLOG_DEFAULTS: Blog-Optionen
         BLOG_PAGE: Blog-Seite
         BLOG_PAGE_HELP: Der Pfad zur Blog-Seite wenn die Blog-Seitenleiste aktiv ist
@@ -432,8 +446,6 @@ de:
         HEADLINE: Letzte Einträge
       SYNDICATE:
         HEADLINE: Verteilen
-
-    LOGIN: Einloggen
     LATESTPOSTS: Letzte Beiträge
     FEATURED: Hervorgehoben
     PRIVACY: Durch die Nutzung dieses Formulars stimmen Sie unseren Bedingungen zu
@@ -454,6 +466,14 @@ es:
         CUSTOM_LOGO_DESCRIPTION: Este logo se usará en lugar del log por defecto `theme://images/grav-logo.svg`
         CUSTOM_LOGO_MOBILE: Logo personalizado para dispositivos móviles
         SLOGAN: Slogan
+        MENU:
+          TITLE: Configuración del Menú Superior
+          LANGSWITCHER: Habilitar icono Idioma
+          LANGSWITCHER_HELP: Con el complemento Langswitcher habilitado y la configuración multilingüe en su sitio, puede habilitar o deshabilitar la funcionalidad de cambiar de idioma, que aparece en el menú superior.
+          SEARCH: Habilitar icono Buscar
+          SEARCH_HELP: Con el complemento SimpleSearch habilitado, puede habilitar o deshabilitar el bloque de búsqueda en el menú superior.
+          LOGIN: Habilitar icono Login
+          LOGIN_HELP: Puede habilitar o deshabilitar el icono de inicio de sesión en el menú superior para mostrar el estado de la sesión.
         BLOG_DEFAULTS: Opciones de Blog
         BLOG_PAGE: Página de Blog
         BLOG_PAGE_HELP: Ruta de la página de Blog cuando funciona con el blog de barra lateral
@@ -641,8 +661,6 @@ es:
         HEADLINE: Últimas entradas
       SYNDICATE:
         HEADLINE: Distribuir
-
-    LOGIN: Iniciar sesión
     LATESTPOSTS: Últimos posts
     FEATURED: Destacados
     PRIVACY: Al usar este formulario estás de acuerdo con nuestra

@@ -87,6 +87,47 @@ form:
         slogan:
           type: text
           label: FUTURE.ADMIN.THEME.SLOGAN
+        
+        menu_options:
+          type: section 
+          title: FUTURE.ADMIN.THEME.MENU.TITLE
+          underline: true
+
+        menu_langswitcher:
+          type: toggle
+          label: FUTURE.ADMIN.THEME.MENU.LANGSWITCHER
+          help: FUTURE.ADMIN.THEME.MENU.LANGSWITCHER_HELP
+          default: 1
+          highlight: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+        
+        menu_search:
+          type: toggle
+          label: FUTURE.ADMIN.THEME.MENU.SEARCH
+          help: FUTURE.ADMIN.THEME.MENU.SEARCH_HELP
+          default: 1
+          highlight: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+        
+        menu_login:
+          type: toggle
+          label: FUTURE.ADMIN.THEME.MENU.LOGIN
+          help: FUTURE.ADMIN.THEME.MENU.LOGIN_HELP
+          default: 1
+          highlight: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
 
     blog_section:
       type: fieldset
