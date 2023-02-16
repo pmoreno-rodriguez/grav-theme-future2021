@@ -35,16 +35,15 @@
     </section>
   {% endif %}
   {% if config.plugins.login.enabled %}
-    
     <section>
-      {% if not grav.user.authenticated %}
       <ul class="actions stacked">
-        <li><a href="{{ base_url_absolute }}/login" class="button large fit">{{ 'FUTURE.LOGIN'|t }}</a></li>
-      </ul>
+      {% if not grav.user.authenticated %}
+        <li><a href="{{ base_url_absolute }}/login" class="button large fit">{{ 'PLUGIN_LOGIN.BTN_LOGIN'|t }}</a></li>
       {% else %}
-        {% include 'partials/login-status.html.twig' %}
+        <li>Logged as: <strong>{{ grav.user.fullname ?: grav.user.username }}</strong></li>
+        <li><a class="button large fit" href="{{ url(uri.addNonce((uri.path)|trim('/') ~ '/task' ~ config.system.param_sep ~ 'login.logout', 'logout-form', 'logout-nonce'))|e }}">{{ 'PLUGIN_LOGIN.BTN_LOGOUT'|t }}</a></li>
       {% endif %}
+      </ul>
     </section>
-
   {% endif %}
 </section>
