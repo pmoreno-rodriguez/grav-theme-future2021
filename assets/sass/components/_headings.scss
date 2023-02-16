@@ -78,7 +78,7 @@
         
     }
 
-    @include breakpoint('<=small') {
+    @include breakpoint('<=xsmall') {
         > .image.featured {
             margin-left: _size(section-spacing-small) * -1;
             margin-top: calc(#{_size(section-spacing-small) * -1} - 1px);

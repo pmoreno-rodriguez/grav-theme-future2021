@@ -26,14 +26,14 @@
 		font-family: _font(family-heading);
 		font-size: 0.6em;
 		font-weight: _font(weight-heading-bold);
-		height: _size(element-height) * 1.75;
+		height: auto;
 		letter-spacing: _font(kerning-heading);
-		line-height: _size(element-height) * 1.75;
+		line-height: _size(element-height) * 1.5;
 		padding: 0 2.5em;
 		text-align: center;
 		text-decoration: none;
 		text-transform: uppercase;
-		white-space: nowrap;
+		white-space: normal;
 
 		&:hover {
 			box-shadow: inset 0 0 0 1px _palette(accent);
