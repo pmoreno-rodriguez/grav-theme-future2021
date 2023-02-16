@@ -1479,14 +1479,14 @@ button,
   font-family: "Raleway", Helvetica, sans-serif;
   font-size: 0.6em;
   font-weight: 800;
-  height: 4.8125em;
+  height: auto;
   letter-spacing: 0.25em;
-  line-height: 4.8125em;
+  line-height: 4.125em;
   padding: 0 2.5em;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  white-space: nowrap;
+  white-space: normal;
 }
 input[type=submit]:hover,
 input[type=reset]:hover,
@@ -2175,7 +2175,7 @@ ul.posts article header > :last-child {
   transform: scale(1.05);
 }
 .mini-post header {
-  padding: 1.25em 4.25em 0.1em 1.25em;
+  padding: 1.25em 4.25em 0.5em 1.25em;
   min-height: 4em;
   position: relative;
   -moz-flex-grow: 1;
@@ -2454,7 +2454,7 @@ ul.posts article header > :last-child {
 }
 @media screen and (max-width: 736px) {
   .post {
-    padding: 1.5em 1.5em 0.1em 1.5em;
+    padding: 1.5em 1.5em 0.5em 1.5em;
     left: -1.5em;
     margin: 0 0 2em 0;
     width: calc(100% + (1.5em * 2));
@@ -2978,7 +2978,7 @@ ul.subitem_hide > li {
 }
 @media screen and (max-width: 736px) {
   .heading {
-    padding: 1.5em 1.5em 0.1em 1.5em;
+    padding: 1.5em 1.5em 0.5em 1.5em;
     left: -1.5em;
     margin: 0 0 2em 0;
     width: calc(100% + (1.5em * 2));
@@ -2987,7 +2987,7 @@ ul.subitem_hide > li {
     font-size: 1.1em;
   }
 }
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 480px) {
   .heading > .image.featured {
     margin-left: -1.5em;
     margin-top: calc(-1.5em - 1px);
