@@ -1,3 +1,20 @@
+# v1.0.4
+## 02/16/2023
+
+1.  [](#bugfix)
+    * Fixed Spanish translation for custom menu items.
+2.  [](#improved)
+    * Updated translations.
+    * Updated css styles.
+    * Optimized js for sidebar menu.
+2.  [](#new)
+    * New styles for login forms.
+    * New option to show icons in the top menu.
+    * Added option on blog posts to choose to share on social media.
+    * Added body classes to default template.
+    * Added option to show custom menu items.
+    * New options in portofolio template.
+    * Added OpenGraph metadata
 # v1.0.3
 ## 02/08/2023
 

@@ -1,7 +1,7 @@
 name: Future 2021
 slug: future2021
 type: theme
-version: 1.0.3
+version: 1.0.4
 description: Grav Future Imperfect by HTML5 UP (Version 2021)
 icon:  microchip
 author:
@@ -203,9 +203,19 @@ form:
       collapsible: true
       collapsed: true
       icon: share-alt
-      title: FUTURE.ADMIN.THEME.FOOTER_SOCIALS_ICONS
+      title: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICONS
       fields:
 
+        enable_social:
+          type: toggle
+          label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ENABLE
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool 
         social:
           name: social
           type: list
@@ -215,13 +225,13 @@ form:
           fields:
             .name:
               type: text
-              label: FUTURE.ADMIN.THEME.FOOTER_SOCIALS_ICON_NAME
+              label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICON_NAME
             .url:
               type: text
-              label: FUTURE.ADMIN.THEME.FOOTER_SOCIALS_ICON_URL
+              label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICON_URL
             .icon:
               type: iconpicker
-              label: FUTURE.ADMIN.THEME.FOOTER_SOCIALS_ICON_ICON
+              label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICON_ICON
 
     custommenu_options_section:
       type: fieldset
@@ -235,11 +245,11 @@ form:
           type: toggle
           label: FUTURE.ADMIN.THEME.CUSTOM_MENU_ENABLE
           help: FUTURE.ADMIN.THEME.CUSTOM_MENU_ENABLE_HELP
-          default: 0
+          default: 1
           highlight: 1
           options:
-            0: PLUGIN_ADMIN.DISABLED
             1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
           validate:
             type: bool
         custommenu:

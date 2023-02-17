@@ -35,12 +35,13 @@ en:
         FOOTER_COPYRIGHT: Copyright Text
         FOOTER_BUTTON_TEXT: Button Text
         FOOTER_BUTTON_URL: Button URL
-        FOOTER_SOCIALS_ICONS: Social Icons
-        FOOTER_SOCIALS_ICON_NAME: Social Name
-        FOOTER_SOCIALS_ICON_URL: URL Link to Social
-        FOOTER_SOCIALS_ICON_ICON: Icon to Social
+        FOOTER_SOCIAL_ENABLE: Enable Social Icons
+        FOOTER_SOCIAL_ICONS: Social Icons
+        FOOTER_SOCIAL_ICON_NAME: Social Name
+        FOOTER_SOCIAL_ICON_URL: URL Link to Social
+        FOOTER_SOCIAL_ICON_ICON: Icon to Social
         CUSTOM_MENU_TITLE: 'Custom Menu Items'
-        CUSTOM_MENU_ENABLE: 'Display Custom Menu Items'
+        CUSTOM_MENU_ENABLE: 'Enable Custom Menu Items'
         CUSTOM_MENU_ENABLE_HELP: 'Determines if any defined custom menu entries are displayed in the menubar.'
         CUSTOM_MENU_ITEM_TEXT: 'Text'
         CUSTOM_MENU_ITEM_TEXT_DESCRIPTION: 'Text label for menu item.'
@@ -264,10 +265,11 @@ de:
         FOOTER_COPYRIGHT: Copyright-Text
         FOOTER_BUTTON_TEXT: Schaltflächentext
         FOOTER_BUTTON_URL: Schaltflächen-URL
-        FOOTER_SOCIALS_ICONS: Symbole für soziale Medien
-        FOOTER_SOCIALS_ICON_NAME: Name des sozialen Netzwerks
-        FOOTER_SOCIALS_ICON_URL: URL-Link zum sozialen Netzwerk
-        FOOTER_SOCIALS_ICON_ICON: Symbol des sozialen Netzwerks
+        FOOTER_SOCIAL_ENABLE: 
+        FOOTER_SOCIAL_ICONS: Symbole für soziale Medien
+        FOOTER_SOCIAL_ICON_NAME: Name des sozialen Netzwerks
+        FOOTER_SOCIAL_ICON_URL: URL-Link zum sozialen Netzwerk
+        FOOTER_SOCIAL_ICON_ICON: Symbol des sozialen Netzwerks
         CUSTOM_MENU_TITLE: 'Benutzerdefinierte Menüpunkte'
         CUSTOM_MENU_ENABLE: 'Benutzerdefinierte Menüpunkte aktivieren'
         CUSTOM_MENU_ENABLE_HELP: 'Legt fest, ob definierte benutzerdefinierte Menüeinträge in der Menüleiste angezeigt werden.'
@@ -490,10 +492,25 @@ es:
         FOOTER_COPYRIGHT: Texto del Copyright
         FOOTER_BUTTON_TEXT: Texto del botón
         FOOTER_BUTTON_URL: URL del botón
-        FOOTER_SOCIALS_ICONS: Iconos Redes Sociales
-        FOOTER_SOCIALS_ICON_NAME: Nombre de Red Social
-        FOOTER_SOCIALS_ICON_URL: URL Link to Social
-        FOOTER_SOCIALS_ICON_ICON: Icono de Red Social
+        FOOTER_SOCIAL_ENABLE: Habilitar iconos de redes sociales
+        FOOTER_SOCIAL_ICONS: Iconos Redes Sociales
+        FOOTER_SOCIAL_ICON_NAME: Nombre de Red Social
+        FOOTER_SOCIAL_ICON_URL: URL Link to Social
+        FOOTER_SOCIAL_ICON_ICON: Icono de Red Social
+        CUSTOM_MENU_TITLE: 'Entradas de menú personalizados'
+        CUSTOM_MENU_ENABLE: 'Habilitar entradas de menú personalizados'
+        CUSTOM_MENU_ENABLE_HELP: 'Determina si se muestra alguna entrada de menú personalizada definida en la barra de menú.'
+        CUSTOM_MENU_ITEM_TEXT: 'Texto'
+        CUSTOM_MENU_ITEM_TEXT_DESCRIPTION: 'Etiqueta de texto para entrada de menú.'
+        CUSTOM_MENU_ITEM_ICON: 'Icono'
+        CUSTOM_MENU_ITEM_ICON_DESCRIPTION: 'Icono Font Awesome para entrada de menú.'
+        CUSTOM_MENU_ITEM_URL: 'URL'
+        CUSTOM_MENU_ITEM_URL_DESCRIPTION: 'URL para entrada de menú.'
+        CUSTOM_MENU_ITEM_TARGET: 'Destino'
+        CUSTOM_MENU_ITEM_TARGET_BLANK: 'Abrir en nueva ventana'
+        CUSTOM_MENU_ITEM_TARGET_PARENT: 'Abrir en el marco principal'
+        CUSTOM_MENU_ITEM_TARGET_SELF: 'Abrir en el mismo marco en el que se hizo clic'
+        CUSTOM_MENU_ITEM_TARGET_TOP: 'Abrir en todo el cuerpo de la ventana'
       DEFAULT:
         PRIMARY_IMAGE: Imagen principal
       MODULAR:
