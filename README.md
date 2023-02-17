@@ -19,7 +19,7 @@ Redesigned from scratch (version 2021)
 - Styling for various modules
 - Cross browser compatible
 - Dynamic avatar images based on author
-- ~~Sharing buttons for Facebook and Twitter with share count.~~
+- Sharing buttons for Facebook, Twitter, Whatsapp and Telegram.
 - Randomised page content in sidebar
 - Top content pages in sidebar
 - Fully responsive with full-page mobile navigation
@@ -28,17 +28,16 @@ Redesigned from scratch (version 2021)
 - Full Portfolio template with Glightbox library
 
 # Supported Page Templates
-- Default view template
-- Error view template
-- Blog view template
-- Blog item view template
-- Single view template
-- Portfolio view template
-- Form view template
-- Modular view templates:
-    - Features Modular view template
-    - Banner Modular view template
-    - Contact Modular view template
+- Default page template
+- Error page template
+- Blog page template
+- Blog item page template
+- Portfolio page template
+- Form page template
+- Modular page templates:
+    - Features Modular page template
+    - Banner Modular page template
+    - Contact Modular page template
 
 # Installation
 
@@ -50,7 +49,5 @@ Installing the Future 2021 theme can be done in one of two ways. Our GPM (Grav P
 
 # Future plans
 
-- ~~Translations English - Spanish for administration and front-end~~
 - Custom templates for Login plugin (login form, forgot form, etc.)
-- Improve the portfolio template with Glightbox JS features.
 - Create a Flex Directory for authors and avatars.
