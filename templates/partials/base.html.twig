@@ -55,7 +55,9 @@
           <div id="main">
             {% block content %}{% endblock %}
           </div>
-          {% block sidebar %}{% endblock %}
+          {% if show_sidebar == true %}
+            {% block sidebar %}{% endblock %}
+          {% endif %}
         {% endblock %}
 
       {% endblock %}
