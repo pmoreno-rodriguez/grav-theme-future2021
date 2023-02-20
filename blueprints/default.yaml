@@ -54,4 +54,4 @@ form:
                    fields:
                      header.body_classes:
                        markdown: true
-                       description: 'Available classes in Future2021 Theme:<br />`single`'
+                       description: FUTURE.ADMIN.DEFAULT.BODY_CLASSES
