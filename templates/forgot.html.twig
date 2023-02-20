@@ -4,7 +4,7 @@
     {{ parent() }}
     {% set styles %}
         #grav-login {
-          max-width: 32em;
+          max-width: 36em;
         }
         #grav-login .form-actions {
             text-align: right;
@@ -14,9 +14,19 @@
             align-items: center;
             margin-top: 1em;
             flex-wrap: wrap;}
-        #grav-login button {
-          margin: 1em 0;
-        }
+ 
+        #grav-login p {font-size: inherit;}
+        #grav-login 
+            input[type=submit].primary,
+            input[type=reset].primary,
+            input[type=button].primary,
+            button.primary,
+            .button.primary {
+              width: 100%;
+              font-size: 0.7em;
+              line-height: 3em;
+              margin: 1em 0;
+            }
         @media screen and (max-width: 480px) {
           #grav-login .form-actions {
             flex-direction: column;

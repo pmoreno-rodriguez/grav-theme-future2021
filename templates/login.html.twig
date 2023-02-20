@@ -4,7 +4,7 @@
     {{ parent() }}
     {% set styles %}
         #grav-login {
-          max-width: 32em;
+          max-width: 36em;
         }
         #grav-login .form-actions {
             text-align: right;
@@ -20,6 +20,7 @@
         @media screen and (max-width: 480px) {
           #grav-login .form-actions {
             flex-direction: column;
+          }
         }
     {% endset %}
     {% do assets.addInlineCss(styles) %}
