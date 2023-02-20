@@ -171,7 +171,7 @@ en:
           CLOSE_OUTSIDE: Close with Outside Click
           CLOSE_OUTSIDE_HELP: Close the lightbox when clicking outside the active slide.
           MORE_STARTAT: 'Start At:'
-          MORE_STARTAT_HELP: Start lightbox at defined index (0 is the first slide)
+          MORE_STARTAT_HELP: Start lightbox at defined index (0 is the first slide). If it is not defined, the clicked image is shown
           WIDTH: Width
           WIDTH_HELP: 'Default width for inline elements and iframes, you can define a specific size on each slide. You can use any unit for example 90% or 100vw for full width'
           HEIGHT: Height
@@ -628,7 +628,7 @@ es:
           CLOSE_OUTSIDE: Cerrar al pulsar fuera
           CLOSE_OUTSIDE_HELP: Cierra el cuadro de luz al hacer clic fuera de la diapositiva activa.
           MORE_STARTAT: 'Comenzar en:'
-          MORE_STARTAT_HELP: Iniciar lightbox en el índice definido (0 es la primera diapositiva)
+          MORE_STARTAT_HELP: Iniciar lightbox en el índice definido (0 es la primera diapositiva). Si no se define, se muestra la imagen en la que se hizo clic
           WIDTH: Ancho
           WIDTH_HELP: 'Ancho predeterminado para elementos en línea e iframes, puede definir un tamaño específico en cada diapositiva. Puede usar cualquier unidad, por ejemplo, 90% o 100vw para ancho completo'
           HEIGHT: Alto
