@@ -17,9 +17,15 @@
         #grav-login button {
           margin: 1em 0;
         }
-        @media screen and (max-width: 480px) {
+        @media screen and (max-width: 736px) {
           #grav-login .form-actions {
             flex-direction: column;
+          }
+          #grav-login .button {
+          width: 100%;
+          }
+          #grav-login .rememberme {
+            align-self: flex-start;
           }
         }
     {% endset %}
