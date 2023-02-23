@@ -40,7 +40,7 @@
 		</header>
 		{% if image %}
 			<span class="image featured">
-				{{ image.cropZoom(1038,437).loading('lazy').html(title, title)|raw }}
+				{{ image.cropZoom(1038,437).loading('lazy').attribute('decoding','async').html(title, title)|raw }}
 			</span>
 		{% endif %}
 
@@ -54,7 +54,7 @@
           {% set item_image = page.media[item.image] %}
 					{% set item_title = item.title %}
 					{% set item_desc = item.description %}
-					{% set thumbnail = item_image.cropZoom(thumb_w, thumb_h).attribute('itemprop','http://schema.org/image').html(item_title,item_title) %}
+					{% set thumbnail = item_image.cropZoom(thumb_w, thumb_h).loading('lazy').attribute('decoding','async').attribute('itemprop','http://schema.org/image').html(item_title,item_title) %}
           <div class="{{columns}} portfolio_item">
             <a href="{{item_image.url}}" class="glightbox"data-height="{{page.header.height}}" data-width="{{page.header.width}}" data-title="{{item_title}}" data-description="{{item_desc|raw}}" data-desc-position="{{item.descPosition}}" data-zoomable="{{page.header.zoomable}}" data-draggable="{{page.header.draggable}}" data-type="image">
               <span class="image fit">

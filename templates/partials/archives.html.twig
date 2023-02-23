@@ -16,7 +16,7 @@
             {% endif %}
           </header>
           <a href="{{p.url}}" class="image">
-            {{ image.cropZoom(64,64).quality(60).loading('lazy').html(title,title)|raw }}
+            {{ image.cropZoom(64,64).quality(60).loading('lazy').attribute('decoding','async').html(title,title)|raw }}
           </a>
         </article>
       </li>

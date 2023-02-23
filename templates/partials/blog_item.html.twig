@@ -47,7 +47,7 @@
   </header>
   {% if image %}
   <a class="image featured" href="{{ page.url }}" title="{{ title|raw }}">
-    {{ image.cropZoom(1038,437).loading('lazy').html(title, title)|raw }}
+    {{ image.cropZoom(1038,437).loading('lazy').attribute('decoding','async').html(title, title)|raw }}
   </a>
   {% endif %}
   <div itemprop="articleBody">

@@ -30,7 +30,7 @@
 
     {% if image %}
       <span class="image featured">
-        {{ image.cropZoom(1038, 437).loading('lazy').html(title, title)|raw }}
+        {{ image.cropZoom(1038, 437).loading('lazy').attribute('decoding','async').html(title, title)|raw }}
       </span>
     {% endif %}
 
