@@ -6,7 +6,7 @@ Future Imperfect theme by HTML5UP ported from scratch to Grav. Version 2021
 
 Future Imperfect by HTML5UP, features a clean, minimalistic design, styling for all basic page elements and HTML5/CSS3 code designed for quick and easy customization.
 
-# Features
+## Features
 Redesigned from scratch (version 2021)
 
 - HTML5 and CSS3
@@ -27,27 +27,86 @@ Redesigned from scratch (version 2021)
 - Blueprints for Footer, Slogan and Social icons.
 - Full Portfolio template with Glightbox library
 
-# Supported Page Templates
-- Default page template
-- Error page template
-- Blog page template
-- Blog item page template
-- Portfolio page template
-- Form page template
-- Modular page templates:
-    - Features Modular page template
-    - Banner Modular page template
-    - Contact Modular page template
+### Supported Page Templates
+
+* Default view template `default.md`
+* Error view template `error.md`
+* Blog view template `blog.md`
+* Blog item view template `item.md`
+* Portfolio page template
+* Form page template `form.md`
+* Modular view templates: `modular.md`
+    - Features Modular page template `features.md`
+    - Banner Modular page template `banner.md`
+    - Contact Modular page template `contact.md`
 
 # Installation
 
 Installing the Future 2021 theme can be done in one of two ways. Our GPM (Grav Package Manager) installation method enables you to quickly and easily install the theme with a simple terminal command, while the manual method enables you to do so via a zip file.
 
+## GPM Installation (Preferred)
+
+The simplest way to install this theme is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm) through your system's Terminal (also called the command line).  From the root of your Grav install type:
+
+    bin/gpm install future2021
+
+This will install the Future2021 theme into your `/user/themes` directory within Grav. Its files can be found under `/your/site/grav/user/themes/future2021`.
+
+## Manual Installation
+
+To install this theme, just download the zip version of this repository and unzip it under `/your/site/grav/user/themes`. Then, rename the folder to `future2021`. You can find these files either on [GitHub](https://github.com/pmoreno-rodriguez/grav-theme-future2021) or via [GetGrav.org](http://getgrav.org/downloads/themes).
+
+You should now have all the theme files under
+
+    /your/site/grav/user/themes/future2021
+
+## Default Options
+
+Future2021 comes with a few default options that can be set site-wide.  These options are:
+
+```yaml
+production-mode: true         # In production mode, only minified CSS is used. When disabled, nested CSS are enabled
+sidebar:                      # Enable/Disable sidebar in non-editable pages such as simplesearch results, offline, etc.
+favicon:                      # Choosse your own favicon
+custom_logo:                  # A custom logo rather than the default (see below)  
+custom_logo_mobile:           # A custom logo to use for mobile navigation
+slogan:                       # Custom text for slogan
+menu_langswitcher:            # Enable/Disable langswitcher icon in menu (langswitcher plugin needed)
+menu_search:                  # Enable/Disable search icon in menu (simplesearch plugin needed)
+menu_login:                   # Enable/Disable login icon in menu
+blog-page: '/blog'            # The route to the blog listing page, useful for a blog style layout
+miniposts:                    # Enable/Disable miniposts in left sidebar
+miniposts_category:           # Select category name for miniposts (configured in taxonomies)
+miniposts_number:             # The number of mini posts will be displayed on the left sidebar
+footer.title:                 # Footer block title in left sidebar
+footer.description:           # Footer block description in left sidebar
+footer.copyright_text:        # Footer block copyright text in left sidebar
+footer.button_text:           # Footer block button text in left sidebar
+footer.button_url:            # Footer block button url in left sidebar
+enable_social:                # Enable/Disable social icons in footer
+custommenus.enabled:          # Enable/Disable custom menus in top menu
+```
+
+To make modifications, you can copy the `user/themes/future2021/future2021.yaml` file to `user/config/themes/` folder and modify, or you can use the admin plugin.
+
+> NOTE: Do not modify the `user/themes/future2021/future2021.yaml` file directly or your changes will be lost with any updates
+
+## Custom Logos
+
+To add a custom logo, you should put the log into the `user/themes/future2021/images/logo` folder.  Standard image formats are support (`.png`,`.jpg`, `.gif`, `.svg`, etc.).  Then reference the logo via the YAML like so:
+
+```yaml
+custom_logo:
+    - name: 'my-custom-logo.png'
+custom_logo_mobile:
+    - name: 'my-custom-mobile-logo.png'    
+```
+
+Alternatively, you can you use the drag-n-drop "Custom Logo" field in the Future2021 theme options.
 # Demo page
 
 [http://future.juanvillen.es/](http://future.juanvillen.es/)
 
 # Future plans
 
-- Custom templates for Login plugin (login form, forgot form, etc.)
 - Create a Flex Directory for authors and avatars.
