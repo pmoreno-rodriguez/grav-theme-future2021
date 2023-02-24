@@ -103,6 +103,32 @@ custom_logo_mobile:
 ```
 
 Alternatively, you can you use the drag-n-drop "Custom Logo" field in the Future2021 theme options.
+
+## Portfolio Options
+
+| Option | Type | Default | Description |
+| --- | --- | --- | --- |
+| openEffect | string | `zoom` | Name of the effect on lightbox open. (zoom, fade, none) |
+| closeEffect | string | `zoom` | Name of the effect on lightbox close. (zoom, fade, none) |
+| slideEffect | string | `slide` | Name of the effect on slide change. (slide, fade, zoom, none) |
+| moreText | string | `See more` | More text for descriptions on mobile devices. |
+| moreLength | number | `60` | Number of characters to display on the description before adding the moreText link (only for mobiles), if 0 it will display the entire description. |
+| closeButton | boolean | `true` | Show or hide the close button. |
+| touchNavigation | boolean | `true` | Enable or disable the touch navigation (swipe). |
+| touchFollowAxis | boolean | `true` | Image follow axis when dragging on mobile. |
+| keyboardNavigation | boolean | `true` | Enable or disable the keyboard navigation. |
+| closeOnOutsideClick | boolean | `true` | Close the lightbox when clicking outside the active slide. |
+| startAt | number | `0` | Start lightbox at defined index. |
+| width | number | `900px` | Default width for inline elements and iframes, you can define a specific size on each slide. You can use any unit for example 90% or 100vw for full width |
+| height | number | `506px` | Default height for inline elements and iframes, you can define a specific size on each slide.You can use any unit for example 90% or 100vh **For inline elements you can set the height to auto**. |
+| descPosition | string | `bottom` | Global position for slides description, you can define a specific position on each slide (bottom, top, left, right). |
+| loop | boolean | `false` | Loop slides on end. |
+| zoomable | boolean | `true` | Enable or disable zoomable images you can also use data-zoomable="false" on individual nodes. |
+| draggable | boolean | `true` | Enable or disable mouse drag to go prev and next slide (only images and inline content), you can also use data-draggable="false" on individual nodes. |
+| dragToleranceX | number | `40` | Used with draggable. Number of pixels the user has to drag to go to prev or next slide. |
+| dragToleranceY | number | `65` | Used with draggable. Number of pixels the user has to drag up or down to close the lightbox (Set 0 to disable vertical drag). |
+| dragAutoSnap | boolean | `false` | If true the slide will automatically change to prev/next or close if dragToleranceX or dragToleranceY is reached, otherwise it will wait till the mouse is released. |
+| preload | boolean | `true` | Enable or disable preloading. |
 # Demo page
 
 [http://future.juanvillen.es/](http://future.juanvillen.es/)
