@@ -228,6 +228,7 @@ en:
     FORM_SUMMARY: Here is the summary of what you wrote to us
     MISC:
       SHARE_ON: Share on
+      BACK_TO_TOP: Back to top
 
 de:
   FUTURE:
@@ -454,7 +455,8 @@ de:
     PRIVACY: Durch die Nutzung dieses Formulars stimmen Sie unseren Bedingungen zu
     FORM_SUMMARY: Hier ist die Zusammenfassung dessen, was Sie uns geschrieben haben
     MISC:
-      SHARE_ON: 
+      SHARE_ON:
+      BACK_TO_TOP:
 
 es:
   FUTURE:
@@ -685,4 +687,5 @@ es:
     PRIVACY: Al usar este formulario estás de acuerdo con nuestra
     FORM_SUMMARY: Aquí está el resumen de lo que nos escribió
     MISC:
-      SHARE_ON: Compartir en 
+      SHARE_ON: Compartir en
+      BACK_TO_TOP: Volver arriba 
