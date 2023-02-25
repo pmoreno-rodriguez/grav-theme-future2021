@@ -1,3 +1,5 @@
+{% set lang = grav.language.getActive ?: grav.config.site.default_lang %}
+
 <article class="post" itemprop="liveBlogUpdate" itemscope itemtype="http://schema.org/BlogPosting">
 
   {% if page.header.metadata.author %}
@@ -17,13 +19,13 @@
       {% if page.header.link %}
         <h2 itemprop="headline">
           {% if page.header.continue_link is not sameas(false) %}
-            <a href="{{ page.url }}"></a>
+            <a href="{{ page.url }}" aria-label="{{ title }}"></a>
           {% endif %}
-          <a href="{{ page.header.link }}">{{ page.title }}</a>
+          <a href="{{ page.header.link }}" aria-label="{{ title }}">{{ title }}</a>
         </h2>
       {% else %}
         <h2 itemprop="headline">
-          <a href="{{ page.url }}">{{ page.title }}</a>
+          <a href="{{ page.url }}" aria-label="{{ title }}">{{ title }}</a>
         </h2>
       {% endif %}
       {% if page.header.subtitle %}
@@ -33,12 +35,14 @@
     <div class="meta">
       {% if config.plugins["translate-date"].enabled %}
         <time class="published" itemprop="datePublished" datetime="{{ page.date|td(null, "Y-m-d") }}">{{ page.date|td(null, "M j, Y") }}</time>
+      {% elseif config.plugins["twig-extensions"].enabled %}
+				<time class="published" itemprop="datePublished" datetime="{{ page.date|localizeddate('medium', 'none', lang) }}">{{ page.date|localizeddate('medium', 'none', lang) }}</time>
       {% else %}
         <time class="published" itemprop="datePublished" datetime="{{ page.date|date("Y-m-d") }}">{{ page.date|date("M j, Y") }}</time>
       {% endif %}
       {% if author %}
         <span itemprop="author" itemscope itemtype="http://schema.org/Person"/>
-        <a {% if page.taxonomy.author %}href="{{ base_url }}/author{{ config.system.param_sep }}{{ author }}" itemprop="url" {% endif %}class="author">
+        <a {% if page.taxonomy.author %}href="{{ base_url }}/author{{ config.system.param_sep }}{{ author }}" itemprop="url" {% endif %}class="author" aria-label="{{ author }}" rel="nofollow">
           <span class="name" rel="author">{{ author }}</span>
           {% if avatar %}<img src="{{ avatar }}" alt="{{ author }}" />{% endif %}
         </a>
@@ -46,7 +50,7 @@
     </div>
   </header>
   {% if image %}
-  <a class="image featured" href="{{ page.url }}" title="{{ title|raw }}">
+  <a class="image featured" href="{{ page.url }}" title="{{ title|raw }}" rel="nofollow">
     {{ image.cropZoom(1038,437).loading('lazy').attribute('decoding','async').html(title, title)|raw }}
   </a>
   {% endif %}
@@ -69,22 +73,22 @@
   <footer>
     <ul class="actions">
       {% if truncate and page.summary != page.content %}
-        <li><a href="{{ page.url }}" class="button">{{'FUTURE.BLOG.ITEM.CONTINUE_READING'|t}}</a></li>
+        <li><a href="{{ page.url }}" class="button" rel="nofollow">{{'FUTURE.BLOG.ITEM.CONTINUE_READING'|t}}</a></li>
       {% elseif truncate %}
-        <li><a href="{{ page.url }}" class="button">{{'FUTURE.BLOG.ITEM.CONTINUE_READING'|t}}</a></li>
+        <li><a href="{{ page.url }}" class="button" rel="nofollow">{{'FUTURE.BLOG.ITEM.CONTINUE_READING'|t}}</a></li>
       {% endif %}
 
       {% if show_prev_next %}
         {% if not page.isLast %}
           <li>
-            <a class="button" href="{{ page.prevSibling.url }}">
+            <a class="button" href="{{ page.prevSibling.url }}" rel="prev">
               <i class="fa fa-chevron-left"></i>
               {{'FUTURE.BLOG.ITEM.PREV_POST'|t}}</a>
           </li>
         {% endif %}
         {% if not page.isFirst %}
           <li>
-            <a class="button" href="{{ page.nextSibling.url }}">{{'FUTURE.BLOG.ITEM.NEXT_POST'|t}}
+            <a class="button" href="{{ page.nextSibling.url }}" rel="next">{{'FUTURE.BLOG.ITEM.NEXT_POST'|t}}
               <i class="fa fa-chevron-right"></i>
             </a>
           </li>
@@ -95,7 +99,7 @@
     {% if page.taxonomy.tag %}
     <ul class="stats">
         {% for tag in page.taxonomy.tag %}
-          <li><a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}" itemprop="keywords">{{ tag }}</a></li>
+          <li><a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}" itemprop="keywords" rel="nofollow">{{ tag }}</a></li>
         {% endfor %}
      </ul>
     {% endif %}
