@@ -33,12 +33,12 @@ Redesigned from scratch (version 2021)
 * Error view template `error.md`
 * Blog view template `blog.md`
 * Blog item view template `item.md`
-* Portfolio page template
-* Form page template `form.md`
+* Portfolio view template
+* Form view template `form.md`
 * Modular view templates: `modular.md`
-    - Features Modular page template `features.md`
-    - Banner Modular page template `banner.md`
-    - Contact Modular page template `contact.md`
+    - Features Modular view template `features.md`
+    - Banner Modular view template `banner.md`
+    - Contact Modular view template `contact.md`
 
 # Installation
 
