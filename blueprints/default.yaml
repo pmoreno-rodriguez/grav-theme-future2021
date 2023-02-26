@@ -37,7 +37,7 @@ form:
                 header.show_sidebar:
                   type: toggle
                   toggleable: true
-                  label: FUTURE.ADMIN.BLOG.BLOG_CONTENT_ITEMS_SIDEBAR
+                  label: FUTURE.ADMIN.DEFAULT.SHOW_SIDEBAR
                   ordering@: -99
                   default: 0
                   highlight: 0

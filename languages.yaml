@@ -56,7 +56,8 @@ en:
         CUSTOM_MENU_ITEM_TARGET_TOP: 'Open in the full body of the window'
       DEFAULT:
         PRIMARY_IMAGE: Primary image
-        BODY_CLASSES: 'Available classes in Future2021 Theme:<br />`single`'
+        SHOW_SIDEBAR: Show Sidebar
+        BODY_CLASSES: 'Available classes in Future2021 Theme:<br />`single` (for pages with sidebar disabled). <br>You can create new CSS classes for the body and insert them here'
       MODULAR:
         BANNER:
           BANNER_TAB: Banner
@@ -93,7 +94,6 @@ en:
         BLOG_CONTENT_ITEMS_ORDER_DIR_DESC: Descending
         BLOG_CONTENT_ITEMS_BREADCRUMBS: Show Breadcrumbs
         BLOG_CONTENT_ITEMS_PAGINATION: Show Pagination
-        BLOG_CONTENT_ITEMS_SIDEBAR: Show Sidebar
         BLOG_CONTENT_ITEMS_URL_TAXONOMY_FILTERS: URL Taxonomy Filters
         BLOG_CONTENT_SHAREICONS_TITLE: Social Media Icons
         BLOG_CONTENT_SHAREICONS: Select Social Media Icons
@@ -288,6 +288,8 @@ de:
         CUSTOM_MENU_ITEM_TARGET_TOP: 'In vollem Fensterkörper öffnen'
       DEFAULT:
         PRIMARY_IMAGE: Hauptbild
+        SHOW_SIDEBAR: Seitenleiste anzeigen
+        BODY_CLASSES: 
       MODULAR:
         BANNER:
           BANNER_TAB: Banner
@@ -324,7 +326,6 @@ de:
         BLOG_CONTENT_ITEMS_ORDER_DIR_DESC: Absteigend
         BLOG_CONTENT_ITEMS_BREADCRUMBS: Paniermehl anzeigen
         BLOG_CONTENT_ITEMS_PAGINATION: Seitennummerierung
-        BLOG_CONTENT_ITEMS_SIDEBAR: Seitenleiste anzeigen
         BLOG_CONTENT_ITEMS_URL_TAXONOMY_FILTERS: Taxonomie filtern nach URL
       ITEM:
         ITEM_TAB: Blog-Artikel
@@ -516,7 +517,8 @@ es:
         CUSTOM_MENU_ITEM_TARGET_TOP: 'Abrir en todo el cuerpo de la ventana'
       DEFAULT:
         PRIMARY_IMAGE: Imagen principal
-        BODY_CLASSES: 'Clases disponibles en el tema Future2021:<br />`single`'
+        SHOW_SIDEBAR: Mostrar Barra Lateral
+        BODY_CLASSES: 'Clases disponibles en el tema Future2021:<br />`single` (para páginas con sidebar deshabilitado). <br>Puede crear nuevas clases CSS para el body e insertarlas aquí.'
       MODULAR:
         BANNER:
           BANNER_TAB: Banner
@@ -553,7 +555,6 @@ es:
         BLOG_CONTENT_ITEMS_ORDER_DIR_DESC: Descendente
         BLOG_CONTENT_ITEMS_BREADCRUMBS: Mostrar Migas de Pan
         BLOG_CONTENT_ITEMS_PAGINATION: Mostrar Paginación
-        BLOG_CONTENT_ITEMS_SIDEBAR: Mostrar Barra Lateral
         BLOG_CONTENT_ITEMS_URL_TAXONOMY_FILTERS: Filtros de taxonomía por URL
         BLOG_CONTENT_SHAREICONS_TITLE: Iconos de Redes Sociales
         BLOG_CONTENT_SHAREICONS: Mostrar iconos de Redes Sociales
