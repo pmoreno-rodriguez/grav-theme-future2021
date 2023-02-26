@@ -57,7 +57,7 @@ en:
       DEFAULT:
         PRIMARY_IMAGE: Primary image
         SHOW_SIDEBAR: Show Sidebar
-        BODY_CLASSES: 'Available classes in Future2021 Theme:<br />`single` (for pages with sidebar disabled). <br>You can create new CSS classes for the body and insert them here'
+        BODY_CLASSES: 'You can create new CSS classes for the body and add them here'
       MODULAR:
         BANNER:
           BANNER_TAB: Banner
@@ -290,7 +290,7 @@ de:
       DEFAULT:
         PRIMARY_IMAGE: Hauptbild
         SHOW_SIDEBAR: Seitenleiste anzeigen
-        BODY_CLASSES: 'Verfügbare Klassen in Future2021:<br />`single` (für Seiten mit deaktivierter Seitenleiste).<br/>Sie können neue CSS-Klassen erstellen und hier eintragen.'
+        BODY_CLASSES: 'Sie können neue CSS-Klassen für den body erstellen und hier hinzufügen.'
       MODULAR:
         BANNER:
           BANNER_TAB: Banner
@@ -520,7 +520,7 @@ es:
       DEFAULT:
         PRIMARY_IMAGE: Imagen principal
         SHOW_SIDEBAR: Mostrar Barra Lateral
-        BODY_CLASSES: 'Clases disponibles en el tema Future2021:<br />`single` (para páginas con sidebar deshabilitado). <br>Puede crear nuevas clases CSS para el body e insertarlas aquí.'
+        BODY_CLASSES: 'Puede crear nuevas clases CSS para el body y añadirlas aquí.'
       MODULAR:
         BANNER:
           BANNER_TAB: Banner
