@@ -110,7 +110,7 @@ form:
               type: text
               label: FUTURE.ADMIN.PORTFOLIO.OPTIONS.MORE_TEXT
               help: FUTURE.ADMIN.PORTFOLIO.OPTIONS.MORE_TEXT_HELP
-              default: 'Ver más'
+              default: FUTURE.ADMIN.PORTFOLIO.OPTIONS.MORE_TEXT_DEFAULT
               size: medium
             header.more_length:
               type: number
