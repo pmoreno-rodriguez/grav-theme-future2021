@@ -1,5 +1,4 @@
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
-{% set body_classes = body_class(['single']) %} {# Here, you can define aditional css classes for body, separated with comas #}
 {% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
 {% set favicon = theme_config.favicon ? theme_config.favicon|first : { type:'image/png', path: url('theme://images/favicon.png') } %}
 {% set new_base_url = base_url_absolute ~ theme_config.blog_page %}
@@ -39,7 +38,7 @@
     {% endblock %}
 
   </head>
-  <body class="{% block body_classes %}{{ body_classes }}{% endblock %} is-preload">
+  <body class="{% block body_classes %}{{ page.header.body_classes }}{% endblock %} is-preload">
     <!-- Wrapper -->
     <div id="wrapper">
 

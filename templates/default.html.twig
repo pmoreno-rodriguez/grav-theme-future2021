@@ -5,10 +5,6 @@
 {% set title = page.title|raw %}
 {% set subtitle = page.header.subtitle|raw %}
 
-{% block body_classes %}
-  {{ body_classes|default('single') }}
-{% endblock %}
-
 {% block menu %}
   {% include 'partials/sidebar_right.html.twig' %}
 {% endblock %}
@@ -45,5 +41,5 @@
 {% endblock %}
 
 {% block sidebar %}
-    {% include 'partials/sidebar_left.html.twig' %}
+  {% include 'partials/sidebar_left.html.twig' %}
 {% endblock %}
