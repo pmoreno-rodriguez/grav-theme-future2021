@@ -1,5 +1,5 @@
 # v1.0.4
-## 02/28/2023
+## 02/27/2023
 
 1.  [](#bugfix)
     * Fixed Spanish translation for custom menu items.
@@ -43,7 +43,7 @@
     * Allow disabling sidebar in all pages.
     * Added support to Login Form
 # v1.0.2
-## 09/11/2022
+## 11/08/2022
 
 1.  [](#bugfix)
     * Fixed code in sidebar_navigation.html.twig and topmenu.html.twig
@@ -58,13 +58,13 @@
     * Added option in theme to choose the miniposts category name.
     * New logo twig template
 # v1.0.1
-## 05/02/2022
+## 02/05/2022
 
 1.  [](#bugfix)
     * Updated CSS Styles to show FontAwesome 5
 
 # v1.0.0
-## 12/05/2021
+## 02/04/2022
 
 1.  [](#new)
     * Drop down menu functionality
