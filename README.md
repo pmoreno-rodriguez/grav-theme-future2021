@@ -20,7 +20,6 @@ Redesigned from scratch (version 2021)
 - Cross browser compatible
 - Dynamic avatar images based on author
 - Sharing buttons for Facebook, Twitter, Whatsapp and Telegram.
-- Randomised page content in sidebar
 - Top content pages in sidebar
 - Fully responsive with full-page mobile navigation
 - SCSS based CSS source files for easy customization
