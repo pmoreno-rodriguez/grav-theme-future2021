@@ -2,7 +2,7 @@
 
 #sidebarmenu {display: none;}
 
-@media screen and (max-width: 980px) {
+@include breakpoint('<=medium') {
 
 #sidebarmenu {
     display: block; }

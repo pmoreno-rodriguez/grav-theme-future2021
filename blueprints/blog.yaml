@@ -31,7 +31,8 @@ form:
           fields:
 
             content_title:
-              type: spacer
+              type: section
+              underline: true
               title: FUTURE.ADMIN.BLOG.BLOG_CONTENT_TITLE
 
             header.content.items:
@@ -104,3 +105,27 @@ form:
                 0: PLUGIN_ADMIN.DISABLED
               validate:
                 type: bool
+            
+            shareicons_title:
+              type: section
+              underline: true
+              title: FUTURE.ADMIN.BLOG.BLOG_CONTENT_SHAREICONS_TITLE
+
+            header.shareicons:
+              type: checkboxes
+              style: vertical
+              label: FUTURE.ADMIN.BLOG.BLOG_CONTENT_SHAREICONS
+              help: FUTURE.ADMIN.BLOG.BLOG_CONTENT_SHAREICONS_HELP
+              default:
+                  facebook: true
+                  twitter: true
+                  whatsapp: true
+                  telegram: true
+              options:
+                  facebook: Facebook
+                  twitter: Twitter
+                  whatsapp: Whatsapp
+                  telegram: Telegram
+              use: keys
+                    
+
