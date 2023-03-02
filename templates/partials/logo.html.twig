@@ -1,5 +1,5 @@
 {% set logo = theme_var('custom_logo_mobile') ?: theme_var('custom_logo') %}
-<a href="{{ home_url }}" class="logo" rel="nofollow" title="{{ site.title }}">
+<a href="{{ home_url }}" class="logo">
   {% if logo %}
     {% set logo_file = (logo|first).name %}
     <img src="{{ url('theme://images/logo/' ~ logo_file) }}" alt="{{ site.title }}"/>

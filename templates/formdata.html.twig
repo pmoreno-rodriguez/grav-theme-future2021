@@ -1,5 +1,3 @@
-{% set lang = grav.language.getActive ?: grav.config.site.default_lang %}
-
 {% extends 'partials/base.html.twig' %}
 {% block content %}
   <article class="post">
@@ -10,8 +8,6 @@
       <div class="meta">
         {% if config.plugins["translate-date"].enabled %}
           <time class="published" datetime="{{ form.date|td(null, "Y-m-d") }}">{{ form.date|td(null, "M j, Y") }}</time>
-        {% elseif config.plugins["twig-extensions"].enabled %}
-          <time class="published" datetime="{{ form.date|localizeddate('medium', 'none', lang) }}">{{ form.date|localizeddate('medium', 'none', lang) }}</time>
         {% else %}
           <time class="published" datetime="{{ form.date|date("Y-m-d") }}">{{ form.date|date("M j, Y") }}</time>
         {% endif %}

@@ -1,5 +1,3 @@
-{% set lang = grav.language.getActive ?: grav.config.site.default_lang %}
-
 <article class="post" itemprop="liveBlogUpdate" itemscope itemtype="http://schema.org/BlogPosting">
 
   {% if page.header.metadata.author %}
@@ -9,23 +7,23 @@
   {% else %}
     {% set author = page.taxonomy.author[0] %}
   {% endif %}
-
+  
+  {% set avatar = page.media[page.header.avatarImage].url|e %}
+  {% set image = page.media[page.header.primaryImage] ?: page.media.images|first %}
   {% set title = page.title|raw %}
-  {% set avatar = page.media[page.header.avatarImage].url|e  %}
-  {% set image = page.media[page.header.primaryImage] ?: page.media.all|filter((v, k) => k != page.header.avatarImage and (v.type == 'image' or v.type == 'vector'))|first %}
 
   <header>
     <div class="title">
       {% if page.header.link %}
         <h2 itemprop="headline">
           {% if page.header.continue_link is not sameas(false) %}
-            <a href="{{ page.url }}" aria-label="{{ title }}"></a>
+            <a href="{{ page.url }}"></a>
           {% endif %}
-          <a href="{{ page.header.link }}" aria-label="{{ title }}">{{ title }}</a>
+          <a href="{{ page.header.link }}">{{ page.title }}</a>
         </h2>
       {% else %}
         <h2 itemprop="headline">
-          <a href="{{ page.url }}" aria-label="{{ title }}">{{ title }}</a>
+          <a href="{{ page.url }}">{{ page.title }}</a>
         </h2>
       {% endif %}
       {% if page.header.subtitle %}
@@ -35,25 +33,25 @@
     <div class="meta">
       {% if config.plugins["translate-date"].enabled %}
         <time class="published" itemprop="datePublished" datetime="{{ page.date|td(null, "Y-m-d") }}">{{ page.date|td(null, "M j, Y") }}</time>
-      {% elseif config.plugins["twig-extensions"].enabled %}
-				<time class="published" itemprop="datePublished" datetime="{{ page.date|localizeddate('medium', 'none', lang) }}">{{ page.date|localizeddate('medium', 'none', lang) }}</time>
       {% else %}
         <time class="published" itemprop="datePublished" datetime="{{ page.date|date("Y-m-d") }}">{{ page.date|date("M j, Y") }}</time>
       {% endif %}
       {% if author %}
         <span itemprop="author" itemscope itemtype="http://schema.org/Person"/>
-        <a {% if page.taxonomy.author %}href="{{ base_url }}/author{{ config.system.param_sep }}{{ author }}" itemprop="url" {% endif %}class="author" aria-label="{{ author }}" rel="nofollow">
+        <a {% if page.taxonomy.author %}href="{{ base_url }}/author{{ config.system.param_sep }}{{ author }}" itemprop="url" {% endif %}class="author">
           <span class="name" rel="author">{{ author }}</span>
           {% if avatar %}<img src="{{ avatar }}" alt="{{ author }}" />{% endif %}
         </a>
       {% endif %}
     </div>
   </header>
+
   {% if image %}
-  <a class="image featured" href="{{ page.url }}" title="{{ title|raw }}" rel="nofollow">
-    {{ image.cropZoom(1038,437).loading('lazy').attribute('decoding','async').html(title, title)|raw }}
-  </a>
-  {% endif %}
+    <span class="image featured">
+      {{ image.cropZoom(1038,437).loading('lazy').html(title, title)|raw }}
+    </span>
+    {% endif %}
+
   <div itemprop="articleBody">
     {% if page.header.continue_link is sameas(false) %}
       {{ page.content|raw }}
@@ -73,22 +71,22 @@
   <footer>
     <ul class="actions">
       {% if truncate and page.summary != page.content %}
-        <li><a href="{{ page.url }}" class="button" rel="nofollow">{{'FUTURE.BLOG.ITEM.CONTINUE_READING'|t}}</a></li>
+        <li><a href="{{ page.url }}" class="button">{{'FUTURE.BLOG.ITEM.CONTINUE_READING'|t}}</a></li>
       {% elseif truncate %}
-        <li><a href="{{ page.url }}" class="button" rel="nofollow">{{'FUTURE.BLOG.ITEM.CONTINUE_READING'|t}}</a></li>
+        <li><a href="{{ page.url }}" class="button">{{'FUTURE.BLOG.ITEM.CONTINUE_READING'|t}}</a></li>
       {% endif %}
 
       {% if show_prev_next %}
         {% if not page.isLast %}
           <li>
-            <a class="button" href="{{ page.prevSibling.url }}" rel="prev">
+            <a class="button" href="{{ page.prevSibling.url }}">
               <i class="fa fa-chevron-left"></i>
               {{'FUTURE.BLOG.ITEM.PREV_POST'|t}}</a>
           </li>
         {% endif %}
         {% if not page.isFirst %}
           <li>
-            <a class="button" href="{{ page.nextSibling.url }}" rel="next">{{'FUTURE.BLOG.ITEM.NEXT_POST'|t}}
+            <a class="button" href="{{ page.nextSibling.url }}">{{'FUTURE.BLOG.ITEM.NEXT_POST'|t}}
               <i class="fa fa-chevron-right"></i>
             </a>
           </li>
@@ -96,25 +94,14 @@
       {% endif %}
     </ul>
 
-    {% if page.taxonomy.tag %}
     <ul class="stats">
+      {% if page.taxonomy.tag %}
         {% for tag in page.taxonomy.tag %}
-          <li><a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}" itemprop="keywords" rel="nofollow">{{ tag }}</a></li>
+          <li><a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}" itemprop="keywords">{{ tag }}</a></li>
         {% endfor %}
-     </ul>
-    {% endif %}
-    <ul class="share">
-      {% set share = [
-      { 'name': 'facebook', 'icon': 'fa-facebook', 'enabled': header_var('shareicons.facebook')|defined(true), 'url': 'https://www.facebook.com/sharer/sharer.php?', 'params': {'u': page.url(true)} },
-      { 'name': 'twitter', 'icon': 'fa-twitter', 'enabled': header_var('shareicons.twitter')|defined(true), 'url': 'https://twitter.com/intent/tweet?', 'params': {'text': page.title, 'url': page.url(true)} },
-      { 'name': 'whatsapp', 'icon': 'fa-whatsapp', 'enabled': header_var('shareicons.whatsapp')|defined(true), 'url': 'https://wa.me/?', 'params': {'text': page.title ~ '. ' ~ page.url(true)}, 'action': 'share/whatsapp/share' },
-      { 'name': 'telegram', 'icon': 'fa-telegram', 'enabled': header_var('shareicons.telegram')|defined(true), 'url': 'https://t.me/share/url?', 'params': {'url': page.url(true), 'text': page.title} },
-      ] %}
-      {% for item in share %}
-          {% if item.enabled|defined(true) %}
-              <li><a class="icon brands {{ item.icon }}" target="_blank" href="{{- item.url -}}{{- item.params|url_encode-}}" {% if item.action is defined %}data-action="{{ item.action }}"{% endif %} aria-label="{{ 'FUTURE.MISC.SHARE_ON'|t }} {{ item.name|capitalize }}" title="{{ 'FUTURE.MISC.SHARE_ON'|t }} {{item.name|capitalize }}"></a></li>
-          {% endif %}
-      {% endfor %}
+      {% endif %}
+      <li><a href="https://twitter.com/share" data-url="{{ page.url(true) }}" data-text="{{ page.title }}" class="icon brands fa-twitter"></a></li>
+      <li><a href="http://www.facebook.com/sharer.php?u={{ page.url(true) }}" class="icon brands fa-facebook"></a></li>
     </ul>
   </footer>
 </article>

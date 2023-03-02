@@ -15,7 +15,7 @@
         <li><span class="disabled button large">{{ paginate.number }}</span></li>
       {% elseif paginate.isInDelta %}
         {% set url = (base_url ~ pagination.params ~ paginate.url)|replace({'//':'/'}) %}
-        <li><a class="button large" href="{{ url }}" rel="nofollow">{{ paginate.number }}</a></li>
+        <li><a class="button large" href="{{ url }}">{{ paginate.number }}</a></li>
       {% elseif paginate.isDeltaBorder %}
         <li class="gap"><span>&hellip;</span></li>
       {% endif %}

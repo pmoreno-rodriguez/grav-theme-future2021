@@ -5,103 +5,54 @@
 {% set subtitle = page.header.subtitle|raw %}
 {% set columns = page.header.layout == 'standard' ? 'col-4 col-6-medium col-12-small' : 'col-6 col-12-small'  %}
 
-{% block stylesheets %}
-	{{ parent() }}
-	{% do assets.addCss('theme://assets/css/glightbox.min.css') %}
-	{% set styling %}
-	button.gclose.gbtn, button.gnext.gbtn, button.gprev.gbtn {
-			box-shadow: none !important;
-		}
-	{% endset %}
-{% do assets.addInlineCss(styling) %}
-{% endblock %}
-{% set gallery = page.header.images %}
-{% set thumb_w = page.header.thumb_width|default(600) %}
-{% set thumb_h = page.header.thumb_height|default(450) %}
-
 {% block menu %}
-	{% include 'partials/sidebar_right.html.twig' %}
+  {% include 'partials/sidebar_right.html.twig' %}
 {% endblock %}
 
 {% block content %}
 
-	<article class="post">
-		<header>
-			<div class="title">
-				<h2>
-					{{ title }}
-				</h2>
-				{% if subtitle %}
-					<p>
-						{{ subtitle }}
-					</p>
-				{% endif %}
-			</div>
-		</header>
-		{% if image %}
-			<span class="image featured">
-				{{ image.cropZoom(1038,437).loading('lazy').attribute('decoding','async').html(title, title)|raw }}
-			</span>
-		{% endif %}
+  <article class="post">
+    <header>
+      <div class="title">
+        <h2>{{ title }}</h2>
+        {% if subtitle %}
+          <p>{{ subtitle }}</p>
+        {% endif %}
+      </div>
+    </header>
+    {% if image %}
+    <span class="image featured">
+      {{ image.cropZoom(1038,437).loading('lazy').html(title, title)|raw }}
+    </span>
+    {% endif %}
 
-		{{ page.content|raw}}
+    {{ page.content|raw}}
 
-		<!-- Portfolio -->
-		{% block portfolio %}
-			<section>
-				<div class="row aln-center">
-					{% for item in gallery %}
-          {% set item_image = page.media[item.image] %}
-					{% set item_title = item.title %}
-					{% set item_desc = item.description %}
-					{% set thumbnail = item_image.cropZoom(thumb_w, thumb_h).loading('lazy').attribute('decoding','async').attribute('itemprop','http://schema.org/image').html(item_title,item_title) %}
-          <div class="{{columns}} portfolio_item">
-            <a href="{{item_image.url}}" class="glightbox"data-height="{{page.header.height}}" data-width="{{page.header.width}}" data-title="{{item_title}}" data-description="{{item_desc|raw}}" data-desc-position="{{item.descPosition}}" data-zoomable="{{page.header.zoomable}}" data-draggable="{{page.header.draggable}}" data-type="image">
-              <span class="image fit">
-                {{ thumbnail }}
-              </span>
-            </a>
-          </div>
-					{% endfor %}
-				</div>
-			</section>
-		{% endblock %}
-	</article>
+    <!-- Portfolio -->
+    {% block portfolio %}
+      <section>
+        <div class="row aln-center">
+          {% for item in page.header.images %}
+            <div class="{{columns}} portfolio_item">
+              <a href="{{page.media[item.image].url}}" class="glightbox" data-width="100vw" data-zoomable="true" data-glightbox='title: {{item.title}}; description: {{item.description|raw}}'>
+                <span class="image fit"><img src="{{page.media[item.thumb].url}}" alt="image"/></span>
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+      </section>
+    {% endblock %}
+  </article>
 
-	{% if show_sidebar == false %}
-		<section id="footer" class="align-center">
-			{% include 'partials/footer.html.twig' %}
-		</section>
-	{% endif %}
+  {% if show_sidebar == false %}
+    <section id="footer" class="align-center">
+      {% include 'partials/footer.html.twig' %}
+    </section>
+  {% endif %}
 {% endblock %}
 
 {% block sidebar %}
-	{% include 'partials/sidebar_left.html.twig' %}
-{% endblock %}
-
-{% block javascripts %}
-	{{ parent() }}
-	{% set script %}
-	const lightbox = GLightbox({
-	    closeButton: {{ page.header.close_button }},
-	    touchFollowAxis: {{ page.header.touch_axis }},
-	    touchNavigation: {{ page.header.touch_navigation }},
-	    keyboardNavigation:	{{ page.header.keyboard_navigation }},
-	    loop: {{ page.header.loop }},
-	    openEffect: '{{ page.header.open_effect }}',
-	    closeEffect: '{{ page.header.close_effect }}',
-	    slideEffect: '{{ page.header.slide_effect }}',
-	    closeOnOutsideClick: {{ page.header.closeOutside }},
-	    dragToleranceX: {{ page.header.draggableX }},
-	    dragToleranceY: {{ page.header.draggableY }},
-	    preload: {{ page.header.preload }},
-	    dragAutoSnap: {{ page.header.dragAuto }},
-	    moreText: '{{ page.header.more_text }}',
-		{% if page.header.startAt is defined %}startAt: {{ page.header.startAt }},{% endif %}
-	    moreLength: {{page.header.more_length}}
-	});
-	{% endset %}
-
-	{% do assets.addJs('theme://assets/js/glightbox.min.js', {group:'bottom'}) %}
-	{% do assets.addInlineJs(script,{'group':'bottom'}) %}
+  {% if show_sidebar == true %}
+    {% include 'partials/sidebar_left.html.twig' %}
+  {% endif %}
 {% endblock %}

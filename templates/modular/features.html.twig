@@ -12,7 +12,7 @@
   </header>
   
   {% if image %}
-    {{ image.cropZoom(1038,437).loading('lazy').attribute('decoding','async').html(title, title, 'image featured')|raw }}
+    {{ image.cropZoom(1038,437).loading('lazy').html(title, title, 'image featured')|raw }}
   {% endif %}
 
   {{ page.content|raw }}

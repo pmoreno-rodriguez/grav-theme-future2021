@@ -8,22 +8,12 @@
   </header>
   <div class="mini-posts">
     {% for p in page.evaluate({'@taxonomy.category':miniposts_category}).order('header.order', 'asc').slice(0,miniposts_number) %}
-    
-    {% if p.header.metadata.author %}
-      {% set author = p.header.metadata.author %}
-    {% elseif p.header.author %}
-      {% set author = p.header.author %}
-    {% else %}
-        {% set author = p.taxonomy.author[0] %}
-    {% endif %}
+    {% set image = p.media[p.header.primaryImage] ?: p.media.images|first %}
     {% set title = p.title|raw %}
-    {% set avatar = p.media[p.header.avatarImage].url|e  %}
-    {% set image = p.media[p.header.primaryImage] ?: p.media.all|filter((v, k) => k != p.header.avatarImage and (v.type == 'image' or v.type == 'vector'))|first %}
-
       <article class="mini-post">
         <header>
           <h3>
-            <a href="{{ p.url }}" aria-label="{{ title }}">{{ title }}</a>
+            <a href="{{ p.url }}">{{ p.title }}</a>
           </h3>
           {% if config.plugins["translate-date"].enabled %}
             <time class="published" itemprop="datePublished" datetime="{{ page.date|td(null, "Y-m-d") }}">{{ page.date|td(null, "M j, Y") }}</time>
@@ -33,12 +23,12 @@
             <time class="published" itemprop="datePublished" datetime="{{ page.date|date("Y-m-d") }}">{{ page.date|date("M j, Y") }}</time>
           {% endif %}
         {% if avatar %}
-          <a href="{{ p.url }}" class="author" title="{{ author }}"><img src="{{ avatar }}" alt="{{ author }}"/></a>
+          <a href="{{ p.url }}" class="author"><img src="{{ p.media[p.header.avatarImage].url}}" alt=""/></a>
         {% endif %}
         </header>
         {% if image %}
-        <a href="{{ p.url }}" class="image" title="{{ title|raw }}" rel="nofollow">
-            {{ image.cropZoom(1038,437).loading('lazy').attribute('decoding','async').html(title,title)|raw}}
+        <a href="{{ p.url }}" class="image">
+            {{ image.cropZoom(1038,437).loading('lazy').html(title,title)|raw}}
         </a>
         {% endif %}
       </article>

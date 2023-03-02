@@ -1,40 +1,4 @@
 {% extends 'partials/base.html.twig' %}
-
-{% block stylesheets %}
-    {{ parent() }}
-    {% set styles %}
-        #user-register .buttons {
-          display: flex;
-          flex-wrap: nowrap;
-          align-content: center;
-          justify-content: flex-start;
-          align-items: center;
-          margin: 1em 0;
-        }
-
-        #user-register .button {
-          margin: 0 1em;
-        }
-        #user-register .button:first-child {
-          margin: 0;
-        }
-         @media screen and (max-width: 480px) {
-          #user-register .buttons {
-            flex-direction: column;
-          }
-          #user-register .button {
-            width: 100%;
-            margin: 1em 0;
-          }
-        }
-    {% endset %}
-    {% do assets.addInlineCss(styles) %}
-{% endblock %}
-
-{% block menu %}
-  {% include 'partials/sidebar_right.html.twig' %}
-{% endblock %}
-
 {% block content %}
   <article class="post">
     <header>

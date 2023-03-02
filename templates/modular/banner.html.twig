@@ -19,7 +19,7 @@
   </div>
   {% if image %}
     <span class="image object fit">
-      {{image.loading('lazy').attribute('decoding','async').html(title,title)|raw}}
+      {{image.loading('lazy').html(title,title)|raw}}
     </span>
   {% endif %}
 </section>

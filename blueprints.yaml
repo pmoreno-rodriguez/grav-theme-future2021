@@ -1,7 +1,7 @@
 name: Future 2021
 slug: future2021
 type: theme
-version: 1.0.4
+version: 1.0.3
 description: Grav Future Imperfect by HTML5 UP (Version 2021)
 icon:  microchip
 author:
@@ -87,47 +87,6 @@ form:
         slogan:
           type: text
           label: FUTURE.ADMIN.THEME.SLOGAN
-        
-        menu_options:
-          type: section 
-          title: FUTURE.ADMIN.THEME.MENU.TITLE
-          underline: true
-
-        menu_langswitcher:
-          type: toggle
-          label: FUTURE.ADMIN.THEME.MENU.LANGSWITCHER
-          help: FUTURE.ADMIN.THEME.MENU.LANGSWITCHER_HELP
-          default: 1
-          highlight: 1
-          options:
-            1: PLUGIN_ADMIN.ENABLED
-            0: PLUGIN_ADMIN.DISABLED
-          validate:
-            type: bool
-        
-        menu_search:
-          type: toggle
-          label: FUTURE.ADMIN.THEME.MENU.SEARCH
-          help: FUTURE.ADMIN.THEME.MENU.SEARCH_HELP
-          default: 1
-          highlight: 1
-          options:
-            1: PLUGIN_ADMIN.ENABLED
-            0: PLUGIN_ADMIN.DISABLED
-          validate:
-            type: bool
-        
-        menu_login:
-          type: toggle
-          label: FUTURE.ADMIN.THEME.MENU.LOGIN
-          help: FUTURE.ADMIN.THEME.MENU.LOGIN_HELP
-          default: 1
-          highlight: 1
-          options:
-            1: PLUGIN_ADMIN.ENABLED
-            0: PLUGIN_ADMIN.DISABLED
-          validate:
-            type: bool
 
     blog_section:
       type: fieldset
@@ -203,19 +162,9 @@ form:
       collapsible: true
       collapsed: true
       icon: share-alt
-      title: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICONS
+      title: FUTURE.ADMIN.THEME.FOOTER_SOCIALS_ICONS
       fields:
 
-        enable_social:
-          type: toggle
-          label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ENABLE
-          highlight: 1
-          default: 1
-          options:
-            1: PLUGIN_ADMIN.ENABLED
-            0: PLUGIN_ADMIN.DISABLED
-          validate:
-            type: bool 
         social:
           name: social
           type: list
@@ -225,13 +174,13 @@ form:
           fields:
             .name:
               type: text
-              label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICON_NAME
+              label: FUTURE.ADMIN.THEME.FOOTER_SOCIALS_ICON_NAME
             .url:
               type: text
-              label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICON_URL
+              label: FUTURE.ADMIN.THEME.FOOTER_SOCIALS_ICON_URL
             .icon:
               type: iconpicker
-              label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICON_ICON
+              label: FUTURE.ADMIN.THEME.FOOTER_SOCIALS_ICON_ICON
 
     custommenu_options_section:
       type: fieldset
@@ -245,11 +194,11 @@ form:
           type: toggle
           label: FUTURE.ADMIN.THEME.CUSTOM_MENU_ENABLE
           help: FUTURE.ADMIN.THEME.CUSTOM_MENU_ENABLE_HELP
-          default: 1
+          default: 0
           highlight: 1
           options:
-            1: PLUGIN_ADMIN.ENABLED
             0: PLUGIN_ADMIN.DISABLED
+            1: PLUGIN_ADMIN.ENABLED
           validate:
             type: bool
         custommenu:

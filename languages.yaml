@@ -11,14 +11,6 @@ en:
         CUSTOM_LOGO_DESCRIPTION: Will be used instead of default logo `theme://images/grav-logo.svg`
         CUSTOM_LOGO_MOBILE: Mobile Custom Logo
         SLOGAN: Slogan
-        MENU:
-          TITLE: Top Menu Configuration
-          LANGSWITCHER: Enable Langswitcher icon
-          LANGSWITCHER_HELP: With Langswitcher plugin enabled and multi-language setup in your site, you can enable or disable the langswitcher functionality appearing in the top menu.
-          SEARCH: Enable Search icon
-          SEARCH_HELP: With SimpleSearch plugin enabled you can enable or disable the search block in top menu.
-          LOGIN: Enable Login icon
-          LOGIN_HELP: You can enable or disable Login icon in top menu, to show login status.
         BLOG_DEFAULTS: Blog Defaults
         BLOG_PAGE: Blog Page
         BLOG_PAGE_HELP: The route to the blog page when working with blog sidebar
@@ -35,13 +27,12 @@ en:
         FOOTER_COPYRIGHT: Copyright Text
         FOOTER_BUTTON_TEXT: Button Text
         FOOTER_BUTTON_URL: Button URL
-        FOOTER_SOCIAL_ENABLE: Enable Social Icons
-        FOOTER_SOCIAL_ICONS: Social Icons
-        FOOTER_SOCIAL_ICON_NAME: Social Name
-        FOOTER_SOCIAL_ICON_URL: URL Link to Social
-        FOOTER_SOCIAL_ICON_ICON: Icon to Social
+        FOOTER_SOCIALS_ICONS: Social Icons
+        FOOTER_SOCIALS_ICON_NAME: Social Name
+        FOOTER_SOCIALS_ICON_URL: URL Link to Social
+        FOOTER_SOCIALS_ICON_ICON: Icon to Social
         CUSTOM_MENU_TITLE: 'Custom Menu Items'
-        CUSTOM_MENU_ENABLE: 'Enable Custom Menu Items'
+        CUSTOM_MENU_ENABLE: 'Display Custom Menu Items'
         CUSTOM_MENU_ENABLE_HELP: 'Determines if any defined custom menu entries are displayed in the menubar.'
         CUSTOM_MENU_ITEM_TEXT: 'Text'
         CUSTOM_MENU_ITEM_TEXT_DESCRIPTION: 'Text label for menu item.'
@@ -56,8 +47,6 @@ en:
         CUSTOM_MENU_ITEM_TARGET_TOP: 'Open in the full body of the window'
       DEFAULT:
         PRIMARY_IMAGE: Primary image
-        SHOW_SIDEBAR: Show Sidebar
-        BODY_CLASSES: 'You can create new CSS classes for the body and add them here'
       MODULAR:
         BANNER:
           BANNER_TAB: Banner
@@ -94,10 +83,8 @@ en:
         BLOG_CONTENT_ITEMS_ORDER_DIR_DESC: Descending
         BLOG_CONTENT_ITEMS_BREADCRUMBS: Show Breadcrumbs
         BLOG_CONTENT_ITEMS_PAGINATION: Show Pagination
+        BLOG_CONTENT_ITEMS_SIDEBAR: Show Sidebar
         BLOG_CONTENT_ITEMS_URL_TAXONOMY_FILTERS: URL Taxonomy Filters
-        BLOG_CONTENT_SHAREICONS_TITLE: Social Media Icons
-        BLOG_CONTENT_SHAREICONS: Select Social Media Icons
-        BLOG_CONTENT_SHAREICONS_HELP: Select which social media icons you want to display on articles
       ITEM:
         ITEM_TAB: Blog Item
         ITEM_OPTIONS: Options
@@ -112,86 +99,16 @@ en:
         ITEM_SUBTITLE: Subtitle
         ITEM_AVATAR: Avatar Image
       PORTFOLIO:
-        TAB: Portfolio
-        TITLE: Portfolio Images
-        LAYOUT: 
-          LABEL: Layout
-          TWOCOLS: Medium   = 2 / 1 columns
-          THREECOLS: Standard  = 3 / 2 / 1 columas
-        THUMB_WIDTH: Thumbnail Width
-        THUMB_WIDTH_HELP: Set width for thumbnails
-        THUMB_HEIGHT: Thumbnail Height
-        THUMB_HEIGHT_HELP: Set height for thumbnails
-        IMAGES: 
-          LABEL: Images
-          IMAGE: Image
-          IMAGE_TITLE: Title
-          IMAGE_DESCRIPTION: Description
-          DESCPOSITION: 
-            LABEL: Description position
-            HELP: Global position for slides description, you can define a specific position on each slide (bottom, top, left, right)
-            BOTTOM: Bottom
-            TOP: Top
-            LEFT: Left
-            RIGHT: Right
-          IMAGE_THUMB: Thumbnail
-        OPTIONS:
-          TAB: Portfolio Options
-          EFFECTS_TITLE: Appearance & Effects
-          ACTIONS_TITLE: Actions
-          STYLING_TITLE: Styling
-          BEHAVIOR_TITLE: Behaviors
-          OPEN_EFFECT:
-            LABEL: Open Effect
-            ZOOM: Zoom
-            FADE: Fade
-            NONE: None
-          CLOSE_EFFECT:
-            LABEL: Close Effect
-            ZOOM: Zoom
-            FADE: Fade
-            NONE: None
-          SLIDE_EFFECT:
-            LABEL: Slide Effect
-            SLIDE: Slide
-            ZOOM: Zoom
-            FADE: Fade
-            NONE: None
-          MORE_TEXT: More Text
-          MORE_TEXT_HELP: More text for descriptions on mobile devices.
-          MORE_TEXT_DEFAULT: More text
-          MORE_LENGTH: More Length
-          MORE_LENGTH_HELP: Number of characters to display on the description before adding the moreText link (only for mobiles), if 0 it will display the entire description.
-          CLOSE_BUTTON: Close Button
-          CLOSE_BUTTON_HELP: Show or hide the close button
-          TOUCH_NAVIGATION: Touch Navigation
-          TOUCH_NAVIGATION_HELP: Enable or disable the touch navigation (swipe)
-          TOUCH_AXIS: Touch Follow Axis
-          TOUCH_AXIS_HELP: Image follow axis when dragging on mobile.
-          KEYBOARD: Keyboard Navigation
-          KEYBOARD_HELP: Enable or disable the keyboard navigation
-          CLOSE_OUTSIDE: Close with Outside Click
-          CLOSE_OUTSIDE_HELP: Close the lightbox when clicking outside the active slide.
-          MORE_STARTAT: 'Start At:'
-          MORE_STARTAT_HELP: Start lightbox at defined index (0 is the first slide). If it is not defined, the clicked image is shown
-          WIDTH: Width
-          WIDTH_HELP: 'Default width for inline elements and iframes, you can define a specific size on each slide. You can use any unit for example 90% or 100vw for full width'
-          HEIGHT: Height
-          HEIGHT_HELP: 'Default height for inline elements and iframes, you can define a specific size on each slide.You can use any unit for example 90% or 100vh For inline elements you can set the height to auto'
-          LOOP: Loop
-          LOOP_HELP: Loop slides on end
-          ZOOMABLE: Zoomable
-          ZOOMABLE_HELP: Enable or disable zoomable images you can also use `data-zoomable="false"` on individual nodes.
-          DRAGGABLE: Draggable
-          DRAGGABLE_HELP: Enable or disable mouse drag to go prev and next slide (only images and inline content), you can also use `data-draggable="false"` on individual nodes.
-          DRAGGABLE_X: Drag Tolerance X
-          DRAGGABLE_X_HELP: Used with draggable. Number of pixels the user has to drag to go to prev or next slide.
-          DRAGGABLE_Y: Drag Tolerance Y
-          DRAGGABLE_Y_HELP: Used with draggable. Number of pixels the user has to drag up or down to close the lightbox (Set 0 to disable vertical drag).
-          DRAG_AUTO_SNAP: Drag Auto-Snap
-          DRAG_AUTO_SNAP_HELP: If true the slide will automatically change to prev/next or close if dragToleranceX or dragToleranceY is reached, otherwise it will wait till the mouse is released.
-          PRELOAD: Preload
-          PRELOAD_HELP: Enable or disable preloading.
+        PORTFOLIO_TAB: Portfolio
+        PORTFOLIO_TITLE: Portfolio Images
+        PORTFOLIO_LAYOUT: Layout
+        PORTFOLIO_LAYOUT_TWOCOLS: Medium   = 2 / 1 columns
+        PORTOFOLIO_LAYOUT_THREECOLS: Standard  = 3 / 2 / 1 columns
+        PORTFOLIO_IMAGES: Images
+        PORTFOLIO_IMAGE: Image
+        PORTFOLIO_IMAGE_TITLE: Title
+        PORTFOLIO_IMAGE_DESCRIPTION: Description
+        PORTFOLIO_IMAGE_THUMB: Thumbnails
 
     BLOG:
       LISTING_TITLE_CATEGORY: 'Posts in Category: '
@@ -223,13 +140,12 @@ en:
         HEADLINE: Archives
       SYNDICATE:
         HEADLINE: Syndicate
+
+    LOGIN: Log in
     LATESTPOSTS: Latest posts
     FEATURED: Featured
     PRIVACY: By using this form you agree our terms
     FORM_SUMMARY: Here is the summary of what you wrote to us
-    MISC:
-      SHARE_ON: Share on
-      BACK_TO_TOP: Back to top
 
 de:
   FUTURE:
@@ -244,14 +160,6 @@ de:
         CUSTOM_LOGO_DESCRIPTION: Dieses Logo wird anstelle des Standardlogos `theme://images/grav-logo.svg` verwendet
         CUSTOM_LOGO_MOBILE: Benutzerdefiniertes Logo für Mobilgeräte
         SLOGAN: Motto
-        MENU:
-          TITLE: Menü-Konfiguration
-          LANGSWITCHER: Sprachauswahl aktivieren
-          LANGSWITCHER_HELP: Sprachauswahl bei mehrsprachigen Seiten im oberen Menü de-/aktivieren (erfordert Langswitcher-Plugin).
-          SEARCH: Suchfeld aktivieren
-          SEARCH_HELP: Suchfeld im oberen Menü de-/aktivieren (erfordert Simplesearch-Plugin).
-          LOGIN: Login-Symbol aktivieren
-          LOGIN_HELP: Login-Symbol im oberen Menü de-/aktivieren um den Login-Status zu sehen.
         BLOG_DEFAULTS: Blog-Optionen
         BLOG_PAGE: Blog-Seite
         BLOG_PAGE_HELP: Der Pfad zur Blog-Seite wenn die Blog-Seitenleiste aktiv ist
@@ -268,29 +176,26 @@ de:
         FOOTER_COPYRIGHT: Copyright-Text
         FOOTER_BUTTON_TEXT: Schaltflächentext
         FOOTER_BUTTON_URL: Schaltflächen-URL
-        FOOTER_SOCIAL_ENABLE: Symbole für soziale Medien aktivieren
-        FOOTER_SOCIAL_ICONS: Symbole für soziale Medien
-        FOOTER_SOCIAL_ICON_NAME: Name des sozialen Netzwerks
-        FOOTER_SOCIAL_ICON_URL: URL-Link zum sozialen Netzwerk
-        FOOTER_SOCIAL_ICON_ICON: Symbol des sozialen Netzwerks
-        CUSTOM_MENU_TITLE: Benutzerdefinierte Menüpunkte
-        CUSTOM_MENU_ENABLE: Benutzerdefinierte Menüpunkte aktivieren
-        CUSTOM_MENU_ENABLE_HELP: Legt fest, ob definierte benutzerdefinierte Menüeinträge in der Menüleiste angezeigt werden.
-        CUSTOM_MENU_ITEM_TEXT: Text
-        CUSTOM_MENU_ITEM_TEXT_DESCRIPTION: Textbeschriftung für Menüpunkt.
-        CUSTOM_MENU_ITEM_ICON: Symbol
-        CUSTOM_MENU_ITEM_ICON_DESCRIPTION: FontAwesome-Symbol für Menüelement.
-        CUSTOM_MENU_ITEM_URL: URL
-        CUSTOM_MENU_ITEM_URL_DESCRIPTION: URL für Menüpunkt.
-        CUSTOM_MENU_ITEM_TARGET: Ziel
-        CUSTOM_MENU_ITEM_TARGET_BLANK: In neuem Fenster öffnen
-        CUSTOM_MENU_ITEM_TARGET_PARENT: In übergeordnetem Frame öffnen
-        CUSTOM_MENU_ITEM_TARGET_SELF: In selbem Frame öffnen
-        CUSTOM_MENU_ITEM_TARGET_TOP: In vollem Fensterkörper öffnen
+        FOOTER_SOCIALS_ICONS: Symbole für soziale Medien
+        FOOTER_SOCIALS_ICON_NAME: Name des sozialen Netzwerks
+        FOOTER_SOCIALS_ICON_URL: URL-Link zum sozialen Netzwerk
+        FOOTER_SOCIALS_ICON_ICON: Symbol des sozialen Netzwerks
+        CUSTOM_MENU_TITLE: 'Benutzerdefinierte Menüpunkte'
+        CUSTOM_MENU_ENABLE: 'Benutzerdefinierte Menüpunkte aktivieren'
+        CUSTOM_MENU_ENABLE_HELP: 'Legt fest, ob definierte benutzerdefinierte Menüeinträge in der Menüleiste angezeigt werden.'
+        CUSTOM_MENU_ITEM_TEXT: 'Text'
+        CUSTOM_MENU_ITEM_TEXT_DESCRIPTION: 'Textbeschriftung für Menüpunkt.'
+        CUSTOM_MENU_ITEM_ICON: 'Symbol'
+        CUSTOM_MENU_ITEM_ICON_DESCRIPTION: 'FontAwesome-Symbol für Menüelement.'
+        CUSTOM_MENU_ITEM_URL: 'URL'
+        CUSTOM_MENU_ITEM_URL_DESCRIPTION: 'URL für Menüpunkt.'
+        CUSTOM_MENU_ITEM_TARGET: 'Ziel'
+        CUSTOM_MENU_ITEM_TARGET_BLANK: 'In neuem Fenster öffnen'
+        CUSTOM_MENU_ITEM_TARGET_PARENT: 'In übergeordnetem Frame öffnen'
+        CUSTOM_MENU_ITEM_TARGET_SELF: 'In selbem Frame öffnen'
+        CUSTOM_MENU_ITEM_TARGET_TOP: 'In vollem Fensterkörper öffnen'
       DEFAULT:
         PRIMARY_IMAGE: Hauptbild
-        SHOW_SIDEBAR: Seitenleiste anzeigen
-        BODY_CLASSES: 'Sie können neue CSS-Klassen für den body erstellen und hier hinzufügen.'
       MODULAR:
         BANNER:
           BANNER_TAB: Banner
@@ -314,7 +219,7 @@ de:
 
       BLOG:
         BLOG_TAB: Blog-Einstellungen
-        BLOG_CONTENT_TITLE: Inhaltseinstellungen
+        BLOG_CONTENT_TITLE: Content Definition
         BLOG_CONTENT_ITEMS: Artikel
         BLOG_CONTENT_ITEMS_LIMIT: Maximale Artikel-Anzahl
         BLOG_CONTENT_ITEMS_ORDER_BY: Sortieren nach
@@ -325,8 +230,9 @@ de:
         BLOG_CONTENT_ITEMS_ORDER_DIR: Reihenfolge
         BLOG_CONTENT_ITEMS_ORDER_DIR_ASC: Aufsteigend
         BLOG_CONTENT_ITEMS_ORDER_DIR_DESC: Absteigend
-        BLOG_CONTENT_ITEMS_BREADCRUMBS: Brotkrümelnavigation anzeigen
+        BLOG_CONTENT_ITEMS_BREADCRUMBS: Paniermehl anzeigen
         BLOG_CONTENT_ITEMS_PAGINATION: Seitennummerierung
+        BLOG_CONTENT_ITEMS_SIDEBAR: Seitenleiste anzeigen
         BLOG_CONTENT_ITEMS_URL_TAXONOMY_FILTERS: Taxonomie filtern nach URL
       ITEM:
         ITEM_TAB: Blog-Artikel
@@ -342,86 +248,16 @@ de:
         ITEM_SUBTITLE: Untertitel
         ITEM_AVATAR: Avatar-Bild
       PORTFOLIO:
-        TAB: Portfolio
-        TITLE: Portfolio-Bilder
-        LAYOUT: 
-          LABEL: Layout
-          TWOCOLS: Mittel   = 2 / 1 Spalten
-          THREECOLS: Standard  = 3 / 2 / 1 Spalten
-        THUMB_WIDTH: Breite der Miniaturansicht
-        THUMB_WIDTH_HELP: Breite der Miniaturansicht einstellen
-        THUMB_HEIGHT: Höhe der Miniaturansicht
-        THUMB_HEIGHT_HELP: Höhe der Miniaturansicht einstellen
-        IMAGES: 
-          LABEL: Bilder
-          IMAGE: Bild
-          IMAGE_TITLE: Titel
-          IMAGE_DESCRIPTION: Beschreibung
-          DESCPOSITION: 
-            LABEL: Position der Beschreibung
-            HELP: Sie können eine spezifische Position angeben (unten, oben, links, rechts)
-            BOTTOM: Unten
-            TOP: Oben
-            LEFT: Links
-            RIGHT: Rechts
-          IMAGE_THUMB: Miniaturansicht
-        OPTIONS:
-          TAB: Portfolio-Optionen
-          EFFECTS_TITLE: Erscheinung & Effekte
-          ACTIONS_TITLE: Aktionen
-          STYLING_TITLE: Aussehen
-          BEHAVIOR_TITLE: Verhalten
-          OPEN_EFFECT:
-            LABEL: Effekt beim Öffnen
-            ZOOM: zoomen
-            FADE: einblenden
-            NONE: keiner
-          CLOSE_EFFECT:
-            LABEL: Effekt beim Schließen
-            ZOOM: zoomen
-            FADE: ausblenden
-            NONE: keiner
-          SLIDE_EFFECT:
-            LABEL: Effekt beim Verschieben
-            SLIDE: verschieben
-            ZOOM: zoomen
-            FADE: ausblenden
-            NONE: keiner
-          MORE_TEXT: Mehr Text
-          MORE_TEXT_HELP: Mehr Text für Beschreibungen auf Mobilgeräten
-          MORE_TEXT_DEFAULT: Mehr Text
-          MORE_LENGTH: Text-Länge
-          MORE_LENGTH_HELP: Anzahl der anzuzeigenden Zeichen bevor der Mehr-Text-Link eingebettet wird (nur auf Mobilgeräten), 0 zeigt den gesamten Text an.
-          CLOSE_BUTTON: Schließen
-          CLOSE_BUTTON_HELP: Den Schließen-Button anzeigen oder ausblenden.
-          TOUCH_NAVIGATION: Touch-Navigation
-          TOUCH_NAVIGATION_HELP: Die Touch-Navigation de-/aktivieren (swipen).
-          TOUCH_AXIS: Achse der Touch-Navigation
-          TOUCH_AXIS_HELP: Bildfolge-Achse beim Schieben auf Mobilgeräten.
-          KEYBOARD: Tastatur-Navigation
-          KEYBOARD_HELP: Die Tastatur-Navigation de-/aktivieren.
-          CLOSE_OUTSIDE: Außerhalb schließen
-          CLOSE_OUTSIDE_HELP: Die Lightbox schließen wenn außerhalb der aktiven Fläche geklickt wird.
-          MORE_STARTAT: Beginnen bei
-          MORE_STARTAT_HELP: Lightbox bei definiertem Index starten (0 wählt das erste Bild).
-          WIDTH: Breite
-          WIDTH_HELP: Standard-Breite für Inline-Elemente und -iframes. Es kann eine spezifische Breite für jede Diashow eingestellt werden. Sie können beliebige Einheiten verwenden, z.B. 90% oder 100vw für die volle Breite.
-          HEIGHT: Höhe
-          HEIGHT_HELP: Standard-Höhe für Inline-Elemente und -iframes. Es kann eine spezifische Höhe für jede Diashow eingestellt werden. Sie können beliebige Einheiten verwenden, z.B. 90% oder 100vh. Für Inline-Elemente kann auch auto gesetzt werden.
-          LOOP: Schleife
-          LOOP_HELP: Am Ende der Diashow von vorne beginnen.
-          ZOOMABLE: Zoombar
-          ZOOMABLE_HELP: Zoom de-/aktivieren. Sie können auch `data-zoomable="false"` für individuelle Knoten definieren.
-          DRAGGABLE: Verschiebbar
-          DRAGGABLE_HELP: Verschieben via Maus de-/aktivieren (nur Bilder und Inline-Elemente). Sie können auch `data-draggable="false"` für individuelle Knoten definieren.
-          DRAGGABLE_X: Verschiebe-Toleranz in X-Richtung
-          DRAGGABLE_X_HELP: Anzahl der Pixel, um die links/rechts geschoben werden muss um vor oder zurück zu gehen.
-          DRAGGABLE_Y: Verschiebe-Toleranz in Y-Richtung
-          DRAGGABLE_Y_HELP: Anzahl der Pixel, um die oben/unten geschoben werden muss um die Lightbox zu schließen. 0 deaktiviert das Verschieben in Y-Richtung.
-          DRAG_AUTO_SNAP: Auto-Einrasten beim Verschieben
-          DRAG_AUTO_SNAP_HELP: Wenn aktiv wird direkt auf das Erreichen der X-/Y-Toleranz reagiert, andernfalls wird auf das Loslassen der Maustaste gewartet.
-          PRELOAD: Vorladen
-          PRELOAD_HELP: Vorladen de-/aktivieren
+        PORTFOLIO_TAB: Portfolio
+        PORTFOLIO_TITLE: Portfolio-Bild
+        PORTFOLIO_LAYOUT: Layout
+        PORTFOLIO_LAYOUT_TWOCOLS: Mittel   = 2 / 1 Spalten
+        PORTOFOLIO_LAYOUT_THREECOLS: Standard  = 3 / 2 / 1 Spalten
+        PORTFOLIO_IMAGES: Bilder
+        PORTFOLIO_IMAGE: Bild
+        PORTFOLIO_IMAGE_TITLE: Titel
+        PORTFOLIO_IMAGE_DESCRIPTION: Beschreibung
+        PORTFOLIO_IMAGE_THUMB: Miniaturansicht
 
     BLOG:
       LISTING_TITLE_CATEGORY: 'Beiträge in der Kategorie: '
@@ -453,13 +289,12 @@ de:
         HEADLINE: Letzte Einträge
       SYNDICATE:
         HEADLINE: Verteilen
+
+    LOGIN: Einloggen
     LATESTPOSTS: Letzte Beiträge
     FEATURED: Hervorgehoben
     PRIVACY: Durch die Nutzung dieses Formulars stimmen Sie unseren Bedingungen zu
     FORM_SUMMARY: Hier ist die Zusammenfassung dessen, was Sie uns geschrieben haben
-    MISC:
-      SHARE_ON: Teilen auf
-      BACK_TO_TOP: Nach oben
 
 es:
   FUTURE:
@@ -474,14 +309,6 @@ es:
         CUSTOM_LOGO_DESCRIPTION: Este logo se usará en lugar del log por defecto `theme://images/grav-logo.svg`
         CUSTOM_LOGO_MOBILE: Logo personalizado para dispositivos móviles
         SLOGAN: Slogan
-        MENU:
-          TITLE: Configuración del Menú Superior
-          LANGSWITCHER: Habilitar icono Idioma
-          LANGSWITCHER_HELP: Con el complemento Langswitcher habilitado y la configuración multilingüe en su sitio, puede habilitar o deshabilitar la funcionalidad de cambiar de idioma, que aparece en el menú superior.
-          SEARCH: Habilitar icono Buscar
-          SEARCH_HELP: Con el complemento SimpleSearch habilitado, puede habilitar o deshabilitar el bloque de búsqueda en el menú superior.
-          LOGIN: Habilitar icono Login
-          LOGIN_HELP: Puede habilitar o deshabilitar el icono de inicio de sesión en el menú superior para mostrar el estado de la sesión.
         BLOG_DEFAULTS: Opciones de Blog
         BLOG_PAGE: Página de Blog
         BLOG_PAGE_HELP: Ruta de la página de Blog cuando funciona con el blog de barra lateral
@@ -498,29 +325,12 @@ es:
         FOOTER_COPYRIGHT: Texto del Copyright
         FOOTER_BUTTON_TEXT: Texto del botón
         FOOTER_BUTTON_URL: URL del botón
-        FOOTER_SOCIAL_ENABLE: Habilitar iconos de redes sociales
-        FOOTER_SOCIAL_ICONS: Iconos Redes Sociales
-        FOOTER_SOCIAL_ICON_NAME: Nombre de Red Social
-        FOOTER_SOCIAL_ICON_URL: URL Link to Social
-        FOOTER_SOCIAL_ICON_ICON: Icono de Red Social
-        CUSTOM_MENU_TITLE: 'Entradas de menú personalizados'
-        CUSTOM_MENU_ENABLE: 'Habilitar entradas de menú personalizados'
-        CUSTOM_MENU_ENABLE_HELP: 'Determina si se muestra alguna entrada de menú personalizada definida en la barra de menú.'
-        CUSTOM_MENU_ITEM_TEXT: 'Texto'
-        CUSTOM_MENU_ITEM_TEXT_DESCRIPTION: 'Etiqueta de texto para entrada de menú.'
-        CUSTOM_MENU_ITEM_ICON: 'Icono'
-        CUSTOM_MENU_ITEM_ICON_DESCRIPTION: 'Icono Font Awesome para entrada de menú.'
-        CUSTOM_MENU_ITEM_URL: 'URL'
-        CUSTOM_MENU_ITEM_URL_DESCRIPTION: 'URL para entrada de menú.'
-        CUSTOM_MENU_ITEM_TARGET: 'Destino'
-        CUSTOM_MENU_ITEM_TARGET_BLANK: 'Abrir en nueva ventana'
-        CUSTOM_MENU_ITEM_TARGET_PARENT: 'Abrir en el marco principal'
-        CUSTOM_MENU_ITEM_TARGET_SELF: 'Abrir en el mismo marco en el que se hizo clic'
-        CUSTOM_MENU_ITEM_TARGET_TOP: 'Abrir en todo el cuerpo de la ventana'
+        FOOTER_SOCIALS_ICONS: Iconos Redes Sociales
+        FOOTER_SOCIALS_ICON_NAME: Nombre de Red Social
+        FOOTER_SOCIALS_ICON_URL: URL Link to Social
+        FOOTER_SOCIALS_ICON_ICON: Icono de Red Social
       DEFAULT:
         PRIMARY_IMAGE: Imagen principal
-        SHOW_SIDEBAR: Mostrar Barra Lateral
-        BODY_CLASSES: 'Puede crear nuevas clases CSS para el body y añadirlas aquí.'
       MODULAR:
         BANNER:
           BANNER_TAB: Banner
@@ -557,10 +367,8 @@ es:
         BLOG_CONTENT_ITEMS_ORDER_DIR_DESC: Descendente
         BLOG_CONTENT_ITEMS_BREADCRUMBS: Mostrar Migas de Pan
         BLOG_CONTENT_ITEMS_PAGINATION: Mostrar Paginación
+        BLOG_CONTENT_ITEMS_SIDEBAR: Mostrar Barra Lateral
         BLOG_CONTENT_ITEMS_URL_TAXONOMY_FILTERS: Filtros de taxonomía por URL
-        BLOG_CONTENT_SHAREICONS_TITLE: Iconos de Redes Sociales
-        BLOG_CONTENT_SHAREICONS: Mostrar iconos de Redes Sociales
-        BLOG_CONTENT_SHAREICONS_HELP: Seleccione qué iconos de redes sociales desea mostrar en los artículos
       ITEM:
         ITEM_TAB: Artículo de Blog
         ITEM_OPTIONS: Opciones
@@ -575,86 +383,16 @@ es:
         ITEM_SUBTITLE: Subtítulo
         ITEM_AVATAR: Imagen de Avatar
       PORTFOLIO:
-        TAB: Portafolio
-        TITLE: Imágenes de Portafolio
-        LAYOUT: 
-          LABEL: Diseño
-          TWOCOLS: Medio   = 2 / 1 columnas
-          THREECOLS: Estándar  = 3 / 2 / 1 columnas
-        THUMB_WIDTH: Ancho de Minitaura
-        THUMB_WIDTH_HELP: Fije el ancho para las miniaturas
-        THUMB_HEIGHT: Alto de Miniatura
-        THUMB_HEIGHT_HELP: Fije el alto para las miniaturas
-        IMAGES: 
-          LABEL: Imágenes
-          IMAGE: Imagen
-          IMAGE_TITLE: Título
-          IMAGE_DESCRIPTION: Descripción
-          DESCPOSITION: 
-            LABEL: Posición de Descripción
-            HELP: Posición global para la descripción de las diapositivas, puede definir una posición específica en cada diapositiva (inferior, superior, izquierda, derecha).
-            BOTTOM: Abajo
-            TOP: Arriba
-            LEFT: Izquierda
-            RIGHT: Derecha
-          IMAGE_THUMB: Miniatura
-        OPTIONS:
-          TAB: Opciones Portafolio
-          EFFECTS_TITLE: Apariencia y efectos
-          ACTIONS_TITLE: Acciones
-          STYLING_TITLE: Estilos
-          BEHAVIOR_TITLE: Comportamiento
-          OPEN_EFFECT:
-            LABEL: Efecto de apertura
-            ZOOM: Zoom
-            FADE: Desvanecer
-            NONE: Ninguno
-          CLOSE_EFFECT:
-            LABEL: Efecto de cierre
-            ZOOM: Zoom
-            FADE: Desvanecimiento
-            NONE: Ninguno
-          SLIDE_EFFECT:
-            LABEL: Efecto de diapositiva
-            SLIDE: Deslizar
-            ZOOM: Zoom
-            FADE: Desvanecer
-            NONE: Ninguno
-          MORE_TEXT: Texto `Ver más`
-          MORE_TEXT_HELP: Texto `Ver más` personalizado (para dispositivos móviles)
-          MORE_TEXT_DEFAULT: Ver más
-          MORE_LENGTH: Número de caracteres `Ver más`
-          MORE_LENGTH_HELP: Número de caracteres a mostrar en la descripción antes de agregar el enlace `Ver más` (solo para móviles), si es 0 mostrará la descripción completa.
-          CLOSE_BUTTON: Botón Cerrar
-          CLOSE_BUTTON_HELP: Mostrar u ocultar el botón de cerrar
-          TOUCH_NAVIGATION: Navegación táctil
-          TOUCH_NAVIGATION_HELP: Activa o desactiva la navegación táctil (deslizar)
-          TOUCH_AXIS: Seguir eje
-          TOUCH_AXIS_HELP: La imagen sigue el eje cuando se arrastra en el móvil.
-          KEYBOARD: Navegación con teclado
-          KEYBOARD_HELP: Activa o desactiva la navegación por teclado
-          CLOSE_OUTSIDE: Cerrar al pulsar fuera
-          CLOSE_OUTSIDE_HELP: Cierra el cuadro de luz al hacer clic fuera de la diapositiva activa.
-          MORE_STARTAT: 'Comenzar en:'
-          MORE_STARTAT_HELP: Iniciar lightbox en el índice definido (0 es la primera diapositiva). Si no se define, se muestra la imagen en la que se hizo clic
-          WIDTH: Ancho
-          WIDTH_HELP: 'Ancho predeterminado para elementos en línea e iframes, puede definir un tamaño específico en cada diapositiva. Puede usar cualquier unidad, por ejemplo, 90% o 100vw para ancho completo'
-          HEIGHT: Alto
-          HEIGHT_HELP: 'Altura predeterminada para elementos en línea e iframes, puede definir un tamaño específico en cada diapositiva. Puede usar cualquier unidad, por ejemplo, 90% o 100vh Para elementos en línea, puede establecer la altura en automático'
-          LOOP: Bucle
-          LOOP_HELP: Reproduce las diapositivas en bucle al llegar al final
-          ZOOMABLE: Ampliable
-          ZOOMABLE_HELP: Habilite o deshabilite las imágenes con zoom, también puede usar `data-zoomable="false"` en nodos individuales.
-          DRAGGABLE: Arrastrable
-          DRAGGABLE_HELP: Habilite o deshabilite el arrastre del mouse para ir a la diapositiva anterior y siguiente (solo imágenes y contenido en línea), también puede usar `data-draggable="false"` en nodos individuales.
-          DRAGGABLE_X: Tolerancia de arrastre X
-          DRAGGABLE_X_HELP: Usado con arrastrable. Número de píxeles que el usuario tiene que arrastrar para ir a la diapositiva anterior o siguiente.
-          DRAGGABLE_Y: Tolerancia de arrastre Y
-          DRAGGABLE_Y_HELP: Usado con arrastrable. Número de píxeles que el usuario tiene que arrastrar hacia arriba o hacia abajo para cerrar el cuadro de luz (establezca 0 para deshabilitar el arrastre vertical).
-          DRAG_AUTO_SNAP: Arrastre automático
-          DRAG_AUTO_SNAP_HELP: Si es verdadero, la diapositiva cambiará automáticamente a anterior/siguiente o se cerrará si se alcanza dragToleranceX o dragToleranceY; de lo contrario, esperará hasta que se suelte el mouse.
-          PRELOAD: Precarga
-          PRELOAD_HELP: Activa o desactiva la precarga.
+        PORTFOLIO_TAB: Portafolio
+        PORTFOLIO_TITLE: Imágenes de Portafolio
+        PORTFOLIO_LAYOUT: Diseño
+        PORTFOLIO_LAYOUT_TWOCOLS: Medio   = 2 / 1 columnas
+        PORTOFOLIO_LAYOUT_THREECOLS: Estándar  = 3 / 2 / 1 columnas
+        PORTFOLIO_IMAGES: Imágenes
+        PORTFOLIO_IMAGE: Imagen
+        PORTFOLIO_IMAGE_TITLE: Título
+        PORTFOLIO_IMAGE_DESCRIPTION: Descripción
+        PORTFOLIO_IMAGE_THUMB: Miniatura
 
     BLOG:
       LISTING_TITLE_CATEGORY: 'Publicaciones en la categoría: '
@@ -686,10 +424,9 @@ es:
         HEADLINE: Últimas entradas
       SYNDICATE:
         HEADLINE: Distribuir
+
+    LOGIN: Iniciar sesión
     LATESTPOSTS: Últimos posts
     FEATURED: Destacados
     PRIVACY: Al usar este formulario estás de acuerdo con nuestra
     FORM_SUMMARY: Aquí está el resumen de lo que nos escribió
-    MISC:
-      SHARE_ON: Compartir en
-      BACK_TO_TOP: Volver arriba 

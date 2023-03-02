@@ -1,7 +1,6 @@
 {% extends 'partials/base.html.twig' %}
-{% set show_sidebar = header_var('show_sidebar')|defined(false) %}
-{% set image = page.media[page.header.primaryImage] ? : page.media.images|first
-%}
+{% set show_sidebar = header_var('show_sidebar')|defined(false)  %}
+{% set image = page.media[page.header.primaryImage] ?: page.media.images|first %}
 {% set title = page.title|raw %}
 {% set subtitle = page.header.subtitle|raw %}
 
@@ -13,24 +12,21 @@
   <article class="post">
     <header>
       <div class="title">
-        <h2>
-          {{ title }}
-        </h2>
+        <h2>{{ title }}</h2>
         {% if subtitle %}
-          <p>
-            {{ subtitle }}
-          </p>
+          <p>{{ subtitle }}</p>
         {% endif %}
       </div>
     </header>
-
+    
     {% if image %}
-      <span class="image featured">
-        {{ image.cropZoom(1038, 437).loading('lazy').attribute('decoding','async').html(title, title)|raw }}
-      </span>
+    <span class="image featured">
+      {{ image.cropZoom(1038,437).loading('lazy').html(title, title)|raw }}
+    </span>
     {% endif %}
 
     {{ page.content|raw }}
+
   </article>
 
   {% if show_sidebar == false %}
@@ -41,5 +37,7 @@
 {% endblock %}
 
 {% block sidebar %}
-  {% include 'partials/sidebar_left.html.twig' %}
+  {% if show_sidebar == true %}
+    {% include 'partials/sidebar_left.html.twig' %}
+  {% endif %}
 {% endblock %}

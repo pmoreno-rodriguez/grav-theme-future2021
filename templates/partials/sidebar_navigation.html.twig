@@ -45,15 +45,3 @@
     {% endif %}
   </ul>
 {% endblock %}
-
-{% block javascripts %}
-<script>
-if ((window.innerWidth || document.documentElement.clientWidth) < 980){ 
-  /* Script for dropdown menu in sidebar */
-  $(".subitem_hide").hide(); /* this hides the list initially */
-      $(".dropdown-btn").click(function () {
-      $(this).next(".subitem_hide").slideToggle();
-  });
-  }
-</script>
-{% endblock %}

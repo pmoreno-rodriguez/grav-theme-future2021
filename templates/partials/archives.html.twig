@@ -15,8 +15,8 @@
               <time class="published" datetime="{{ p.date|date("Y-m-d") }}">{{ p.date|date("M j, Y") }}</time>
             {% endif %}
           </header>
-          <a href="{{p.url}}" class="image" aria-label="{{ title }}">
-            {{ image.cropZoom(64,64).quality(60).loading('lazy').attribute('decoding','async').html(title,title)|raw }}
+          <a href="{{p.url}}" class="image">
+            {{ image.cropZoom(64,64).quality(60).loading('lazy').html(title,title)|raw }}
           </a>
         </article>
       </li>

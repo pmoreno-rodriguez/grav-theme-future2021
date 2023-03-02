@@ -60,9 +60,7 @@
 				width: 100%;
 			}
 		}
-		@include breakpoint('<=small') {
-			@include vendor('justify-content', 'center');
-		}
+
 		@include breakpoint('<=xsmall') {
 			&:not(.fixed) {
 				@include vendor('flex-direction', 'column');

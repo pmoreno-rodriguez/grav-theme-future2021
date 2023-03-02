@@ -12,15 +12,17 @@
             position: relative;
             float: left;
             text-transform: uppercase;
-            font-size: 14pt;
+            font-size: 12pt;
             height: inherit; 
             a {
                 font-family: _font(family-heading);
-                font-size: 0.7em;
+                font-size: 0.8em;
                 font-weight: _font(weight);
-                letter-spacing: 0.20em;
+                letter-spacing: 0.15em;
+                @include vendor('display', 'block');
                 border-bottom: none;
                 padding: 0 0.8rem;
+                height: inherit; 
                 
             }
             ul {
@@ -38,10 +40,11 @@
                     
                     a {
                     font-family: _font(family-heading);
-                    font-size: 0.7em;
+                    font-size: 0.8em;
                     font-weight: _font(weight);
-                    letter-spacing: 0.20em;
+                    letter-spacing: 0.15em;
                     text-transform: uppercase;
+                    @include vendor('display', 'block');
                     border-bottom: none;
                     padding: 0.3rem 0.8rem;
                     line-height: 2.5em; 
