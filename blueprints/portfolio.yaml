@@ -7,46 +7,28 @@ form:
       fields:
         portfolio:
           type: tab
-          title: FUTURE.ADMIN.PORTFOLIO.TAB
+          title: FUTURE.ADMIN.PORTFOLIO.PORTFOLIO_TAB
           fields:
             content_title:
               type: spacer
-              title: FUTURE.ADMIN.PORTFOLIO.TITLE
+              title: FUTURE.ADMIN.PORTFOLIO.PORTFOLIO_TITLE
             header.layout:
               type: select
-              label: FUTURE.ADMIN.PORTFOLIO.LAYOUT.LABEL
+              label: FUTURE.ADMIN.PORTFOLIO.PORTFOLIO_LAYOUT
               default: standard
               size: medium
               options:
-                medium: FUTURE.ADMIN.PORTFOLIO.LAYOUT.TWOCOLS
-                standard: FUTURE.ADMIN.PORTFOLIO.LAYOUT.THREECOLS
-            header.thumb_width:
-              type: number
-              label: FUTURE.ADMIN.PORTFOLIO.THUMB_WIDTH
-              help: FUTURE.ADMIN.PORTFOLIO.THUMB_WIDTH_HELP
-              size: small
-              default: 600
-              validate:
-                min: 50
-                max: 1000
-            header.thumb_height:
-              type: number
-              label: FUTURE.ADMIN.PORTFOLIO.THUMB_HEIGHT
-              help: FUTURE.ADMIN.PORTFOLIO.THUMB_HEIGHT_HELP
-              size: small
-              default: 450
-              validate:
-                min: 50
-                max: 1000   
+                medium: FUTURE.ADMIN.PORTFOLIO.PORTFOLIO_LAYOUT_TWOCOLS
+                standard: FUTURE.ADMIN.PORTFOLIO.PORTOFOLIO_LAYOUT_THREECOLS   
             header.images:
               type: list
               style: vertical
-              label: FUTURE.ADMIN.PORTFOLIO.IMAGES.LABEL
+              label: FUTURE.ADMIN.PORTFOLIO.PORTFOLIO_IMAGES
               collapsed: true
               fields:
                 .image:
                   type: pagemediaselect
-                  label: FUTURE.ADMIN.PORTFOLIO.IMAGES.IMAGE
+                  label: FUTURE.ADMIN.PORTFOLIO.PORTFOLIO_IMAGE
                   preview_images: true
                   accept:
                   - .png
@@ -55,206 +37,17 @@ form:
                   - .svg
                 .title:
                   type: text
-                  label: FUTURE.ADMIN.PORTFOLIO.IMAGES.IMAGE_TITLE
+                  label: FUTURE.ADMIN.PORTFOLIO.PORTFOLIO_IMAGE_TITLE
                 .description:
                   type: text
-                  label: FUTURE.ADMIN.PORTFOLIO.IMAGES.IMAGE_DESCRIPTION
-                .descPosition:
-                  type: select
-                  label: FUTURE.ADMIN.PORTFOLIO.IMAGES.DESCPOSITION.LABEL
-                  help: FUTURE.ADMIN.PORTFOLIO.IMAGES.DESCPOSITION.HELP
-                  default: bottom
-                  size: medium
-                  options:
-                    bottom: FUTURE.ADMIN.PORTFOLIO.IMAGES.DESCPOSITION.BOTTOM
-                    top: FUTURE.ADMIN.PORTFOLIO.IMAGES.DESCPOSITION.TOP
-                    left: FUTURE.ADMIN.PORTFOLIO.IMAGES.DESCPOSITION.LEFT
-                    right: FUTURE.ADMIN.PORTFOLIO.IMAGES.DESCPOSITION.RIGHT
-            
-        portfolio_options:
-          type: tab
-          title: FUTURE.ADMIN.PORTFOLIO.OPTIONS.TAB
-          fields:
-            Effects_title:
-              type: spacer
-              title: FUTURE.ADMIN.PORTFOLIO.OPTIONS.EFFECTS_TITLE
-            header.open_effect:
-              type: select
-              label: FUTURE.ADMIN.PORTFOLIO.OPTIONS.OPEN_EFFECT.LABEL
-              default: zoom
-              size: medium
-              options:
-                zoom: FUTURE.ADMIN.PORTFOLIO.OPTIONS.OPEN_EFFECT.ZOOM
-                fade: FUTURE.ADMIN.PORTFOLIO.OPTIONS.OPEN_EFFECT.FADE
-                none: FUTURE.ADMIN.PORTFOLIO.OPTIONS.OPEN_EFFECT.NONE
-            header.close_effect:
-              type: select
-              label: FUTURE.ADMIN.PORTFOLIO.OPTIONS.CLOSE_EFFECT.LABEL
-              default: zoom
-              size: medium
-              options:
-                zoom: FUTURE.ADMIN.PORTFOLIO.OPTIONS.CLOSE_EFFECT.ZOOM
-                fade: FUTURE.ADMIN.PORTFOLIO.OPTIONS.CLOSE_EFFECT.FADE
-                none: FUTURE.ADMIN.PORTFOLIO.OPTIONS.CLOSE_EFFECT.NONE
-            header.slide_effect:
-              type: select
-              label: FUTURE.ADMIN.PORTFOLIO.OPTIONS.SLIDE_EFFECT.LABEL
-              default: slide
-              size: medium
-              options:
-                slide: FUTURE.ADMIN.PORTFOLIO.OPTIONS.SLIDE_EFFECT.SLIDE
-                zoom: FUTURE.ADMIN.PORTFOLIO.OPTIONS.SLIDE_EFFECT.ZOOM
-                fade: FUTURE.ADMIN.PORTFOLIO.OPTIONS.SLIDE_EFFECT.FADE
-                none: FUTURE.ADMIN.PORTFOLIO.OPTIONS.SLIDE_EFFECT.NONE
-            header.more_text:
-              type: text
-              label: FUTURE.ADMIN.PORTFOLIO.OPTIONS.MORE_TEXT
-              help: FUTURE.ADMIN.PORTFOLIO.OPTIONS.MORE_TEXT_HELP
-              default: FUTURE.ADMIN.PORTFOLIO.OPTIONS.MORE_TEXT_DEFAULT
-              size: medium
-            header.more_length:
-              type: number
-              label: FUTURE.ADMIN.PORTFOLIO.OPTIONS.MORE_LENGTH
-              help: FUTURE.ADMIN.PORTFOLIO.OPTIONS.MORE_LENGTH_HELP
-              size: small
-              default: 60
-              validate:
-                min: 0
-                max: 500
-            Actions_title:
-              type: spacer
-              title: FUTURE.ADMIN.PORTFOLIO.OPTIONS.ACTIONS_TITLE
-            header.close_button:
-              type: toggle
-              label: FUTURE.ADMIN.PORTFOLIO.OPTIONS.CLOSE_BUTTON
-              help: FUTURE.ADMIN.PORTFOLIO.OPTIONS.CLOSE_BUTTON_HELP
-              default: 1
-              highlight: 1
-              options:
-                1: PLUGIN_ADMIN.ENABLED
-                0: PLUGIN_ADMIN.DISABLED
-            header.touch_navigation:
-              type: toggle
-              label: FUTURE.ADMIN.PORTFOLIO.OPTIONS.TOUCH_NAVIGATION
-              help: FUTURE.ADMIN.PORTFOLIO.OPTIONS.TOUCH_NAVIGATION_HELP
-              default: 1
-              highlight: 1
-              options:
-                1: PLUGIN_ADMIN.ENABLED
-                0: PLUGIN_ADMIN.DISABLED
-            header.touch_axis:
-              type: toggle
-              label: FUTURE.ADMIN.PORTFOLIO.OPTIONS.TOUCH_AXIS
-              help: FUTURE.ADMIN.PORTFOLIO.OPTIONS.TOUCH_AXIS_HELP
-              default: 1
-              highlight: 1
-              options:
-                1: PLUGIN_ADMIN.ENABLED
-                0: PLUGIN_ADMIN.DISABLED
-            header.keyboard_navigation:
-              type: toggle
-              label: FUTURE.ADMIN.PORTFOLIO.OPTIONS.KEYBOARD
-              help: FUTURE.ADMIN.PORTFOLIO.OPTIONS.KEYBOARD_HELP
-              default: 1
-              highlight: 1
-              options:
-                1: PLUGIN_ADMIN.ENABLED
-                0: PLUGIN_ADMIN.DISABLED
-            header.closeOutside:
-              type: toggle
-              label: FUTURE.ADMIN.PORTFOLIO.OPTIONS.CLOSE_OUTSIDE
-              help: FUTURE.ADMIN.PORTFOLIO.OPTIONS.CLOSE_OUTSIDE_HELP
-              default: 1
-              highlight: 1
-              options:
-                1: PLUGIN_ADMIN.ENABLED
-                0: PLUGIN_ADMIN.DISABLED
-            header.startAt:
-              type: number
-              label: FUTURE.ADMIN.PORTFOLIO.OPTIONS.MORE_STARTAT
-              help: FUTURE.ADMIN.PORTFOLIO.OPTIONS.MORE_STARTAT_HELP
-              size: small
-              validate:
-                min: 0
-                max: 1000
-            Styling_title:
-              type: spacer
-              title: FUTURE.ADMIN.PORTFOLIO.OPTIONS.STYLING_TITLE
-            header.width:
-              type: text
-              label: FUTURE.ADMIN.PORTFOLIO.OPTIONS.WIDTH
-              help: FUTURE.ADMIN.PORTFOLIO.OPTIONS.WIDTH_HELP
-              placeholder: 'auto'
-              size: small
-            header.height:
-              type: text
-              label: FUTURE.ADMIN.PORTFOLIO.OPTIONS.HEIGHT
-              help: FUTURE.ADMIN.PORTFOLIO.OPTIONS.HEIGHT_HELP
-              placeholder: 'auto'
-              size: small
-            Behavior_title:
-              type: spacer
-              title: FUTURE.ADMIN.PORTFOLIO.OPTIONS.BEHAVIOR_TITLE
-            header.loop:
-              type: toggle
-              label: FUTURE.ADMIN.PORTFOLIO.OPTIONS.LOOP
-              help: FUTURE.ADMIN.PORTFOLIO.OPTIONS.LOOP_HELP
-              default: 0
-              highlight: 0
-              options:
-                1: PLUGIN_ADMIN.ENABLED
-                0: PLUGIN_ADMIN.DISABLED
-            header.zoomable:
-              type: toggle
-              label: FUTURE.ADMIN.PORTFOLIO.OPTIONS.ZOOMABLE
-              help: FUTURE.ADMIN.PORTFOLIO.OPTIONS.ZOOMABLE_HELP
-              default: 1
-              highlight: 1
-              options:
-                1: PLUGIN_ADMIN.ENABLED
-                0: PLUGIN_ADMIN.DISABLED
-            header.draggable:
-              type: toggle
-              label: FUTURE.ADMIN.PORTFOLIO.OPTIONS.DRAGGABLE
-              help: FUTURE.ADMIN.PORTFOLIO.OPTIONS.DRAGGABLE_HELP
-              default: 1
-              highlight: 1
-              options:
-                1: PLUGIN_ADMIN.ENABLED
-                0: PLUGIN_ADMIN.DISABLED
-            header.draggableX:
-              type: number
-              label: FUTURE.ADMIN.PORTFOLIO.OPTIONS.DRAGGABLE_X
-              help: FUTURE.ADMIN.PORTFOLIO.OPTIONS.DRAGGABLE_X_HELP
-              size: small
-              default: 40
-              validate:
-                min: 1
-                max: 500
-            header.draggableY:
-              type: number
-              label: FUTURE.ADMIN.PORTFOLIO.OPTIONS.DRAGGABLE_Y
-              help: FUTURE.ADMIN.PORTFOLIO.OPTIONS.DRAGGABLE_Y_HELP
-              size: small
-              default: 65
-              validate:
-                min: 1
-                max: 500
-            header.dragAuto:
-              type: toggle
-              label: FUTURE.ADMIN.PORTFOLIO.OPTIONS.DRAG_AUTO_SNAP
-              help: FUTURE.ADMIN.PORTFOLIO.OPTIONS.DRAG_AUTO_SNAP_HELP
-              default: 0
-              highlight: 0
-              options:
-                1: PLUGIN_ADMIN.ENABLED
-                0: PLUGIN_ADMIN.DISABLED
-            header.preload:
-              type: toggle
-              label: FUTURE.ADMIN.PORTFOLIO.OPTIONS.PRELOAD
-              help: FUTURE.ADMIN.PORTFOLIO.OPTIONS.PRELOAD_HELP
-              default: 1
-              highlight: 1
-              options:
-                1: PLUGIN_ADMIN.ENABLED
-                0: PLUGIN_ADMIN.DISABLED 
+                  label: FUTURE.ADMIN.PORTFOLIO.PORTFOLIO_IMAGE_DESCRIPTION
+                .thumb:
+                  type: filepicker
+                  folder: 'self@'
+                  label: FUTURE.ADMIN.PORTFOLIO.PORTFOLIO_IMAGE_THUMB
+                  preview_images: true
+                  accept:
+                  - .png
+                  - .jpg
+                  - .gif
+                  - .svg

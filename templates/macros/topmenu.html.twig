@@ -8,9 +8,10 @@
           {% if p.header.icon %}
             <i class="fa fa-{{ p.header.icon }}"></i>
           {% endif %}
-          {{ p.menu }}
+          <span>{{ p.menu }}
             {% if p.routable ?? false %}&nbsp;<i class="fa fa-angle-down"></i>
             {% endif %}
+          </span>
         </a>
         <ul>
           {{ macros.nav_loop(p) }}

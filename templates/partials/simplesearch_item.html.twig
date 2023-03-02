@@ -5,7 +5,7 @@
 
     {% if thumb %}
     <div class="search-image">
-        <a href="{{ page.url }}">{{ thumb.loading('lazy').attribute('decoding','async').html(title,title)|raw }}</a>
+        <a href="{{ page.url }}">{{ thumb.loading('lazy').html(title,title)|raw }}</a>
     </div>
     {% endif %}
     <div class="search-item">

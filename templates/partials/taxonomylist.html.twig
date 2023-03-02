@@ -5,7 +5,7 @@
     <li>
       {% for tax,value in taxlist[taxonomy]|sort %}
         {% set active = uri.param(taxonomy) == tax? 'active' : '' %}
-        <a class="tags {{ active }}" rel="nofollow" href="{{ base_url }}/{{ taxonomy }}{{ config.system.param_sep }}{{ tax }}">{{ tax }}</a>
+        <a class="tags {{ active }}" href="{{ base_url }}/{{ taxonomy }}{{ config.system.param_sep }}{{ tax }}">{{ tax }}</a>
       {% endfor %}
     </li>
   </ul>

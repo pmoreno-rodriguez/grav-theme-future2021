@@ -1,7 +1,3 @@
-{% set icon_lang = theme_var('menu_langswitcher')|defined('true') %}
-{% set icon_search = theme_var('menu_search')|defined('true') %}
-{% set icon_login = theme_var('menu_login')|defined('true') %}
-
 <header id="header">
   <h1 class="logo">
     <a href="{{ home_url }}">{{ site.title }}</a>
@@ -14,21 +10,10 @@
   <nav class="main">
     {% block header_extra %}
       <ul>
-        {% if icon_login %}
-        <li class="login-logout">
-        {% if not grav.user.authenticated %}
-          <a class="fa-sign-in-alt" href="{{ base_url_absolute }}/login" title="{{ 'PLUGIN_LOGIN.BTN_LOGIN'|t }}">{{ 'PLUGIN_LOGIN.BTN_LOGIN'|t }}</a>
-        {% else %}
-          <a class="fa-sign-out-alt" href="{{ url(uri.addNonce((uri.path)|trim('/') ~ '/task' ~ config.system.param_sep ~ 'login.logout', 'logout-form', 'logout-nonce'))|e }}" title="{{ 'PLUGIN_LOGIN.BTN_LOGOUT'|t }} {{ grav.user.fullname ?: grav.user.username }}">{{ 'PLUGIN_LOGIN.BTN_LOGOUT'|t }}</a>
-        {% endif %}
-        </li>
-        {% endif %}
-
-        {% if icon_lang and config.plugins.langswitcher.enabled and system.languages.supported is not null %}
+        {% if config.plugins.langswitcher.enabled and system.languages.supported is not null %}
           {% include 'partials/langswitcher.html.twig' %}
         {% endif %}
-
-        {% if config.plugins.simplesearch.enabled and icon_search %}
+        {% if config.plugins.simplesearch.enabled %}
           {% include 'partials/simplesearch_searchbox.html.twig' %}
         {% endif %}
         <li class="menu">

@@ -1,37 +1,5 @@
 {% extends 'partials/base.html.twig' %}
 
-{% block stylesheets %}
-    {{ parent() }}
-    {% set styles %}
-        #grav-login {
-          max-width: 36em;
-        }
-        #grav-login .form-actions {
-            text-align: right;
-            padding: 1em 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 1em;
-            flex-wrap: wrap;}
-        #grav-login button {
-          margin: 1em 0;
-        }
-        @media screen and (max-width: 736px) {
-          #grav-login .form-actions {
-            flex-direction: column;
-          }
-          #grav-login .button {
-          width: 100%;
-          }
-          #grav-login .rememberme {
-            align-self: flex-start;
-          }
-        }
-    {% endset %}
-    {% do assets.addInlineCss(styles) %}
-{% endblock %}
-
 {% block menu %}
   {% include 'partials/sidebar_right.html.twig' %}
 {% endblock %}
