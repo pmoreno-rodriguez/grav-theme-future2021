@@ -1,6 +1,6 @@
 {% extends 'partials/base.html.twig' %}
 
-{% set show_sidebar = theme_var('sidebar')|defined(false)  %}
+{% set sidebar = theme_var('sidebar')|defined(false)  %}
 
 {% block menu %}
   {% include 'partials/sidebar_right.html.twig' %}
@@ -35,7 +35,7 @@
     {% endfor %}
   </article>
 
-  {% if show_sidebar == false %}
+  {% if sidebar == false %}
     <section id="footer" class="align-center">
       {% include 'partials/footer.html.twig' %}
     </section>
@@ -43,5 +43,8 @@
 {% endblock %}
 
 {% block sidebar %}
+{% if sidebar == true %}
     {% include 'partials/sidebar_left.html.twig' %}
+{% endif %}
 {% endblock %}
+

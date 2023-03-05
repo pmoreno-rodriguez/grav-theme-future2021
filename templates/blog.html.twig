@@ -5,7 +5,6 @@
 {% set feed_url = base_url %}
 {% set show_breadcrumbs = header_var('show_breadcrumbs')|defined(true) %}
 {% set show_pagination = header_var('show_pagination')|defined(true) %}
-{% set show_sidebar = header_var('show_sidebar')|defined(false)  %}
 {% set image = page.media[page.header.primaryImage] ?: page.media.images|first %}
 {% set title = page.title|raw %}
 
@@ -68,5 +67,7 @@
 {% endblock %}
 
 {% block sidebar %}
+{% if show_sidebar == true %}
     {% include 'partials/sidebar_left.html.twig' %}
+{% endif %}
 {% endblock %}
