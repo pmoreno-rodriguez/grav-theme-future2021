@@ -10,9 +10,18 @@
     {% set author = page.taxonomy.author[0] %}
   {% endif %}
 
-  {% set title = page.title|raw %}
-  {% set avatar = page.media[page.header.avatarImage].url|e  %}
-  {% set image = page.media[page.header.primaryImage] ?: page.media.all|filter((v, k) => k != page.header.avatarImage and (v.type == 'image' or v.type == 'vector'))|first %}
+{# Set avatar image and primary image #}
+{% set avatar = page.media[page.header.avatarImage].url|e  %}
+{% set image = page.media[page.header.primaryImage] ?: page.media.all|filter((v, k) => k != page.header.avatarImage and (v.type == 'image' or v.type == 'vector'))|first %}
+
+{# Define if the primary image and the attributes of width and height are shown #}
+{% set show_image = header_var('show_pageimage')|defined(true) %}
+{% set img_width = header_var('image_width')|default(1038) %}
+{% set img_height = header_var('image_height')|default(437) %}
+
+{# Set title and subtitle #}
+{% set title = page.title|raw %}
+{% set subtitle = page.header.subtitle|raw %}
 
   <header>
     <div class="title">
@@ -28,8 +37,8 @@
           <a href="{{ page.url }}" aria-label="{{ title }}">{{ title }}</a>
         </h2>
       {% endif %}
-      {% if page.header.subtitle %}
-        <p itemprop="alternativeHeadline">{{ page.header.subtitle|raw }}</p>
+      {% if subtitle %}
+        <p itemprop="alternativeHeadline">{{ subtitle|raw }}</p>
       {% endif %}
     </div>
     <div class="meta">
@@ -49,9 +58,9 @@
       {% endif %}
     </div>
   </header>
-  {% if image %}
+  {% if show_image and image %}
   <a class="image featured" href="{{ page.url }}" title="{{ title|raw }}" rel="nofollow">
-    {{ image.cropZoom(1038,437).loading('lazy').attribute('decoding','async').html(title, title)|raw }}
+    {{ image.cropZoom(img_width,img_height).loading('lazy').attribute('decoding','async').html(title, title)|raw }}
   </a>
   {% endif %}
   <div itemprop="articleBody">
