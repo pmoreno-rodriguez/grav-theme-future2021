@@ -88,6 +88,7 @@ en:
 
       BLOG:
         BLOG_TAB: Blog Config
+        BLOG_CONFIGURATION: Configuration
         BLOG_ROUTE: Blog Route
         BLOG_ROUTE_HELP: The route to the main blog page that contains the "Show ..." configuration
         BLOG_CONTENT_TITLE: Content Definition
@@ -331,6 +332,7 @@ de:
 
       BLOG:
         BLOG_TAB: Blog-Einstellungen
+        BLOG_CONFIGURATION: Konfiguration
         BLOG_ROUTE: Blogroute
         BLOG_ROUTE_HELP: Die Route zur Hauptseite des Blogs, die die Konfiguration "Show ..." enthält
         BLOG_CONTENT_TITLE: Inhaltseinstellungen
@@ -571,6 +573,7 @@ es:
 
       BLOG:
         BLOG_TAB: Configuración del Blog
+        BLOG_CONFIGURATION: Configuración
         BLOG_ROUTE: Ruta del Blog
         BLOG_ROUTE_HELP: La ruta a la página principal del blog que contiene la configuración "Mostrar..."
         BLOG_CONTENT_TITLE: Definición de Contenido

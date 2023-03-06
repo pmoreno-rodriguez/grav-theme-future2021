@@ -3,7 +3,7 @@ form:
 
     blog_config:
       type: spacer
-      title: Configuration
+      title: FUTURE.ADMIN.BLOG.BLOG_CONFIGURATION
 
     header.blog_url:
       type: text
