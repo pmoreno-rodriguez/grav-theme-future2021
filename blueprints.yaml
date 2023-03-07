@@ -215,7 +215,17 @@ form:
             1: PLUGIN_ADMIN.ENABLED
             0: PLUGIN_ADMIN.DISABLED
           validate:
-            type: bool 
+            type: bool
+        enable_social_header:
+          type: toggle
+          label: FUTURE.ADMIN.THEME.HEADER_SOCIAL_ENABLE
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
         social:
           name: social
           type: list
