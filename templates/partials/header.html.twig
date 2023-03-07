@@ -31,6 +31,11 @@
         {% if config.plugins.simplesearch.enabled and icon_search %}
           {% include 'partials/simplesearch_searchbox.html.twig' %}
         {% endif %}
+        {% if theme_var('enable_social_header') %}
+          <ul class="icons">
+            {% include 'partials/social.html.twig' %}
+          </ul>
+        {% endif %}
         <li class="menu">
           <a class="fa-bars" href="#menu">Menu</a>
         </li>
