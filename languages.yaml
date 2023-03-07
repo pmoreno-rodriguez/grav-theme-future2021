@@ -36,6 +36,7 @@ en:
         FOOTER_BUTTON_TEXT: Button Text
         FOOTER_BUTTON_URL: Button URL
         FOOTER_SOCIAL_ENABLE: Enable Social Icons
+        HEADER_SOCIAL_ENABLE: Enable Social Icons in Header
         FOOTER_SOCIAL_ICONS: Social Icons
         FOOTER_SOCIAL_ICON_NAME: Social Name
         FOOTER_SOCIAL_ICON_URL: URL Link to Social
@@ -269,6 +270,7 @@ de:
         FOOTER_BUTTON_TEXT: Schaltflächentext
         FOOTER_BUTTON_URL: Schaltflächen-URL
         FOOTER_SOCIAL_ENABLE: Symbole für soziale Medien aktivieren
+        HEADER_SOCIAL_ENABLE: Symbole für soziale Medien im Header aktivieren
         FOOTER_SOCIAL_ICONS: Symbole für soziale Medien
         FOOTER_SOCIAL_ICON_NAME: Name des sozialen Netzwerks
         FOOTER_SOCIAL_ICON_URL: URL-Link zum sozialen Netzwerk
@@ -499,6 +501,7 @@ es:
         FOOTER_BUTTON_TEXT: Texto del botón
         FOOTER_BUTTON_URL: URL del botón
         FOOTER_SOCIAL_ENABLE: Habilitar iconos de redes sociales
+        HEADER_SOCIAL_ENABLE: Habilitar iconos de redes sociales (Header)
         FOOTER_SOCIAL_ICONS: Iconos Redes Sociales
         FOOTER_SOCIAL_ICON_NAME: Nombre de Red Social
         FOOTER_SOCIAL_ICON_URL: URL Link to Social
