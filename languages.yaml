@@ -55,7 +55,14 @@ en:
         CUSTOM_MENU_ITEM_TARGET_SELF: 'Open in the same frame as clicked'
         CUSTOM_MENU_ITEM_TARGET_TOP: 'Open in the full body of the window'
       DEFAULT:
-        PRIMARY_IMAGE: Primary image
+        CONTENT: Content
+        IMAGE_OPTIONS: Image options
+        PRIMARY_IMAGE: 
+          LABEL: Primary image
+          WIDTH: Width
+          HEIGHT: Height
+        SHOW_PAGEIMAGE: Show Image
+        SHOW_PAGEIMAGE_HELP: Enable primary image if it is defined or the first image of the media page.
         SHOW_SIDEBAR: Show Sidebar
         BODY_CLASSES: 'You can create new CSS classes for the body and add them here'
       MODULAR:
@@ -81,6 +88,9 @@ en:
 
       BLOG:
         BLOG_TAB: Blog Config
+        BLOG_CONFIGURATION: Configuration
+        BLOG_ROUTE: Blog Route
+        BLOG_ROUTE_HELP: The route to the main blog page that contains the "Show ..." configuration
         BLOG_CONTENT_TITLE: Content Definition
         BLOG_CONTENT_ITEMS: Items
         BLOG_CONTENT_ITEMS_LIMIT: Max Item Count
@@ -93,7 +103,8 @@ en:
         BLOG_CONTENT_ITEMS_ORDER_DIR_ASC: Ascending
         BLOG_CONTENT_ITEMS_ORDER_DIR_DESC: Descending
         BLOG_CONTENT_ITEMS_BREADCRUMBS: Show Breadcrumbs
-        BLOG_CONTENT_ITEMS_PAGINATION: Show Pagination
+        BLOG_CONTENT_ITEMS_SHOWPAGINATION: Show Pagination
+        BLOG_CONTENT_ITEMS_PAGINATION: Pagination
         BLOG_CONTENT_ITEMS_URL_TAXONOMY_FILTERS: URL Taxonomy Filters
         BLOG_CONTENT_SHAREICONS_TITLE: Social Media Icons
         BLOG_CONTENT_SHAREICONS: Select Social Media Icons
@@ -288,7 +299,14 @@ de:
         CUSTOM_MENU_ITEM_TARGET_SELF: In selbem Frame öffnen
         CUSTOM_MENU_ITEM_TARGET_TOP: In vollem Fensterkörper öffnen
       DEFAULT:
-        PRIMARY_IMAGE: Hauptbild
+        CONTENT: Inhalt
+        IMAGE_OPTIONS: Bildoptionen
+        PRIMARY_IMAGE: 
+          LABEL: Hauptbild
+          WIDTH: Breite
+          HEIGHT: Höhe
+        SHOW_PAGEIMAGE: Show Image
+        SHOW_PAGEIMAGE_HELP: Enable primary image if it is defined or the first image of the media page.
         SHOW_SIDEBAR: Seitenleiste anzeigen
         BODY_CLASSES: 'Sie können neue CSS-Klassen für den body erstellen und hier hinzufügen.'
       MODULAR:
@@ -314,6 +332,9 @@ de:
 
       BLOG:
         BLOG_TAB: Blog-Einstellungen
+        BLOG_CONFIGURATION: Konfiguration
+        BLOG_ROUTE: Blogroute
+        BLOG_ROUTE_HELP: Die Route zur Hauptseite des Blogs, die die Konfiguration "Show ..." enthält
         BLOG_CONTENT_TITLE: Inhaltseinstellungen
         BLOG_CONTENT_ITEMS: Artikel
         BLOG_CONTENT_ITEMS_LIMIT: Maximale Artikel-Anzahl
@@ -326,7 +347,8 @@ de:
         BLOG_CONTENT_ITEMS_ORDER_DIR_ASC: Aufsteigend
         BLOG_CONTENT_ITEMS_ORDER_DIR_DESC: Absteigend
         BLOG_CONTENT_ITEMS_BREADCRUMBS: Brotkrümelnavigation anzeigen
-        BLOG_CONTENT_ITEMS_PAGINATION: Seitennummerierung
+        BLOG_CONTENT_ITEMS_SHOWPAGINATION: Paginierung anzeigen
+        BLOG_CONTENT_ITEMS_PAGINATION: Paginierung
         BLOG_CONTENT_ITEMS_URL_TAXONOMY_FILTERS: Taxonomie filtern nach URL
       ITEM:
         ITEM_TAB: Blog-Artikel
@@ -518,7 +540,14 @@ es:
         CUSTOM_MENU_ITEM_TARGET_SELF: 'Abrir en el mismo marco en el que se hizo clic'
         CUSTOM_MENU_ITEM_TARGET_TOP: 'Abrir en todo el cuerpo de la ventana'
       DEFAULT:
-        PRIMARY_IMAGE: Imagen principal
+        CONTENT: Contenido
+        IMAGE_OPTIONS: Opciones de imagen
+        PRIMARY_IMAGE: 
+          LABEL: Imagen principal
+          WIDTH: Ancho
+          HEIGHT: Alto
+        SHOW_PAGEIMAGE: Mostrar imagen
+        SHOW_PAGEIMAGE_HELP: Habilitar la imagen principal si está definida o la primera de las imágenes de la página.
         SHOW_SIDEBAR: Mostrar Barra Lateral
         BODY_CLASSES: 'Puede crear nuevas clases CSS para el body y añadirlas aquí.'
       MODULAR:
@@ -544,6 +573,9 @@ es:
 
       BLOG:
         BLOG_TAB: Configuración del Blog
+        BLOG_CONFIGURATION: Configuración
+        BLOG_ROUTE: Ruta del Blog
+        BLOG_ROUTE_HELP: La ruta a la página principal del blog que contiene la configuración "Mostrar..."
         BLOG_CONTENT_TITLE: Definición de Contenido
         BLOG_CONTENT_ITEMS: Artículos
         BLOG_CONTENT_ITEMS_LIMIT: Límite máximo de artículos
@@ -556,7 +588,8 @@ es:
         BLOG_CONTENT_ITEMS_ORDER_DIR_ASC: Ascendente
         BLOG_CONTENT_ITEMS_ORDER_DIR_DESC: Descendente
         BLOG_CONTENT_ITEMS_BREADCRUMBS: Mostrar Migas de Pan
-        BLOG_CONTENT_ITEMS_PAGINATION: Mostrar Paginación
+        BLOG_CONTENT_ITEMS_SHOWPAGINATION: Mostrar paginación
+        BLOG_CONTENT_ITEMS_PAGINATION: Paginación
         BLOG_CONTENT_ITEMS_URL_TAXONOMY_FILTERS: Filtros de taxonomía por URL
         BLOG_CONTENT_SHAREICONS_TITLE: Iconos de Redes Sociales
         BLOG_CONTENT_SHAREICONS: Mostrar iconos de Redes Sociales

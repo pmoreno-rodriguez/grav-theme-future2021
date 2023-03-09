@@ -3,6 +3,9 @@
 {% set favicon = theme_config.favicon ? theme_config.favicon|first : { type:'image/png', path: url('theme://images/favicon.png') } %}
 {% set new_base_url = base_url_absolute ~ theme_config.blog_page %}
 
+{# Define if sidebar is shown in the page #}
+{% set show_sidebar = header_var('show_sidebar')|defined(false) %}
+
 <!DOCTYPE html>
 <html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
   <head>
@@ -54,9 +57,9 @@
           <div id="main">
             {% block content %}{% endblock %}
           </div>
-          {% if show_sidebar == true %}
+
             {% block sidebar %}{% endblock %}
-          {% endif %}
+
         {% endblock %}
 
       {% endblock %}

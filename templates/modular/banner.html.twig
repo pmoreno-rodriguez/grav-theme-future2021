@@ -1,4 +1,6 @@
-{% set image = page.media[page.header.image] ?: page.media.images|first %}
+{# Set banner image #}
+{% set image = page.media[page.header.image] ?: page.media.all|filter((v) => (v.type == 'image' or v.type == 'vector'))|first %}
+
 {% set title = page.title|raw %}
 {% set subtitle = page.header.subtitle|raw %}
 

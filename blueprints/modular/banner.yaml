@@ -12,7 +12,15 @@ form:
               fields:
                 header.content:
                   fields:
+                    image_section:
+                      unset@: true
                     header.primaryImage:
+                      unset@: true
+                    header.show_pageimage:
+                      unset@: true
+                    header.image_width: 
+                      unset@: true
+                    header.image_height:
                       unset@: true
         banner:
           type: tab

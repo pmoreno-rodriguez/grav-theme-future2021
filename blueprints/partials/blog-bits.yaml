@@ -1,0 +1,39 @@
+form:
+  fields:
+
+    blog_config:
+      type: spacer
+      title: FUTURE.ADMIN.BLOG.BLOG_CONFIGURATION
+
+    header.blog_url:
+      type: text
+      toggleable: true
+      label: FUTURE.ADMIN.BLOG.BLOG_ROUTE
+      help: FUTURE.ADMIN.BLOG.BLOG_ROUTE_HELP
+      default: '/blog'
+      placeholder: '/blog'
+      size: medium
+
+    header.show_breadcrumbs:
+      type: toggle
+      toggleable: true
+      label: FUTURE.ADMIN.BLOG.BLOG_CONTENT_ITEMS_BREADCRUMBS
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+                
+    header.show_pagination:
+      type: toggle
+      toggleable: true
+      label: FUTURE.ADMIN.BLOG.BLOG_CONTENT_ITEMS_SHOWPAGINATION
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
