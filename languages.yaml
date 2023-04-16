@@ -695,8 +695,8 @@ es:
       LISTING_TITLE_AUTHOR: 'Publicaciones escritas por: '
       ITEM:
         CONTINUE_READING: Continuar leyendo...
-        NEXT_POST: Siguiente Entrada
-        PREV_POST: Entrada Anterior
+        NEXT_POST: Siguiente
+        PREV_POST: Anterior
       PAGINATION:
         PREVIOUS: Anterior
         NEXT: Siguiente
