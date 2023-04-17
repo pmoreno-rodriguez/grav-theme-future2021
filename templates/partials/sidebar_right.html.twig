@@ -9,7 +9,7 @@
   <section id="sidebarmenu">
     {% include 'partials/sidebar_navigation.html.twig' %}
   </section>
-  {% if config.plugins.archives.enabled %}
+  {% if config.plugins.archives.enabled and archives_data is not empty  %}
     <!-- Actions -->
     <section>
       <header>
@@ -18,7 +18,7 @@
       {% include 'partials/archives.html.twig' %}
     </section>
   {% endif %}
-  {% if config.plugins.relatedpages.enabled %}
+  {% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
     <section>
       <header>
         <h3>{{ 'FUTURE.SIDEBAR.RELATED_POSTS.HEADLINE'|t }}</h3>
