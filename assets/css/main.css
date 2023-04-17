@@ -1405,7 +1405,7 @@ hr.major {
   font-weight: 400;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  white-space: nowrap;
+  white-space: wrap;
 }
 .author .name {
   -moz-transition: border-bottom-color 0.2s ease;
@@ -2297,6 +2297,17 @@ ul.posts article header > :last-child {
   margin-top: 0.5em;
   text-transform: uppercase;
   white-space: nowrap;
+}
+.post > header .meta .reading-time {
+  color: #2e2e2e;
+  display: block;
+  font-family: "Raleway", Helvetica, sans-serif;
+  font-size: 0.6em;
+  font-weight: 400;
+  letter-spacing: 0em;
+  margin-top: 0.5em;
+  text-transform: uppercase;
+  white-space: wrap;
 }
 .post > a.image.featured {
   overflow: hidden;
