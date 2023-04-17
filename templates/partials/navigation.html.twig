@@ -10,7 +10,7 @@
           {% if mitem.icon %}
             <i class="fa fa-{{ mitem.icon }}"></i>
           {% endif %}
-          {{ mitem.text }}
+          {{ mitem.text|raw }}
         </a>
       </li>
     {% endfor %}

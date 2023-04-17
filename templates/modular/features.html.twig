@@ -36,14 +36,14 @@
           {% endif %}
           <header>
             {% if feature.title %}
-              <h3>{{feature.title}}</h3>
+              <h3>{{feature.title|raw}}</h3>
             {% endif %}
             {% if feature.text %}
               <p>{{feature.text|raw}}</p>
             {% endif %}
             {% if feature.buttonurl %}
               <p>
-                <a href="{{feature.buttonurl}}" class="button fit" target={% if feature.buttonurl_target %} "_blank" {% endif%}>{{feature.buttontext}}</a>
+                <a href="{{feature.buttonurl}}" class="button fit" target={% if feature.buttonurl_target %} "_blank" {% endif%}>{{feature.buttontext|raw}}</a>
               </p>
             {% endif %}
           </header>

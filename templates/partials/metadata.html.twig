@@ -8,10 +8,10 @@
 {# Partial code from https://github.com/paulcmal/grav-plugin-socialmeta #}
 
 {% if not page.metadata["og:sitename"] %}
-<meta name="og:site_name" property="og:site_name" content="{{ site.title }}" />
+<meta name="og:site_name" property="og:site_name" content="{{ site.title|raw }}" />
 {% endif %}
 {% if not page.metadata["og:title"] %}
-<meta name="og:title" property="og:title" content="{{ page.title }}" />
+<meta name="og:title" property="og:title" content="{{ page.title|raw }}" />
 {% endif %}
 {% if not page.metadata["og:description"] %}
 <meta name="og:description" property="og:description" content="{{ page.summary|striptags|truncate(150)|raw }}" />
@@ -38,7 +38,7 @@
   {% endfor %}
 {% endif %}
 {% if not page.metadata["twitter:title"] %}
-<meta name="twitter:title" property="twitter:title" content="{{ page.title }}" />
+<meta name="twitter:title" property="twitter:title" content="{{ page.title|raw }}" />
 {% endif %}
 {% if not page.metadata["twitter:description"] %}
 <meta name="twitter:description" property="twitter:description" content="{{ page.summary|striptags|truncate(150)|raw }}" />

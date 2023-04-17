@@ -54,13 +54,13 @@
 				<div class="row aln-center">
 				{% for item in gallery %}
 					{% set item_image = page.media[item.image] %}
-					{% set item_title = item.title %}
-					{% set item_desc = item.description %}
+					{% set item_title = item.title|raw %}
+					{% set item_desc = item.description|raw %}
 					{% set thumbnail = item_image.cropZoom(thumb_w, thumb_h).loading('lazy').attribute('decoding','async').attribute('itemprop','http://schema.org/image').html(item_title,item_title) %}
 					<div class="{{columns}} portfolio_item">
-						<a href="{{item_image.url}}" class="glightbox" data-height="{{page.header.height}}" data-width="{{page.header.width}}" data-title="{{item_title}}" data-description="{{item_desc|raw}}" data-desc-position="{{item.descPosition}}" data-zoomable="{{page.header.zoomable}}" data-draggable="{{page.header.draggable}}" data-type="image">
+						<a href="{{item_image.url}}" class="glightbox" data-height="{{page.header.height}}" data-width="{{page.header.width}}" data-title="{{item_title}}" data-description="{{item_desc}}" data-desc-position="{{item.descPosition}}" data-zoomable="{{page.header.zoomable}}" data-draggable="{{page.header.draggable}}" data-type="image">
 						<span class="image fit">
-							{{ thumbnail }}
+							{{ thumbnail|raw }}
 						</span>
 						</a>
 					</div>
