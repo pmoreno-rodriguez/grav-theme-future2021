@@ -17,7 +17,7 @@
 		font-weight: _font(weight-heading);
 		letter-spacing: _font(kerning-heading);
 		text-transform: uppercase;
-		white-space: nowrap;
+		white-space: wrap;
 
 		.name {
 			@include vendor('transition', 'border-bottom-color #{_duration(transition)} ease');

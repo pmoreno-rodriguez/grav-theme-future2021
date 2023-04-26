@@ -1,0 +1,23 @@
+{% block stylesheets %}
+     <style>
+         .wrapper-carousel-{{ owl_id }} {
+             display: flex;
+             width: 100%;
+             }
+         .carousel-{{ owl_id }} {
+             width: 0;
+             margin-bottom: 2rem;
+             flex-basis: 100%;
+                     }
+     </style>
+
+{% endblock %}
+
+<div class="wrapper-carousel-{{ owl_id }}">
+     <div class="carousel-{{ owl_id }}">
+         <div class="owl-carousel owl-theme" id="{{ owl_id }}">
+             {{ owl_items|regex_replace('(^\n?<p>|<\/p>$)','')|raw }}
+         </div>
+     </div>
+</div>
+

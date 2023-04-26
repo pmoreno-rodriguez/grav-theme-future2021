@@ -19,6 +19,11 @@
     {% set title = p.title|raw %}
     {% set avatar = p.media[p.header.avatarImage].url|e  %}
     {% set image = p.media[p.header.primaryImage] ?: p.media.all|filter((v, k) => k != p.header.avatarImage and (v.type == 'image' or v.type == 'vector'))|first %}
+    
+    {# Define if the primary image and the attributes of width and height are shown #}
+    {% set show_image = p.header.show_pageimage|defined(true) %}
+    {% set img_width = p.header.image_width|default(1038) %}
+    {% set img_height = p.header.image_height|default(437) %}
 
       <article class="mini-post">
         <header>
@@ -36,9 +41,9 @@
           <a href="{{ p.url }}" class="author" title="{{ author }}"><img src="{{ avatar }}" alt="{{ author }}"/></a>
         {% endif %}
         </header>
-        {% if image %}
+        {% if show_image and image %}
         <a href="{{ p.url }}" class="image" title="{{ title|raw }}" rel="nofollow">
-            {{ image.cropZoom(1038,437).loading('lazy').attribute('decoding','async').html(title,title)|raw}}
+            {{ image.cropZoom(img_width,img_height).loading('lazy').attribute('decoding','async').html(title,title)|raw}}
         </a>
         {% endif %}
       </article>

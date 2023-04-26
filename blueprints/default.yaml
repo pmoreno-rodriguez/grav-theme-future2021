@@ -22,14 +22,47 @@ form:
                     header.subtitle:
                       type: text
                       style: vertical
+                      size: long
                       label: FUTURE.ADMIN.ITEM.ITEM_SUBTITLE
+                    image_section:
+                      type: section
+                      underline: true
+                      title: FUTURE.ADMIN.DEFAULT.IMAGE_OPTIONS
+                    header.show_pageimage:
+                      type: toggle
+                      style: vertical
+                      label: FUTURE.ADMIN.DEFAULT.SHOW_PAGEIMAGE
+                      help: FUTURE.ADMIN.DEFAULT.SHOW_PAGEIMAGE_HELP
+                      default: 1
+                      highlight: 1
+                      options:
+                        1: PLUGIN_ADMIN.ENABLED
+                        0: PLUGIN_ADMIN.DISABLED
+                      validate:
+                        type: bool
                     header.primaryImage:
                       ordering@: header.subtitle
                       style: vertical
                       size: medium
                       type: pagemediaselect
-                      label: FUTURE.ADMIN.DEFAULT.PRIMARY_IMAGE
+                      label: FUTURE.ADMIN.DEFAULT.PRIMARY_IMAGE.LABEL
                       preview_images: true
+                    header.image_width:
+                        type: number
+                        style: vertical
+                        label: FUTURE.ADMIN.DEFAULT.PRIMARY_IMAGE.WIDTH
+                        size: small
+                        default: 1038
+                    header.image_height:
+                      type: number
+                      style: vertical
+                      label: FUTURE.ADMIN.DEFAULT.PRIMARY_IMAGE.HEIGHT
+                      size: small
+                      default: 437
+                    content_section:
+                      type: section
+                      underline: true
+                      title: FUTURE.ADMIN.DEFAULT.CONTENT
         options:
           fields:
             publishing:

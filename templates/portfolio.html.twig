@@ -1,6 +1,11 @@
 {% extends 'partials/base.html.twig' %}
-{% set show_sidebar = header_var('show_sidebar')|defined(false)  %}
-{% set image = page.media[page.header.primaryImage] %}
+
+{# Define if the primary image and the attributes of width and height are shown #}
+{% set image = page.media[page.header.primaryImage] ?: page.media.all|filter((v) => (v.type == 'image' or v.type == 'vector'))|first %}
+{% set img_width = header_var('image_width')|default(1038) %}
+{% set img_height = header_var('image_height')|default(437) %}
+
+{# Set title and subtitle #}
 {% set title = page.title|raw %}
 {% set subtitle = page.header.subtitle|raw %}
 {% set columns = page.header.layout == 'standard' ? 'col-4 col-6-medium col-12-small' : 'col-6 col-12-small'  %}
@@ -9,9 +14,10 @@
 	{{ parent() }}
 	{% do assets.addCss('theme://assets/css/glightbox.min.css') %}
 	{% set styling %}
-	button.gclose.gbtn, button.gnext.gbtn, button.gprev.gbtn {
-			box-shadow: none !important;
-		}
+		button.gclose.gbtn, button.gnext.gbtn, button.gprev.gbtn {
+				box-shadow: none !important;
+			}
+		
 	{% endset %}
 {% do assets.addInlineCss(styling) %}
 {% endblock %}
@@ -28,19 +34,15 @@
 	<article class="post">
 		<header>
 			<div class="title">
-				<h2>
-					{{ title }}
-				</h2>
+				<h2>{{ title }}</h2>
 				{% if subtitle %}
-					<p>
-						{{ subtitle }}
-					</p>
+					<p>{{ subtitle }}</p>
 				{% endif %}
 			</div>
 		</header>
-		{% if image %}
+		{% if show_image and image %}
 			<span class="image featured">
-				{{ image.cropZoom(1038,437).loading('lazy').attribute('decoding','async').html(title, title)|raw }}
+				{{ image.cropZoom(img_width,img_height).loading('lazy').attribute('decoding','async').html(title, title)|raw }}
 			</span>
 		{% endif %}
 
@@ -50,19 +52,19 @@
 		{% block portfolio %}
 			<section>
 				<div class="row aln-center">
-					{% for item in gallery %}
-          {% set item_image = page.media[item.image] %}
-					{% set item_title = item.title %}
-					{% set item_desc = item.description %}
+				{% for item in gallery %}
+					{% set item_image = page.media[item.image] %}
+					{% set item_title = item.title|raw %}
+					{% set item_desc = item.description|raw %}
 					{% set thumbnail = item_image.cropZoom(thumb_w, thumb_h).loading('lazy').attribute('decoding','async').attribute('itemprop','http://schema.org/image').html(item_title,item_title) %}
-          <div class="{{columns}} portfolio_item">
-            <a href="{{item_image.url}}" class="glightbox"data-height="{{page.header.height}}" data-width="{{page.header.width}}" data-title="{{item_title}}" data-description="{{item_desc|raw}}" data-desc-position="{{item.descPosition}}" data-zoomable="{{page.header.zoomable}}" data-draggable="{{page.header.draggable}}" data-type="image">
-              <span class="image fit">
-                {{ thumbnail }}
-              </span>
-            </a>
-          </div>
-					{% endfor %}
+					<div class="{{columns}} portfolio_item">
+						<a href="{{item_image.url}}" class="glightbox" data-height="{{page.header.height}}" data-width="{{page.header.width}}" data-title="{{item_title}}" data-description="{{item_desc}}" data-desc-position="{{item.descPosition}}" data-zoomable="{{page.header.zoomable}}" data-draggable="{{page.header.draggable}}" data-type="image">
+						<span class="image fit">
+							{{ thumbnail|raw }}
+						</span>
+						</a>
+					</div>
+				{% endfor %}
 				</div>
 			</section>
 		{% endblock %}
@@ -76,7 +78,9 @@
 {% endblock %}
 
 {% block sidebar %}
+{% if show_sidebar == true %}
 	{% include 'partials/sidebar_left.html.twig' %}
+{% endif %}
 {% endblock %}
 
 {% block javascripts %}

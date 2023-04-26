@@ -1,3 +1,18 @@
+# v1.0.5
+## 04/17/2023
+
+1.  [](#bugfix)
+    * Fixed raw filter in several templates.
+    * Fixed pagination in blog
+2.  [](#improved)
+    * Updated translations.
+    * Updated css styles.
+    * Improved author styles in blog items.
+3.  [](#new)
+    * Added support for Owl Carousel plugin
+    * Added support for Reading time plugin in blog
+    * Added option to enable or disable primary image in pages
+
 # v1.0.4
 ## 02/27/2023
 

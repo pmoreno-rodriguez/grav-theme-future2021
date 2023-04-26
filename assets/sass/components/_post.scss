@@ -70,6 +70,17 @@
 					text-transform: uppercase;
 					white-space: nowrap;
 				}
+				.reading-time {
+					color: _palette(fg);
+					display: block;
+					font-family: _font(family-heading);
+					font-size: 0.6em;
+					font-weight: _font(weight);
+					letter-spacing: _font(no-kerning);
+					margin-top: 0.5em;
+					text-transform: uppercase;
+					white-space: wrap;
+				}
 			}
 		}
 

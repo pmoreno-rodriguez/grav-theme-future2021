@@ -45,7 +45,7 @@ Installing the Future 2021 theme can be done in one of two ways. Our GPM (Grav P
 
 ## GPM Installation (Preferred)
 
-The simplest way to install this theme is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm) through your system's Terminal (also called the command line).  From the root of your Grav install type:
+The simplest way to install this theme is via the [Grav Package Manager (GPM)](https://learn.getgrav.org/17/cli-console/grav-cli-gpm) through your system's Terminal (also called the command line).  From the root of your Grav install type:
 
     bin/gpm install future2021
 
@@ -58,7 +58,6 @@ To install this theme, just download the zip version of this repository and unzi
 You should now have all the theme files under
 
     /your/site/grav/user/themes/future2021
-
 ## Default Options
 
 Future2021 comes with a few default options that can be set site-wide.  These options are:
@@ -85,11 +84,9 @@ footer.button_url:            # Footer block button url in left sidebar
 enable_social:                # Enable/Disable social icons in footer
 custommenus.enabled:          # Enable/Disable custom menus in top menu
 ```
-
 To make modifications, you can copy the `user/themes/future2021/future2021.yaml` file to `user/config/themes/` folder and modify, or you can use the admin plugin.
 
 > NOTE: Do not modify the `user/themes/future2021/future2021.yaml` file directly or your changes will be lost with any updates
-
 ## Custom Logos
 
 To add a custom logo, you should put the log into the `user/themes/future2021/images/logo` folder.  Standard image formats are support (`.png`,`.jpg`, `.gif`, `.svg`, etc.).  Then reference the logo via the YAML like so:
@@ -100,9 +97,7 @@ custom_logo:
 custom_logo_mobile:
     - name: 'my-custom-mobile-logo.png'    
 ```
-
 Alternatively, you can you use the drag-n-drop "Custom Logo" field in the Future2021 theme options.
-
 ## Portfolio Options
 
 | Option | Type | Default | Description |
@@ -131,7 +126,6 @@ Alternatively, you can you use the drag-n-drop "Custom Logo" field in the Future
 # Demo page
 
 [http://future.juanvillen.es/](http://future.juanvillen.es/)
-
 # Future plans
 
 - Create a Flex Directory for authors and avatars.

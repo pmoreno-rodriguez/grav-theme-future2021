@@ -69,22 +69,9 @@ form:
               options:
                 asc: FUTURE.ADMIN.BLOG.BLOG_CONTENT_ITEMS_ORDER_DIR_ASC
                 desc: FUTURE.ADMIN.BLOG.BLOG_CONTENT_ITEMS_ORDER_DIR_DESC
-
-            header.show_breadcrumbs:
+            
+            header.content.pagination:
               type: toggle
-              toggleable: true
-              label: FUTURE.ADMIN.BLOG.BLOG_CONTENT_ITEMS_BREADCRUMBS
-              highlight: 1
-              default: 1
-              options:
-                1: PLUGIN_ADMIN.ENABLED
-                0: PLUGIN_ADMIN.DISABLED
-              validate:
-                type: bool
-                
-            header.show_pagination:
-              type: toggle
-              toggleable: true
               label: FUTURE.ADMIN.BLOG.BLOG_CONTENT_ITEMS_PAGINATION
               highlight: 1
               default: 1
@@ -93,10 +80,9 @@ form:
                 0: PLUGIN_ADMIN.DISABLED
               validate:
                 type: bool
-
+            
             header.content.url_taxonomy_filters:
               type: toggle
-              toggleable: true
               label: FUTURE.ADMIN.BLOG.BLOG_CONTENT_ITEMS_URL_TAXONOMY_FILTERS
               highlight: 1
               default: 1
@@ -127,5 +113,9 @@ form:
                   whatsapp: Whatsapp
                   telegram: Telegram
               use: keys
+
+          import@:
+            type: partials/blog-bits
+            context: blueprints://pages
                     
 
