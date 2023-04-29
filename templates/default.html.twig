@@ -25,7 +25,7 @@
       </div>
     </header>
 
-  {% if show_image and image %}
+  {% if show_pageimage and image %}
       <span class="image featured">
         {{ image.cropZoom(img_width, img_height).loading('lazy').attribute('decoding','async').html(title, title)|raw }}
       </span>
