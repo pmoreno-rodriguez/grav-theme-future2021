@@ -8,13 +8,13 @@ favicon:
     path: user/themes/future2021/images/logo/Grav_logo.png
 blog_page: /blog
 slogan: 'AYUDA DE GRAV EN ESPAÑOL'
-custom_logo: {  }
-custom_logo_mobile:
+custom_logo:
   user/themes/future2021/images/logo/Grav_logo.png:
     name: Grav_logo.png
     type: image/png
     size: 15355
     path: user/themes/future2021/images/logo/Grav_logo.png
+custom_logo_mobile: {  }
 footer:
   title: ABOUT
   description: 'Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod amet placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at phasellus sed ultricies.'
@@ -38,8 +38,8 @@ miniposts: true
 miniposts_number: 3
 latestposts: true
 miniposts_category: minipost
-custommenus:
-  enabled: false
+displaycustommenus:
+  enabled: true
 dropdown:
   enabled: true
 custommenu:
@@ -48,3 +48,11 @@ custommenu:
     icon: arrow-circle-right
     url: 'https://getgrav.org'
     target: _blank
+sidebar: true
+custommenus:
+  enabled: true
+menu_langswitcher: false
+menu_search: true
+menu_login: true
+enable_social: true
+social_style: brands

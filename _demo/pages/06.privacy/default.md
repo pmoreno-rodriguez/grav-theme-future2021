@@ -4,6 +4,7 @@ primaryImage: privacy-policy.jpg
 media_order: privacy-policy.jpg
 visible: false
 subtitle: 'Our privacy terms'
+show_sidebar: true
 ---
 
 <p>Last updated: December 02, 2020</p>

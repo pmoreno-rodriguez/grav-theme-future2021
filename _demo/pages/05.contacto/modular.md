@@ -4,5 +4,6 @@ content:
     items: '@self.modular'
 body_classes: modular
 menu: Contacto
+show_sidebar: true
 ---
 

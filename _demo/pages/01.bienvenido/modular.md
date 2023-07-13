@@ -3,7 +3,7 @@ title: Bienvenido
 content:
     items: '@self.modular'
     order: {  }
-sidebar: true
+show_sidebar: true
 ---
 
 Bienvenido/a a la web ES-GRAV.COM, un sitio web dedicado en exclusiva al popular gestor de contenido GRAV, uno de los Flat-File CMS más reconocidos del mundo. El objetivo de este sitio es ser un punto de partida para conocer este popular CMS, el cual dispone de poca documentación en nuestro idioma, a la vez que servir de base documental para realizar tus proyectos con Grav, incluyendo algunos de los documentos oficiales de Grav, traducidos al castellano, así como pequeños tutoriales que harán más fácil la creación de un sitio web con Grav.

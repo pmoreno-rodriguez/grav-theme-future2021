@@ -43,6 +43,7 @@ images:
         thumb: thumb_magic_butterfly-wallpaper-1920x1080.jpg
 published: true
 layout: standard
+show_sidebar: true
 ---
 
 ## [center]Some pictures for your portfolio[/center]
