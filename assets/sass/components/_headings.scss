@@ -32,6 +32,11 @@
 
     .title {
 
+        h1 {
+            font-weight: _font(weight-heading-extrabold);
+            font-size: 2em;
+        }
+
         h2 {
             font-weight: _font(weight-heading-extrabold);
             font-size: 1.8em;
@@ -58,7 +63,7 @@
             text-align: center;
         }
         .title {
-            -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
             margin: 0 0 _size(element-margin) 0;
             padding: 0;
             text-align: center;
