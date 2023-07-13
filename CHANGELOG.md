@@ -1,3 +1,16 @@
+# v1.0.6
+## 07/13/2023
+
+1.  [](#improved)
+    * Updated demo content [#38](https://github.com/pmoreno-rodriguez/grav-theme-future2021/issues/38)
+    * Relocated some variables used in all theme templates
+    * Improved css styles
+    * Updated translations
+    * Improved html header tags (h1,h2,etc), to improve SEO
+2.  [](#new)
+    * New option to choose the style of social media icons [#34](https://github.com/pmoreno-rodriguez/grav-theme-future2021/issues/34)
+    * Added crossmark to close the side menu [#24](https://github.com/pmoreno-rodriguez/grav-theme-future2021/issues/24)
+    * Added css styles to support plugin `Editable with ContentTools` [#39](https://github.com/pmoreno-rodriguez/grav-theme-future2021/issues/39)
 # v1.0.5
 ## 04/17/2023
 
@@ -12,7 +25,6 @@
     * Added support for Owl Carousel plugin
     * Added support for Reading time plugin in blog
     * Added option to enable or disable primary image in pages
-
 # v1.0.4
 ## 02/27/2023
 

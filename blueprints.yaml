@@ -1,7 +1,7 @@
 name: Future 2021
 slug: future2021
 type: theme
-version: 1.0.5
+version: 1.0.6
 description: Grav Future Imperfect by HTML5 UP (Version 2021)
 icon:  microchip
 author:
@@ -215,9 +215,20 @@ form:
             1: PLUGIN_ADMIN.ENABLED
             0: PLUGIN_ADMIN.DISABLED
           validate:
-            type: bool 
+            type: bool
+        social_style:
+              type: select
+              label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_STYLE
+              description: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_STYLE_DESCRIPTION
+              default: brands
+              size: medium
+              options:
+                regular: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_STYLE_REGULAR
+                solid: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_STYLE_SOLID
+                brands: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_STYLE_BRANDS
         social:
           name: social
+          label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICONS_LIST
           type: list
           style: vertical
           collapsed: false
