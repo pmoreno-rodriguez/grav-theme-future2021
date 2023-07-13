@@ -1,4 +1,5 @@
 <section id="menu">
+  <div style="padding: 1.5em;"><a class="close" href="#menu" title="Menu"></a></div>
   {% if config.plugins.simplesearch.enabled %}
     <!-- Search -->
     <section>
@@ -6,36 +7,36 @@
     </section>
   {% endif %}
   <!-- Links -->
-  <section id="sidebarmenu">
+  <div id="sidebarmenu">
     {% include 'partials/sidebar_navigation.html.twig' %}
-  </section>
+  </div>
   {% if config.plugins.archives.enabled and archives_data is not empty  %}
     <!-- Actions -->
-    <section>
+    <div>
       <header>
         <h3>{{ 'FUTURE.SIDEBAR.ARCHIVES.HEADLINE'|t }}</h3>
       </header>
       {% include 'partials/archives.html.twig' %}
-    </section>
+    </div>
   {% endif %}
   {% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
-    <section>
+    <div>
       <header>
         <h3>{{ 'FUTURE.SIDEBAR.RELATED_POSTS.HEADLINE'|t }}</h3>
       </header>
       {% include 'partials/relatedpages.html.twig' %}
-    </section>
+    </div>
   {% endif %}
   {% if config.plugins.taxonomylist.enabled %}
-    <section>
+    <div>
       <header>
         <h3>{{ 'FUTURE.SIDEBAR.TAGS.HEADLINE'|t }}</h3>
       </header>
       {% include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag'} %}
-    </section>
+    </div>
   {% endif %}
   {% if config.plugins.login.enabled %}
-    <section>
+    <div>
       <ul class="actions stacked">
       {% if not grav.user.authenticated %}
         <li><a href="{{ base_url_absolute }}{{config.plugins.login.route}}" class="button large fit">{{ 'PLUGIN_LOGIN.BTN_LOGIN'|t }}</a></li>
@@ -44,6 +45,6 @@
         <li><a class="button large fit" href="{{ url(uri.addNonce((uri.path)|trim('/') ~ '/task' ~ config.system.param_sep ~ 'login.logout', 'logout-form', 'logout-nonce'))|e }}">{{ 'PLUGIN_LOGIN.BTN_LOGOUT'|t }}</a></li>
       {% endif %}
       </ul>
-    </section>
+    </div>
   {% endif %}
 </section>
