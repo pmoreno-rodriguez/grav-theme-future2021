@@ -38,6 +38,36 @@
 		> :first-child {
 			border-top: 0;
 		}
+		> :nth-child(2) {
+			border-top: 0;
+		}
+		.close {
+			@include icon(false, solid);
+			@include vendor('transition', 'color #{_duration(transition)} ease-in-out');
+			border: 0;
+			color: _palette(fg-light);
+			cursor: pointer;
+			text-align: right;
+
+			&:before {
+				content: '\f00d';
+				display: block;
+				padding: 0.5em 1.5em;
+			}
+
+			&:hover {
+				color: inherit;
+			}
+
+			@include breakpoint('<=small') {
+				height: 4em;
+				line-height: 4em;
+
+				&:before {
+					padding: 0em;
+				}
+			}
+		}
 
 		.links {
 			list-style: none;
