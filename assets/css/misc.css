@@ -109,3 +109,8 @@
 @media screen and (max-width: 736px) {
   #header .main ul li.login-logout {
     display: none; } }
+
+/* Support for Editable with ContentTools plugin */
+.ct-widget.ct-ignition {
+  z-index: 10015;
+}
