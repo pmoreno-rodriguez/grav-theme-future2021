@@ -35,8 +35,14 @@ en:
         FOOTER_COPYRIGHT: Copyright Text
         FOOTER_BUTTON_TEXT: Button Text
         FOOTER_BUTTON_URL: Button URL
-        FOOTER_SOCIAL_ENABLE: Enable Social Icons
-        FOOTER_SOCIAL_ICONS: Social Icons
+        FOOTER_SOCIAL_ENABLE: Enable Icons
+        FOOTER_SOCIAL_STYLE: Icon Styles
+        FOOTER_SOCIAL_STYLE_DESCRIPTION: Look for the icons at <a href="https://fontawesome.com/v5/search" target="_blank">https://fontawesome.com/v5/search</a>
+        FOOTER_SOCIAL_STYLE_REGULAR: Regular
+        FOOTER_SOCIAL_STYLE_SOLID: Solid
+        FOOTER_SOCIAL_STYLE_BRANDS: Brands
+        FOOTER_SOCIAL_ICONS: Social Media Icons
+        FOOTER_SOCIAL_ICONS_LIST: List of icons
         FOOTER_SOCIAL_ICON_NAME: Social Name
         FOOTER_SOCIAL_ICON_URL: URL Link to Social
         FOOTER_SOCIAL_ICON_ICON: Icon to Social
@@ -279,8 +285,14 @@ de:
         FOOTER_COPYRIGHT: Copyright-Text
         FOOTER_BUTTON_TEXT: Schaltflächentext
         FOOTER_BUTTON_URL: Schaltflächen-URL
-        FOOTER_SOCIAL_ENABLE: Symbole für soziale Medien aktivieren
+        FOOTER_SOCIAL_ENABLE: Symbole aktivieren
+        FOOTER_SOCIAL_STYLE: Icon-Stile
+        FOOTER_SOCIAL_STYLE_DESCRIPTION: Suchen Sie nach den Symbolen unter <a href="https://fontawesome.com/v5/search" target="_blank">https://fontawesome.com/v5/search</a>
+        FOOTER_SOCIAL_STYLE_REGULAR: Regular
+        FOOTER_SOCIAL_STYLE_SOLID: Solid
+        FOOTER_SOCIAL_STYLE_BRANDS: Brands
         FOOTER_SOCIAL_ICONS: Symbole für soziale Medien
+        FOOTER_SOCIAL_ICONS_LIST: Liste der Symbole
         FOOTER_SOCIAL_ICON_NAME: Name des sozialen Netzwerks
         FOOTER_SOCIAL_ICON_URL: URL-Link zum sozialen Netzwerk
         FOOTER_SOCIAL_ICON_ICON: Symbol des sozialen Netzwerks
@@ -520,8 +532,14 @@ es:
         FOOTER_COPYRIGHT: Texto del Copyright
         FOOTER_BUTTON_TEXT: Texto del botón
         FOOTER_BUTTON_URL: URL del botón
-        FOOTER_SOCIAL_ENABLE: Habilitar iconos de redes sociales
+        FOOTER_SOCIAL_ENABLE: Habilitar iconos
+        FOOTER_SOCIAL_STYLE: Estilos de iconos
+        FOOTER_SOCIAL_STYLE_DESCRIPTION: 'Busque los iconos en <a href="https://fontawesome.com/v5/search" target="_blank">https://fontawesome.com/v5/search</a>'
+        FOOTER_SOCIAL_STYLE_REGULAR: Regular
+        FOOTER_SOCIAL_STYLE_SOLID: Solid
+        FOOTER_SOCIAL_STYLE_BRANDS: Brands
         FOOTER_SOCIAL_ICONS: Iconos Redes Sociales
+        FOOTER_SOCIAL_ICONS_LIST: Lista de Iconos
         FOOTER_SOCIAL_ICON_NAME: Nombre de Red Social
         FOOTER_SOCIAL_ICON_URL: URL Link to Social
         FOOTER_SOCIAL_ICON_ICON: Icono de Red Social
