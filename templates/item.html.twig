@@ -24,7 +24,7 @@
 		</div>
 	{% endif %}
 
-	{% include 'partials/blog_item.html.twig' with {'truncate':false} %}
+	{% include 'partials/blog_item.html.twig' with {'listing': false, 'truncate':false} %}
 
 	{% if show_sidebar == false %}
 		<section id="footer" class="align-center">

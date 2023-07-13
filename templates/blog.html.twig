@@ -5,8 +5,6 @@
 {% set feed_url = base_url %}
 {% set show_breadcrumbs = header_var('show_breadcrumbs')|defined(true) %}
 {% set show_pagination = header_var('show_pagination')|defined(true) %}
-{% set image = page.media[page.header.primaryImage] ?: page.media.images|first %}
-{% set title = page.title|raw %}
 
 {# Set page title by taxonomy #}
 {% if uri.param('category') %}
@@ -39,7 +37,7 @@
     </span>
     {% endif %}
     <div class="title">
-      <h2>{{ title }}</h2>
+      <h1 itemprop="headline">{{ title }}</h1>
       {% if listing_title %}
         <p>{{ listing_title|raw }}</p>
       {% endif %}
@@ -52,7 +50,7 @@
     {% endif %}
 </article>
   {% for child in collection %}
-    {% include 'partials/blog_item.html.twig' with {'page':child, 'truncate':true} %}
+    {% include 'partials/blog_item.html.twig' with {'page':child, 'title': child.title|raw, 'subtitle': child.header.subtitle|raw, 'listing': true, 'truncate':true} %}
   {% endfor %}
 
   {% if show_pagination and config.plugins.pagination.enabled and collection.params.pagination %}

@@ -1,15 +1,5 @@
 {% extends 'partials/base.html.twig' %}
 
-{# Define if the primary image and the attributes of width and height are shown #}
-{% set show_image = header_var('show_pageimage')|defined(true) %}
-{% set image = page.media[page.header.primaryImage] ?: page.media.all|filter((v, k) => k != page.header.primaryImage and (v.type == 'image' or v.type == 'vector'))|first %}
-{% set img_width = header_var('image_width')|default(1038) %}
-{% set img_height = header_var('image_height')|default(437) %}
-
-{# Set title and subtitle #}
-{% set title = page.title|raw %}
-{% set subtitle = page.header.subtitle|raw %}
-
 {% block menu %}
   {% include 'partials/sidebar_right.html.twig' %}
 {% endblock %}
@@ -18,7 +8,7 @@
   <article class="post">
     <header>
       <div class="title">
-        <h2>{{ title }}</h2>
+        <h1>{{ title }}</h1>
         {% if subtitle %}
           <p>{{ subtitle }}</p>
         {% endif %}

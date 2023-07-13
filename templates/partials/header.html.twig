@@ -1,11 +1,12 @@
+{# Configuration of navbar buttons #}
 {% set icon_lang = theme_var('menu_langswitcher')|defined('false') %}
 {% set icon_search = theme_var('menu_search')|defined('false') %}
 {% set icon_login = theme_var('menu_login')|defined('false') %}
 
 <header id="header">
-  <h1 class="logo">
+  <div class="logo">
     <a href="{{ home_url }}">{{ site.title }}</a>
-  </h1>
+  </div>
   <nav class="dropdown">
     {% block header_navigation %}
       {% include 'partials/navigation.html.twig' %}

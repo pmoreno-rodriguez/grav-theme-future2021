@@ -1,3 +1,4 @@
+{# Define global variables #}
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
 {% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
 {% set favicon = theme_config.favicon ? theme_config.favicon|first : { type:'image/png', path: url('theme://images/favicon.png') } %}
@@ -5,6 +6,16 @@
 
 {# Define if sidebar is shown in the page #}
 {% set show_sidebar = header_var('show_sidebar')|defined(false) %}
+
+{# Define if the primary image and the attributes of width and height are shown #}
+{% set show_image = header_var('show_pageimage')|defined(true) %}
+{% set image = page.media[page.header.primaryImage] ?: page.media.all|filter((v, k) => k != page.header.primaryImage and (v.type == 'image' or v.type == 'vector'))|first %}
+{% set img_width = header_var('image_width')|default(1038) %}
+{% set img_height = header_var('image_height')|default(437) %}
+
+{# Set title and subtitle #}
+{% set title = page.title|raw %}
+{% set subtitle = page.header.subtitle|raw %}
 
 <!DOCTYPE html>
 <html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">

@@ -1,14 +1,11 @@
 {% extends 'partials/base.html.twig' %}
 
-{# Define if the primary image and the attributes of width and height are shown #}
-{% set image = page.media[page.header.primaryImage] ?: page.media.all|filter((v) => (v.type == 'image' or v.type == 'vector'))|first %}
-{% set img_width = header_var('image_width')|default(1038) %}
-{% set img_height = header_var('image_height')|default(437) %}
-
-{# Set title and subtitle #}
-{% set title = page.title|raw %}
-{% set subtitle = page.header.subtitle|raw %}
 {% set columns = page.header.layout == 'standard' ? 'col-4 col-6-medium col-12-small' : 'col-6 col-12-small'  %}
+
+{# Set portfolio options #}
+{% set gallery = page.header.images %}
+{% set thumb_w = page.header.thumb_width|default(600) %}
+{% set thumb_h = page.header.thumb_height|default(450) %}
 
 {% block stylesheets %}
 	{{ parent() }}
@@ -21,9 +18,6 @@
 	{% endset %}
 {% do assets.addInlineCss(styling) %}
 {% endblock %}
-{% set gallery = page.header.images %}
-{% set thumb_w = page.header.thumb_width|default(600) %}
-{% set thumb_h = page.header.thumb_height|default(450) %}
 
 {% block menu %}
 	{% include 'partials/sidebar_right.html.twig' %}

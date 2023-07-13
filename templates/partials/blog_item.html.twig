@@ -1,41 +1,36 @@
+{# Set site language #}
 {% set lang = grav.language.getActive ?: grav.config.site.default_lang %}
-
-<article class="post" itemprop="liveBlogUpdate" itemscope itemtype="http://schema.org/BlogPosting">
-
-  {% if page.header.metadata.author %}
-    {% set author = page.header.metadata.author %}
-  {% elseif page.header.author %}
-    {% set author = page.header.author %}
-  {% else %}
-    {% set author = page.taxonomy.author[0] %}
-  {% endif %}
+{# For SEO purposes, we avoid displaying more than one H1 tag. #}
+{% set Htag = listing ? 'h2' : 'h1' %}
 
 {# Set avatar image and primary image #}
 {% set avatar = page.media[page.header.avatarImage].url|e  %}
 {% set image = page.media[page.header.primaryImage] ?: page.media.all|filter((v, k) => k != page.header.avatarImage and (v.type == 'image' or v.type == 'vector'))|first %}
 
-{# Define if the primary image and the attributes of width and height are shown #}
-{% set show_image = header_var('show_pageimage')|defined(true) %}
-{% set img_width = header_var('image_width')|default(1038) %}
-{% set img_height = header_var('image_height')|default(437) %}
+{# Set page author #}
+{% if page.header.metadata.author %}
+  {% set author = page.header.metadata.author %}
+{% elseif page.header.author %}
+  {% set author = page.header.author %}
+{% else %}
+  {% set author = page.taxonomy.author[0] %}
+{% endif %}
 
-{# Set title and subtitle #}
-{% set title = page.title|raw %}
-{% set subtitle = page.header.subtitle|raw %}
+<article class="post" itemprop="liveBlogUpdate" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header>
     <div class="title">
       {% if page.header.link %}
-        <h2 itemprop="headline">
+        <{{ Htag }} itemprop="headline">
           {% if page.header.continue_link is not sameas(false) %}
             <a href="{{ page.url }}" aria-label="{{ title }}"></a>
           {% endif %}
           <a href="{{ page.header.link }}" aria-label="{{ title }}">{{ title }}</a>
-        </h2>
+        </{{ Htag }}>
       {% else %}
-        <h2 itemprop="headline">
+       <{{ Htag }} itemprop="headline">
           <a href="{{ page.url }}" aria-label="{{ title }}">{{ title }}</a>
-        </h2>
+        </{{ Htag }}>
       {% endif %}
       {% if subtitle %}
         <p itemprop="alternativeHeadline">{{ subtitle|raw }}</p>
