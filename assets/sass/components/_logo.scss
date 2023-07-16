@@ -4,6 +4,18 @@
     font-family: _font(family-heading);
     font-size: 1.3em;
     font-weight: _font(weight-heading-bold);
+    height: inherit;
+    line-height: inherit;
+    padding: 0 0 0 1.5em;
+    white-space: nowrap;
+
+        a {
+            font-size: 0.7em;
+            letter-spacing: 0.25em;
+            text-decoration: none;
+            border-bottom: 0;
+        }
+
     @include breakpoint('<=small') {
     font-size: 1em;
     }

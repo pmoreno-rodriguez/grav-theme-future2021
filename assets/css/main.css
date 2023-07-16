@@ -2618,6 +2618,16 @@ table.alt tfoot {
   font-family: "Raleway", Helvetica, sans-serif;
   font-size: 1.3em;
   font-weight: 800;
+  height: inherit;
+  line-height: inherit;
+  padding: 0 0 0 1.5em;
+  white-space: nowrap;
+}
+#header .logo a {
+  font-size: 0.7em;
+  letter-spacing: 0.25em;
+  text-decoration: none;
+  border-bottom: 0;
 }
 @media screen and (max-width: 736px) {
   #header .logo {
@@ -2941,16 +2951,6 @@ body {
 }
 #header h1 a {
   font-size: 0.7em;
-}
-#header div {
-  height: inherit;
-  line-height: inherit;
-  padding: 0 0 0 1.5em !important;
-  white-space: nowrap !important;
-}
-#header div a {
-  font-size: 0.7em;
-  letter-spacing: 0.25em;
 }
 #header .main {
   height: inherit;
