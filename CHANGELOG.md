@@ -4,7 +4,7 @@
 1.  [](#bugfix)
     * Fixed page date in miniposts [#43](https://github.com/pmoreno-rodriguez/grav-theme-future2021/issues/43)
 2.  [](#improved)
-    * Updated css to fix large content [#42](https://github.com/pmoreno-rodriguez/grav-theme-future2021/issues/42)
+    * Updated css to avoid content overflow [#42](https://github.com/pmoreno-rodriguez/grav-theme-future2021/issues/42)
 # v1.0.6
 ## 07/13/2023
 
