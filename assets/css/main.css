@@ -2204,7 +2204,7 @@ ul.posts article header > :last-child {
   -moz-flex-grow: 1;
   -ms-flex-grow: 1;
   flex-grow: 1;
-  -ms-flex: 1;
+  flex: 1;
   padding: 3.75em 3em 3.3em 3em;
 }
 .post > header .title h2 {
@@ -2338,7 +2338,7 @@ ul.posts article header > :last-child {
     border-left: 0;
   }
   .post > header .title {
-    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
     margin: 0 0 2em 0;
     padding: 0;
     text-align: center;
@@ -2842,8 +2842,7 @@ ul.subitem_hide > li {
   margin-top: -1em;
   height: 3em;
   line-height: 3em;
-  -webkit-padding-start: 0;
-          padding-inline-start: 0;
+  padding-inline-start: 0;
 }
 .heading #breadcrumbs span {
   padding: 0;
