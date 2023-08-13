@@ -1,7 +1,7 @@
 name: Future 2021
 slug: future2021
 type: theme
-version: 1.0.7
+version: 1.2.0
 description: Grav Future Imperfect by HTML5 UP (Version 2021)
 icon:  microchip
 author:
@@ -171,6 +171,26 @@ form:
           validate:
             min: 1
             max: 5
+        
+        recent_posts_enabled:
+          type: toggle
+          label: FUTURE.ADMIN.THEME.RECENT_POSTS_ENABLED
+          highlight: 0
+          default: 0
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+        
+        recent_posts_number:
+          type: range
+          label: FUTURE.ADMIN.THEME.RECENT_POSTS_NUMBER
+          description: FUTURE.ADMIN.THEME.RECENT_POSTS_NUMBER_DESCRIPTION
+          default: 5
+          validate:
+            min: 1
+            max: 15
 
     footer_section:
       type: fieldset
