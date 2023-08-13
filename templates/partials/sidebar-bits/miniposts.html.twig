@@ -1,8 +1,10 @@
 {# Configuring miniposts with variables defined in the theme #}
-{% set miniposts_category = theme_var('miniposts_category') %}
-{% set miniposts_number = config.theme.miniposts_number %}
-{% set lang = grav.language.getActive ?: grav.config.site.default_lang %}
+{% set miniposts_enabled = theme_var('miniposts')|defined(false) %}
+{% set miniposts_category = theme_var('miniposts_category')|default('minipost') %}
+{% set miniposts_number = theme_var('miniposts_number')|defined(3) %}
 
+{% if miniposts_enabled is same as true %}
+<!-- Mini Posts -->
 <section>
   <header class="">
     <h3>{{ 'FUTURE.FEATURED'|t }}</h3>
@@ -52,3 +54,4 @@
   </div>
 </section>
 <!-- End of featured Section -->
+{% endif %}
