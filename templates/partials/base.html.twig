@@ -2,7 +2,9 @@
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
 {% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
 {% set favicon = theme_config.favicon ? theme_config.favicon|first : { type:'image/png', path: url('theme://images/favicon.png') } %}
-{% set new_base_url = base_url_absolute ~ theme_config.blog_page %}
+
+{# Set site language #}
+{% set lang = grav.language.getActive ?: grav.config.site.default_lang %}
 
 {# Define if sidebar is shown in the page #}
 {% set show_sidebar = header_var('show_sidebar')|defined(false) %}
@@ -18,7 +20,7 @@
 {% set subtitle = page.header.subtitle|raw %}
 
 <!DOCTYPE html>
-<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
+<html lang="{{ lang }}">
   <head>
     {% block head deferred %}
       <title>{% if page.title %}{{ page.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>

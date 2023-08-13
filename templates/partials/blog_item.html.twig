@@ -1,5 +1,3 @@
-{# Set site language #}
-{% set lang = grav.language.getActive ?: grav.config.site.default_lang %}
 {# For SEO purposes, we avoid displaying more than one H1 tag. #}
 {% set Htag = listing ? 'h2' : 'h1' %}
 
@@ -51,7 +49,7 @@
       {% endif %}
       {% if author %}
         <span itemprop="author" itemscope itemtype="http://schema.org/Person"/>
-        <a {% if page.taxonomy.author %}href="{{ base_url }}/author{{ config.system.param_sep }}{{ author }}" itemprop="url" {% endif %}class="author" aria-label="{{ author }}" rel="nofollow">
+        <a {% if page.taxonomy.author %}href="{{ blog.url }}/author{{ config.system.param_sep }}{{ author }}" itemprop="url" {% endif %}class="author" aria-label="{{ author }}" rel="nofollow">
           <span class="name" rel="author">{{ author }}</span>
           {% if avatar %}<img src="{{ avatar }}" alt="{{ author }}" />{% endif %}
         </a>
@@ -108,7 +106,7 @@
     {% if page.taxonomy.tag %}
     <ul class="stats">
         {% for tag in page.taxonomy.tag %}
-          <li><a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}" itemprop="keywords" rel="nofollow">{{ tag }}</a></li>
+          <li><a href="{{ blog.url }}/tag{{ config.system.param_sep }}{{ tag }}" itemprop="keywords" rel="nofollow">{{ tag }}</a></li>
         {% endfor %}
      </ul>
     {% endif %}
