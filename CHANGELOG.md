@@ -1,3 +1,18 @@
+# v1.2.0
+## 08/13/2023
+
+1.  [](#new)
+    * New recent posts partial template and theme option to enable it.
+    * New related pages partial template
+    * New demo content
+2.  [](#improved)
+    * Updated CSS styles
+    * Updated translations
+    * Readme updated
+    * Relocated the templates for the sidebar
+    * Redefined the url of the base page for the blog
+3.  [](#bugfix)
+    * Fixed archives templates 
 # v1.0.7
 ## 07/20/2023
 
