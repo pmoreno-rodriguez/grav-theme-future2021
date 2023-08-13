@@ -1,8 +1,7 @@
 {% extends 'partials/base.html.twig' %}
 
 {% set collection = page.collection() %}
-{% set base_url = page.url %}
-{% set feed_url = base_url %}
+{% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
 {% set show_breadcrumbs = header_var('show_breadcrumbs')|defined(true) %}
 {% set show_pagination = header_var('show_pagination')|defined(true) %}
 
@@ -13,17 +12,11 @@
 	{% set listing_title = 'FUTURE.BLOG.LISTING_TITLE_TAG'|t ~ uri.param('tag') %}
 {% elseif uri.param('author') %}
 	{% set listing_title = 'FUTURE.BLOG.LISTING_TITLE_AUTHOR'|t ~ uri.param('author') %}
+{% elseif uri.param('archives_month') %}
+    {% set listing_title = 'FUTURE.BLOG.LISTING_TITLE_MONTH'|t ~ uri.param('archives_month')|replace({'_': ' '}) %}
 {% else %}
     {% set listing_title = page.header.subtitle|raw %}
 {% endif %}
-
-{% if base_url == '/' %}
-  {% set base_url = '' %}
-{% endif %}
-
-{% if base_url == base_url_relative %}
-  {% set feed_url = base_url~'/'~page.slug %}
-{% endif  %}
 
 {% block menu %}
   {% include 'partials/sidebar_right.html.twig' %}
@@ -50,16 +43,16 @@
     {% endif %}
 </article>
   {% for child in collection %}
-    {% include 'partials/blog_item.html.twig' with {'page':child, 'title': child.title|raw, 'subtitle': child.header.subtitle|raw, 'listing': true, 'truncate':true} %}
+    {% include 'partials/blog_item.html.twig' with {blog: page, page:child, 'title': child.title|raw, 'subtitle': child.header.subtitle|raw, 'listing': true, 'truncate':true} %}
   {% endfor %}
 
   {% if show_pagination and config.plugins.pagination.enabled and collection.params.pagination %}
-    {% include 'partials/pagination.html.twig' with {base_url: page.url, pagination: collection.params.pagination} %}
+    {% include 'partials/pagination.html.twig' with {'base_url': page.url, 'pagination': collection.params.pagination} %}
   {% endif %}
 
   {% if show_sidebar == false %}
     <section id="footer" class="align-center">
-      {% include 'partials/footer.html.twig' %}
+      {% include 'partials/sidebar-bits/footer.html.twig' %}
     </section>
   {% endif %}
 {% endblock %}
