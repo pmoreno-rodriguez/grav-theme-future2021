@@ -31,7 +31,7 @@
 
 			.title {
 				@include vendor('flex-grow', '1');
-				-ms-flex: 1;
+				flex: 1;
 				padding: (_size(section-spacing) * 1.25) _size(section-spacing) (_size(section-spacing) * 1.1) _size(section-spacing);
 
 				h2 {
@@ -181,7 +181,7 @@
 				border-left: 0;
 
 				.title {
-					-ms-flex: 0 1 auto;
+					flex: 0 1 auto;
 					margin: 0 0 _size(element-margin) 0;
 					padding: 0;
 					text-align: center;
