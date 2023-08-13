@@ -101,8 +101,24 @@
   padding-bottom: 2em;
 }
 
-/* Styles modified from Breadcrumbs */
-/* Included in headings.scss */
+/* Styles for Archives plugin */
+
+.label-circle {
+  display: inline-block;
+  border-radius: 50%;
+  height: 1.5em;
+  width: 1.5em;
+  text-align: center;
+  line-height: 1.25;
+  padding: .1rem .2rem;
+  background: #ba2e5d;color: #ffffff;
+  font-family: "Raleway", Helvetica, sans-serif;
+}
+
+.archive_date {
+  font-family: "Raleway", Helvetica, sans-serif;
+  font-size: 0.9em;
+}
 
 /* Styles for Login plugin */
 
