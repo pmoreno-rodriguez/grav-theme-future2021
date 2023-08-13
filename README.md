@@ -22,13 +22,13 @@ Redesigned from scratch (version 2021)
 - Styling for all basic page elements
 - Styling for various modules
 - Cross browser compatible
-- Dynamic avatar images based on author
 - Sharing buttons for Facebook, Twitter, Whatsapp and Telegram.
 - Top content pages in sidebar
 - Fully responsive with full-page mobile navigation
 - SCSS based CSS source files for easy customization
 - Blueprints for Footer, Slogan and Social icons.
 - Full Portfolio template with Glightbox library
+- Ready to work with Archives, Breadcrumbs, Editable with Contenttools, Feed, Langswitcher, Maintenance, Reading time, Related pages, Twig extensions, Simplesearch and Taxonomylist.
 
 ### Supported Page Templates
 
@@ -43,6 +43,8 @@ Redesigned from scratch (version 2021)
     - Banner Modular view template `banner.md`
     - Contact Modular view template `contact.md`
 * Owlcarousel template
+* Recent posts partial template
+* Related posts partial template
 
 # Installation
 
@@ -81,6 +83,8 @@ blog-page: '/blog'            # The route to the blog listing page, useful for a
 miniposts:                    # Enable/Disable miniposts in left sidebar
 miniposts_category:           # Select category name for miniposts (configured in taxonomies)
 miniposts_number:             # The number of mini posts will be displayed on the left sidebar
+recent_posts_enabled:         # Enable/Disable recent posts in left sidebar
+recent_posts_number:          # The number of recent posts will be displayed on the left sidebar
 footer.title:                 # Footer block title in left sidebar
 footer.description:           # Footer block description in left sidebar
 footer.copyright_text:        # Footer block copyright text in left sidebar
