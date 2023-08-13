@@ -29,6 +29,9 @@ en:
         MINIPOSTS_NUMBER_DESCRIPTION: Number of miniposts that will be showed in sidebar
         MINIPOSTS_CATEGORY: Miniposts category
         MINIPOSTS_CATEGORY_DESCRIPTION: Set name to miniposts category.<br />`You must include this name in Options->Taxonomy->Category`
+        RECENT_POSTS_ENABLED: Show Recent posts in sidebar
+        RECENT_POSTS_NUMBER: Recent posts number
+        RECENT_POSTS_NUMBER_DESCRIPTION: Number of Recent posts that will be showed in sidebar
         FOOTER: Footer
         FOOTER_TITLE: Footer Title
         FOOTER_DESCRIPTION: Footer Description
@@ -214,6 +217,7 @@ en:
       LISTING_TITLE_CATEGORY: 'Posts in Category: '
       LISTING_TITLE_TAG: 'Posts with Tag: '
       LISTING_TITLE_AUTHOR: 'Posts written by Author: '
+      LISTING_TITLE_MONTH: 'Post of the month: '
       ITEM:
         CONTINUE_READING: Continue reading...
         NEXT_POST: Next Post
@@ -236,11 +240,12 @@ en:
         HEADLINE: Tags
       POPULAR_TAGS:
         HEADLINE: Popular Tags
+      RECENT_POSTS:
+        HEADLINE: Recent posts
       ARCHIVES:
         HEADLINE: Archives
       SYNDICATE:
         HEADLINE: Syndicate
-    LATESTPOSTS: Latest posts
     FEATURED: Featured
     PRIVACY: By using this form you agree our terms
     FORM_SUMMARY: Here is the summary of what you wrote to us
@@ -279,6 +284,9 @@ de:
         MINIPOSTS_NUMBER_DESCRIPTION: Anzahl der in der Seitenleiste anzuzeigenden Miniposts
         MINIPOSTS_CATEGORY: Kategorie für Miniposts
         MINIPOSTS_CATEGORY_DESCRIPTION: Legen Sie einen Namen für die Miniposts-Kategorie fest.<br />`Sie müssen diesen Namen in Optionen->Taxonomie->Kategorie einfügen`
+        RECENT_POSTS_ENABLED: Letzte Beiträge in der Seitenleiste anzeigen
+        RECENT_POSTS_NUMBER: Anzahl der letzten Beiträge
+        RECENT_POSTS_NUMBER_DESCRIPTION: Anzahl der letzten Beiträge, die in der Seitenleiste angezeigt werden
         FOOTER: Fusszeile
         FOOTER_TITLE: Fusszeilentitel
         FOOTER_DESCRIPTION: Fusszeilentext
@@ -461,6 +469,7 @@ de:
       LISTING_TITLE_CATEGORY: 'Beiträge in der Kategorie: '
       LISTING_TITLE_TAG: 'Beiträge mit Tag: '
       LISTING_TITLE_AUTHOR: 'Beiträge des Autors: '
+      LISTING_TITLE_MONTH: 'Beiträge des Monats: '
       ITEM:
         CONTINUE_READING: Weiterlesen...
         NEXT_POST: Nächster Eintrag
@@ -483,11 +492,12 @@ de:
         HEADLINE: Schlagworte
       POPULAR_TAGS:
         HEADLINE: beliebte Schlagworte
+      RECENT_POSTS:
+        HEADLINE: Kürzliche Beiträge
       ARCHIVES:
         HEADLINE: Letzte Einträge
       SYNDICATE:
         HEADLINE: Verteilen
-    LATESTPOSTS: Letzte Beiträge
     FEATURED: Hervorgehoben
     PRIVACY: Durch die Nutzung dieses Formulars stimmen Sie unseren Bedingungen zu
     FORM_SUMMARY: Hier ist die Zusammenfassung dessen, was Sie uns geschrieben haben
@@ -526,6 +536,9 @@ es:
         MINIPOSTS_NUMBER_DESCRIPTION: Número de miniposts que se mostrarán en la barra lateral
         MINIPOSTS_CATEGORY: Categoría para miniposts
         MINIPOSTS_CATEGORY_DESCRIPTION: Establezca un nombre para la categoría de miniposts.<br />`Deberá incluir este nombre en Opciones->Taxonomía->Categoría`
+        RECENT_POSTS_ENABLED: Mostrar publicaciones recientes en la barra lateral
+        RECENT_POSTS_NUMBER: Número de publicaciones recientes
+        RECENT_POSTS_NUMBER_DESCRIPTION: Número de publicaciones recientes que se mostrarán en la barra lateral
         FOOTER: Pie de página
         FOOTER_TITLE: Título del pie de página
         FOOTER_DESCRIPTION: Descripción del pie de página
@@ -711,6 +724,7 @@ es:
       LISTING_TITLE_CATEGORY: 'Publicaciones en la categoría: '
       LISTING_TITLE_TAG: 'Publicaciones con la etiqueta: '
       LISTING_TITLE_AUTHOR: 'Publicaciones escritas por: '
+      LISTING_TITLE_MONTH: 'Publicaciones del mes: '
       ITEM:
         CONTINUE_READING: Continuar leyendo...
         NEXT_POST: Siguiente
@@ -733,11 +747,12 @@ es:
         HEADLINE: Etiquetas
       POPULAR_TAGS:
         HEADLINE: Etiquetas Populares
-      ARCHIVES:
+      RECENT_POSTS:
         HEADLINE: Últimas entradas
+      ARCHIVES:
+        HEADLINE: Archivos
       SYNDICATE:
         HEADLINE: Distribuir
-    LATESTPOSTS: Últimos posts
     FEATURED: Destacados
     PRIVACY: Al usar este formulario estás de acuerdo con nuestra
     FORM_SUMMARY: Aquí está el resumen de lo que nos escribió
