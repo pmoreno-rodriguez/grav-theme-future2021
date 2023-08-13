@@ -1,3 +1,12 @@
+{% set blog = page.find(header_var('blog_url')|defined(theme_var('blog_page'))) %}
+{% set new_base_url = blog.url == '/' ? '' : blog.url %}
+
+{% if uri.params %}
+    {% set feed_url = blog.url == '/' or blog.url == base_url_relative ? (uri.uri~'/'~blog.slug) : blog.url %}
+{% else %}
+    {% set feed_url = blog.url == '/' or blog.url == base_url_relative ? (base_url_relative~'/'~blog.slug) : blog.url %}
+{% endif %}
+
 <section id="menu">
   <div style="padding: 1.5em;"><a class="close" href="#menu" title="Menu"></a></div>
   {% if config.plugins.simplesearch.enabled %}
@@ -10,16 +19,17 @@
   <div id="sidebarmenu">
     {% include 'partials/sidebar_navigation.html.twig' %}
   </div>
-  {% if config.plugins.archives.enabled and archives_data is not empty  %}
-    <!-- Actions -->
+  {% if config.plugins.archives.enabled and archives_data is not empty %}
+    <!-- Archives -->
     <div>
       <header>
         <h3>{{ 'FUTURE.SIDEBAR.ARCHIVES.HEADLINE'|t }}</h3>
       </header>
-      {% include 'partials/archives.html.twig' %}
+      {% include 'partials/archives.html.twig' with {'base_url': new_base_url} %}
     </div>
   {% endif %}
   {% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
+  <!-- Related posts -->
     <div>
       <header>
         <h3>{{ 'FUTURE.SIDEBAR.RELATED_POSTS.HEADLINE'|t }}</h3>
@@ -28,6 +38,7 @@
     </div>
   {% endif %}
   {% if config.plugins.taxonomylist.enabled %}
+  <!-- Taxonomy list -->
     <div>
       <header>
         <h3>{{ 'FUTURE.SIDEBAR.TAGS.HEADLINE'|t }}</h3>
@@ -35,7 +46,19 @@
       {% include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag'} %}
     </div>
   {% endif %}
+  {% if config.plugins.feed.enabled %}
+  <!-- Syndicate -->
+    <div class="sidebar-content syndicate">
+        <h4>{{ 'FUTURE.SIDEBAR.SYNDICATE.HEADLINE'|t }}</h4>
+        <ul class="actions">
+        <li><a href="{{ feed_url }}.atom"><i class="fa fa-rss-square"></i> Atom 1.0</a></li>
+        <li><a href="{{ feed_url }}.rss"><i class="fa fa-rss-square"></i> RSS</a></li>
+        {% if config.plugins.feed.enable_json_feed %}<li><a href="{{ feed_url }}.json"><i class="fa fa-rss-square"></i> JSON</a></li>{% endif %}
+        </ul>
+    </div>
+  {% endif %}
   {% if config.plugins.login.enabled %}
+  <!-- Login button -->
     <div>
       <ul class="actions stacked">
       {% if not grav.user.authenticated %}

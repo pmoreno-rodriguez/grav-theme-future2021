@@ -1,13 +1,33 @@
-<ul class="related-pages">
-  {% for related_path, score in related_pages %}
+<section>
+<ul class="posts">
+{% for related_path, score in related_pages %}
     {% set related = grav['pages'].get(related_path) %}
+    {% set related_image = related.media.images[related.header.primaryImage] ?: related.media.all|filter((v, k) => k != related.header.avatarImage and (v.type == 'image' ))|first %}
+
     {% if related %}
-      <li>
-        <a href="{{ related.url }}" title="{{ related.title }}">{{ related.title }}</a>
-        {% if config.plugins.relatedpages.show_score %}
-          <span class="score">( {{ score }} )</span>
-        {% endif %}
-      </li>
+            <li>
+                <article>
+                    {% if related.taxonomy.category is not null %}
+                        <header>
+                            <h3><a class="" href="{{ related.url }}" title="{{ related.title }}" rel="nofollow">{{ related.title }}</a></h3>
+                            <small class="published">
+                                In <span class="catlist">
+                                {% for category in related.taxonomy.category %}
+                                    <a class="" href="{{ new_base_url }}/category{{ config.system.param_sep }}{{ category }}">{{ category|raw }}</a>{% if not loop.last %}<span class="sep">, </span>{% endif %}
+                                {% endfor %}
+                                </span>
+                            </small>
+                        </header>
+                        
+                        {% if related_image is not empty %}
+                            <a class="image" aria-label="{{ related.title }}" href="{{ related.url }}">
+                                {{ related_image.cropResize(64,64).loading('lazy').attribute('decoding','async').html|raw }}
+                            </a>
+                        {% endif %}
+                    {% endif %}
+                </article>
+            </li>
     {% endif %}
-  {% endfor %}
+{% endfor %}
 </ul>
+</section>
