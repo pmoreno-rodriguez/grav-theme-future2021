@@ -1,6 +1,6 @@
 ---
 title: 'Post four'
-media_order: 'juan_avataaars.jpg,Elements14-b1.svg'
+media_order: 'juan_avataaars.jpg,pic07.jpg'
 taxonomy:
     category:
         - minipost
@@ -9,10 +9,13 @@ taxonomy:
         - tag4
     author:
         - 'Juan Villén'
-primaryImage: Elements14-b1.svg
+primaryImage: pic07.jpg
 avatarImage: juan_avataaars.jpg
 subtitle: 'Nulla consequat auctor odio non vehicula'
 order: 4
+show_pageimage: true
+image_width: 1038
+image_height: 437
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt diam at tortor volutpat placerat. Duis a dolor pharetra neque euismod porttitor. Ut pellentesque neque a odio pretium, eu feugiat lorem efficitur. Nunc pulvinar, dolor non facilisis semper, libero nisl auctor dolor, vitae dictum justo elit aliquet arcu. Curabitur quis posuere libero. Phasellus auctor purus turpis, non fringilla arcu scelerisque in. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo tempus nisi, nec euismod augue commodo in.

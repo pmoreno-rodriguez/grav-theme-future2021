@@ -1,7 +1,7 @@
 ---
 title: 'Post Seven'
-media_order: 'pedro_avataaars.png,Elements14-c1.svg'
-primaryImage: Elements14-c1.svg
+media_order: 'pedro_avataaars.png,home.jpg'
+primaryImage: home.jpg
 avatarImage: pedro_avataaars.png
 taxonomy:
     category:
@@ -9,9 +9,14 @@ taxonomy:
     tag:
         - tag2
     author:
+        - 'Ana Fernández'
         - 'Pedro Moreno'
 subtitle: 'Quisque et neque interdum, sodales metus id, ullamcorper est'
 order: 5
+show_pagination: true
+show_pageimage: true
+image_width: 1038
+image_height: 437
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt diam at tortor volutpat placerat. Duis a dolor pharetra neque euismod porttitor. Ut pellentesque neque a odio pretium, eu feugiat lorem efficitur. Nunc pulvinar, dolor non facilisis semper, libero nisl auctor dolor, vitae dictum justo elit aliquet arcu. Curabitur quis posuere libero. Phasellus auctor purus turpis, non fringilla arcu scelerisque in. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam commodo tempus nisi, nec euismod augue commodo in.

@@ -7,7 +7,7 @@ favicon:
     size: 15355
     path: user/themes/future2021/images/logo/Grav_logo.png
 blog_page: /blog
-slogan: 'AYUDA DE GRAV EN ESPAÑOL'
+slogan: 'RESPONSIVE SITE TEMPLATE BY HTML5 UP PORTED TO GRAV'
 custom_logo:
   user/themes/future2021/images/logo/Grav_logo.png:
     name: Grav_logo.png
@@ -34,8 +34,6 @@ social:
     name: Instagram
     url: 'https://www.instagram.com'
     icon: 'fa fa-instagram'
-miniposts: true
-miniposts_number: 3
 latestposts: true
 miniposts_category: minipost
 displaycustommenus:
@@ -56,3 +54,7 @@ menu_search: true
 menu_login: true
 enable_social: true
 social_style: brands
+miniposts: true
+miniposts_number: 3
+recent_posts_enabled: true
+recent_posts_number: 5
