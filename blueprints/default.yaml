@@ -12,73 +12,121 @@ form:
         content:
           type: tab
           fields:
-            header.options:
+            header.title:
+              replace@: true
+            content:
+              replace@ true
+            header.media_order:
+              replace@: true
+            _Headings_Section:
+              type: section
+              underline: true
+              title: FUTURE.ADMIN.DEFAULT.HEADINGS_SECTION
+            _Headings:
               type: columns
-              ordering@: header.title
               fields:
-                header.content:
+                _Title:
+                  type: column
+                  fields:
+                    header.title:
+                      type: text
+                      autofocus: true
+                      style: vertical
+                      label: PLUGIN_ADMIN.TITLE
+                _Subtitle:
                   type: column
                   fields:
                     header.subtitle:
                       type: text
                       style: vertical
-                      size: long
                       label: FUTURE.ADMIN.ITEM.ITEM_SUBTITLE
-                    image_section:
-                      type: section
-                      underline: true
-                      title: FUTURE.ADMIN.DEFAULT.IMAGE_OPTIONS
-                    header.show_pageimage:
+            _Content_Section:
+              type: section
+              underline: true
+              title: FUTURE.ADMIN.DEFAULT.CONTENT
+            _ContentOptions:
+              type: column
+              fields:
+                _ContentToggles:
+                  type: columns
+                  fields:
+                    header.show_sidebar:
                       type: toggle
-                      style: vertical
-                      label: FUTURE.ADMIN.DEFAULT.SHOW_PAGEIMAGE
-                      help: FUTURE.ADMIN.DEFAULT.SHOW_PAGEIMAGE_HELP
-                      default: 1
-                      highlight: 1
+                      outerclasses: size-1-2
+                      toggleable: true
+                      label: FUTURE.ADMIN.DEFAULT.SHOW_SIDEBAR
+                      default: 0
+                      highlight: 0
                       options:
                         1: PLUGIN_ADMIN.ENABLED
                         0: PLUGIN_ADMIN.DISABLED
                       validate:
                         type: bool
-                    header.primaryImage:
+                    header.toc_enabled:
+                      type: toggle
+                      outerclasses: size-1-2
+                      toggleable: true
+                      label: FUTURE.ADMIN.DEFAULT.TOC_ENABLED
+                      help: FUTURE.ADMIN.DEFAULT.TOC_ENABLED_HELP
+                      default: 0
+                      highlight: 0
+                      options:
+                        1: PLUGIN_ADMIN.ENABLED
+                        0: PLUGIN_ADMIN.DISABLED
+                      validate:
+                        type: bool
+                _Content:
+                  type: columns
+                  fields:
+                    content:
+                      type: markdown
+                      validate:
+                        type: textarea
+            _Media_Section:
+              type: section
+              underline: true
+              title: FUTURE.ADMIN.DEFAULT.IMAGE_OPTIONS      
+            _MediaOptions:
+              type: columns
+              fields:
+                _MediaContent:
+                  type: column
+                  fields:
+                    header.media_order:
+                      type: pagemedia
+                      label: PLUGIN_ADMIN.PAGE_MEDIA
+                _ImageOptions:
+                  type: column
+                  fields:
+                    header.show_pageimage:
+                      type: toggle
+  
+                      label: FUTURE.ADMIN.DEFAULT.SHOW_PAGEIMAGE
+                      help: FUTURE.ADMIN.DEFAULT.SHOW_PAGEIMAGE_HELP
+                      default: 1
+                      highlight: 1
+                      options:
+                        1: PLUGIN_ADMIN.YES
+                        0: PLUGIN_ADMIN.NO
+                      validate:
+                        type: bool
+                    header.featured_image:
                       ordering@: header.subtitle
-                      style: vertical
-                      size: medium
+                      size: large
                       type: pagemediaselect
                       label: FUTURE.ADMIN.DEFAULT.PRIMARY_IMAGE.LABEL
+                      help: FUTURE.ADMIN.DEFAULT.FEATURED_IMAGE.HELP
                       preview_images: true
                     header.image_width:
-                        type: number
-                        style: vertical
-                        label: FUTURE.ADMIN.DEFAULT.PRIMARY_IMAGE.WIDTH
-                        size: small
-                        default: 1038
+                      type: number
+                      label: FUTURE.ADMIN.DEFAULT.PRIMARY_IMAGE.WIDTH
+                      size: small
+                      default: 1000
                     header.image_height:
                       type: number
-                      style: vertical
                       label: FUTURE.ADMIN.DEFAULT.PRIMARY_IMAGE.HEIGHT
                       size: small
-                      default: 437
-                    content_section:
-                      type: section
-                      underline: true
-                      title: FUTURE.ADMIN.DEFAULT.CONTENT
-        options:
-          fields:
-            publishing:
-              fields:
-                header.show_sidebar:
-                  type: toggle
-                  toggleable: true
-                  label: FUTURE.ADMIN.DEFAULT.SHOW_SIDEBAR
-                  ordering@: -99
-                  default: 0
-                  highlight: 0
-                  options:
-                    1: PLUGIN_ADMIN.ENABLED
-                    0: PLUGIN_ADMIN.DISABLED
-                  validate:
-                    type: bool
+                      default: 300  
         advanced:
           fields:
             columns:
