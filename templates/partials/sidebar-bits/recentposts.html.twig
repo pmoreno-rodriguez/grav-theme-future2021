@@ -1,3 +1,4 @@
+{% set blog = page.find(header_var('blog_url')|defined(theme_var('blog_page'))) %}
 {# Set the number or recent posts will be displayed in sidebar #}
 {% set recent_enabled = theme_var('recent_posts_enabled')|defined(false) %}
 {% set recent_number = theme_var('recent_posts_number')|defined(5) %}
@@ -8,7 +9,8 @@
     <h3>{{ 'FUTURE.SIDEBAR.RECENT_POSTS.HEADLINE'|t }}</h3>
   </header>
   <ul class="posts">
-    {% for p in page.find(theme_config.blog_page).children.order('date', 'desc').slice(0, recent_number) %}
+    {% for p in blog.collection.order('date', 'desc').slice(0,recent_number) %}
+    {% set datestamp = include('partials/page-bits/date.html.twig', { 'page': p } ) %}
     {% set image = p.media[p.header.primaryImage] ?: p.media.all|filter((v, k) => k != p.header.avatarImage and (v.type == 'image' or v.type == 'vector'))|first %}
     {% set title = p.title|raw %}
       <li>
@@ -16,18 +18,10 @@
           <header>
             <h3>
               <a href="{{p.url}}">{{ title }}</a>
-            </h3>
-            {# Support for translate and twig extensions plugins #}
-            {% if config.plugins["translate-date"].enabled %}
-              <time class="published" itemprop="datePublished" datetime="{{ p.date|td(null, "Y-m-d") }}">{{ p.date|td(null, "M j, Y") }}</time>
-            {% elseif config.plugins["twig-extensions"].enabled %}
-              <time class="published" itemprop="datePublished" datetime="{{ p.date|localizeddate('medium', 'none', lang) }}">{{ p.date|localizeddate('medium', 'none', lang) }}</time>
-            {% else %}
-              <time class="published" itemprop="datePublished" datetime="{{ p.date|date("Y-m-d") }}">{{ p.date|date("M j, Y") }}</time>
-            {% endif %}
+            </h3>  
+            <time class="published" itemprop="datePublished" datetime="{{ datestamp }}">{{ datestamp }}</time>
           </header>
-          <a class="image" aria-label="{{ title }}" href="{{ base_url }}/{{ config.plugins.archives.taxonomy_names.month }}{{ config.system.param_sep }}{{ month|date(config.plugins.archives.taxonomy_values.month)|lower|e('url') }}">
-          {# <a href="{{p.url}}" class="image" aria-label="{{ title }}"> #}
+          <a href="{{p.url}}" class="image" aria-label="{{ title }}">
             {{ image.cropResize(64,64).quality(60).loading('lazy').attribute('decoding','async').html(title,title)|raw }}
           </a>
         </article>
