@@ -30,7 +30,7 @@
       {% if field.markdown %}
         {{ field.label|t|markdown(false) }}
       {% else %}
-        {{'FUTURE.PRIVACY'|t}} <a href="{{base_url}}/privacy">{{field.label}}</a>
+        {{field.label}}
       {% endif %}
       {{ field.validate.required in ['on', 'true', 1] ? '<span class="required">*</span>' }}
     </label>
