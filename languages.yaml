@@ -64,6 +64,7 @@ en:
         CUSTOM_MENU_ITEM_TARGET_SELF: 'Open in the same frame as clicked'
         CUSTOM_MENU_ITEM_TARGET_TOP: 'Open in the full body of the window'
       DEFAULT:
+        HEADINGS_SECTION: Headings options
         CONTENT: Content
         IMAGE_OPTIONS: Image options
         PRIMARY_IMAGE: 
@@ -73,6 +74,8 @@ en:
         SHOW_PAGEIMAGE: Show Image
         SHOW_PAGEIMAGE_HELP: Enable primary image if it is defined or the first image of the media page.
         SHOW_SIDEBAR: Show Sidebar
+        TOC_ENABLED: Enable TOC on large pages
+        TOC_ENABLED_HELP: Enable Table of Contents on large pages. Page Toc plugin is required
         BODY_CLASSES: 'You can create new CSS classes for the body and add them here'
       MODULAR:
         BANNER:
@@ -319,6 +322,7 @@ de:
         CUSTOM_MENU_ITEM_TARGET_SELF: In selbem Frame öffnen
         CUSTOM_MENU_ITEM_TARGET_TOP: In vollem Fensterkörper öffnen
       DEFAULT:
+        HEADINGS_SECTION: Header-Optionen
         CONTENT: Inhalt
         IMAGE_OPTIONS: Bildoptionen
         PRIMARY_IMAGE: 
@@ -328,6 +332,8 @@ de:
         SHOW_PAGEIMAGE: Show Image
         SHOW_PAGEIMAGE_HELP: Enable primary image if it is defined or the first image of the media page.
         SHOW_SIDEBAR: Seitenleiste anzeigen
+        TOC_ENABLED: Inhaltsverzeichnis auf großen Seiten aktivieren
+        TOC_ENABLED_HELP: Inhaltsverzeichnis auf großen Seiten aktivieren. Das Page Toc-Plugin ist erforderlich
         BODY_CLASSES: 'Sie können neue CSS-Klassen für den body erstellen und hier hinzufügen.'
       MODULAR:
         BANNER:
@@ -571,6 +577,7 @@ es:
         CUSTOM_MENU_ITEM_TARGET_SELF: 'Abrir en el mismo marco en el que se hizo clic'
         CUSTOM_MENU_ITEM_TARGET_TOP: 'Abrir en todo el cuerpo de la ventana'
       DEFAULT:
+        HEADINGS_SECTION: Opciones de encabezados
         CONTENT: Contenido
         IMAGE_OPTIONS: Opciones de imagen
         PRIMARY_IMAGE: 
@@ -580,6 +587,8 @@ es:
         SHOW_PAGEIMAGE: Mostrar imagen
         SHOW_PAGEIMAGE_HELP: Habilitar la imagen principal si está definida o la primera de las imágenes de la página.
         SHOW_SIDEBAR: Mostrar Barra Lateral
+        TOC_ENABLED: Activar TOC en páginas largas
+        TOC_ENABLED_HELP: Activa la Tabla de Contenidos en páginas largas. Es necesario tener instalado el plugin Page Toc.
         BODY_CLASSES: 'Puede crear nuevas clases CSS para el body y añadirlas aquí.'
       MODULAR:
         BANNER:
