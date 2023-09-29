@@ -31,7 +31,8 @@
       </div>
     </header>
     {% for page in search_results %}
-      {% include 'partials/simplesearch_item.html.twig' with {'page':page} %}
+      {% set datestamp = include('partials/page-bits/date.html.twig') %}
+      {% include 'partials/simplesearch_item.html.twig' with {'page':page, datestamp} %}
     {% endfor %}
   </article>
 

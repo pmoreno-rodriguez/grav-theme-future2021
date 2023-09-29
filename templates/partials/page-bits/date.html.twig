@@ -1,0 +1,21 @@
+{# Support for Twig-Extensions and Translate-Date plugins #}
+{# Set page datestamp in folowing order with support for translations #}
+{# FIRST: Page publication date #}
+{# SECOND: Page date #}
+{# LAST: Page modification date #}
+
+{# SET DEFAULT GRAV LANGUAGE #}
+{% set lang = grav.language.getActive ?: grav.config.site.default_lang %}
+
+{% set default_format = system.pages.dateformat.default %}
+{% set short_format = system.pages.dateformat.short %}
+
+{% if config.plugins["translate-date"].enabled %}
+    {% set datestamp = (page.header.publish_date) ? (page.header.publish_date|td(lang,default_format)) : (page.date ? page.date|td(lang,default_format) : page.modified|td(lang,default_format)) %}
+{% elseif config.plugins["twig-extensions"].enabled %}
+    {% set datestamp = (page.header.publish_date) ? (page.header.publish_date|localizeddate('medium', 'none', lang)) : (page.date ? page.date|localizeddate('medium', 'none', lang) : page.modified|localizeddate('medium', 'none', lang)) %}
+{% else %}
+    {% set datestamp = (page.header.publish_date) ? (page.header.publish_date|date(short_format)) : (page.date ? page.date|date(short_format) : page.modified|date(short_format)) %}
+{% endif %}
+
+{{ datestamp }}

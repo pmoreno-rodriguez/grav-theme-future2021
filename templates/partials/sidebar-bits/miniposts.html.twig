@@ -11,7 +11,7 @@
   </header>
   <div class="mini-posts">
     {% for p in page.evaluate({'@taxonomy.category':miniposts_category}).order('header.order', 'asc').slice(0,miniposts_number) %}
-    
+    {% set datestamp = include('partials/page-bits/date.html.twig', { 'page': p } ) %}
     {% if p.header.metadata.author %}
       {% set author = p.header.metadata.author %}
     {% elseif p.header.author %}
@@ -32,14 +32,10 @@
         <header>
           <h3>
             <a href="{{ p.url }}" aria-label="{{ title }}">{{ title }}</a>
-          </h3>
-          {% if config.plugins["translate-date"].enabled %}
-            <time class="published" itemprop="datePublished" datetime="{{ p.date|td(null, "Y-m-d") }}">{{ p.date|td(null, "M j, Y") }}</time>
-          {% elseif config.plugins["twig-extensions"].enabled %}
-            <time class="published" itemprop="datePublished" datetime="{{ p.date|localizeddate('medium', 'none', lang) }}">{{ p.date|localizeddate('medium', 'none', lang) }}</time>
-          {% else %}
-            <time class="published" itemprop="datePublished" datetime="{{ p.date|date("Y-m-d") }}">{{ p.date|date("M j, Y") }}</time>
-          {% endif %}
+          </h3> 
+          
+          <time class="published" itemprop="datePublished" datetime="{{ datestamp }}">{{ datestamp }}</time>
+
         {% if avatar %}
           <a href="{{ p.url }}" class="author" title="{{ author }}"><img src="{{ avatar }}" alt="{{ author }}"/></a>
         {% endif %}

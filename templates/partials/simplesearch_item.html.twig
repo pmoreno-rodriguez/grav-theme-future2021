@@ -13,7 +13,7 @@
             <h3><a href="{{ page.url }}">{{ title }}</a></h3>
         </div>
         <div class="search-details">
-            <span class="search-date">{{ page.date|date(config.system.pages.dateformat.short) }}</span>
+            <span class="search-date">{{ datestamp }}</span>
         </div>
         {{ page.summary|striptags|truncate(300, true)|raw }} 
     </div>

@@ -3,8 +3,9 @@
 {% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
 {% set favicon = theme_config.favicon ? theme_config.favicon|first : { type:'image/png', path: url('theme://images/favicon.png') } %}
 
-{# Set site language #}
+{# Set site language and datestamp for pages #}
 {% set lang = grav.language.getActive ?: grav.config.site.default_lang %}
+{% set datestamp = include('partials/page-bits/date.html.twig') %}
 
 {# Define if sidebar is shown in the page #}
 {% set show_sidebar = header_var('show_sidebar')|defined(false) %}
