@@ -1,3 +1,17 @@
+# v1.2.1
+## 09/28/2023
+
+1.  [](#new)
+    * New template for Page Toc plugin compatibility
+2.  [](#improved)
+    * Removed the extra text from the checkbox label, from the privacy.html.twig template (Note: use the `markdown` attribute on the form field to be able to use html tags within the privacy field)
+    * Code restructured in some twig templates
+    * Redesigned default template layout
+    * Improved code for datestamp on blog pages
+    * Improved css styles
+3.  [](#bugfix)
+    * Fixed `blog_page` variable in blog templates.
+    * Fixed links in recent posts images
 # v1.2.0
 ## 08/13/2023
 
