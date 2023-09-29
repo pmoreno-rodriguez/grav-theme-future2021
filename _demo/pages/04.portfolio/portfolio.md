@@ -9,35 +9,35 @@ content:
         dir: desc
     pagination: true
     url_taxonomy_filters: true
-media_order: 'headphones_black_and_white-wallpaper-1920x1080.jpg,deep_sea_monster-wallpaper-1920x1080.jpg,howls_moving_castle-wallpaper-1920x1080.jpg,mushroom_forest-wallpaper-1920x1080.jpg,magic_butterfly-wallpaper-1920x1080.jpg,the_forest_house-wallpaper-1920x1080.jpg,thumb_headphones_black_and_white-wallpaper-1920x1080.jpg,thumb_deep_sea_monster-wallpaper-1920x1080.jpg,thumb_howls_moving_castle-wallpaper-1920x1080.jpg,thumb_magic_butterfly-wallpaper-1920x1080.jpg,thumb_mushroom_forest-wallpaper-1920x1080.jpg,thumb_the_forest_house-wallpaper-1920x1080.jpg'
+media_order: 'pic01.jpg,pic02.jpg,pic03.jpg,pic04.jpg,pic05.jpg,pic06.jpg,thumb_pic01.jpg,thumb_pic02.jpg,thumb_pic03.jpg,thumb_pic04.jpg,thumb_pic05.jpg,thumb_pic06.jpg'
 images:
     -
-        image: headphones_black_and_white-wallpaper-1920x1080.jpg
+        image: pic01.jpg
         title: 'Title 1'
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae vulputate risus. Aliquam sed mi vel nisi luctus scelerisque a quis est. Morbi ac ligula sit amet risus gravida sollicitudin nec et urna.'
         descPosition: top
     -
-        image: the_forest_house-wallpaper-1920x1080.jpg
+        image: pic02.jpg
         title: 'Title 2'
         description: 'Aliquam erat volutpat. Phasellus malesuada eu orci quis malesuada. Sed sit amet suscipit ligula, et pellentesque mauris. '
         descPosition: bottom
     -
-        image: deep_sea_monster-wallpaper-1920x1080.jpg
+        image: pic03.jpg
         title: 'Title 3'
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae vulputate risus. Aliquam sed mi vel nisi luctus scelerisque a quis est. Morbi ac ligula sit amet risus gravida sollicitudin nec et urna.'
         descPosition: left
     -
-        image: howls_moving_castle-wallpaper-1920x1080.jpg
+        image: pic04.jpg
         title: 'Title 4'
         description: 'Donec hendrerit leo tincidunt diam pharetra venenatis. Nullam at venenatis ex. Mauris nisi quam, mattis vel sem vitae, ultrices ullamcorper augue'
         descPosition: right
     -
-        image: mushroom_forest-wallpaper-1920x1080.jpg
+        image: pic05.jpg
         title: 'Title 5'
         description: 'Donec eu orci libero. Integer est arcu, malesuada quis tincidunt vel, cursus et mauris. Vivamus interdum sed lectus eget tempus.'
         descPosition: bottom
     -
-        image: magic_butterfly-wallpaper-1920x1080.jpg
+        image: pic06.jpg
         title: 'Title 6'
         description: 'Mauris ultrices turpis vel justo mollis, eget lacinia enim efficitur. Cras consectetur neque id purus mattis, quis finibus sapien ornare'
         descPosition: bottom
