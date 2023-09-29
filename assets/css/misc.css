@@ -130,3 +130,14 @@
 .ct-widget.ct-ignition {
   z-index: 10015;
 }
+
+/* Modified styles for Notices */
+
+.notices {
+  padding: 0.2em;
+  margin: 15px 0;
+}
+
+.notices p {
+  margin: 1em;
+}
