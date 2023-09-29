@@ -13,17 +13,18 @@
   {% endblock %}
   
   {% block footer %}
-    <!-- About -->
-    {% if theme_config.footer.title or theme_config.footer.description %}
-      <section class="blurb">
-        <h2>{{theme_config.footer.title}}</h2>
-        <p>{{theme_config.footer.description}}</p>
-        <ul class="actions">
-          <li><a href="{{theme_config.footer.button_url}}" class="button" aria-label="{{theme_config.footer.title}}">{{theme_config.footer.button_text}}</a></li>
-        </ul>
-      </section>
+    
+    {% if page.header.toc_enabled == true and config.plugins["page-toc"].enabled %}
+      <div class="page-toc-sticky">
+      {% include 'components/page-toc.html.twig' %}
     {% endif %}
+    
     {% include 'partials/sidebar-bits/footer.html.twig' %}
+    
+    {% if page.header.toc_enabled == true and config.plugins["page-toc"].enabled %}
+      </div>
+    {% endif %}
+    
   {% endblock %}
 
 </section>
