@@ -1,7 +1,7 @@
 {% extends 'partials/base.html.twig' %}
 
 {% set collection = page.collection() %}
-{% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
+{% set blog = page.find(header_var('blog_url')|defined(theme_var('blog_page'))) %}
 {% set show_breadcrumbs = header_var('show_breadcrumbs')|defined(true) %}
 {% set show_pagination = header_var('show_pagination')|defined(true) %}
 
@@ -43,6 +43,7 @@
     {% endif %}
 </article>
   {% for child in collection %}
+    {% set datestamp = include('partials/page-bits/date.html.twig', { 'page': child }) %}
     {% include 'partials/blog_item.html.twig' with {blog: page, page:child, 'title': child.title|raw, 'subtitle': child.header.subtitle|raw, 'listing': true, 'truncate':true} %}
   {% endfor %}
 
