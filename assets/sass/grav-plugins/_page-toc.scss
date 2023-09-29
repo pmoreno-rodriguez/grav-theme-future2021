@@ -1,0 +1,39 @@
+/*
+Future2021
+Grav Theme by Pedro Moreno
+
+CSS Styles for Page Toc Plugin 
+*/
+
+.page-toc {
+
+	margin-bottom: 2.5em;
+
+	a {
+		color: inherit;
+		text-decoration: none;
+		}
+
+	ul {
+		list-style: none;
+		font-family: _font(family-heading);
+		font-size: 1em;
+		padding: 0.5em 0 0 0;
+		margin: 0em;
+		line-height: 2.3em;
+
+		li {
+			padding-left: 0.5em;
+			font-size: 0.9em;
+		}
+
+	}
+
+}
+
+.page-toc-sticky {
+	height: 25vh; 
+	position: -webkit-sticky;
+	position: sticky;
+	top: 3.5em;
+}
