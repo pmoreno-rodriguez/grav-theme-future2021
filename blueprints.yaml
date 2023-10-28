@@ -1,7 +1,7 @@
 name: Future 2021
 slug: future2021
 type: theme
-version: 1.2.1
+version: 1.2.2
 description: Grav Future Imperfect by HTML5 UP (Version 2021)
 icon:  microchip
 author:
@@ -44,6 +44,17 @@ form:
         0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
+    
+    google_fonts_local:
+      type: toggle
+      label: FUTURE.ADMIN.THEME.GOOGLE_FONTS.LOCAL
+      highlight: 0
+      default: 0
+      options:
+          1: PLUGIN_ADMIN.ENABLED
+          0: PLUGIN_ADMIN.DISABLED
+      validate:
+          type: bool
 
     header_section:
       type: fieldset

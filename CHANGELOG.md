@@ -1,3 +1,16 @@
+# v1.2.2
+## 10/28/2023
+
+1.  [](#new)
+    * Added option to load Google fonts from local folder.
+    * New captions on hover for portfolio images.
+2.  [](#improved)
+    * Updated translations
+    * Updated CSS styles
+    * Redefined macros for navigation and page toc plugin
+3.  [](#bugfix)
+    * Fixed sort filter error when taxonomy is empty 
+  
 # v1.2.1
 ## 09/28/2023
 
