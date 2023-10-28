@@ -1,12 +1,10 @@
-{% set taxlist = children_only is defined ? taxonomylist.getChildPagesTags() : taxonomylist.get() %}
-
-{% if taxlist %}
   <ul class="menulink">
     <li>
-      {% for tax,value in taxlist[taxonomy]|sort %}
+      {% for tax,value in taxlist[taxonomy] %}
+        {% if value is not empty %}
         {% set active = uri.param(taxonomy) == tax? 'active' : '' %}
         <a class="tags {{ active }}" rel="nofollow" href="{{ base_url }}/{{ taxonomy }}{{ config.system.param_sep }}{{ tax }}">{{ tax }}</a>
+        {% endif %}
       {% endfor %}
     </li>
   </ul>
-{% endif %}

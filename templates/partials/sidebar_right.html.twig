@@ -38,13 +38,16 @@
     </div>
   {% endif %}
   {% if config.plugins.taxonomylist.enabled %}
-  <!-- Taxonomy list -->
-    <div>
-      <header>
-        <h3>{{ 'FUTURE.SIDEBAR.TAGS.HEADLINE'|t }}</h3>
-      </header>
-      {% include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag'} %}
-    </div>
+    {% set taxlist = children_only is defined ? taxonomylist.getChildPagesTags() : taxonomylist.get() %}
+    {% if taxlist %}
+    <!-- Taxonomy list -->
+      <div>
+        <header>
+          <h3>{{ 'FUTURE.SIDEBAR.TAGS.HEADLINE'|t }}</h3>
+        </header>
+        {% include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag'} %}
+      </div>
+    {% endif %}
   {% endif %}
   {% if config.plugins.feed.enabled %}
   <!-- Syndicate -->
