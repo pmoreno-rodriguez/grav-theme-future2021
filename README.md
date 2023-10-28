@@ -72,6 +72,7 @@ Future2021 comes with a few default options that can be set site-wide.  These op
 ```yaml
 production-mode: true         # In production mode, only minified CSS is used. When disabled, nested CSS are enabled
 sidebar:                      # Enable/Disable sidebar in non-editable pages such as simplesearch results, offline, etc.
+google_fonts_local:           # Option to load Google Fonts from the theme or from Google servers.
 favicon:                      # Choosse your own favicon
 custom_logo:                  # A custom logo rather than the default (see below)  
 custom_logo_mobile:           # A custom logo to use for mobile navigation
