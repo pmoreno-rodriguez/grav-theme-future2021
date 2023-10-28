@@ -50,13 +50,19 @@
 					{% set item_image = page.media[item.image] %}
 					{% set item_title = item.title|raw %}
 					{% set item_desc = item.description|raw %}
-					{% set thumbnail = item_image.cropZoom(thumb_w, thumb_h).loading('lazy').attribute('decoding','async').attribute('itemprop','http://schema.org/image').html(item_title,item_title) %}
-					<div class="{{columns}} portfolio_item">
-						<a href="{{item_image.url}}" class="glightbox" data-height="{{page.header.height}}" data-width="{{page.header.width}}" data-title="{{item_title}}" data-description="{{item_desc}}" data-desc-position="{{item.descPosition}}" data-zoomable="{{page.header.zoomable}}" data-draggable="{{page.header.draggable}}" data-type="image">
-						<span class="image fit">
-							{{ thumbnail|raw }}
-						</span>
-						</a>
+					{% set thumbnail = item_image.cropZoom(thumb_w, thumb_h).loading('lazy').attribute('decoding','async').attribute('itemprop','http://schema.org/image').html(item_title,item_title,'portfolio_content-image') %}
+					<div class="{{columns}} portfolio_container" itemprop="associatedMedia" itemscope itemtype="MediaObject">
+						{# <h3 class="title">{{item_title}}</h3> #}
+						<div class="portfolio_content">
+							<a href="{{item_image.url}}" class="glightbox" data-height="{{page.header.height}}" data-width="{{page.header.width}}" data-title="{{item_title}}" data-description="{{item_desc|raw}}" data-desc-position="{{item.descPosition}}" data-zoomable="{{page.header.zoomable}}" data-draggable="{{page.header.draggable}}" data-type="image">
+							<div class="portfolio_content-overlay"></div>
+								{{ thumbnail|raw }}
+							<div class="portfolio_content-details {{page.header.overlay_hover_effect}}">
+								<h3 class="portfolio_content-title">{{item_title}}</h3>
+								<p class="portfolio_content-text">{{item_desc|truncate(75)|raw}}</p>
+							</div>
+							</a>
+						</div>
 					</div>
 				{% endfor %}
 				</div>

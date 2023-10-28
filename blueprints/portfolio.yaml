@@ -78,6 +78,21 @@ form:
             Effects_title:
               type: spacer
               title: FUTURE.ADMIN.PORTFOLIO.OPTIONS.EFFECTS_TITLE
+            header.overlay_hover_effect:
+              type: select
+              label: FUTURE.ADMIN.PORTFOLIO.OPTIONS.OVERLAY_HOVER_EFFECT.LABEL
+              help: FUTURE.ADMIN.PORTFOLIO.OPTIONS.OVERLAY_HOVER_EFFECT.HELP
+              default: fadeIn-bottom
+              size: medium
+              options:
+                fadeIn-bottom: FUTURE.ADMIN.PORTFOLIO.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_BOTTOM
+                fadeIn-top: FUTURE.ADMIN.PORTFOLIO.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_TOP
+                fadeIn-left: FUTURE.ADMIN.PORTFOLIO.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_LEFT
+                fadeIn-right: FUTURE.ADMIN.PORTFOLIO.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_RIGHT
+                fadeIn-top fadeIn-right: FUTURE.ADMIN.PORTFOLIO.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_TOP_RIGHT
+                fadeIn-top fadeIn-left: FUTURE.ADMIN.PORTFOLIO.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_TOP_LEFT
+                fadeIn-bottom fadeIn-right: FUTURE.ADMIN.PORTFOLIO.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_BOTTOM_RIGHT
+                fadeIn-bottom fadeIn-left: FUTURE.ADMIN.PORTFOLIO.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_BOTTOM_LEFT
             header.open_effect:
               type: select
               label: FUTURE.ADMIN.PORTFOLIO.OPTIONS.OPEN_EFFECT.LABEL

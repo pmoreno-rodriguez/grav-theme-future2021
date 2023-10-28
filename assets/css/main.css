@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Raleway:400,800,900");
 /*
 	Future Imperfect by HTML5 UP
 	html5up.net | @ajlkn
@@ -2590,23 +2589,108 @@ table.alt tfoot {
 }
 
 /* Portofolio */
-.portfolio_item .image {
+.portfolio_container {
+  padding: 1em 0;
+  float: left;
+  width: 50%;
+}
+.portfolio_container .title {
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 736px) {
+  .portfolio_container .portfolio_container {
+    display: block;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1680px) {
+  .portfolio_container .portfolio_container {
+    width: 33.33333%;
+  }
+}
+
+.portfolio_content {
+  position: relative;
+  margin: 1em;
   overflow: hidden;
-  width: 100%;
-  border-radius: 10px;
 }
-.portfolio_item .image img {
-  -moz-transition: -moz-transform 0.2s ease-out;
-  -webkit-transition: -webkit-transform 0.2s ease-out;
-  -ms-transition: -ms-transform 0.2s ease-out;
-  transition: transform 0.2s ease-out;
-  width: 100%;
+.portfolio_content a {
+  border: unset;
+  margin-bottom: 0;
 }
-.portfolio_item .image:hover img {
-  -moz-transform: scale(1.05);
-  -webkit-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  transform: scale(1.05);
+.portfolio_content .portfolio_content-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  height: calc(100% - 0.5em);
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+  border-radius: 0.375em;
+}
+.portfolio_content:hover .portfolio_content-overlay {
+  opacity: 1;
+}
+.portfolio_content:hover .portfolio_content-details {
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.portfolio_content-image {
+  width: 100%;
+  border-radius: 0.375em;
+}
+
+.portfolio_content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.portfolio_content-details h3 {
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+.portfolio_content-details p {
+  color: #fff;
+  font-size: 0.8em;
+}
+
+.fadeIn-bottom {
+  top: 80%;
+}
+
+.fadeIn-top {
+  top: 20%;
+}
+
+.fadeIn-left {
+  left: 20%;
+}
+
+.fadeIn-right {
+  left: 80%;
 }
 
 /* Banner */
