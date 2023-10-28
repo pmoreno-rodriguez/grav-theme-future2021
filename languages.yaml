@@ -24,6 +24,8 @@ en:
         BLOG_PAGE_HELP: The route to the blog page when working with blog sidebar
         SIDEBAR: Show sidebar on non-editable pages
         SIDEBAR_HELP: Show sidebar on pages like Offline, SimpleSearch Results, Error, etc.
+        GOOGLE_FONTS:
+          LOCAL: Use locally hosted Google Fonts
         MINIPOSTS: Show miniposts in sidebar
         MINIPOSTS_NUMBER: Miniposts number to show
         MINIPOSTS_NUMBER_DESCRIPTION: Number of miniposts that will be showed in sidebar
@@ -164,6 +166,17 @@ en:
           ACTIONS_TITLE: Actions
           STYLING_TITLE: Styling
           BEHAVIOR_TITLE: Behaviors
+          OVERLAY_HOVER_EFFECT:
+            LABEL: Overlay effect on hover
+            HELP: Set the hover effect when the mouse is over an image
+            FADEIN_BOTTOM: Fade in bottom
+            FADEIN_TOP: Fade in top
+            FADEIN_LEFT: Fade in left
+            FADEIN_RIGHT: Fade in right
+            FADEIN_TOP_RIGHT: Fade in top right
+            FADEIN_TOP_LEFT: Fade in top left
+            FADEIN_BOTTOM_RIGHT: Fade in bottom right
+            FADEIN_BOTTOM_LEFT: Fade in bottom left
           OPEN_EFFECT:
             LABEL: Open Effect
             ZOOM: Zoom
@@ -282,6 +295,8 @@ de:
         BLOG_PAGE_HELP: Der Pfad zur Blog-Seite wenn die Blog-Seitenleiste aktiv ist
         SIDEBAR: Seitenleiste auf nicht bearbeitbaren Seiten anzeigen
         SIDEBAR_HELP: Seitenleiste auf Seiten wie Offline, SimpleSearch-Ergebnisse, Fehler usw. anzeigen.
+        GOOGLE_FONTS:
+          LOCAL: Verwenden Sie lokal gehostete Google Fonts
         MINIPOSTS: Miniposts in der Seitenleiste zeigen
         MINIPOSTS_NUMBER: Anzahl der anzuzeigenden Miniposts
         MINIPOSTS_NUMBER_DESCRIPTION: Anzahl der in der Seitenleiste anzuzeigenden Miniposts
@@ -419,6 +434,17 @@ de:
           ACTIONS_TITLE: Aktionen
           STYLING_TITLE: Aussehen
           BEHAVIOR_TITLE: Verhalten
+          OVERLAY_HOVER_EFFECT:
+            LABEL: Overlay-Effekt beim Hover
+            HELP: Legen Sie den Hover-Effekt fest, wenn sich die Maus über einem Bild befindet
+            FADEIN_BOTTOM: Unten einblenden
+            FADEIN_TOP: Oben einblenden
+            FADEIN_LEFT: Links einblenden
+            FADEIN_RIGHT: Rechts einblenden
+            FADEIN_TOP_RIGHT: Oben rechts einblenden
+            FADEIN_TOP_LEFT: Oben links einblenden
+            FADEIN_BOTTOM_RIGHT: Unten rechts einblenden
+            FADEIN_BOTTOM_LEFT: Unten links einblenden
           OPEN_EFFECT:
             LABEL: Effekt beim Öffnen
             ZOOM: zoomen
@@ -537,6 +563,8 @@ es:
         BLOG_PAGE_HELP: Ruta de la página de Blog cuando funciona con el blog de barra lateral
         SIDEBAR: Mostrar barra lateral en página no editables
         SIDEBAR_HELP: Mostrar barra lateral en páginas como Offline, SimpleSearch Results, Error, etc.
+        GOOGLE_FONTS:
+          LOCAL: Usar fuentes de Google alojadas localmente
         MINIPOSTS: Activar Miniposts en la barra lateral
         MINIPOSTS_NUMBER: Número de miniposts a mostrar
         MINIPOSTS_NUMBER_DESCRIPTION: Número de miniposts que se mostrarán en la barra lateral
@@ -677,6 +705,17 @@ es:
           ACTIONS_TITLE: Acciones
           STYLING_TITLE: Estilos
           BEHAVIOR_TITLE: Comportamiento
+          OVERLAY_HOVER_EFFECT:
+            LABEL: Efecto de superposición al pasar el ratón
+            HELP: Establece el efecto de superposición cuando el ratón está sobre una imagen
+            FADEIN_BOTTOM: Fundido inferior
+            FADEIN_TOP: Fundido superior
+            FADEIN_LEFT: Fundido desde la izquierda
+            FADEIN_RIGHT: Fundido desde la derecha
+            FADEIN_TOP_RIGHT: Fundido superior derecha
+            FADEIN_TOP_LEFT: Fundido superior izquierda
+            FADEIN_BOTTOM_RIGHT: Fundido inferior derecha
+            FADEIN_BOTTOM_LEFT: Fundido inferior izquierda
           OPEN_EFFECT:
             LABEL: Efecto de apertura
             ZOOM: Zoom
