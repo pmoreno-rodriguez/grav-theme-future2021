@@ -1,7 +1,7 @@
-{% import 'macros/topmenu.html.twig' as macros %}
+{% import 'macros/macros.html.twig' as nav_macros %}
 
 <ul>
-  {{ macros.nav_loop(pages) }}
+  {{ nav_macros.nav_loop(pages) }}
 
   {% if theme_var('custommenus.enabled') %}
     {% for mitem in theme_var('custommenu') %}

@@ -1,5 +1,24 @@
+{# MACRO FOR PAGE-TOC PLUGIN SUPPORT #}
+
+{% macro toc_loop(items) %}
+    {% import _self as toc_macros %}
+    {% for item in items %}
+        {% set class = loop.first ? 'first' : loop.last ? 'last' : null %}
+        <li {% if class %}class="{{ class }}"{% endif %}>
+            <a href="{{ item.uri }}">{{ item.label }}</a>
+            {% if item.children|length > 0 %}
+                <ul>
+                    {{ toc_macros.toc_loop(item.children) }}
+                </ul>
+            {% endif %}
+        </li>
+    {% endfor %}
+{% endmacro %}
+
+{# MACRO FOR TOP MENU NAVIGATION #}
+
 {% macro nav_loop(page) %}
-  {% import _self as macros %}
+  {% import _self as nav_macros %}
   {% for p in page.children.visible %}
     {% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
     {% if p.children.visible.count > 0 %}
@@ -13,7 +32,7 @@
             {% endif %}
         </a>
         <ul>
-          {{ macros.nav_loop(p) }}
+          {{ nav_macros.nav_loop(p) }}
         </ul>
       </li>
     {% else %}
