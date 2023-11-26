@@ -2401,7 +2401,7 @@ ul.posts article header > :last-child {
     border-left: 0;
     border-right: 0;
     left: -3em;
-    width: calc(100% + (3em * 2));
+    width: calc(100% + 3em * 2);
   }
   .post > header {
     -moz-flex-direction: column;
@@ -2470,7 +2470,7 @@ ul.posts article header > :last-child {
     padding: 1.5em 1.5em 0.5em 1.5em;
     left: -1.5em;
     margin: 0 0 2em 0;
-    width: calc(100% + (1.5em * 2));
+    width: calc(100% + 1.5em * 2);
   }
   .post > header {
     padding: 3em 1.5em 0.5em 1.5em;
@@ -2939,14 +2939,20 @@ ul.menulink > li > ul {
   list-style: none;
   font-family: "Raleway", Helvetica, sans-serif;
   padding: 0.1em 0 0 0;
-  margin: 0em;
+  margin: 0 0 0 1em;
   line-height: 2.3em;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 ul.menulink > li a.tags {
   border: dotted 1px rgba(119, 118, 118, 0.65);
   padding: 0.2em;
   font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 ul.menulink > li a:hover.tags {
@@ -2954,21 +2960,12 @@ ul.menulink > li a:hover.tags {
   color: #f4f4f4 !important;
 }
 
-ul.menulink > li > ul,
-ul.menulink > li a span {
+ul.menulink > li > ul > li {
   -webkit-transition: color 0.2s ease;
   transition: color 0.2s ease;
+  font-weight: 400;
+  text-transform: uppercase;
   font-size: 0.9em;
-  text-transform: uppercase;
-  font-weight: 400;
-}
-
-ul.menulink > li a span li {
-  -webkit-transition: color 0.2s ease;
-  transition: color 0.2s ease;
-  font-size: 0.8em;
-  font-weight: 400;
-  text-transform: uppercase;
 }
 
 ul.menulink > li * {
@@ -2981,48 +2978,8 @@ ul.menulink > li a:hover span {
 
 ul.subitem {
   display: block;
-}
-
-ul.subitem > li > ul,
-ul.subitem > li a span {
-  -webkit-transition: color 0.2s ease;
-  transition: color 0.2s ease;
-  font-size: 0.9em;
-  font-weight: 400;
-  text-transform: capitalize;
-  margin-bottom: 0;
-}
-
-ul.subitem > li {
-  list-style-type: none;
-  margin-left: 0.4em;
-}
-
-ul.subitem_hide {
-  display: none;
-}
-
-ul.subitem_hide > li > ul,
-ul.subitem_hide > li a span {
-  -webkit-transition: color 0.2s ease;
-  transition: color 0.2s ease;
-  margin-bottom: 0;
-  font-weight: 400;
-  text-transform: capitalize;
-}
-
-ul.subitem_hide > li {
-  list-style-type: none;
-  margin-left: 0.4em;
-}
-
-.dropdown-btn {
-  cursor: pointer;
-}
-
-.fa-caret-down {
-  float: right;
-  padding-right: 8px;
+  margin: 0 0 0 0.5em;
+  padding-left: 0;
 }
 
 /* CSS for Headings */
@@ -3074,7 +3031,7 @@ ul.subitem_hide > li {
     border-left: 0;
     border-right: 0;
     left: -3em;
-    width: calc(100% + (3em * 2));
+    width: calc(100% + 3em * 2);
   }
   .heading #breadcrumbs {
     margin: 0 0 2em 0;
@@ -3093,7 +3050,7 @@ ul.subitem_hide > li {
     padding: 1.5em 1.5em 0.5em 1.5em;
     left: -1.5em;
     margin: 0 0 2em 0;
-    width: calc(100% + (1.5em * 2));
+    width: calc(100% + 1.5em * 2);
   }
   .heading .title h2 {
     font-size: 1.1em;
