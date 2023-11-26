@@ -1,3 +1,12 @@
+# v1.2.3
+## 11/26/2023
+
+1.  [](#improved)
+    * Updated CSS styles
+    * Macros redefined for navigation (now, clickable parent menu items)
+2.  [](#bugfix)
+    * Fixed pimary image definition in base template
+  
 # v1.2.2
 ## 10/28/2023
 
