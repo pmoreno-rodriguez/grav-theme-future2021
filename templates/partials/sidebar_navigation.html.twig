@@ -1,34 +1,22 @@
 {% block menu_navigation %}
-  {% macro loop(page) %}
-    {% for p in page.children.visible %}
-      {% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
-      {% if p.children.visible.count > 0 %}
-        <li class="{{ current_page }}">
-          <a class="dropdown-btn">
+{% macro loop(page) %}
+{% for p in page.children.visible %}
+    {% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
+    <li class="{{ current_page }}">
+        <a href="{{ p.url }}">
             {% if p.header.icon %}
-              <i class="fa fa-{{ p.header.icon }}"></i>
-            {% endif %}
-            <span>{{ p.menu }}
-              {% if p.routable ?? false %}&nbsp;<i class="fa fa-caret-down"></i>
-              {% endif %}
-            </span>
-          </a>
-          <ul class="subitem_hide">
-            {{ _self.loop(p) }}
-          </ul>
-        </li>
-      {% else %}
-        <li class="{{ current_page }}">
-          <a href="{{ p.url }}">
-            {% if p.header.icon %}
-              <i class="fa fa-{{ p.header.icon }}"></i>
+                <i class="fa fa-{{ p.header.icon }}"></i>
             {% endif %}
             <span>{{ p.menu }}</span>
-          </a>
-        </li>
-      {% endif %}
-    {% endfor %}
-  {% endmacro %}
+        </a>
+        {% if p.children.visible.count > 0 %}
+            <ul class="subitem">
+                {{ _self.loop(p) }}
+            </ul>
+        {% endif %}
+    </li>
+{% endfor %}
+{% endmacro %}
   <ul class="menulink">
     {{ _self.loop(pages) }}
     {% if theme_var('custommenus.enabled') %}
@@ -44,16 +32,4 @@
       {% endfor %}
     {% endif %}
   </ul>
-{% endblock %}
-
-{% block javascripts %}
-<script>
-if ((window.innerWidth || document.documentElement.clientWidth) < 980){ 
-  /* Script for dropdown menu in sidebar */
-  $(".subitem_hide").hide(); /* this hides the list initially */
-      $(".dropdown-btn").click(function () {
-      $(this).next(".subitem_hide").slideToggle();
-  });
-  }
-</script>
 {% endblock %}
