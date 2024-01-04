@@ -10,6 +10,11 @@ en:
         CUSTOM_LOGO: Custom Logo
         CUSTOM_LOGO_DESCRIPTION: Will be used instead of default logo `theme://images/grav-logo.svg`
         CUSTOM_LOGO_MOBILE: Mobile Custom Logo
+        TYPE_LOGO_HEADER: 'Show logo/text in header'
+        TYPE_LOGO_HEADER_HELP: Choose how to display the logo in the header
+        TYPE_LOGO_HEADER_IMAGE: Image
+        TYPE_LOGO_HEADER_TEXT: Text
+        TYPE_LOGO_HEADER_BOTH: Both
         SLOGAN: Slogan
         MENU:
           TITLE: Top Menu Configuration
@@ -281,6 +286,11 @@ de:
         CUSTOM_LOGO: Benutzerdefiniertes Logo
         CUSTOM_LOGO_DESCRIPTION: Dieses Logo wird anstelle des Standardlogos `theme://images/grav-logo.svg` verwendet
         CUSTOM_LOGO_MOBILE: Benutzerdefiniertes Logo für Mobilgeräte
+        TYPE_LOGO_HEADER: 'Logo/Text in der Kopfzeile anzeigen'
+        TYPE_LOGO_HEADER_HELP: Wählen Sie aus, wie das Logo in der Kopfzeile angezeigt werden soll
+        TYPE_LOGO_HEADER_IMAGE: Bild
+        TYPE_LOGO_HEADER_TEXT: Text
+        TYPE_LOGO_HEADER_BOTH: Beide
         SLOGAN: Motto
         MENU:
           TITLE: Menü-Konfiguration
@@ -549,6 +559,11 @@ es:
         CUSTOM_LOGO: Logo personalizado
         CUSTOM_LOGO_DESCRIPTION: Este logo se usará en lugar del log por defecto `theme://images/grav-logo.svg`
         CUSTOM_LOGO_MOBILE: Logo personalizado para dispositivos móviles
+        TYPE_LOGO_HEADER: 'Mostrar logo/texto en el encabezado'
+        TYPE_LOGO_HEADER_HELP: Elige cómo quieres que aparezca el logo en el encabezado.
+        TYPE_LOGO_HEADER_IMAGE: Imagen
+        TYPE_LOGO_HEADER_TEXT: Texto
+        TYPE_LOGO_HEADER_BOTH: Ambos
         SLOGAN: Slogan
         MENU:
           TITLE: Configuración del Menú Superior
