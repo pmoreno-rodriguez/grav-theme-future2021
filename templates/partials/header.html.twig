@@ -2,11 +2,22 @@
 {% set icon_lang = theme_var('menu_langswitcher')|defined('false') %}
 {% set icon_search = theme_var('menu_search')|defined('false') %}
 {% set icon_login = theme_var('menu_login')|defined('false') %}
-
+{% set logoImageHeader = theme_var('type_logo_header')|defined('text') %}
 <header id="header">
-  <div class="logo">
-    <a href="{{ home_url }}">{{ site.title }}</a>
-  </div>
+    
+    <div class="logo">
+      
+      <a href="{{ home_url }}" class="">
+       {% if logoImageHeader == 'image' %}
+        {% include 'partials/logo.html.twig' with {'logo_class': 'logo-img'} %}
+      {% elseif logoImageHeader == 'both' %}
+        {% include 'partials/logo.html.twig' with {'logo_class': 'logo-img'} %}{{ site.title }}
+      {% else %}
+        {{ site.title }}
+      {% endif %}
+      </a>
+    </div>
+  
   <nav class="dropdown">
     {% block header_navigation %}
       {% include 'partials/navigation.html.twig' %}
