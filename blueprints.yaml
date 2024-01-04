@@ -1,7 +1,7 @@
 name: Future 2021
 slug: future2021
 type: theme
-version: 1.2.3
+version: 1.2.4
 description: Grav Future Imperfect by HTML5 UP (Version 2021)
 icon:  microchip
 author:
@@ -94,6 +94,16 @@ form:
           multiple: false
           accept:
             - image/*
+        
+        type_logo_header:
+          type: radio
+          label: FUTURE.ADMIN.THEME.TYPE_LOGO_HEADER
+          help: FUTURE.ADMIN.THEME.TYPE_LOGO_HEADER_HELP
+          default: text
+          options:
+              image: FUTURE.ADMIN.THEME.TYPE_LOGO_HEADER_IMAGE
+              text: FUTURE.ADMIN.THEME.TYPE_LOGO_HEADER_TEXT
+              both: FUTURE.ADMIN.THEME.TYPE_LOGO_HEADER_BOTH
 
         slogan:
           type: text

@@ -1,3 +1,12 @@
+# v1.2.4
+## 01/04/2024
+
+1.  [](#new)
+    * Added option to display image logo in header
+2.  [](#improved)
+    * Updated CSS styles
+    * Updated translations
+  
 # v1.2.3
 ## 11/26/2023
 
