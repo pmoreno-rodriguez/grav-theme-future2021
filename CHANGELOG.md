@@ -1,3 +1,13 @@
+# v1.2.5
+## 01/08/2024
+
+1.  [](#new)
+    * New demo page url
+2.  [](#improved)
+    * Added language selector on mobile
+    * Added display swap when loading Google fonts
+    * Updated CSS Styles
+
 # v1.2.4
 ## 01/04/2024
 
