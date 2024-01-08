@@ -114,6 +114,16 @@
 			}
 		}
 
+		.sidebar-content.lang {
+			display: none;
+		}
+
+		@include breakpoint('<=small') {
+			.sidebar-content.lang {
+				display: block;
+			}
+		}
+
 		body.is-menu-visible & {
 			@include vendor('transform', 'translateX(0)');
 			visibility: visible;

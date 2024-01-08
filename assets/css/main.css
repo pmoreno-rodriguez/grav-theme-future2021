@@ -1964,6 +1964,17 @@ ul.actions li {
   padding: 0 0 0 1em;
   vertical-align: middle;
 }
+ul.actions.start {
+  -moz-justify-content: -moz-flex-start;
+  -webkit-justify-content: -webkit-flex-start;
+  -ms-justify-content: -ms-flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  margin-left: 0;
+}
+ul.actions.start li:first-child {
+  padding-left: 0;
+}
 ul.actions.special {
   -moz-justify-content: center;
   -webkit-justify-content: center;
@@ -3499,6 +3510,14 @@ body.single #footer {
   border-top: 0;
   margin-top: 0;
   padding-top: 0;
+}
+#menu .sidebar-content.lang {
+  display: none;
+}
+@media screen and (max-width: 736px) {
+  #menu .sidebar-content.lang {
+    display: block;
+  }
 }
 body.is-menu-visible #menu {
   -moz-transform: translateX(0);
