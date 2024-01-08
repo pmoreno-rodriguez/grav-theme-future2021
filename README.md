@@ -136,7 +136,7 @@ Alternatively, you can you use the drag-n-drop "Custom Logo" field in the Future
 | preload | boolean | `true` | Enable or disable preloading. |
 # Demo page
 
-[http://future.juanvillen.es/](http://future.juanvillen.es/)
+[https://future2021.pmdesign.dev](https://future2021.pmdesign.dev)
 # Future plans
 
 - Create a Flex Directory for authors and avatars.
