@@ -267,6 +267,8 @@ en:
         HEADLINE: Archives
       SYNDICATE:
         HEADLINE: Syndicate
+      LANGSWITCHER:
+        HEADLINE: Langswitcher
     FEATURED: Featured
     PRIVACY: By using this form you agree our terms
     FORM_SUMMARY: Here is the summary of what you wrote to us
@@ -540,6 +542,8 @@ de:
         HEADLINE: Letzte Einträge
       SYNDICATE:
         HEADLINE: Verteilen
+      LANGSWITCHER:
+        HEADLINE: Langswitcher
     FEATURED: Hervorgehoben
     PRIVACY: Durch die Nutzung dieses Formulars stimmen Sie unseren Bedingungen zu
     FORM_SUMMARY: Hier ist die Zusammenfassung dessen, was Sie uns geschrieben haben
@@ -816,6 +820,8 @@ es:
         HEADLINE: Archivos
       SYNDICATE:
         HEADLINE: Distribuir
+      LANGSWITCHER:
+        HEADLINE: Cambiar idioma
     FEATURED: Destacados
     PRIVACY: Al usar este formulario estás de acuerdo con nuestra
     FORM_SUMMARY: Aquí está el resumen de lo que nos escribió
