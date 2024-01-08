@@ -13,6 +13,12 @@
 {# Define if sidebar is shown in the page #}
 {% set show_sidebar = header_var('show_sidebar')|defined(false) %}
 
+{# Configuration of header and sidebar buttons #}
+{% set icon_lang = theme_var('menu_langswitcher')|defined('false') %}
+{% set icon_search = theme_var('menu_search')|defined('false') %}
+{% set icon_login = theme_var('menu_login')|defined('false') %}
+{% set logoImageHeader = theme_var('type_logo_header')|defined('text') %}
+
 {# Define if the primary image and the attributes of width and height are shown #}
 {% set show_image = header_var('show_pageimage')|defined(true) %}
 {% set image = page.media[page.header.primaryImage] ?: page.media.all|filter((v, k) => k != page.header.avatarImage and (v.type == 'image' or v.type == 'vector'))|first %}
