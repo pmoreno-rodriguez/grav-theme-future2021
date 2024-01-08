@@ -9,7 +9,7 @@
 
 <section id="menu">
   <div style="padding: 1.5em;"><a class="close" href="#menu" title="Menu"></a></div>
-  {% if config.plugins.simplesearch.enabled %}
+  {% if config.plugins.simplesearch.enabled and icon_search %}
     <!-- Search -->
     <section>
       {% include 'partials/simplesearch_searchbox_sidebar.html.twig' %}
@@ -21,7 +21,7 @@
   </div>
   {% if config.plugins.archives.enabled and archives_data is not empty %}
     <!-- Archives -->
-    <div>
+    <div class="sidebar-content">
       <header>
         <h3>{{ 'FUTURE.SIDEBAR.ARCHIVES.HEADLINE'|t }}</h3>
       </header>
@@ -30,7 +30,7 @@
   {% endif %}
   {% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
   <!-- Related posts -->
-    <div>
+    <div class="sidebar-content">
       <header>
         <h3>{{ 'FUTURE.SIDEBAR.RELATED_POSTS.HEADLINE'|t }}</h3>
       </header>
@@ -41,7 +41,7 @@
     {% set taxlist = children_only is defined ? taxonomylist.getChildPagesTags() : taxonomylist.get() %}
     {% if taxlist %}
     <!-- Taxonomy list -->
-      <div>
+      <div class="sidebar-content">
         <header>
           <h3>{{ 'FUTURE.SIDEBAR.TAGS.HEADLINE'|t }}</h3>
         </header>
@@ -51,16 +51,29 @@
   {% endif %}
   {% if config.plugins.feed.enabled %}
   <!-- Syndicate -->
-    <div class="sidebar-content syndicate">
-        <h4>{{ 'FUTURE.SIDEBAR.SYNDICATE.HEADLINE'|t }}</h4>
-        <ul class="actions">
+    <div class="sidebar-content">
+      <header>
+        <h3>{{ 'FUTURE.SIDEBAR.SYNDICATE.HEADLINE'|t }}</h3>
+      </header>
+        <ul class="actions start">
         <li><a href="{{ feed_url }}.atom"><i class="fa fa-rss-square"></i> Atom 1.0</a></li>
         <li><a href="{{ feed_url }}.rss"><i class="fa fa-rss-square"></i> RSS</a></li>
         {% if config.plugins.feed.enable_json_feed %}<li><a href="{{ feed_url }}.json"><i class="fa fa-rss-square"></i> JSON</a></li>{% endif %}
         </ul>
     </div>
   {% endif %}
-  {% if config.plugins.login.enabled %}
+  {% if icon_lang and config.plugins.langswitcher.enabled and system.languages.supported is not null %}
+  <!-- Langswitcher -->
+  <div class="sidebar-content lang start">
+    <header>
+      <h3>{{ 'FUTURE.SIDEBAR.LANGSWITCHER.HEADLINE'|t }}</h3>
+    </header>
+    <ul class="actions start">
+      {% include 'partials/langswitcher.html.twig' %}
+    </ul>
+  </div>
+  {% endif %}
+  {% if config.plugins.login.enabled and icon_login%}
   <!-- Login button -->
     <div>
       <ul class="actions stacked">
