@@ -52,8 +52,10 @@ form:
             rows: 10
         -
             name: privacy
-            type: privacy
-            label: 'Privacy policy'
+            type: checkbox
+            markdown: true
+            label: 'Accept our <a href="privacy">Privacy policy</a>'
+            outerclasses: col-12
             validate:
                 required: true
                 message: 'You must agree to the privacy policy'
@@ -61,7 +63,7 @@ form:
         -
             type: submit
             value: Enviar
-            outerclasses: form-field
+            outerclasses: col-12
             classes: 'button primary'
     process:
         save:
