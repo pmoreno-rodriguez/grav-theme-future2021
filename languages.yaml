@@ -246,7 +246,12 @@ en:
       PAGINATION:
         PREVIOUS: Previous
         NEXT: Next
-
+    DOWNLOADS:
+      TH_NAME: Name
+      TH_SIZE: Size
+      TH_MODIFIED: Modified
+      TH_DOWNLOAD: Download
+      TD_BUTTON: Download
     SIDEBAR:
       SIMPLE_SEARCH:
         HEADLINE: Search
@@ -521,7 +526,12 @@ de:
       PAGINATION:
         PREVIOUS: Vorherige
         NEXT: Nächste
-
+    DOWNLOADS:
+       TH_NAME: Name
+       TH_SIZE: Größe
+       TH_MODIFIED: Geändert
+       TH_DOWNLOAD: Herunterladen
+       TD_BUTTON: Herunterladen
     SIDEBAR:
       SIMPLE_SEARCH:
         HEADLINE: Suche
@@ -799,7 +809,12 @@ es:
       PAGINATION:
         PREVIOUS: Anterior
         NEXT: Siguiente
-
+    DOWNLOADS:
+      TH_NAME: Nombre
+      TH_SIZE: Tamaño
+      TH_MODIFIED: Modificado
+      TH_DOWNLOAD: Descarga
+      TD_BUTTON: Descargar
     SIDEBAR:
       SIMPLE_SEARCH:
         HEADLINE: Buscar
