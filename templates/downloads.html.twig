@@ -1,0 +1,55 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+  <article class="post">
+    <header>
+      <div class="title">
+        <h1>{{ title }}</h1>
+        {% if subtitle %}
+          <p>{{ subtitle }}</p>
+        {% endif %}
+      </div>
+    </header>
+
+  {% if show_image and image %}
+      <span class="image featured">
+        {{ image.cropZoom(img_width, img_height).loading('lazy').attribute('decoding','async').html(title, title)|raw }}
+      </span>
+  {% endif %}
+
+    {{ page.content|raw }}
+
+    <table class="responsive">
+        <thead>
+            <tr>
+                <th><h3>{{ 'FUTURE.DOWNLOADS.TH_NAME'|t }}</h3></th>
+                <th><h3>{{ 'FUTURE.DOWNLOADS.TH_SIZE'|t }}</h3></th>
+                <th><h3>{{ 'FUTURE.DOWNLOADS.TH_MODIFIED'|t }}</h3></th>
+                <th><h3>{{ 'FUTURE.DOWNLOADS.TH_DOWNLOAD'|t }}</h3></th>
+            </tr>
+        </thead>
+        <tbody>
+        
+        {% for file in page.media.all %}
+            <tr>
+                {% include 'partials/download_item.html.twig' with {file: file} %}
+            </tr>
+        {% endfor %}
+        
+        </tbody>
+        </table>
+
+  </article>
+
+  {% if show_sidebar == false %}
+    <section id="footer" class="align-center">
+      {% include 'partials/sidebar-bits/footer.html.twig' %}
+    </section>
+  {% endif %}
+{% endblock %}
+
+{% block sidebar %}
+{% if show_sidebar == true %}
+  {% include 'partials/sidebar_left.html.twig' %}
+{% endif %}
+{% endblock %}

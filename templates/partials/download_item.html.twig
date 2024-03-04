@@ -1,0 +1,19 @@
+{% set datestamp = include('partials/page-bits/date.html.twig') %}
+{% set size = file.size/1024 %}
+{% set unit = "Kb" %}
+{% if size > 1023 %}
+    {% set size = size/1024 %}
+    {% set unit = "Mb" %}
+{% endif %}
+<td>
+    {{ file.filename|regex_replace(['/-/','/_/'], [' ',' ']) }}
+</td>
+<td>
+    {{ size|number_format(2, '.', ',') }}{{ unit }}
+</td>
+<td>
+    {{ datestamp }}
+</td>
+<td>
+    <a href="{{ file.url }}" class="button small" download>{{ 'FUTURE.DOWNLOADS.TD_BUTTON'|t }}</a>
+</td>
