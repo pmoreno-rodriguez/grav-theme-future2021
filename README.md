@@ -76,6 +76,7 @@ google_fonts_local:           # Option to load Google Fonts from the theme or fr
 favicon:                      # Choosse your own favicon
 custom_logo:                  # A custom logo rather than the default (see below)  
 custom_logo_mobile:           # A custom logo to use for mobile navigation
+type_logo_header:             # Choose how the logo is displayed in header. Options: Image, Text or Both
 slogan:                       # Custom text for slogan
 menu_langswitcher:            # Enable/Disable langswitcher icon in menu (langswitcher plugin needed)
 menu_search:                  # Enable/Disable search icon in menu (simplesearch plugin needed)
