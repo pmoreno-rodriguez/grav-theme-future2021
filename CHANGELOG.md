@@ -1,3 +1,16 @@
+# v1.3.0
+## 03/04/2024
+
+1.  [](#new)
+    * New Downloads template
+2.  [](#improved)
+    * Updated README
+    * Updated translations
+    * Updated styles
+    * Updated author info in theme blueprints
+    * Removed partial Privacy template for contact form
+    * Updated contact demo page
+  
 # v1.2.5
 ## 01/08/2024
 
