@@ -1,0 +1,24 @@
+/*
+Future2021
+Grav Theme by Pedro Moreno
+
+CSS Styles for Langswitcher Plugin 
+*/
+
+#menu  li.langswitcher {
+    margin-left: 0em !important;
+}
+
+#header .main ul li.langswitcher {
+    margin-left: 0em !important;
+  }
+#header .main ul li.langswitcher > a {
+    text-decoration: none;
+    border-bottom: 0;
+    color: #838383;
+    text-indent: 0em;
+    text-align: center;}
+
+@media screen and (max-width: 736px) {
+    #header .main ul li.langswitcher {
+    display: none; } }

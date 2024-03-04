@@ -2046,7 +2046,6 @@ ul.actions.fit.stacked {
     -ms-flex-shrink: 1;
     flex-shrink: 1;
     padding: 1em 0 0 0;
-    text-align: center;
     width: 100%;
   }
   ul.actions:not(.fixed) li > * {
@@ -2553,6 +2552,7 @@ header p {
 table {
   margin: 0 0 2em 0;
   width: 100%;
+  word-break: break-word;
 }
 table tbody tr {
   border: solid 1px rgba(160, 160, 160, 0.3);
@@ -2597,6 +2597,32 @@ table.alt thead {
 }
 table.alt tfoot {
   border-top: 0;
+}
+
+/* Styles for responsive tables */
+@media screen and (max-width: 736px) {
+  .responsive table {
+    width: 100%;
+  }
+  .responsive thead {
+    display: none;
+  }
+  .responsive tr:nth-of-type(2n) {
+    background-color: inherit;
+  }
+  .responsive tr td:first-child {
+    background: #f4f4f4;
+    font-weight: 700;
+  }
+  .responsive tbody td {
+    display: block;
+    text-align: center;
+  }
+  .responsive tbody td:before {
+    content: attr(data-th);
+    display: block;
+    text-align: center;
+  }
 }
 
 /* Portofolio */
@@ -2955,7 +2981,6 @@ ul.menulink > li > ul {
   list-style: none;
   font-family: "Raleway", Helvetica, sans-serif;
   padding: 0.1em 0 0 0;
-  margin: 0 0 0 1em;
   line-height: 2.3em;
   -webkit-transition: color 0.2s ease;
   transition: color 0.2s ease;
@@ -3563,4 +3588,32 @@ CSS Styles for Page Toc Plugin
   position: -webkit-sticky;
   position: sticky;
   top: 3.5em;
+}
+
+/*
+Future2021
+Grav Theme by Pedro Moreno
+
+CSS Styles for Langswitcher Plugin 
+*/
+#menu li.langswitcher {
+  margin-left: 0em !important;
+}
+
+#header .main ul li.langswitcher {
+  margin-left: 0em !important;
+}
+
+#header .main ul li.langswitcher > a {
+  text-decoration: none;
+  border-bottom: 0;
+  color: #838383;
+  text-indent: 0em;
+  text-align: center;
+}
+
+@media screen and (max-width: 736px) {
+  #header .main ul li.langswitcher {
+    display: none;
+  }
 }

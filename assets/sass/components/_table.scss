@@ -14,6 +14,7 @@
 	table {
 		margin: 0 0 _size(element-margin) 0;
 		width: 100%;
+		word-break: break-word;
 
 		tbody {
 			tr {
@@ -79,3 +80,33 @@
 			}
 		}
 	}
+
+/* Styles for responsive tables */
+	
+.responsive {
+
+	@include breakpoint('<=small') {
+		table {
+			width:100%;
+		}
+		thead {
+			display: none;
+		}
+		tr:nth-of-type(2n) {
+			background-color: inherit;
+		}
+		tr td:first-child {
+			background: _palette(bg-alt);
+			font-weight:_font(weight-bold);
+		}
+		tbody td {
+			display: block;
+			text-align:center;
+		}
+		tbody td:before {
+			content: attr(data-th);
+			display: block;
+			text-align: center;
+		}
+	}
+}

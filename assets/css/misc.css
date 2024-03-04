@@ -37,22 +37,6 @@
     visibility: visible;
   }
 
-/* Styles for Langswitcher plugin */
-
-#header .main ul li.langswitcher {
-  margin-left: 0em !important;
-}
-#header .main ul li.langswitcher > a {
-      text-decoration: none;
-      border-bottom: 0;
-      color: #838383;
-      text-indent: 0em;
-      text-align: center;}
-
-@media screen and (max-width: 736px) {
-    #header .main ul li.langswitcher {
-      display: none; } }
-
 /* Styles to show Font Awesome 5 Free in shortcode core notices */
 
 .sc-notice > div:before {
