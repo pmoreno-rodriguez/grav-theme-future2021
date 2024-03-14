@@ -843,3 +843,285 @@ es:
     MISC:
       SHARE_ON: Compartir en
       BACK_TO_TOP: Volver arriba 
+
+nl:
+  FUTURE:
+    ADMIN:
+      THEME:
+        DROPDOWN_MENU: Vervolgkeuzemenu
+        PRODUCTION_MODE: Productiemodus
+        PRODUCTION_MODE_HELP: 'Ingeschakeld: Future weergeven met minified CSS'
+        HEADER: Kop
+        FAVICON: Kies je eigen favicon
+        CUSTOM_LOGO: Aangepast logo
+        CUSTOM_LOGO_DESCRIPTION: Wordt gebruikt in plaats van het standaardlogo `theme://images/grav-logo.svg`
+        CUSTOM_LOGO_MOBILE: Aangepast logo voor mobile
+        TYPE_LOGO_HEADER: 'Logo/tekst weergeven in kop'
+        TYPE_LOGO_HEADER_HELP: Kies de weergave van het logo in de kop
+        TYPE_LOGO_HEADER_IMAGE: Afbeelding
+        TYPE_LOGO_HEADER_TEXT: Tekst
+        TYPE_LOGO_HEADER_BOTH: Beide
+        SLOGAN: Leuze
+        MENU:
+          TITLE: Topmenuconfiguratie
+          LANGSWITCHER: Icoon taalkeuze inschakelen
+          LANGSWITCHER_HELP: Met de taalkeuzeplugin actief en meertaligheid ingesteld voor je website, kun je het taalkeuzeonderdeel in het topmenu in- of uitschakelen.
+          SEARCH: Icoon Zoeken inschakelen
+          SEARCH_HELP: Met de zoekplugin actief kun je het onderdeel Zoeken in het topmenu in- of uitschakelen.
+          LOGIN: Login-icoon inschakelen
+          LOGIN_HELP: Login-icoon in het hoofdmenu in- of uitschakelen om loginstatus weer te geven.
+        BLOG_DEFAULTS: Standaard webloginstellingen
+        BLOG_PAGE: Weblogpagina
+        BLOG_PAGE_HELP: De route naar de webblogpagina tijdens werken met de webblogzijbalk
+        SIDEBAR: Zijbalk tonen op niet-bewerkbare pagina's
+        SIDEBAR_HELP: Zijbalk tonen op pagina's zoals Offline, SimpleSearch resultaten, Foutmelding, etc.
+        GOOGLE_FONTS:
+          LOCAL: Lokaal geïnstalleerde Google Fonts gebruiken
+        MINIPOSTS: Miniposts in zijbalk tonen
+        MINIPOSTS_NUMBER: Aantal miniposts weergeven
+        MINIPOSTS_NUMBER_DESCRIPTION: Welk aantal miniposts weergeven in zijbalk
+        MINIPOSTS_CATEGORY: Miniposts categorie
+        MINIPOSTS_CATEGORY_DESCRIPTION: Stel naam in op minipostscategorie.<br />`Je moet deze naam toevoegen aan Opties->Taxonomie->Categorie`
+        RECENT_POSTS_ENABLED: Recente berichten tonen in zijbalk
+        RECENT_POSTS_NUMBER: Aantal recente berichten
+        RECENT_POSTS_NUMBER_DESCRIPTION: Welk aantal recente berichten weergeven in zijbalk
+        FOOTER: Paginavoet
+        FOOTER_TITLE: Titel paginavoet
+        FOOTER_DESCRIPTION: Beschrijving paginavoet
+        FOOTER_COPYRIGHT: Tekst copyright
+        FOOTER_BUTTON_TEXT: Knoptekst
+        FOOTER_BUTTON_URL: Knop-URL
+        FOOTER_SOCIAL_ENABLE: Iconen inschakelen
+        FOOTER_SOCIAL_STYLE: Icoonstijlen
+        FOOTER_SOCIAL_STYLE_DESCRIPTION: Zoek naar iconen op <a href="https://fontawesome.com/v5/search" target="_blank">https://fontawesome.com/v5/search</a>
+        FOOTER_SOCIAL_STYLE_REGULAR: Regulier
+        FOOTER_SOCIAL_STYLE_SOLID: Solide
+        FOOTER_SOCIAL_STYLE_BRANDS: Merken
+        FOOTER_SOCIAL_ICONS: Sociale Media-iconen
+        FOOTER_SOCIAL_ICONS_LIST: Lijst van iconen
+        FOOTER_SOCIAL_ICON_NAME: Sociaal medium naam
+        FOOTER_SOCIAL_ICON_URL: URL link naar sociale medium
+        FOOTER_SOCIAL_ICON_ICON: Icoon naar sociale medium
+        CUSTOM_MENU_TITLE: 'Aangepaste menuonderdelen'
+        CUSTOM_MENU_ENABLE: 'Aangepaste menuonderdelen inschakelen'
+        CUSTOM_MENU_ENABLE_HELP: 'Bepaalt of aangepaste menuonderdelen in het hoofdmenu worden weergegeven.'
+        CUSTOM_MENU_ITEM_TEXT: 'Tekst'
+        CUSTOM_MENU_ITEM_TEXT_DESCRIPTION: 'Tekstlabel voor menuonderdeel.'
+        CUSTOM_MENU_ITEM_ICON: 'Icoon'
+        CUSTOM_MENU_ITEM_ICON_DESCRIPTION: 'Font Awesome-icoon voor menuonderdeel.'
+        CUSTOM_MENU_ITEM_URL: 'URL'
+        CUSTOM_MENU_ITEM_URL_DESCRIPTION: 'URL voor menuonderdeel.'
+        CUSTOM_MENU_ITEM_TARGET: 'Doel'
+        CUSTOM_MENU_ITEM_TARGET_BLANK: 'In nieuw venster openen'
+        CUSTOM_MENU_ITEM_TARGET_PARENT: 'In bovenliggend venster openen'
+        CUSTOM_MENU_ITEM_TARGET_SELF: 'In huidige venster openen'
+        CUSTOM_MENU_ITEM_TARGET_TOP: 'In volledig applicatievenster openen'
+      DEFAULT:
+        HEADINGS_SECTION: Opties kopteksten
+        CONTENT: Inhoud
+        IMAGE_OPTIONS: Opties afbeeldingen
+        PRIMARY_IMAGE: 
+          LABEL: Primaire afbeelding
+          WIDTH: Breedte
+          HEIGHT: Hoogte
+        SHOW_PAGEIMAGE: Afbeelding weergeven
+        SHOW_PAGEIMAGE_HELP: Primaire afbeelding activeren indien gedefinieerd, anders de eerste media-afbeelding.
+        SHOW_SIDEBAR: Zijbalk weergeven
+        TOC_ENABLED: Inhoudsopgave activeren op grote pagina's.
+        TOC_ENABLED_HELP: Inhoudsopgave activeren op grote pagina's. Page TOC plugin moet geïnstalleerd zijn. 
+        BODY_CLASSES: 'Je kunt nieuwe css-klassen maken voor de body en die hier toevoegen.'
+      MODULAR:
+        BANNER:
+          BANNER_TAB: Banier
+          BANNER_SUBTITLE: Ondertitel
+          BANNER_BUTTON_TEXT: Knoptekst
+          BANNER_BUTTON_URL: Knop-URL
+          BANNER_IMAGE: Afbeelding
+          BANNER_IMAGE_DESCRIPTION: Kies een afbeelding
+        FEATURES:
+          FEATURES_TAB: Kenmerken
+          FEATURES_LAYOUT: Opmaak
+          FEATURES_LAYOUT_TWOCOLS: Medium   = 2 / 1 kolommen
+          FEATURES_LAYOUT_THREECOLS: Standaard  = 3 / 2 / 1 kolommen
+          FEATURES_HEADER: Kenmerken
+          FEATURES_IMAGE: Afbeelding
+          FEATURES_TITLE: Titel
+          FEATURES_TEXT: Tekst
+          FEATURES_BUTTON_TEXT: Knoptekst
+          FEATURES_BUTTON_URL: Knop-UrL
+          FEATURES_BUTTON_URL_TARGET: Open URL in een nieuw venster
+
+      BLOG:
+        BLOG_TAB: Weblog
+        BLOG_CONFIGURATION: Weblogconfiguratie
+        BLOG_ROUTE: Weblogroute
+        BLOG_ROUTE_HELP: De route naar de hoofdweblogpagina die de "Toon ..." configuratie bevat
+        BLOG_CONTENT_TITLE: Inhoudsdefinitie
+        BLOG_CONTENT_ITEMS: Onderdelen
+        BLOG_CONTENT_ITEMS_LIMIT: Maximaal aantal onderdelen
+        BLOG_CONTENT_ITEMS_ORDER_BY: Sorteren op
+        BLOG_CONTENT_ITEMS_ORDER_BY_DATE: Datum
+        BLOG_CONTENT_ITEMS_ORDER_BY_TITLE: Titel
+        BLOG_CONTENT_ITEMS_ORDER_BY_FOLDER: Folder
+        BLOG_CONTENT_ITEMS_ORDER_BY_DEFAULT: Verstekwaarde
+        BLOG_CONTENT_ITEMS_ORDER_DIR: Sorteren
+        BLOG_CONTENT_ITEMS_ORDER_DIR_ASC: Oplopend
+        BLOG_CONTENT_ITEMS_ORDER_DIR_DESC: Aflopend
+        BLOG_CONTENT_ITEMS_BREADCRUMBS: Broodkruimels tonen
+        BLOG_CONTENT_ITEMS_SHOWPAGINATION: Paginatie tonen
+        BLOG_CONTENT_ITEMS_PAGINATION: Paginatie
+        BLOG_CONTENT_ITEMS_URL_TAXONOMY_FILTERS: URL Taxonomiefilters
+        BLOG_CONTENT_SHAREICONS_TITLE: Sociale media-icoontjes
+        BLOG_CONTENT_SHAREICONS: Kies sociale media-icoontjes
+        BLOG_CONTENT_SHAREICONS_HELP: Kies welke sociale media icons you want to display on articles
+      ITEM:
+        ITEM_TAB: Weblogonderdeel
+        ITEM_OPTIONS: Opties
+        ITEM_SUMMARY: Samenvatting van onderdeel
+        ITEM_SUMMARY_ENABLED: Samenvatting ingeschakeld
+        ITEM_SUMMARY_FORMAT: Vorm samenvatting
+        ITEM_SUMMARY_FORMAT_SHORT: Gebruik het eerste scheidingsteken of de tekstomvang
+        ITEM_SUMMARY_FORMAT_LONG: Scheidingsteken wordt genegeerd
+        ITEM_SUMMARY_SIZE: Omvang
+        ITEM_SUMMARY_DELIMITER: Scheidingsteken
+        ITEM_ORDER: Volgorde onderdeel
+        ITEM_SUBTITLE: Ondertitel
+        ITEM_AVATAR: Avatar
+      PORTFOLIO:
+        TAB: Portfolio
+        TITLE: Afbeeldingen portfolio
+        LAYOUT: 
+          LABEL: Opmaak
+          TWOCOLS: Medium   = 2 / 1 kolommen
+          THREECOLS: Standard  = 3 / 2 / 1 kolommen
+        THUMB_WIDTH: Breedte miniatuur
+        THUMB_WIDTH_HELP: Stel breedte voor miniaturen in
+        THUMB_HEIGHT: Hoogte miniatuur
+        THUMB_HEIGHT_HELP: Stel hoogte voor miniaturen in
+        IMAGES: 
+          LABEL: Afbeeldingen
+          IMAGE: Afbeelding
+          IMAGE_TITLE: Titel
+          IMAGE_DESCRIPTION: Beschrijving
+          DESCPOSITION: 
+            LABEL: Positie beschrijving
+            HELP: Globale positionering beschrijving dia's, je kunt voor elke dia een specifieke positie instellen (beneden, boven, links, rechts)
+            BOTTOM: Beneden
+            TOP: Boven
+            LEFT: Links
+            RIGHT: Rechts
+          IMAGE_THUMB: Miniatuur
+        OPTIONS:
+          TAB: Portfolio Opties
+          EFFECTS_TITLE: Uiterlijk & effecten
+          ACTIONS_TITLE: Acties
+          STYLING_TITLE: Stijl
+          BEHAVIOR_TITLE: Gedragingen
+          OVERLAY_HOVER_EFFECT:
+            LABEL: Overlapeffect tijdens zweven
+            HELP: Overlapeffect inschakelen wanneer de aanwijzer boven een afbeelding zweeft.
+            FADEIN_BOTTOM: Fade in van beneden
+            FADEIN_TOP: Fade in van boven
+            FADEIN_LEFT: Fade in van links
+            FADEIN_RIGHT: Fade in van rechts
+            FADEIN_TOP_RIGHT: Fade in rechterbovenhoek
+            FADEIN_TOP_LEFT: Fade in linkerbovenhoek
+            FADEIN_BOTTOM_RIGHT: Fade in rechteronderhoek
+            FADEIN_BOTTOM_LEFT: Fade in linkeronderhoek
+          OPEN_EFFECT:
+            LABEL: Effect bij openen
+            ZOOM: Inzoomen
+            FADE: Fade in
+            NONE: None
+          CLOSE_EFFECT:
+            LABEL: Effect bij sluiten
+            ZOOM: Uitzoomen
+            FADE: Fade out
+            NONE: None
+          SLIDE_EFFECT:
+            LABEL: Dia-effect
+            SLIDE: Glijden
+            ZOOM: Inzoomen
+            FADE: Fade in
+            NONE: None
+          MORE_TEXT: Meer tekst
+          MORE_TEXT_HELP: Meer tekst voor beschrijvingen op mobiele apparaten.
+          MORE_TEXT_DEFAULT: Meer tekst
+          MORE_LENGTH: Meer tekstlengte
+          MORE_LENGTH_HELP: Aantal leestekens weergeven van de beschrijving, voordat de link Meer tekst wordt toegevoegd (alleen mobile). Indien 0 hele beschrijving weergeven.
+          CLOSE_BUTTON: Sluitknop
+          CLOSE_BUTTON_HELP: Sluitknop weergeven of verbergen.
+          TOUCH_NAVIGATION: Aanraaknavigatie
+          TOUCH_NAVIGATION_HELP: Aanraaknavigatie in- of uitschakelen (vegen)
+          TOUCH_AXIS: Aanraken volgt as
+          TOUCH_AXIS_HELP: Afbeelding volgt as bij vegen op mobile.
+          KEYBOARD: Toetsenbordnavigatie
+          KEYBOARD_HELP: Toetsenbordnavigatie in- of uitschakelen
+          CLOSE_OUTSIDE: Sluiten met klik buiten
+          CLOSE_OUTSIDE_HELP: Diavoorstelling sluiten bij klikken buiten de dia.
+          MORE_STARTAT: 'Beginnen op:'
+          MORE_STARTAT_HELP: Begin de diavoorstelling op de gedefinieerde index (0 is de eerste dia). Indien ongedefinieerd begin met de afbeelding, waarop is geklikt.
+          WIDTH: Breedte
+          WIDTH_HELP: 'Standaardbreedte voor inline-elementen en iframes. Je kunt een specifieke afmeting aangeven op elke dia. Gebruik elke gewenste eenheid, bijvoorbeeld 90% of 100vw voor volledige breedte.'
+          HEIGHT: Hoogte
+          HEIGHT_HELP: 'Standaardhoogte voor inline-elementen en iframes. Je kunt een specifieke afmeting aangeven op elke dia. Gebruik elke gewenste eenheid, bijvoorbeeld 90% of 100vw voor volledige hoogte. Bij inline-elementen kan de hoogte op auto worden ingesteld.'
+          LOOP: Herhalen
+          LOOP_HELP: Diavoorstelling herhalen
+          ZOOMABLE: Zoombaar
+          ZOOMABLE_HELP: Zoombaarheid in- of uitschakelen. Je kunt ook `data-zoomable="false"` aan individuele knooppunten toevoegen.
+          DRAGGABLE: Naar volgende of vorige dia slepen met de muis in- of uitschakelen (alleen afbeeldingen en andere inline inhoud). Je kunt ook `data-draggable="false"` aan individuele knooppunten toevoegen.
+          DRAGGABLE_X: Sleeptolerantie X
+          DRAGGABLE_X_HELP: Gevoeligheid slepen links-rechts. Het aantal pixels dat de gebruiker moet slepen, voordat de volgende dia wordt weergegeven.
+          DRAGGABLE_Y: Sleeptolerantie Y
+          DRAGGABLE_Y_HELP: Gevoeligheid slepen op en neer. Het aantal pixels dat de gebruiker moet slepen om de diavoorstelling te sluiten (op 0 instellen om verticaal slepen uit te schakelen).
+          DRAG_AUTO_SNAP: Slepen direct activeren
+          DRAG_AUTO_SNAP_HELP: Indien waar verspringt de diavoorstelling direct naar vorige of volgende dia of wordt de diavoorstelling gesloten, zodra Sleeptolerantie X of Sleeptolerantie Y is bereikt. Anders wordt gewacht op loslaten van de muisknop.
+          PRELOAD: Voorladen
+          PRELOAD_HELP: Voorladen in- of uitschakelen
+
+    BLOG:
+      LISTING_TITLE_CATEGORY: 'Berichten in categorie: '
+      LISTING_TITLE_TAG: 'Berichten met label: '
+      LISTING_TITLE_AUTHOR: 'Berichten geschreven door auteur: '
+      LISTING_TITLE_MONTH: 'Bericht van de maand: '
+      ITEM:
+        CONTINUE_READING: Verder lezen...
+        NEXT_POST: Volgend bericht
+        PREV_POST: Vorig bericht
+      PAGINATION:
+        PREVIOUS: Vorige
+        NEXT: Volgende
+    DOWNLOADS:
+      TH_NAME: Naam
+      TH_SIZE: Bestandsgrootte
+      TH_MODIFIED: Gewijzigd
+      TH_DOWNLOAD: Downloaden
+      TD_BUTTON: Downloaden
+    SIDEBAR:
+      SIMPLE_SEARCH:
+        HEADLINE: Zoeken
+      RELATED_POSTS:
+        HEADLINE: Gerelateerde berichten
+      RANDOM_ARTICLE:
+        HEADLINE: Willekeurig artikel
+        FEELING_LUCKY: Ik waag een gokje!
+      SOME_TEXT_WIDGET:
+        HEADLINE: Een tekstveld
+      TAGS:
+        HEADLINE: Labels
+      POPULAR_TAGS:
+        HEADLINE: Populaire labels
+      RECENT_POSTS:
+        HEADLINE: Recente berichten
+      ARCHIVES:
+        HEADLINE: Archieven
+      SYNDICATE:
+        HEADLINE: Samengevoegd
+      LANGSWITCHER:
+        HEADLINE: Taalkeuze
+    FEATURED: In de schijnwerpers
+    PRIVACY: Door dit formulier te gebruiken ga je akkoord met onze voorwaarden
+    FORM_SUMMARY: Samenvatting van wat je geschreven hebt
+    MISC:
+      SHARE_ON: Delen op
+      BACK_TO_TOP: Terug naar boven
