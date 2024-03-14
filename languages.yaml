@@ -850,7 +850,7 @@ nl:
       THEME:
         DROPDOWN_MENU: Vervolgkeuzemenu
         PRODUCTION_MODE: Productiemodus
-        PRODUCTION_MODE_HELP: When enabled, Future will render with minified CSS
+        PRODUCTION_MODE_HELP: Ingeschakeld: Future weergeven met minified CSS
         HEADER: Kop
         FAVICON: Kies je eigen favicon
         CUSTOM_LOGO: Aangepast logo
