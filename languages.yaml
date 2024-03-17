@@ -850,7 +850,7 @@ nl:
       THEME:
         DROPDOWN_MENU: Vervolgkeuzemenu
         PRODUCTION_MODE: Productiemodus
-        PRODUCTION_MODE_HELP: Ingeschakeld: Future weergeven met minified CSS
+        PRODUCTION_MODE_HELP: 'Ingeschakeld: Future weergeven met minified CSS'
         HEADER: Kop
         FAVICON: Kies je eigen favicon
         CUSTOM_LOGO: Aangepast logo
@@ -925,11 +925,11 @@ nl:
           WIDTH: Breedte
           HEIGHT: Hoogte
         SHOW_PAGEIMAGE: Afbeelding weergeven
-        SHOW_PAGEIMAGE_HELP: Enable primary image if it is defined or the first image of the media page.
-        SHOW_SIDEBAR: Show Sidebar
-        TOC_ENABLED: Enable TOC on large pages
-        TOC_ENABLED_HELP: Enable Table of Contents on large pages. Page Toc plugin is required
-        BODY_CLASSES: 'You can create new CSS classes for the body and add them here'
+        SHOW_PAGEIMAGE_HELP: Primaire afbeelding activeren indien gedefinieerd, anders de eerste media-afbeelding.
+        SHOW_SIDEBAR: Zijbalk weergeven
+        TOC_ENABLED: Inhoudsopgave activeren op grote pagina's.
+        TOC_ENABLED_HELP: Inhoudsopgave activeren op grote pagina's. Page TOC plugin moet geïnstalleerd zijn. 
+        BODY_CLASSES: 'Je kunt nieuwe css-klassen maken voor de body en die hier toevoegen.'
       MODULAR:
         BANNER:
           BANNER_TAB: Banier
