@@ -1,3 +1,9 @@
+# v1.3.1
+## 03/17/2024
+
+1.  [](#new)
+    * New Dutch language (thanks [Gilles van Eeden](https://github.com/gigago))
+
 # v1.3.0
 ## 03/04/2024
 
