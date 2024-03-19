@@ -2,7 +2,7 @@
 ## 03/19/2024
 
 1.  [](#bugfix)
-    * Fixed missing block in the right sidebar in the downloads template
+    * Fixed missing block menu in the right sidebar in the downloads template (thanks [mjz68](https://github.com/mjz68))
 
 # v1.3.1
 ## 03/17/2024
