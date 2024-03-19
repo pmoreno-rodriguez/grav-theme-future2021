@@ -1,3 +1,9 @@
+# v1.3.2
+## 03/19/2024
+
+1.  [](#bugfix)
+    * Fixed missing block in the right sidebar in the downloads template
+
 # v1.3.1
 ## 03/17/2024
 
