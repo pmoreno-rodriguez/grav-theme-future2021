@@ -37,17 +37,8 @@
       {% include 'partials/relatedpages.html.twig' %}
     </div>
   {% endif %}
-  {% if config.plugins.taxonomylist.enabled %}
-    {% set taxlist = children_only is defined ? taxonomylist.getChildPagesTags() : taxonomylist.get() %}
-    {% if taxlist %}
-    <!-- Taxonomy list -->
-      <div class="sidebar-content">
-        <header>
-          <h3>{{ 'FUTURE.SIDEBAR.TAGS.HEADLINE'|t }}</h3>
-        </header>
-        {% include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag'} %}
-      </div>
-    {% endif %}
+  {% if config.plugins.taxonomylist.enabled and page.template == 'blog' %}
+    {% include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag', children_only: true, of_page: page.blog} %}
   {% endif %}
   {% if config.plugins.feed.enabled %}
   <!-- Syndicate -->
@@ -73,7 +64,7 @@
     </ul>
   </div>
   {% endif %}
-  {% if config.plugins.login.enabled and icon_login%}
+  {% if config.plugins.login.enabled and icon_login %}
   <!-- Login button -->
     <div>
       <ul class="actions stacked">

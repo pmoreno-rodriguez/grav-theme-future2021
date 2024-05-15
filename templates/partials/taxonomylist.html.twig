@@ -1,10 +1,20 @@
-  <ul class="menulink">
-    <li>
-      {% for tax,value in taxlist[taxonomy] %}
-        {% if value is not empty %}
-        {% set active = uri.param(taxonomy) == tax? 'active' : '' %}
-        <a class="tags {{ active }}" rel="nofollow" href="{{ base_url }}/{{ taxonomy }}{{ config.system.param_sep }}{{ tax }}">{{ tax }}</a>
-        {% endif %}
-      {% endfor %}
-    </li>
-  </ul>
+<!-- Taxonomy list -->
+{% set taxlist = children_only is defined ? taxonomylist.getChildPagesTags(of_page) : taxonomylist.get() %}
+
+{% if taxlist %}
+  <div class="sidebar-content">
+    <header>
+      <h3>{{ 'FUTURE.SIDEBAR.TAGS.HEADLINE'|t }}</h3>
+    </header>
+    <ul class="menulink">
+      <li>
+        {% for tax,value in taxlist[taxonomy] %}
+          {% if value is not empty %}
+          {% set active = uri.param(taxonomy) == tax? 'active' : '' %}
+          <a class="tags {{ active }}" rel="nofollow" href="{{ base_url }}/{{ taxonomy }}{{ config.system.param_sep }}{{ tax }}">{{ tax }}</a>
+          {% endif %}
+        {% endfor %}
+      </li>
+    </ul>
+  </div>
+{% endif %} 
