@@ -1,3 +1,9 @@
+# v1.3.3
+## 04/27/2024
+
+1.  [](#improved)
+    * Updated `taxonomylist` partial template to latest changes of [taxonomylist plugin](https://github.com/getgrav/grav-plugin-taxonomylist/releases/tag/1.3.6)
+  
 # v1.3.2
 ## 03/19/2024
 
