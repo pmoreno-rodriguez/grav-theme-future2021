@@ -135,9 +135,19 @@ Alternatively, you can you use the drag-n-drop "Custom Logo" field in the Future
 | dragToleranceY | number | `65` | Used with draggable. Number of pixels the user has to drag up or down to close the lightbox (Set 0 to disable vertical drag). |
 | dragAutoSnap | boolean | `false` | If true the slide will automatically change to prev/next or close if dragToleranceX or dragToleranceY is reached, otherwise it will wait till the mouse is released. |
 | preload | boolean | `true` | Enable or disable preloading. |
+
+# Downloads template
+
+Future2021 theme includes a simple template to manage downloads of files uploaded to a page. These files are automatically found and processed by Grav using `page.media.all` and displayed in a table with four columns: name, size, modification date and download button.
+
 # Demo page
 
 [https://future2021.pmdesign.dev](https://future2021.pmdesign.dev)
+
+# Documentation 
+
+You can read extra documentation of Future2021 Theme at [https://pmoreno-rodriguez.github.io/#/./gravthemes/future2021/index](https://pmoreno-rodriguez.github.io/#/./gravthemes/future2021/index). This is [Spanish document site for Future2021 Theme](https://pmdesign.dev/temas/future2021)
+
 # Future plans
 
 - Create a Flex Directory for authors and avatars.
