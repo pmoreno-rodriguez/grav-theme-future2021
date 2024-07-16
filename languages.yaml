@@ -16,6 +16,10 @@ en:
         TYPE_LOGO_HEADER_TEXT: Text
         TYPE_LOGO_HEADER_BOTH: Both
         SLOGAN: Slogan
+        CUSTOM_CSS: Load Custom CSS
+        CUSTOM_CSS_HELP: Load custom CSS styles from theme://assets/css/custom.css
+        CUSTOM_JS: Load Custom JS
+        CUSTOM_JS_HELP: Load custom JS from theme://assets/css/custom.js
         MENU:
           TITLE: Top Menu Configuration
           LANGSWITCHER: Enable Langswitcher icon
@@ -299,6 +303,10 @@ de:
         TYPE_LOGO_HEADER_TEXT: Text
         TYPE_LOGO_HEADER_BOTH: Beide
         SLOGAN: Motto
+        CUSTOM_CSS: Benutzerdefiniertes CSS laden
+        CUSTOM_CSS_HELP: Benutzerdefinierte CSS-Stile aus theme://assets/css/custom.css laden
+        CUSTOM_JS: Benutzerdefiniertes JS laden
+        CUSTOM_JS_HELP: Benutzerdefiniertes JS aus theme://assets/css/custom.js laden
         MENU:
           TITLE: Menü-Konfiguration
           LANGSWITCHER: Sprachauswahl aktivieren
@@ -579,6 +587,10 @@ es:
         TYPE_LOGO_HEADER_TEXT: Texto
         TYPE_LOGO_HEADER_BOTH: Ambos
         SLOGAN: Slogan
+        CUSTOM_CSS: Cargar CSS personalizado
+        CUSTOM_CSS_HELP: Carga los estilos CSS personalizados desde theme://assets/css/custom.css
+        CUSTOM_JS: Cargar JS personalizado
+        CUSTOM_JS_HELP: Carga JS personalizado desde theme://assets/css/custom.js
         MENU:
           TITLE: Configuración del Menú Superior
           LANGSWITCHER: Habilitar icono Idioma
@@ -862,6 +874,10 @@ nl:
         TYPE_LOGO_HEADER_TEXT: Tekst
         TYPE_LOGO_HEADER_BOTH: Beide
         SLOGAN: Leuze
+        CUSTOM_CSS: Aangepaste CSS laden
+        CUSTOM_CSS_HELP: Laad aangepaste CSS-stijlen van theme://assets/css/custom.css
+        CUSTOM_JS: Aangepaste JS laden
+        CUSTOM_JS_HELP: Laad aangepaste JS van theme://assets/css/custom.js
         MENU:
           TITLE: Topmenuconfiguratie
           LANGSWITCHER: Icoon taalkeuze inschakelen
