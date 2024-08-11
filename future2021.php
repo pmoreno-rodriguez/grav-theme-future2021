@@ -34,6 +34,11 @@ class Future2021 extends Theme
         }
     }
 
+    public function onShortcodeHandlers()
+    {
+        $this->grav['shortcode']->registerAllShortcodes(__DIR__ . '/shortcodes');
+    }
+
     // Add images to twig template paths to allow inclusion of SVG files
     public function onTwigLoader()
     {

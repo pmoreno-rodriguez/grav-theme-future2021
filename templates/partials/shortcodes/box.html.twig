@@ -1,0 +1,35 @@
+{#{% set boxStyle = shortcode.getParameter('style', '') %}#}
+{% set boxHeading = shortcode.getParameter('heading', shortcode.getBbCode()) %}
+{% set boxLevel = shortcode.getParameter('level', '3') %}
+{% set boxImage = shortcode.getParameter('image', '') %}
+{% set boxImageAlt = shortcode.getParameter('alt', '') %}
+{% set boxImageTitle = shortcode.getParameter('title', '') %}
+
+{# Options for button in box #}
+{% set buttonLabel = shortcode.getParameter('button-label', '') %}
+{% set buttonUrl = shortcode.getParameter('button-url', '') %}
+{% set buttonTarget = shortcode.getParameter('button-target', 'self') %}
+{% set buttonClasses = shortcode.getParameter('button-classes', '') %}
+
+{# Get the relative path to the current page #}
+{% set pagePath = uri.route(true) %}
+{% set imagePath = pagePath ~ '/' ~ boxImage %}
+
+<article class="box">
+    {% if boxImage %}
+        <span class="image fit">
+            <img src="{{ imagePath }}" alt="{{ boxImageAlt }}" title="{{ boxImageTitle }}"/>
+        </span>
+    {% endif %}
+    <header>
+        {% if boxHeading %}
+            <h{{ boxLevel }}>{{ boxHeading|raw }}</h{{ boxLevel }}>
+        {% endif %}
+            {{ shortcode.content|raw }}
+        {% if buttonLabel and buttonUrl %}
+            <p>
+                <a href="{{ buttonUrl }}" class="button {{ buttonClasses }}" target="_{{ buttonTarget }}">{{ buttonLabel }}</a>
+            </p>
+        {% endif %}
+    </header>
+</article>

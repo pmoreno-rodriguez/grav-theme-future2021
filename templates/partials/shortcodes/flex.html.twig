@@ -1,0 +1,9 @@
+<section {% if section_id %} id="{{ section_id }}" {% endif %}>
+    <div class="{{ row_class }}" {% if row_styles %}style="{{ row_styles }}"{% endif %}>
+        {% for key, column in columns %}
+            <div class="{{ column.getParameter('class', 'col-4 col-6-medium col-12-small') }}">
+                {{ column.getContent()|raw }}
+            </div>
+        {% endfor %}
+    </div>
+</section>
