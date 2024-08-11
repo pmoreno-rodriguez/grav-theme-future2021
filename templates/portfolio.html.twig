@@ -51,7 +51,7 @@
 					{% set item_title = item.title|raw %}
 					{% set item_desc = item.description|raw %}
 					{% set thumbnail = item_image.cropZoom(thumb_w, thumb_h).loading('lazy').attribute('decoding','async').attribute('itemprop','http://schema.org/image').html(item_title,item_title,'portfolio_content-image') %}
-					<div class="{{columns}} portfolio_container" itemprop="associatedMedia" itemscope itemtype="MediaObject">
+					<div class="{{columns}} portfolio_container" itemprop="associatedMedia" itemscope itemtype="http://schema.org/MediaObject">
 						{# <h3 class="title">{{item_title}}</h3> #}
 						<div class="portfolio_content">
 							<a href="{{item_image.url}}" class="glightbox" data-height="{{page.header.height}}" data-width="{{page.header.width}}" data-title="{{item_title}}" data-description="{{item_desc|raw}}" data-desc-position="{{item.descPosition}}" data-zoomable="{{page.header.zoomable}}" data-draggable="{{page.header.draggable}}" data-type="image">
