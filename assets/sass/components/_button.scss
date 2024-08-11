@@ -71,7 +71,88 @@
 		&.small {
 			font-size: 0.5em;
 		}
+		&.primary {
+			background-color: _palette(accent);
+			box-shadow: none;
+			color: _palette(bg) !important;
 
+			&:hover {
+				background-color: lighten(_palette(accent), 3);
+			}
+
+			&:active {
+				background-color: darken(_palette(accent), 3);
+			}
+		}
+
+		&.secondary {
+			background-color: _palette(secondary);
+			box-shadow: none;
+			color: _palette(bg) !important;
+
+			&:hover {
+				background-color: lighten(_palette(secondary), 3);
+			}
+
+			&:active {
+				background-color: darken(_palette(secondary), 3);
+			}
+		}
+		&.success {
+			background-color: _palette(success);
+			box-shadow: none;
+			color: _palette(bg) !important;
+
+			&:hover {
+				background-color: lighten(_palette(success), 3);
+			}
+
+			&:active {
+				background-color: darken(_palette(success), 3);
+			}
+		}
+
+		&.info {
+			background-color: _palette(info);
+			box-shadow: none;
+			color: _palette(bg) !important;
+
+			&:hover {
+				background-color: lighten(_palette(info), 3);
+			}
+
+			&:active {
+				background-color: darken(_palette(info), 3);
+			}
+		}
+
+		&.warning {
+			background-color: _palette(warning);
+			box-shadow: none;
+			color: _palette(fg-bold) !important;
+
+			&:hover {
+				background-color: lighten(_palette(warning), 3);
+			}
+
+			&:active {
+				background-color: darken(_palette(warning), 3);
+			}
+		}
+
+		&.danger {
+			background-color: _palette(danger);
+			box-shadow: none;
+			color: _palette(bg) !important;
+
+			&:hover {
+				background-color: lighten(_palette(danger), 3);
+			}
+
+			&:active {
+				background-color: darken(_palette(danger), 3);
+			}
+		}
 		&.disabled,
 		&:disabled {
 			@include vendor('pointer-events', 'none');

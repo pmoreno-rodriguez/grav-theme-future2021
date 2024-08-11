@@ -1555,6 +1555,144 @@ button.small,
 .button.small {
   font-size: 0.5em;
 }
+input[type=submit].primary,
+input[type=reset].primary,
+input[type=button].primary,
+button.primary,
+.button.primary {
+  background-color: #ba2e5d;
+  box-shadow: none;
+  color: #ffffff !important;
+}
+input[type=submit].primary:hover,
+input[type=reset].primary:hover,
+input[type=button].primary:hover,
+button.primary:hover,
+.button.primary:hover {
+  background-color: #c63163;
+}
+input[type=submit].primary:active,
+input[type=reset].primary:active,
+input[type=button].primary:active,
+button.primary:active,
+.button.primary:active {
+  background-color: #ae2b57;
+}
+input[type=submit].secondary,
+input[type=reset].secondary,
+input[type=button].secondary,
+button.secondary,
+.button.secondary {
+  background-color: #6c757d;
+  box-shadow: none;
+  color: #ffffff !important;
+}
+input[type=submit].secondary:hover,
+input[type=reset].secondary:hover,
+input[type=button].secondary:hover,
+button.secondary:hover,
+.button.secondary:hover {
+  background-color: #737d85;
+}
+input[type=submit].secondary:active,
+input[type=reset].secondary:active,
+input[type=button].secondary:active,
+button.secondary:active,
+.button.secondary:active {
+  background-color: #656d75;
+}
+input[type=submit].success,
+input[type=reset].success,
+input[type=button].success,
+button.success,
+.button.success {
+  background-color: #48c774;
+  box-shadow: none;
+  color: #ffffff !important;
+}
+input[type=submit].success:hover,
+input[type=reset].success:hover,
+input[type=button].success:hover,
+button.success:hover,
+.button.success:hover {
+  background-color: #54cb7d;
+}
+input[type=submit].success:active,
+input[type=reset].success:active,
+input[type=button].success:active,
+button.success:active,
+.button.success:active {
+  background-color: #3cc36b;
+}
+input[type=submit].info,
+input[type=reset].info,
+input[type=button].info,
+button.info,
+.button.info {
+  background-color: #209cee;
+  box-shadow: none;
+  color: #ffffff !important;
+}
+input[type=submit].info:hover,
+input[type=reset].info:hover,
+input[type=button].info:hover,
+button.info:hover,
+.button.info:hover {
+  background-color: #2ea2ef;
+}
+input[type=submit].info:active,
+input[type=reset].info:active,
+input[type=button].info:active,
+button.info:active,
+.button.info:active {
+  background-color: #1296ed;
+}
+input[type=submit].warning,
+input[type=reset].warning,
+input[type=button].warning,
+button.warning,
+.button.warning {
+  background-color: #ffdd57;
+  box-shadow: none;
+  color: #3c3b3b !important;
+}
+input[type=submit].warning:hover,
+input[type=reset].warning:hover,
+input[type=button].warning:hover,
+button.warning:hover,
+.button.warning:hover {
+  background-color: #ffe066;
+}
+input[type=submit].warning:active,
+input[type=reset].warning:active,
+input[type=button].warning:active,
+button.warning:active,
+.button.warning:active {
+  background-color: #ffda48;
+}
+input[type=submit].danger,
+input[type=reset].danger,
+input[type=button].danger,
+button.danger,
+.button.danger {
+  background-color: #ff3860;
+  box-shadow: none;
+  color: #ffffff !important;
+}
+input[type=submit].danger:hover,
+input[type=reset].danger:hover,
+input[type=button].danger:hover,
+button.danger:hover,
+.button.danger:hover {
+  background-color: #ff476c;
+}
+input[type=submit].danger:active,
+input[type=reset].danger:active,
+input[type=button].danger:active,
+button.danger:active,
+.button.danger:active {
+  background-color: #ff2954;
+}
 input[type=submit].disabled, input[type=submit]:disabled,
 input[type=reset].disabled,
 input[type=reset]:disabled,
@@ -2832,11 +2970,13 @@ table.alt tfoot {
   font-size: inherit;
   letter-spacing: 0em;
   line-height: inherit;
-  margin-top: 1em;
+  margin: 1em 0;
   text-transform: initial;
+  padding: 0 1em;
 }
 #features header h3 {
   margin-top: 0em;
+  padding: 0 1em;
 }
 
 /* Logo */
