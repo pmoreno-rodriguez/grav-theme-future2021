@@ -1,4 +1,5 @@
 {#{% set boxStyle = shortcode.getParameter('style', '') %}#}
+{% set boxColor = shortcode.getParameter('color', 'primary') %}
 {% set boxHeading = shortcode.getParameter('heading', shortcode.getBbCode()) %}
 {% set boxLevel = shortcode.getParameter('level', '3') %}
 {% set boxImage = shortcode.getParameter('image', '') %}
@@ -15,7 +16,7 @@
 {% set pagePath = uri.route(true) %}
 {% set imagePath = pagePath ~ '/' ~ boxImage %}
 
-<article class="box">
+<article class="box {{ boxColor }}">
     {% if boxImage %}
         <span class="image fit">
             <img src="{{ imagePath }}" alt="{{ boxImageAlt }}" title="{{ boxImageTitle }}"/>
