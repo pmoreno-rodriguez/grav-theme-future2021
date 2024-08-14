@@ -1,16 +1,22 @@
-# v1.4.0
+# v2.0.0
 ## 08/14/2024
 
 1.  [](#new)
-    * Removed the `custom.js` and `custom.css` files from the theme, to avoid overwriting user customizations with the release of new versions. These files are now loaded, if they exist in the theme's `assets/css` or `assets/js` folder, using the `onTwigSiteVariables` function within `future2021.php` and can be enabled from the theme settings
     * New styles for buttons and boxes
     * New Box, Buttons and Flex shortcodes
 2.  [](#improved)
-    * Fixed the escaping of an html string in the metadata description
-    * Integrated "Back to Top" button code in main.js
     * Updated Shortcodes demo page
 3.  [](#bugfix)
     * Fixed invalid value in `itemtype` field in gallery template
+  
+# v1.4.0
+## 07/16/2024
+
+1.  [](#new)
+    * Removed the `custom.js` and `custom.css` files from the theme, to avoid overwriting user customizations with the release of new versions. These files are now loaded, if they exist in the theme's `assets/css` or `assets/js` folder, using the `onTwigSiteVariables` function within `future2021.php` and can be enabled from the theme settings.
+2.  [](#improved)
+    * Fixed the escaping of an html string in the metadata description
+    * Integrated "Back to Top" button code in main.js
   
 # v1.3.3
 ## 05/15/2024
