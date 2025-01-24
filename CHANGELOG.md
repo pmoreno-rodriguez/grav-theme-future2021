@@ -1,3 +1,11 @@
+# v2.1.0
+## 01/24/2025
+
+1.  [](#new)
+    * New demo page for download template
+2.  [](#bugfix)
+    * Fixed z-index property in dropdown menu ([https://github.com/pmoreno-rodriguez/grav-theme-future2021/issues/61](https://github.com/pmoreno-rodriguez/grav-theme-future2021/issues/61))
+  
 # v2.0.0
 ## 08/14/2024
 
