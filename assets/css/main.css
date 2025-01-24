@@ -3144,6 +3144,7 @@ table.alt tfoot {
   line-height: normal;
   background-color: rgb(230, 230, 230);
   box-shadow: 0 0.05rem 1rem rgba(0, 0, 0, 0.15) !important;
+  z-index: 10002;
 }
 #header .dropdown li ul li a {
   font-family: "Raleway", Helvetica, sans-serif;

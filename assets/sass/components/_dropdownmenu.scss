@@ -33,7 +33,7 @@
                 line-height: normal;
                 background-color: _palette(bg-dropdown);
                 box-shadow: 0 0.05rem 1rem _palette(border-dropdown) !important;
-                
+                z-index: _misc(z-index-base) + 2;
                 li {
                     
                     a {
