@@ -1,3 +1,9 @@
+# v2.1.1
+## 02/16/2025
+
+1.  [](#improved)
+    * Updated `parials/taxonomylist.html.twig` to support latest updates in that plugin
+  
 # v2.1.0
 ## 01/24/2025
 
