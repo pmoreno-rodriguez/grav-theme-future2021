@@ -1,3 +1,9 @@
+# v2.1.2
+## 03/13/2025
+
+1.  [](#improved)
+    * Upgraded Glightbox library to version 3.3.0 
+
 # v2.1.1
 ## 02/16/2025
 
