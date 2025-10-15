@@ -1,0 +1,96 @@
+{# ===========================================
+   SEO & META TEMPLATE
+   =========================================== #}
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes"/>
+
+{# -------------------------
+   Title
+   ------------------------- #}
+{% set meta_title = title is defined ? title ~ ' | ' ~ site.title : site.title %}
+{% if meta_title %}
+<title>{{ meta_title|e }}</title>
+<meta itemprop="name" content="{{ meta_title|e }}">
+<meta property="og:title" content="{{ meta_title|e }}">
+<meta name="twitter:title" content="{{ meta_title|e }}">
+{% endif %}
+
+{# -------------------------
+   Canonical & URLs
+   ------------------------- #}
+{% if canonical_url %}
+<link rel="canonical" href="{{ canonical_url }}">
+<meta property="og:url" content="{{ canonical_url }}">
+<meta name="twitter:url" content="{{ canonical_url }}">
+{% endif %}
+
+{# -------------------------
+   Description
+   ------------------------- #}
+{% if meta_description %}
+<meta name="description" content="{{ meta_description|striptags|trim }}">
+<meta property="og:description" content="{{ meta_description|striptags|trim }}">
+<meta name="twitter:description" content="{{ meta_description|striptags|trim }}">
+<meta itemprop="description" content="{{ meta_description|striptags|trim }}">
+{% endif %}
+
+{# -------------------------
+   Featured Image
+   ------------------------- #}
+{% if image %}
+{% set image_url = url(image.url, true) %}
+<meta property="og:image" content="{{ image_url }}">
+<meta name="twitter:image" content="{{ image_url }}">
+<meta itemprop="image" content="{{ image_url }}">
+{% endif %}
+
+{# -------------------------
+ Social Media Defaults
+ ------------------------- #}
+<meta property="og:type" content="{{ page.template == 'item' ? 'article' : 'website' }}">
+<meta property="og:site_name" content="{{ site.title|e }}">
+<meta name="twitter:card" content="summary_large_image">
+{# Twitter site handle #}
+{% if theme_config.social is defined and theme_config.social is not null %}
+ {% for item in theme_config.social if item.name|lower == 'twitter' %}
+<meta name="twitter:site" content="{{ item.url }}">
+ {% endfor %}
+{% endif %}
+
+{# -------------------------
+   Structured Data (JSON-LD)
+   ------------------------- #}
+<script type="application/ld+json">
+{{ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": page.url(true)
+  },
+  "headline": title|e,
+  "image": image ? (uri.base ~ image.url) : '',
+  "datePublished": page.date|date('c'),
+  "inLanguage": grav.language.getActive ?: 'es',
+  "wordCount": page.content|wordcount,
+  "author": {
+    "@type": "Person",
+    "name": page.taxonomy.author[0] ?? 'Unknown'
+  },
+  "description": description
+} | json_encode(constant('JSON_UNESCAPED_UNICODE') b-or constant('JSON_UNESCAPED_SLASHES')) | raw }}
+</script>
+
+{# -------------------------
+   Custom metadata only (excludes common duplicates)
+   ------------------------- #}
+{% for meta in page.metadata %}
+  {% if meta.name and meta.name not in ['description', 'generator', 'viewport', 'author', 'keywords'] %}
+<meta name="{{ meta.name|e }}" content="{{ meta.content|e }}">
+  {% elseif meta.http_equiv and meta.http_equiv != 'X-UA-Compatible' %}
+<meta http-equiv="{{ meta.http_equiv|e }}" content="{{ meta.content|e }}">
+  {% elseif meta.property and meta.property not in ['og:title', 'og:description', 'og:image', 'og:url', 'og:type', 'og:site_name'] %}
+<meta property="{{ meta.property|e }}" content="{{ meta.content|e }}">
+  {% endif %}
+{% endfor %}

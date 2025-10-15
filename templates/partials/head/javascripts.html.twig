@@ -1,0 +1,10 @@
+{# Add JavaScript files to assets #}
+
+{# Set jQuery with high priority to load first #}
+{% do assets.add('jquery',101) %}
+{# Add JavaScript files to assets #}
+{% do assets.addJs('theme://assets/js/browser.min.js', {group:'bottom'}) %}
+{% do assets.addJs('theme://assets/js/breakpoints.min.js', {group:'bottom'}) %}
+{% do assets.addJs('theme://assets/js/util.js', {group:'bottom'}) %}
+{% do assets.addJs('theme://assets/js/main.js', {group:'bottom'}) %}
+{% do assets.addJs('theme://assets/js/custom.js', {group:'bottom'}) %}
