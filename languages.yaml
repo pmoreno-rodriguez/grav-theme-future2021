@@ -2,6 +2,7 @@ en:
   FUTURE:
     ADMIN:
       THEME:
+        GENERAL: General Settings
         DROPDOWN_MENU: Dropdown menu
         PRODUCTION_MODE: Production Mode
         PRODUCTION_MODE_HELP: When enabled, Future will render with minified CSS
@@ -289,6 +290,7 @@ de:
   FUTURE:
     ADMIN:
       THEME:
+        GENERAL: Allgemeine Einstellungen
         DROPDOWN_MENU: Dropdown-Menü
         PRODUCTION_MODE: Produktionsmodus
         PRODUCTION_MODE_HELP: Wenn aktiviert, wird Future mit minimiertem CSS geladen
@@ -573,6 +575,7 @@ es:
   FUTURE:
     ADMIN:
       THEME:
+        GENERAL: Configuración General
         DROPDOWN_MENU: Menu Desplegable
         PRODUCTION_MODE: Modo Producción
         PRODUCTION_MODE_HELP: Si está activado, Future cargará con CSS minificado
@@ -860,6 +863,7 @@ nl:
   FUTURE:
     ADMIN:
       THEME:
+        GENERAL: Algemene instellingen
         DROPDOWN_MENU: Vervolgkeuzemenu
         PRODUCTION_MODE: Productiemodus
         PRODUCTION_MODE_HELP: 'Ingeschakeld: Future weergeven met minified CSS'
