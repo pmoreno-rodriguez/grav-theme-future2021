@@ -7,7 +7,7 @@
    * **Twig Templates**: Updated output filtering practices following security best practices
    * Refactored `onTwigSiteVariables()` to dynamically detect active theme
    * **Changed:** Plugin dependencies are no longer automatically installed. They are now listed as recommendations in the README for manual installation and greater user control.
-   **Refactored:** Theme configuration blueprint has been modularized into separate files (`header.yaml`, `footer.yaml`, etc.) for improved organization and maintainability.
+   * **Refactored:** Theme configuration blueprint has been modularized into separate files (`header.yaml`, `footer.yaml`, etc.) for improved organization and maintainability.
 
 # v2.1.2
 ## 03/13/2025
