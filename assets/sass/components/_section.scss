@@ -1,3 +1,5 @@
+@use "../libs/functions";
+
 ///
 /// Future Imperfect by HTML5 UP
 /// html5up.net | @ajlkn
@@ -14,10 +16,10 @@
 
 	header {
 		p {
-			font-family: _font(family-heading);
+			font-family: functions.font(family-heading);
 			font-size: 0.7em;
-			font-weight: _font(weight-heading);
-			letter-spacing: _font(kerning-heading);
+			font-weight: functions.font(weight-heading);
+			letter-spacing: functions.font(kerning-heading);
 			line-height: 2.5;
 			margin-top: -1em;
 			text-transform: uppercase;

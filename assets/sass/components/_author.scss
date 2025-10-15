@@ -1,3 +1,6 @@
+@use "../libs/functions";
+@use "../libs/vendor";
+
 ///
 /// Future Imperfect by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,21 +10,21 @@
 /* Author */
 
 	.author {
-		@include vendor('display', 'flex');
-		@include vendor('flex-direction', 'row');
-		@include vendor('align-items', 'center');
-		@include vendor('justify-content', 'flex-end');
+		@include vendor.vendor('display', 'flex');
+		@include vendor.vendor('flex-direction', 'row');
+		@include vendor.vendor('align-items', 'center');
+		@include vendor.vendor('justify-content', 'flex-end');
 		border-bottom: 0;
-		font-family: _font(family-heading);
+		font-family: functions.font(family-heading);
 		font-size: 0.6em;
-		font-weight: _font(weight-heading);
-		letter-spacing: _font(kerning-heading);
+		font-weight: functions.font(weight-heading);
+		letter-spacing: functions.font(kerning-heading);
 		text-transform: uppercase;
 		white-space: wrap;
 
 		.name {
-			@include vendor('transition', 'border-bottom-color #{_duration(transition)} ease');
-			border-bottom: dotted 1px _palette(border-alt);
+			@include vendor.vendor('transition', 'border-bottom-color #{functions.duration(transition)} ease');
+			border-bottom: dotted 1px functions.palette(border-alt);
 			display: block;
 			margin: 0 1.5em 0 0;
 		}

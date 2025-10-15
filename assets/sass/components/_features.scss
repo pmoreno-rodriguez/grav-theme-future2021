@@ -1,13 +1,15 @@
+@use "../libs/functions";
+
 /* Feautres */
 
 #features {
 
         header {
             p {
-                font-family: _font(family);
-                font-weight: _font(weight);
+                font-family: functions.font(family);
+                font-weight: functions.font(weight);
                 font-size: inherit;
-                letter-spacing: _font(no-kerning);
+                letter-spacing: functions.font(no-kerning);
                 line-height: inherit;
                 margin: 1em 0;
                 text-transform: initial;

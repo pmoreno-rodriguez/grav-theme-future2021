@@ -1,3 +1,6 @@
+@use "../libs/breakpoints";
+@use "../libs/html-grid";
+
 ///
 /// Future Imperfect by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,25 +10,25 @@
 /* Row */
 
 	.row {
-		@include html-grid(1em);
+		@include html-grid.html-grid(1em);
 
-		@include breakpoint('<=xlarge') {
-			@include html-grid(1em, 'xlarge');
+		@include breakpoints.breakpoint('<=xlarge') {
+			@include html-grid.html-grid(1em, 'xlarge');
 		}
 
-		@include breakpoint('<=large') {
-			@include html-grid(1em, 'large');
+		@include breakpoints.breakpoint('<=large') {
+			@include html-grid.html-grid(1em, 'large');
 		}
 
-		@include breakpoint('<=medium') {
-			@include html-grid(1em, 'medium');
+		@include breakpoints.breakpoint('<=medium') {
+			@include html-grid.html-grid(1em, 'medium');
 		}
 
-		@include breakpoint('<=small') {
-			@include html-grid(1em, 'small');
+		@include breakpoints.breakpoint('<=small') {
+			@include html-grid.html-grid(1em, 'small');
 		}
 
-		@include breakpoint('<=xsmall') {
-			@include html-grid(1em, 'xsmall');
+		@include breakpoints.breakpoint('<=xsmall') {
+			@include html-grid.html-grid(1em, 'xsmall');
 		}
 	}

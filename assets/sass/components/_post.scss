@@ -1,3 +1,8 @@
+@use "../libs/breakpoints";
+@use "../libs/functions";
+@use "../libs/mixins";
+@use "../libs/vendor";
+
 ///
 /// Future Imperfect by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,10 +12,10 @@
 /* Post */
 
 	.post {
-		@include padding(_size(section-spacing), _size(section-spacing));
-		background: _palette(bg);
-		border: solid 1px _palette(border);
-		margin: 0 0 _size(section-spacing) 0;
+		@include mixins.padding(functions.size(section-spacing), functions.size(section-spacing));
+		background: functions.palette(bg);
+		border: solid 1px functions.palette(border);
+		margin: 0 0 functions.size(section-spacing) 0;
 		position: relative;
 
 		img {
@@ -22,20 +27,20 @@
 		}
 
 		> header {
-			@include vendor('display', 'flex');
-			border-bottom: solid 1px _palette(border);
-			left: (_size(section-spacing) * -1);
-			margin: (_size(section-spacing) * -1) 0 _size(section-spacing) 0;
+			@include vendor.vendor('display', 'flex');
+			border-bottom: solid 1px functions.palette(border);
+			left: (functions.size(section-spacing) * -1);
+			margin: (functions.size(section-spacing) * -1) 0 functions.size(section-spacing) 0;
 			position: relative;
-			width: calc(100% + #{_size(section-spacing) * 2});
+			width: calc(100% + #{functions.size(section-spacing) * 2});
 
 			.title {
-				@include vendor('flex-grow', '1');
+				@include vendor.vendor('flex-grow', '1');
 				flex: 1;
-				padding: (_size(section-spacing) * 1.25) _size(section-spacing) (_size(section-spacing) * 1.1) _size(section-spacing);
+				padding: (functions.size(section-spacing) * 1.25) functions.size(section-spacing) (functions.size(section-spacing) * 1.1) functions.size(section-spacing);
 
 				h2 {
-					font-weight: _font(weight-heading-extrabold);
+					font-weight: functions.font(weight-heading-extrabold);
 					font-size: 1.5em;
 				}
 
@@ -45,14 +50,14 @@
 			}
 
 			.meta {
-				@include padding(_size(section-spacing) * 1.25, _size(section-spacing));
-				border-left: solid 1px _palette(border);
+				@include mixins.padding(functions.size(section-spacing) * 1.25, functions.size(section-spacing));
+				border-left: solid 1px functions.palette(border);
 				min-width: 17em;
 				text-align: right;
 				width: 17em;
 
 				> * {
-					margin: 0 0 (_size(element-margin) * 0.5) 0;
+					margin: 0 0 (functions.size(element-margin) * 0.5) 0;
 				}
 
 				> :last-child {
@@ -60,23 +65,23 @@
 				}
 
 				.published {
-					color: _palette(fg-bold);
+					color: functions.palette(fg-bold);
 					display: block;
-					font-family: _font(family-heading);
+					font-family: functions.font(family-heading);
 					font-size: 0.7em;
-					font-weight: _font(weight-heading-bold);
-					letter-spacing: _font(kerning-heading);
+					font-weight: functions.font(weight-heading-bold);
+					letter-spacing: functions.font(kerning-heading);
 					margin-top: 0.5em;
 					text-transform: uppercase;
 					white-space: nowrap;
 				}
 				.reading-time {
-					color: _palette(fg);
+					color: functions.palette(fg);
 					display: block;
-					font-family: _font(family-heading);
+					font-family: functions.font(family-heading);
 					font-size: 0.6em;
-					font-weight: _font(weight);
-					letter-spacing: _font(no-kerning);
+					font-weight: functions.font(weight);
+					letter-spacing: functions.font(no-kerning);
 					margin-top: 0.5em;
 					text-transform: uppercase;
 					white-space: wrap;
@@ -88,22 +93,22 @@
 			overflow: hidden;
 
 			img {
-				@include vendor('transition', 'transform #{_duration(transition)} ease-out');
+				@include vendor.vendor('transition', 'transform #{functions.duration(transition)} ease-out');
 			}
 
 			&:hover {
 				img {
-					@include vendor('transform', 'scale(1.05)');
+					@include vendor.vendor('transform', 'scale(1.05)');
 				}
 			}
 		}
 
 		> footer {
-			@include vendor('display', 'flex');
-			@include vendor('align-items', 'center');
+			@include vendor.vendor('display', 'flex');
+			@include vendor.vendor('align-items', 'center');
 
 			.actions {
-				@include vendor('flex-grow', '1');
+				@include vendor.vendor('flex-grow', '1');
 			}
 
 			.stats {
@@ -116,12 +121,12 @@
 				align-content: center;
 
 				li {
-					border-left: solid 1px _palette(border);
+					border-left: solid 1px functions.palette(border);
 					display: inline-block;
-					font-family: _font(family-heading);
+					font-family: functions.font(family-heading);
 					font-size: 0.6em;
-					font-weight: _font(weight-heading);
-					letter-spacing: _font(kerning-heading);
+					font-weight: functions.font(weight-heading);
+					letter-spacing: functions.font(kerning-heading);
 					// line-height: 1;
 					margin: 0 0 0 2em;
 					padding: 0 0 0 2em;
@@ -137,7 +142,7 @@
 						border-bottom: 0;
 
 						&:before {
-							color: _palette(icon);
+							color: functions.palette(icon);
 							margin-right: 0.75em;
 						}
 					}
@@ -152,10 +157,10 @@
 				align-content: center;
 
 				li {
-					border-left: solid 1px _palette(border);
+					border-left: solid 1px functions.palette(border);
 					display: inline-block;
 					font-size: larger;
-					font-weight: _font(weight-heading);
+					font-weight: functions.font(weight-heading);
 					margin: 0 0 0 1em;
 					padding: 0 0 0 1em;
 					text-transform: uppercase;
@@ -169,37 +174,37 @@
 			}
 		}
 
-		@include breakpoint('<=medium') {
+		@include breakpoints.breakpoint('<=medium') {
 			border-left: 0;
 			border-right: 0;
-			left: _size(section-spacing) * -1;
-			width: calc(100% + (#{_size(section-spacing)} * 2));
+			left: functions.size(section-spacing) * -1;
+			width: calc(100% + (#{functions.size(section-spacing)} * 2));
 
 			> header {
-				@include vendor('flex-direction', 'column');
-				@include padding(_size(section-spacing) * 1.25, _size(section-spacing), (0, 0, -0.5em, 0));
+				@include vendor.vendor('flex-direction', 'column');
+				@include mixins.padding(functions.size(section-spacing) * 1.25, functions.size(section-spacing), (0, 0, -0.5em, 0));
 				border-left: 0;
 
 				.title {
 					flex: 0 1 auto;
-					margin: 0 0 _size(element-margin) 0;
+					margin: 0 0 functions.size(element-margin) 0;
 					padding: 0;
 					text-align: center;
 				}
 
 				.meta {
-					@include vendor('align-items', 'center');
-					@include vendor('display', 'flex');
-					@include vendor('justify-content', 'center');
+					@include vendor.vendor('align-items', 'center');
+					@include vendor.vendor('display', 'flex');
+					@include vendor.vendor('justify-content', 'center');
 					border-left: 0;
-					margin: 0 0 _size(element-margin) 0;
+					margin: 0 0 functions.size(element-margin) 0;
 					padding-top: 0;
 					padding: 0;
 					text-align: left;
 					width: 100%;
 
 					> * {
-						border-left: solid 1px _palette(border);
+						border-left: solid 1px functions.palette(border);
 						margin-left: 2em;
 						padding-left: 2em;
 					}
@@ -216,7 +221,7 @@
 					}
 
 					.author {
-						@include vendor('flex-direction', 'row-reverse');
+						@include vendor.vendor('flex-direction', 'row-reverse');
 						margin-bottom: 0;
 
 						.name {
@@ -231,17 +236,17 @@
 			}
 		}
 
-		@include breakpoint('<=small') {
-			@include padding(_size(section-spacing-small), _size(section-spacing-small));
-			left: _size(section-spacing-small) * -1;
-			margin: 0 0 _size(element-margin) 0;
-			width: calc(100% + (#{_size(section-spacing-small)} * 2));
+		@include breakpoints.breakpoint('<=small') {
+			@include mixins.padding(functions.size(section-spacing-small), functions.size(section-spacing-small));
+			left: functions.size(section-spacing-small) * -1;
+			margin: 0 0 functions.size(element-margin) 0;
+			width: calc(100% + (#{functions.size(section-spacing-small)} * 2));
 
 			> header {
-				@include padding(_size(section-spacing-small) * 2, _size(section-spacing-small), (0, 0, -0.5em, 0));
-				left: (_size(section-spacing-small) * -1);
-				margin: (_size(section-spacing-small) * -1) 0 _size(section-spacing-small) 0;
-				width: calc(100% + #{_size(section-spacing-small) * 2});
+				@include mixins.padding(functions.size(section-spacing-small) * 2, functions.size(section-spacing-small), (0, 0, -0.5em, 0));
+				left: (functions.size(section-spacing-small) * -1);
+				margin: (functions.size(section-spacing-small) * -1) 0 functions.size(section-spacing-small) 0;
+				width: calc(100% + #{functions.size(section-spacing-small) * 2});
 
 				.title {
 					h2 {
@@ -250,20 +255,20 @@
 				}
 			}
 			> footer {
-				@include vendor('align-items', 'stretch');
-				@include vendor('flex-direction', 'column-reverse');
+				@include vendor.vendor('align-items', 'stretch');
+				@include vendor.vendor('flex-direction', 'column-reverse');
 			}
 		}
 
-		@include breakpoint('<=xsmall') {
+		@include breakpoints.breakpoint('<=xsmall') {
 			> header {
 				.meta {
-					@include vendor('align-items', 'center');
-					@include vendor('flex-direction', 'column');
+					@include vendor.vendor('align-items', 'center');
+					@include vendor.vendor('flex-direction', 'column');
 
 					> * {
 						border-left: 0;
-						margin: (_size(element-margin) * 0.5) 0 0 0;
+						margin: (functions.size(element-margin) * 0.5) 0 0 0;
 						padding-left: 0;
 					}
 
@@ -276,9 +281,9 @@
 			}
 
 			> .image.featured {
-				margin-left: _size(section-spacing-small) * -1;
-				margin-top: calc(#{_size(section-spacing-small) * -1} - 1px);
-				width: calc(100% + #{_size(section-spacing-small) * 2});
+				margin-left: functions.size(section-spacing-small) * -1;
+				margin-top: calc(#{functions.size(section-spacing-small) * -1} - 1px);
+				width: calc(100% + #{functions.size(section-spacing-small) * 2});
 			}
 		}
 	}

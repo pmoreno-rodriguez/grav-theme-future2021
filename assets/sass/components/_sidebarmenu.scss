@@ -1,8 +1,11 @@
+@use "../libs/breakpoints";
+@use "../libs/functions";
+
 /* Sidebar menu */
 
 #sidebarmenu {display: none;}
 
-@include breakpoint('<=medium') {
+@include breakpoints.breakpoint('<=medium') {
 
 #sidebarmenu {
     display: block; }
@@ -18,30 +21,30 @@ ul.menulink > li,
 ul.menulink > li > ul
 {
     list-style: none;
-    font-family: _font(family-heading);
+    font-family: functions.font(family-heading);
     padding: 0.1em 0 0 0;
     line-height: 2.3em;
     -webkit-transition: color 0.2s ease;
     transition: color 0.2s ease;
     text-transform: uppercase;
-    font-weight: _font(weight-medium);
+    font-weight: functions.font(weight-medium);
 }
 ul.menulink > li a.tags {
     border: dotted 1px rgba(119, 118, 118, 0.65);
     padding: 0.2em;
     font-size: 0.8em;
     text-transform: uppercase;
-    font-weight: _font(weight);
+    font-weight: functions.font(weight);
 }
 ul.menulink > li a:hover.tags  {
-    background-color: _palette(accent);
-    color: _palette(bg-alt) !important;
+    background-color: functions.palette(accent);
+    color: functions.palette(bg-alt) !important;
 }
 
 ul.menulink > li > ul > li {
     -webkit-transition: color 0.2s ease;
     transition: color 0.2s ease;
-    font-weight: _font(weight);
+    font-weight: functions.font(weight);
     text-transform: uppercase;
     font-size: 0.9em;
 }
@@ -51,7 +54,7 @@ list-style-type: none;
 }
 
 ul.menulink > li a:hover span {
-    color: _palette(accent) !important;
+    color: functions.palette(accent) !important;
 }
 ul.subitem {
     display:block;

@@ -1,3 +1,7 @@
+@use "../libs/breakpoints";
+@use "../libs/functions";
+@use "../libs/vendor";
+
 ///
 /// Future Imperfect by HTML5 UP
 /// html5up.net | @ajlkn
@@ -17,7 +21,7 @@
 		}
 
 	// Ensures page width is always >=320px.
-		@include breakpoint('<=xsmall') {
+		@include breakpoints.breakpoint('<=xsmall') {
 			html, body {
 				min-width: auto;
 			}
@@ -34,13 +38,13 @@
 		}
 
 	body {
-		background: _palette(bg-alt);
+		background: functions.palette(bg-alt);
 
 		// Stops initial animations until page loads.
 			&.is-preload {
 				*, *:before, *:after {
-					@include vendor('animation', 'none !important');
-					@include vendor('transition', 'none !important');
+					@include vendor.vendor('animation', 'none !important');
+					@include vendor.vendor('transition', 'none !important');
 				}
 			}
 

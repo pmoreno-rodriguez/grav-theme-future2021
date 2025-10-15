@@ -1,3 +1,5 @@
+@use "../libs/functions";
+
 /*
 Future2021
 Grav Theme by Pedro Moreno
@@ -16,7 +18,7 @@ CSS Styles for Page Toc Plugin
 
 	ul {
 		list-style: none;
-		font-family: _font(family-heading);
+		font-family: functions.font(family-heading);
 		font-size: 1em;
 		padding: 0.5em 0 0 0;
 		margin: 0em;

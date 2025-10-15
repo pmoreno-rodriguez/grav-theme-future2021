@@ -1,3 +1,6 @@
+@use "../libs/breakpoints";
+@use "../libs/functions";
+
 ///
 /// Future Imperfect by HTML5 UP
 /// html5up.net | @ajlkn
@@ -38,7 +41,7 @@
 
 		&.fit {
 			display: block;
-			margin: 0 0 _size(element-margin) 0;
+			margin: 0 0 functions.size(element-margin) 0;
 			width: 100%;
 
 			img {
@@ -48,21 +51,21 @@
 
 		&.featured {
 			display: block;
-			margin: 0 0 _size(section-spacing) 0;
+			margin: 0 0 functions.size(section-spacing) 0;
 			width: 100%;
 
 			img {
 				width: 100%;
 			}
 
-			@include breakpoint('<=small') {
-				margin: 0 0 _size(section-spacing-small) 0;
+			@include breakpoints.breakpoint('<=small') {
+				margin: 0 0 functions.size(section-spacing-small) 0;
 			}
 		}
 
 		&.main {
 			display: block;
-			margin: 0 0 (_size(element-margin) * 1.5) 0;
+			margin: 0 0 (functions.size(element-margin) * 1.5) 0;
 			width: 100%;
 
 			img {

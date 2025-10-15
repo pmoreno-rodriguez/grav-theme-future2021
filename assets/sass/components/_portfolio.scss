@@ -1,3 +1,5 @@
+@use "../libs/breakpoints";
+
 
 /* Portofolio */
 
@@ -12,13 +14,13 @@
         margin-bottom: 10px;
     }
 
-    @include breakpoint('<=small') {
+    @include breakpoints.breakpoint('<=small') {
         .portfolio_container{
             display: block;
             width: 100%;
         }
     }
-    @include breakpoint('<=xlarge') {
+    @include breakpoints.breakpoint('<=xlarge') {
         .portfolio_container{
             width: 33.33333%;
         }

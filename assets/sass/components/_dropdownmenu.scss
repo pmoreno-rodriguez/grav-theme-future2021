@@ -1,13 +1,17 @@
+@use "../libs/breakpoints";
+@use "../libs/functions";
+@use "../libs/vendor";
+
 /* Dropdown menu in header */
 
 #header {
     
     .dropdown {
-    @include vendor('flex', '1');
-    border-left: solid 1px _palette(border);
+    @include vendor.vendor('flex', '1');
+    border-left: solid 1px functions.palette(border);
     height: inherit;
     line-height: inherit;
-    margin-left: _size(section-spacing-small); 
+    margin-left: functions.size(section-spacing-small); 
         li {
             position: relative;
             float: left;
@@ -15,9 +19,9 @@
             font-size: 14pt;
             height: inherit; 
             a {
-                font-family: _font(family-heading);
+                font-family: functions.font(family-heading);
                 font-size: 0.7em;
-                font-weight: _font(weight);
+                font-weight: functions.font(weight);
                 letter-spacing: 0.20em;
                 border-bottom: none;
                 padding: 0 0.8rem;
@@ -29,17 +33,17 @@
                 margin: 0;
                 padding: 0;
                 list-style: none;
-                @include vendor('display', 'none');
+                @include vendor.vendor('display', 'none');
                 line-height: normal;
-                background-color: _palette(bg-dropdown);
-                box-shadow: 0 0.05rem 1rem _palette(border-dropdown) !important;
-                z-index: _misc(z-index-base) + 2;
+                background-color: functions.palette(bg-dropdown);
+                box-shadow: 0 0.05rem 1rem functions.palette(border-dropdown) !important;
+                z-index: functions.misc(z-index-base) + 2;
                 li {
                     
                     a {
-                    font-family: _font(family-heading);
+                    font-family: functions.font(family-heading);
                     font-size: 0.7em;
-                    font-weight: _font(weight);
+                    font-weight: functions.font(weight);
                     letter-spacing: 0.20em;
                     text-transform: uppercase;
                     border-bottom: none;
@@ -73,24 +77,24 @@
                 //     padding: 0.5rem 0.8rem;
                 // }
                 &:hover>ul {
-                    @include vendor('display', 'flex');
-                    @include vendor('flex-direction', 'column');
-                    @include vendor('flex-wrap', 'nowrap');
+                    @include vendor.vendor('display', 'flex');
+                    @include vendor.vendor('flex-direction', 'column');
+                    @include vendor.vendor('flex-wrap', 'nowrap');
                     min-width: 15em;
                     border: solid 1px rgba(160, 160, 160, 0.3);
-                    background-color: _palette(bg);
-                    box-shadow: 0 0.05rem 1rem _palette(border-dropdown) !important;
+                    background-color: functions.palette(bg);
+                    box-shadow: 0 0.05rem 1rem functions.palette(border-dropdown) !important;
                 }
                 
             }
         }
     }
-    @include breakpoint('<=medium') {
+    @include breakpoints.breakpoint('<=medium') {
         .dropdown {
             display: none; 
             } 
         }
-    @include breakpoint('<=small') {
+    @include breakpoints.breakpoint('<=small') {
         .dropdown {
             margin-left: -1rem;
             margin-right: -1rem; }

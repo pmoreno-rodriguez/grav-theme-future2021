@@ -1,9 +1,10 @@
-@import 'libs/vars';
-@import 'libs/functions';
-@import 'libs/mixins';
-@import 'libs/vendor';
-@import 'libs/breakpoints';
-@import 'libs/html-grid';
+@use "sass:meta";
+@use 'libs/vars';
+@use 'libs/functions';
+@use 'libs/mixins';
+@use 'libs/vendor';
+@use 'libs/breakpoints';
+@use 'libs/html-grid';
 // @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Raleway:400,800,900');
 
 /*
@@ -14,7 +15,7 @@
 
 // Breakpoints.
 
-	@include breakpoints((
+	@include breakpoints.breakpoints((
 		xlarge:   ( 1281px,  1680px ),
 		large:    ( 981px,   1280px ),
 		medium:   ( 737px,   980px  ),
@@ -24,47 +25,47 @@
 
 // Base.
 
-	@import 'base/reset';
-	@import 'base/page';
-	@import 'base/typography';
+	@include meta.load-css('base/reset');
+	@include meta.load-css('base/page');
+	@include meta.load-css('base/typography');
 
 // Component.
 
-	@import 'components/row';
-	@import 'components/author';
-	@import 'components/blurb';
-	@import 'components/box';
-	@import 'components/button';
-	@import 'components/form';
-	@import 'components/icon';
-	@import 'components/image';
-	@import 'components/list';
-	@import 'components/actions';
-	@import 'components/icons';
-	@import 'components/posts';
-	@import 'components/mini-post';
-	@import 'components/post';
-	@import 'components/section';
-	@import 'components/table';
-	@import 'components/portfolio';
-	@import 'components/banner';
-	@import 'components/features';
-	@import 'components/logo';
-	@import 'components/dropdownmenu';
-	@import 'components/sidebarmenu';
-	@import 'components/headings.scss';
+	@include meta.load-css('components/row');
+	@include meta.load-css('components/author');
+	@include meta.load-css('components/blurb');
+	@include meta.load-css('components/box');
+	@include meta.load-css('components/button');
+	@include meta.load-css('components/form');
+	@include meta.load-css('components/icon');
+	@include meta.load-css('components/image');
+	@include meta.load-css('components/list');
+	@include meta.load-css('components/actions');
+	@include meta.load-css('components/icons');
+	@include meta.load-css('components/posts');
+	@include meta.load-css('components/mini-post');
+	@include meta.load-css('components/post');
+	@include meta.load-css('components/section');
+	@include meta.load-css('components/table');
+	@include meta.load-css('components/portfolio');
+	@include meta.load-css('components/banner');
+	@include meta.load-css('components/features');
+	@include meta.load-css('components/logo');
+	@include meta.load-css('components/dropdownmenu');
+	@include meta.load-css('components/sidebarmenu');
+	@include meta.load-css('components/headings.scss');
 
 // Layout.
 
-	@import 'layout/header';
-	@import 'layout/wrapper';
-	@import 'layout/main';
-	@import 'layout/sidebar';
-	@import 'layout/intro';
-	@import 'layout/footer';
-	@import 'layout/menu';
+	@include meta.load-css('layout/header');
+	@include meta.load-css('layout/wrapper');
+	@include meta.load-css('layout/main');
+	@include meta.load-css('layout/sidebar');
+	@include meta.load-css('layout/intro');
+	@include meta.load-css('layout/footer');
+	@include meta.load-css('layout/menu');
 
 // Grav Plugins.
 	
-	@import 'grav-plugins/page-toc.scss';
-	@import 'grav-plugins/langswitcher';
+	@include meta.load-css('grav-plugins/page-toc.scss');
+	@include meta.load-css('grav-plugins/langswitcher');

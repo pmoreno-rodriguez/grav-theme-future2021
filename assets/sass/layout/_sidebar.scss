@@ -1,3 +1,6 @@
+@use "../libs/breakpoints";
+@use "../libs/functions";
+
 ///
 /// Future Imperfect by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,14 +10,14 @@
 /* Sidebar */
 
 	#sidebar {
-		margin-right: _size(section-spacing);
+		margin-right: functions.size(section-spacing);
 		min-width: 20%;
 		width: 25%;
 
 		> * {
-			border-top: solid 1px _palette(border);
-			margin: _size(section-spacing) 0 0 0;
-			padding: _size(section-spacing) 0 0 0;
+			border-top: solid 1px functions.palette(border);
+			margin: functions.size(section-spacing) 0 0 0;
+			padding: functions.size(section-spacing) 0 0 0;
 		}
 
 		> :first-child {
@@ -23,11 +26,11 @@
 			padding-top: 0;
 		}
 
-		@include breakpoint('<=large') {
-			border-top: solid 1px _palette(border);
-			margin: _size(section-spacing) 0 0 0;
+		@include breakpoints.breakpoint('<=large') {
+			border-top: solid 1px functions.palette(border);
+			margin: functions.size(section-spacing) 0 0 0;
 			min-width: 0;
-			padding: _size(section-spacing) 0 0 0;
+			padding: functions.size(section-spacing) 0 0 0;
 			width: 100%;
 			overflow-x: hidden;
 		}

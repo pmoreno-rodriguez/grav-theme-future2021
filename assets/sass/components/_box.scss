@@ -1,3 +1,5 @@
+@use "../libs/functions";
+
 ///
 /// Future Imperfect by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,8 +9,8 @@
 /* Box */
 
 	.box {
-		border: solid 1px _palette(border);
-		margin-bottom: _size(element-margin);
+		border: solid 1px functions.palette(border);
+		margin-bottom: functions.size(element-margin);
 		padding: 0em;
 
 		> :last-child,
@@ -19,63 +21,63 @@
 		}
 
 		&.primary {
-			background-color: _palette(accent);
+			background-color: functions.palette(accent);
 			box-shadow: none;
-			color: _palette(bg) !important;
+			color: functions.palette(bg) !important;
 
 			h1,h2,h3,h4,h5,h6 {
-				color: _palette(bg) !important;
+				color: functions.palette(bg) !important;
 			}
 		}
 
 		&.secondary {
-			background-color: _palette(secondary);
+			background-color: functions.palette(secondary);
 			box-shadow: none;
-			color: _palette(bg-alt) !important;
+			color: functions.palette(bg-alt) !important;
 
 			h1,h2,h3,h4,h5,h6 {
-				color: _palette(bg-alt) !important;
+				color: functions.palette(bg-alt) !important;
 			}
 			
 		}
 
 		&.success {
-			background-color: _palette(success);
+			background-color: functions.palette(success);
 			box-shadow: none;
-			color: _palette(bg-alt) !important;
+			color: functions.palette(bg-alt) !important;
 
 			h1,h2,h3,h4,h5,h6 {
-				color: _palette(bg-alt) !important;
+				color: functions.palette(bg-alt) !important;
 			}
 		}
 
 		&.info {
-			background-color: _palette(info);
+			background-color: functions.palette(info);
 			box-shadow: none;
-			color: _palette(bg-alt) !important;
+			color: functions.palette(bg-alt) !important;
 
 			h1,h2,h3,h4,h5,h6 {
-				color: _palette(bg-alt) !important;
+				color: functions.palette(bg-alt) !important;
 			}
 		}
 
 		&.warning {
-			background-color: _palette(warning);
+			background-color: functions.palette(warning);
 			box-shadow: none;
-			color: _palette(fg-bold) !important;
+			color: functions.palette(fg-bold) !important;
 
 			h1,h2,h3,h4,h5,h6 {
-				color: _palette(fg-bold) !important;
+				color: functions.palette(fg-bold) !important;
 			}
 		}
 
 		&.danger {
-			background-color: _palette(danger);
+			background-color: functions.palette(danger);
 			box-shadow: none;
-			color: _palette(bg-alt) !important;
+			color: functions.palette(bg-alt) !important;
 
 			h1,h2,h3,h4,h5,h6 {
-				color: _palette(bg-alt) !important;
+				color: functions.palette(bg-alt) !important;
 			}
 		}
 

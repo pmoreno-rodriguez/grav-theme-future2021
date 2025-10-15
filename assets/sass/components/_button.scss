@@ -1,3 +1,7 @@
+@use "sass:color";
+@use "../libs/functions";
+@use "../libs/vendor";
+
 ///
 /// Future Imperfect by HTML5 UP
 /// html5up.net | @ajlkn
@@ -11,24 +15,24 @@
 	input[type="button"],
 	button,
 	.button {
-		@include vendor('appearance', 'none');
-		@include vendor('transition', (
-			'background-color #{_duration(transition)} ease',
-			'box-shadow #{_duration(transition)} ease',
-			'color #{_duration(transition)} ease'
+		@include vendor.vendor('appearance', 'none');
+		@include vendor.vendor('transition', (
+			'background-color #{functions.duration(transition)} ease',
+			'box-shadow #{functions.duration(transition)} ease',
+			'color #{functions.duration(transition)} ease'
 		));
 		background-color: transparent;
 		border: 0;
-		box-shadow: inset 0 0 0 1px _palette(border);
-		color: _palette(fg-bold) !important;
+		box-shadow: inset 0 0 0 1px functions.palette(border);
+		color: functions.palette(fg-bold) !important;
 		cursor: pointer;
 		display: inline-block;
-		font-family: _font(family-heading);
+		font-family: functions.font(family-heading);
 		font-size: 0.6em;
-		font-weight: _font(weight-heading-bold);
+		font-weight: functions.font(weight-heading-bold);
 		height: auto;
-		letter-spacing: _font(kerning-heading);
-		line-height: _size(element-height) * 1.5;
+		letter-spacing: functions.font(kerning-heading);
+		line-height: functions.size(element-height) * 1.5;
 		padding: 0 2.5em;
 		text-align: center;
 		text-decoration: none;
@@ -36,16 +40,16 @@
 		white-space: normal;
 
 		&:hover {
-			box-shadow: inset 0 0 0 1px _palette(accent);
-			color: _palette(accent) !important;
+			box-shadow: inset 0 0 0 1px functions.palette(accent);
+			color: functions.palette(accent) !important;
 
 			&:active {
-				background-color: transparentize(_palette(accent), 0.95);
+				background-color: color.adjust(functions.palette(accent), $alpha: -0.95);
 			}
 		}
 
 		&:before, &:after {
-			color: _palette(fg-light);
+			color: functions.palette(fg-light);
 			position: relative;
 		}
 
@@ -72,94 +76,94 @@
 			font-size: 0.5em;
 		}
 		&.primary {
-			background-color: _palette(accent);
+			background-color: functions.palette(accent);
 			box-shadow: none;
-			color: _palette(bg) !important;
+			color: functions.palette(bg) !important;
 
 			&:hover {
-				background-color: lighten(_palette(accent), 3);
+				background-color: color.adjust(functions.palette(accent), $lightness: 3);
 			}
 
 			&:active {
-				background-color: darken(_palette(accent), 3);
+				background-color: color.adjust(functions.palette(accent), $lightness: -3);
 			}
 		}
 
 		&.secondary {
-			background-color: _palette(secondary);
+			background-color: functions.palette(secondary);
 			box-shadow: none;
-			color: _palette(bg) !important;
+			color: functions.palette(bg) !important;
 
 			&:hover {
-				background-color: lighten(_palette(secondary), 3);
+				background-color: color.adjust(functions.palette(secondary), $lightness: 3);
 			}
 
 			&:active {
-				background-color: darken(_palette(secondary), 3);
+				background-color: color.adjust(functions.palette(secondary), $lightness: -3);
 			}
 		}
 		&.success {
-			background-color: _palette(success);
+			background-color: functions.palette(success);
 			box-shadow: none;
-			color: _palette(bg) !important;
+			color: functions.palette(bg) !important;
 
 			&:hover {
-				background-color: lighten(_palette(success), 3);
+				background-color: color.adjust(functions.palette(success), $lightness: 3);
 			}
 
 			&:active {
-				background-color: darken(_palette(success), 3);
+				background-color: color.adjust(functions.palette(success), $lightness: -3);
 			}
 		}
 
 		&.info {
-			background-color: _palette(info);
+			background-color: functions.palette(info);
 			box-shadow: none;
-			color: _palette(bg) !important;
+			color: functions.palette(bg) !important;
 
 			&:hover {
-				background-color: lighten(_palette(info), 3);
+				background-color: color.adjust(functions.palette(info), $lightness: 3);
 			}
 
 			&:active {
-				background-color: darken(_palette(info), 3);
+				background-color: color.adjust(functions.palette(info), $lightness: -3);
 			}
 		}
 
 		&.warning {
-			background-color: _palette(warning);
+			background-color: functions.palette(warning);
 			box-shadow: none;
-			color: _palette(fg-bold) !important;
+			color: functions.palette(fg-bold) !important;
 
 			&:hover {
-				background-color: lighten(_palette(warning), 3);
+				background-color: color.adjust(functions.palette(warning), $lightness: 3);
 			}
 
 			&:active {
-				background-color: darken(_palette(warning), 3);
+				background-color: color.adjust(functions.palette(warning), $lightness: -3);
 			}
 		}
 
 		&.danger {
-			background-color: _palette(danger);
+			background-color: functions.palette(danger);
 			box-shadow: none;
-			color: _palette(bg) !important;
+			color: functions.palette(bg) !important;
 
 			&:hover {
-				background-color: lighten(_palette(danger), 3);
+				background-color: color.adjust(functions.palette(danger), $lightness: 3);
 			}
 
 			&:active {
-				background-color: darken(_palette(danger), 3);
+				background-color: color.adjust(functions.palette(danger), $lightness: -3);
 			}
 		}
 		&.disabled,
 		&:disabled {
-			@include vendor('pointer-events', 'none');
-			color: _palette(border) !important;
+			@include vendor.vendor('pointer-events', 'none');
+			color: functions.palette(border) !important;
 
 			&:before {
-				color: _palette(border) !important;
+				color: functions.palette(border) !important;
 			}
 		}
 	}

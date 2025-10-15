@@ -1,9 +1,12 @@
+@use "../libs/breakpoints";
+@use "../libs/functions";
+
 /* Logo */@at-root
 
 #header .logo {
-    font-family: _font(family-heading);
+    font-family: functions.font(family-heading);
     font-size: 1.3em;
-    font-weight: _font(weight-heading-bold);
+    font-weight: functions.font(weight-heading-bold);
     height: inherit;
     line-height: inherit;
     padding: 0 0 0 1.5em;
@@ -23,7 +26,7 @@
         }
         
 
-    @include breakpoint('<=small') {
+    @include breakpoints.breakpoint('<=small') {
     font-size: 1em;
     }
 }

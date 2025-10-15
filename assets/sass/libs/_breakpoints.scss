@@ -1,3 +1,7 @@
+@use "sass:list";
+@use "sass:map";
+@use "sass:meta";
+@use "sass:string";
 // breakpoints.scss v1.0 | @ajlkn | MIT licensed */
 
 // Vars.
@@ -33,42 +37,42 @@
 		// Determine operator, breakpoint.
 
 			// Greater than or equal.
-				@if (str-slice($query, 0, 2) == '>=') {
+				@if (string.slice($query, 0, 2) == '>=') {
 
 					$op: 'gte';
-					$breakpoint: str-slice($query, 3);
+					$breakpoint: string.slice($query, 3);
 
 				}
 
 			// Less than or equal.
-				@else if (str-slice($query, 0, 2) == '<=') {
+				@else if (string.slice($query, 0, 2) == '<=') {
 
 					$op: 'lte';
-					$breakpoint: str-slice($query, 3);
+					$breakpoint: string.slice($query, 3);
 
 				}
 
 			// Greater than.
-				@else if (str-slice($query, 0, 1) == '>') {
+				@else if (string.slice($query, 0, 1) == '>') {
 
 					$op: 'gt';
-					$breakpoint: str-slice($query, 2);
+					$breakpoint: string.slice($query, 2);
 
 				}
 
 			// Less than.
-				@else if (str-slice($query, 0, 1) == '<') {
+				@else if (string.slice($query, 0, 1) == '<') {
 
 					$op: 'lt';
-					$breakpoint: str-slice($query, 2);
+					$breakpoint: string.slice($query, 2);
 
 				}
 
 			// Not.
-				@else if (str-slice($query, 0, 1) == '!') {
+				@else if (string.slice($query, 0, 1) == '!') {
 
 					$op: 'not';
-					$breakpoint: str-slice($query, 2);
+					$breakpoint: string.slice($query, 2);
 
 				}
 
@@ -81,15 +85,15 @@
 				}
 
 		// Build media.
-			@if ($breakpoint and map-has-key($breakpoints, $breakpoint)) {
+			@if ($breakpoint and map.has-key($breakpoints, $breakpoint)) {
 
-				$a: map-get($breakpoints, $breakpoint);
+				$a: map.get($breakpoints, $breakpoint);
 
 				// Range.
-					@if (type-of($a) == 'list') {
+					@if (meta.type-of($a) == 'list') {
 
-						$x: nth($a, 1);
-						$y: nth($a, 2);
+						$x: list.nth($a, 1);
+						$y: list.nth($a, 2);
 
 						// Max only.
 							@if ($x == null) {
@@ -202,7 +206,7 @@
 					@else {
 
 						// Missing a media type? Prefix with "screen".
-							@if (str-slice($a, 0, 1) == '(') {
+							@if (string.slice($a, 0, 1) == '(') {
 								$media: 'screen and ' + $a;
 							}
 

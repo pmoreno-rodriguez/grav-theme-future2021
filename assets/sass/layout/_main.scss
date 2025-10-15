@@ -1,3 +1,5 @@
+@use "../libs/vendor";
+
 ///
 /// Future Imperfect by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,7 +9,7 @@
 /* Main */
 
 	#main {
-		@include vendor('flex-grow', '1');
+		@include vendor.vendor('flex-grow', '1');
 		flex: 1;
 		-ms-flex: 1;
 		min-width: 70%;

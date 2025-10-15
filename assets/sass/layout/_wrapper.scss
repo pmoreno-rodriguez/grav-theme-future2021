@@ -1,3 +1,7 @@
+@use "../libs/breakpoints";
+@use "../libs/functions";
+@use "../libs/vendor";
+
 ///
 /// Future Imperfect by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,29 +11,29 @@
 /* Wrapper */
 
 	#wrapper {
-		@include vendor('display', 'flex');
-		@include vendor('flex-direction', 'row-reverse');
-		@include vendor('transition', 'opacity #{_duration(menu)} ease');
+		@include vendor.vendor('display', 'flex');
+		@include vendor.vendor('flex-direction', 'row-reverse');
+		@include vendor.vendor('transition', 'opacity #{functions.duration(menu)} ease');
 		margin: 0 auto;
 		max-width: 100%;
 		opacity: 1;
-		padding: (_size(section-spacing) * 1.5);
+		padding: (functions.size(section-spacing) * 1.5);
 		width: 100%;
 
 		body.is-menu-visible & {
 			opacity: 0.15;
 		}
 
-		@include breakpoint('<=xlarge') {
-			padding: _size(section-spacing);
+		@include breakpoints.breakpoint('<=xlarge') {
+			padding: functions.size(section-spacing);
 		}
 
-		@include breakpoint('<=large') {
+		@include breakpoints.breakpoint('<=large') {
 			display: block;
 		}
 
-		@include breakpoint('<=small') {
-			padding: _size(section-spacing-small);
+		@include breakpoints.breakpoint('<=small') {
+			padding: functions.size(section-spacing-small);
 		}
 
 		body.single & {

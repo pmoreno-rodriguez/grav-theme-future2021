@@ -1,3 +1,6 @@
+@use "../libs/functions";
+@use "../libs/vendor";
+
 ///
 /// Future Imperfect by HTML5 UP
 /// html5up.net | @ajlkn
@@ -12,9 +15,9 @@
 		margin-bottom: 0.25rem;
 
 		li {
-			border-top: dotted 1px _palette(border);
-			margin: (_size(element-margin) * 0.125) 0 0 0;
-			padding: (_size(element-margin) * 0.125) 0 0 0;
+			border-top: dotted 1px functions.palette(border);
+			margin: (functions.size(element-margin) * 0.125) 0 0 0;
+			padding: (functions.size(element-margin) * 0.125) 0 0 0;
 
 			&:first-child {
 				border-top: 0;
@@ -24,9 +27,9 @@
 		}
 
 		article {
-			@include vendor('display', 'flex');
-			@include vendor('align-items', 'flex-start');
-			@include vendor('flex-direction', 'row-reverse');
+			@include vendor.vendor('display', 'flex');
+			@include vendor.vendor('align-items', 'flex-start');
+			@include vendor.vendor('flex-direction', 'row-reverse');
 
 			.image {
 				display: block;
@@ -40,7 +43,7 @@
 			}
 
 			header {
-				@include vendor('flex-grow', '1');
+				@include vendor.vendor('flex-grow', '1');
 				flex: 1;
 				-ms-flex: 1;
 
@@ -52,11 +55,11 @@
 
 				.published {
 					display: block;
-					font-family: _font(family-heading);
+					font-family: functions.font(family-heading);
 					font-size: 0.6em;
-					font-weight: _font(weight-heading);
-					letter-spacing: _font(kerning-heading);
-					margin: -0.625em 0 (_size(element-margin) * 0.85) 0;
+					font-weight: functions.font(weight-heading);
+					letter-spacing: functions.font(kerning-heading);
+					margin: -0.625em 0 (functions.size(element-margin) * 0.85) 0;
 					text-transform: uppercase;
 				}
 

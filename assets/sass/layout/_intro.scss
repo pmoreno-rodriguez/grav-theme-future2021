@@ -1,3 +1,7 @@
+@use "../libs/breakpoints";
+@use "../libs/functions";
+@use "../libs/mixins";
+
 ///
 /// Future Imperfect by HTML5 UP
 /// html5up.net | @ajlkn
@@ -10,13 +14,13 @@
 	.logo {
 		border-bottom: 0;
 		display: inline-block;
-		margin: 0 0 (_size(element-margin) * 0.5) 0;
+		margin: 0 0 (functions.size(element-margin) * 0.5) 0;
 		overflow: hidden;
 		position: relative;
 		width: 4em;
     
 		&:before {
-			background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="none" zoomAndPan="disable"><polygon points="0,0 100,0 100,25 50,0 0,25" style="fill:#{_palette(bg-alt)}" /><polygon points="0,100 100,100 100,75 50,100 0,75"  style="fill:#{_palette(bg-alt)}" /></svg>');
+			background-image: mixins.svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="none" zoomAndPan="disable"><polygon points="0,0 100,0 100,25 50,0 0,25" style="fill:#{functions.palette(bg-alt)}" /><polygon points="0,100 100,100 100,75 50,100 0,75"  style="fill:#{functions.palette(bg-alt)}" /></svg>');
 			background-position: top left;
 			background-repeat: no-repeat;
 			background-size: 100% 100%;
@@ -39,7 +43,7 @@
 	header {
 		h2 {
 			font-size: 2em;
-			font-weight: _font(weight-heading-extrabold);
+			font-weight: functions.font(weight-heading-extrabold);
 		}
 
 		p {
@@ -47,14 +51,14 @@
 		}
 	}
 
-	@include breakpoint('<=large') {
-		margin: 0 0 _size(section-spacing) 0;
+	@include breakpoints.breakpoint('<=large') {
+		margin: 0 0 functions.size(section-spacing) 0;
 		text-align: center;
 
 		header {
 			h2 {
 				font-size: 2em;
-				font-weight: _font(weight-heading-extrabold);
+				font-weight: functions.font(weight-heading-extrabold);
 			}
 
 			p {
@@ -63,8 +67,8 @@
 		}
 	}
 
-	@include breakpoint('<=small') {
-		margin: 0 0 _size(section-spacing-small) 0;
+	@include breakpoints.breakpoint('<=small') {
+		margin: 0 0 functions.size(section-spacing-small) 0;
 		padding: 1.25em 0;
 
 		> :last-child {
@@ -72,7 +76,7 @@
 		}
 
 		.logo {
-			margin: 0 0 (_size(element-margin) * 0.25) 0;
+			margin: 0 0 (functions.size(element-margin) * 0.25) 0;
 		}
 
 		header {
@@ -85,7 +89,7 @@
 			}
 
 			.logo {
-				margin: 0 0 (_size(element-margin) * 0.25) 0;
+				margin: 0 0 (functions.size(element-margin) * 0.25) 0;
 			}
 
 			header {
