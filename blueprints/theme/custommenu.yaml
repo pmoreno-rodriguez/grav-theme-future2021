@@ -1,0 +1,42 @@
+form:
+  validation: loose
+  fields:
+
+    custommenus.enabled:
+      type: toggle
+      label: FUTURE.ADMIN.THEME.CUSTOM_MENU_ENABLE
+      help: FUTURE.ADMIN.THEME.CUSTOM_MENU_ENABLE_HELP
+      default: 1
+      highlight: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    custommenu:
+      name: menu
+      type: list
+      label: FUTURE.ADMIN.THEME.CUSTOM_MENU_TITLE
+      fields:
+        .text:
+          type: text
+          label: FUTURE.ADMIN.THEME.CUSTOM_MENU_ITEM_TEXT
+          description: FUTURE.ADMIN.THEME.CUSTOM_MENU_ITEM_TEXT_DESCRIPTION
+        .icon:
+          type: text
+          label: FUTURE.ADMIN.THEME.CUSTOM_MENU_ITEM_ICON
+          description: FUTURE.ADMIN.THEME.CUSTOM_MENU_ITEM_ICON_DESCRIPTION
+        .url:
+          type: text
+          label: FUTURE.ADMIN.THEME.CUSTOM_MENU_ITEM_URL
+          description: FUTURE.ADMIN.THEME.CUSTOM_MENU_ITEM_URL_DESCRIPTION
+        .target:
+          type: select
+          label: FUTURE.ADMIN.THEME.CUSTOM_MENU_ITEM_TARGET
+          default: _self
+          size: medium
+          options:
+            _blank: FUTURE.ADMIN.THEME.CUSTOM_MENU_ITEM_TARGET_BLANK
+            _parent: FUTURE.ADMIN.THEME.CUSTOM_MENU_ITEM_TARGET_PARENT
+            _self: FUTURE.ADMIN.THEME.CUSTOM_MENU_ITEM_TARGET_SELF
+            _top: FUTURE.ADMIN.THEME.CUSTOM_MENU_ITEM_TARGET_TOP

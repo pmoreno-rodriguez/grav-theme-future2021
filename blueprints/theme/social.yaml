@@ -1,0 +1,41 @@
+form:
+  validation: loose
+  fields:
+
+    enable_social:
+      type: toggle
+      label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ENABLE
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    social_style:
+          type: select
+          label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_STYLE
+          description: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_STYLE_DESCRIPTION
+          default: brands
+          size: medium
+          options:
+            regular: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_STYLE_REGULAR
+            solid: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_STYLE_SOLID
+            brands: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_STYLE_BRANDS
+    social:
+      name: social
+      label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICONS_LIST
+      type: list
+      style: vertical
+      collapsed: false
+      max: 5
+      fields:
+        .name:
+          type: text
+          label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICON_NAME
+        .url:
+          type: text
+          label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICON_URL
+        .icon:
+          type: iconpicker
+          label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICON_ICON

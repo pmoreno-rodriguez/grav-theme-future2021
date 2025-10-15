@@ -1,0 +1,21 @@
+form:
+  validation: loose
+  fields:
+
+    footer.title:
+      type: text
+      label: FUTURE.ADMIN.THEME.FOOTER_TITLE
+    footer.description:
+      type: textarea
+      rows: 5
+      markdown: true
+      label: FUTURE.ADMIN.THEME.FOOTER_DESCRIPTION
+    footer.copyright_text:
+      type: text
+      label: FUTURE.ADMIN.THEME.FOOTER_COPYRIGHT
+    footer.button_text:
+      type: text
+      label: FUTURE.ADMIN.THEME.FOOTER_BUTTON_TEXT
+    footer.button_url:
+      type: text
+      label: FUTURE.ADMIN.THEME.FOOTER_BUTTON_URL
