@@ -38,14 +38,6 @@
 {% set title = page.title %}
 {% set subtitle = page.header.subtitle %}
 
-{# Canonical URL #}
-{% set canonical_url = page.url(true, true) %}
-
-{# Description #}
-{% set meta_description = (not page.home() and page.summary|striptags|trim)
-    ? page.summary|striptags|trim|truncate(150)
-    : (site.metadata.description|striptags|trim|truncate(150) ?: site.title|e) %}
-
 <!DOCTYPE html>
 <html lang="{{ lang }}">
   
