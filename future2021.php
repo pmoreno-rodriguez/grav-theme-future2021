@@ -19,32 +19,44 @@ use Grav\Common\Theme;
 
 class Future2021 extends Theme
 {
-    public function onTwigSiteVariables ()
-    {
-        $themeConfig = $this->config->get('themes.future2021');
 
-        // Add custom.css and custom.js assets if they exists
-
-        if (isset($themeConfig['custom_css']) && $themeConfig['custom_css'] && file_exists(__DIR__ . '/assets/css/custom.css')) {
-            $this->grav['assets']->addCss('theme://assets/css/custom.css', ['priority' => 5]);
+        public static function getSubscribedEvents()
+        {
+            return [
+                'onShortcodeHandlers' => ['onShortcodeHandlers', 0],
+                'onTwigSiteVariables' => ['onTwigSiteVariables', 0]
+            ];
+        }
+        public function onTwigSiteVariables()
+        {
+            // Get active theme dynamically
+            $activeTheme = $this->grav['theme']->name;
+            $themeConfig = $this->config->get("themes.$activeTheme");
+            
+            // Register custom CSS
+            $custom_css_path = $this->grav['locator']->findResource('theme://assets/css/custom.css');
+            if (isset($themeConfig['custom_css']) && $themeConfig['custom_css'] && $custom_css_path) {
+                $this->grav['assets']->addCss('theme://assets/css/custom.css', ['priority' => 5]);
+            }
+            
+            // Register custom JavaScript
+            $custom_js_path = $this->grav['locator']->findResource('theme://assets/js/custom.js');
+            if (isset($themeConfig['custom_js']) && $themeConfig['custom_js'] && $custom_js_path) {
+                $this->grav['assets']->addJs('theme://assets/js/custom.js', ['group' => 'bottom', 'priority' => 15]);
+            }
         }
 
-        if (isset($themeConfig['custom_js']) && $themeConfig['custom_js'] && file_exists(__DIR__ . '/assets/js/custom.js')) {
-            $this->grav['assets']->addJs('theme://assets/js/custom.js', ['group' => 'bottom', 'priority' => 15]);
+        public function onShortcodeHandlers()
+        {
+            $this->grav['shortcode']->registerAllShortcodes(__DIR__ . '/shortcodes');
         }
-    }
 
-    public function onShortcodeHandlers()
-    {
-        $this->grav['shortcode']->registerAllShortcodes(__DIR__ . '/shortcodes');
-    }
-
-    // Add images to twig template paths to allow inclusion of SVG files
-    public function onTwigLoader()
-    {
-        $theme_paths = Grav::instance()['locator']->findResources('theme://images');
-        foreach($theme_paths as $images_path) {
-            $this->grav['twig']->addPath($images_path, 'images');
+        // Add images to twig template paths to allow inclusion of SVG files
+        public function onTwigLoader()
+        {
+            $theme_paths = Grav::instance()['locator']->findResources('theme://images');
+            foreach($theme_paths as $images_path) {
+                $this->grav['twig']->addPath($images_path, 'images');
+            }
         }
-    }
 }
