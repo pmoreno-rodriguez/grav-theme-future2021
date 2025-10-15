@@ -19,6 +19,9 @@
 {# -------------------------
    Canonical & URLs
    ------------------------- #}
+   {# Canonical URL #}
+{% set canonical_url = page.url(true, true) %}
+
 {% if canonical_url %}
 <link rel="canonical" href="{{ canonical_url }}">
 <meta property="og:url" content="{{ canonical_url }}">
@@ -28,11 +31,16 @@
 {# -------------------------
    Description
    ------------------------- #}
+{# Description #}
+{% set meta_description = page.home() 
+    ? (site.metadata.description ?: site.title)
+    : (page.summary ?: site.metadata.description ?: site.title) %}
+
 {% if meta_description %}
-<meta name="description" content="{{ meta_description|striptags|trim }}">
-<meta property="og:description" content="{{ meta_description|striptags|trim }}">
-<meta name="twitter:description" content="{{ meta_description|striptags|trim }}">
-<meta itemprop="description" content="{{ meta_description|striptags|trim }}">
+<meta name="description" content="{{ meta_description|striptags|trim|truncate(150)|raw }}">
+<meta property="og:description" content="{{ meta_description|striptags|trim|truncate(150)|raw }}">
+<meta name="twitter:description" content="{{ meta_description|striptags|trim|truncate(150)|raw }}">
+<meta itemprop="description" content="{{ meta_description|striptags|trim|truncate(150)|raw }}">
 {% endif %}
 
 {# -------------------------

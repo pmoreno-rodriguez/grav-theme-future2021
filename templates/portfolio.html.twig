@@ -49,16 +49,16 @@
 				{% for item in gallery %}
 					{% set item_image = page.media[item.image] %}
 					{% set item_title = item.title %}
-					{% set item_desc = item.description|raw %}
+					{% set item_desc = item.description %}
 					{% set thumbnail = item_image.cropZoom(thumb_w, thumb_h).loading('lazy').decoding('async').attribute('itemprop','http://schema.org/image').html(item_title,item_title,'portfolio_content-image') %}
 					<div class="{{columns}} portfolio_container" itemprop="associatedMedia" itemscope itemtype="http://schema.org/MediaObject">
 						<div class="portfolio_content">
-							<a href="{{item_image.url}}" class="glightbox" data-height="{{page.header.height}}" data-width="{{page.header.width}}" data-title="{{item_title}}" data-description="{{item_desc|raw}}" data-desc-position="{{item.descPosition}}" data-zoomable="{{page.header.zoomable}}" data-draggable="{{page.header.draggable}}" data-type="image">
+							<a href="{{item_image.url}}" class="glightbox" data-height="{{page.header.height}}" data-width="{{page.header.width}}" data-title="{{item_title}}" data-description="{{item_desc|e}}" data-desc-position="{{item.descPosition}}" data-zoomable="{{page.header.zoomable}}" data-draggable="{{page.header.draggable}}" data-type="image">
 							<div class="portfolio_content-overlay"></div>
 								{{ thumbnail|raw }}
 							<div class="portfolio_content-details {{page.header.overlay_hover_effect}}">
 								<h3 class="portfolio_content-title">{{item_title|e}}</h3>
-								<p class="portfolio_content-text">{{item_desc|striptags|trim|truncate(75)}}</p>
+								<p class="portfolio_content-text">{{ item_desc|striptags|trim|truncate(75)|raw }}</p>
 							</div>
 							</a>
 						</div>
