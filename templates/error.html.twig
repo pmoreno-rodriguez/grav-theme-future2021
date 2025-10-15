@@ -11,7 +11,7 @@
     <header>
       <div class="title">
         <h2><span class="icon solid fa-exclamation-triangle"></span> Error {{ page.header.http_response_code }}</h2>
-        <p>{{ page.content|raw }}</p>
+        {{ page.content|raw }}
       </div>
     </header>
   </article>

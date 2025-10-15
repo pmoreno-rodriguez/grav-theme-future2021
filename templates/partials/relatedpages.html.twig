@@ -9,19 +9,19 @@
                 <article>
                     {% if related.taxonomy.category is not null %}
                         <header>
-                            <h3><a class="" href="{{ related.url }}" title="{{ related.title }}" rel="nofollow">{{ related.title }}</a></h3>
+                            <h3><a class="" href="{{ related.url }}" title="{{ related.title|e('html_attr') }}" rel="nofollow">{{ related.title|e }}</a></h3>
                             <small class="published">
                                 In <span class="catlist">
                                 {% for category in related.taxonomy.category %}
-                                    <a class="" href="{{ new_base_url }}/category{{ config.system.param_sep }}{{ category }}">{{ category|raw }}</a>{% if not loop.last %}<span class="sep">, </span>{% endif %}
+                                    <a class="" href="{{ new_base_url }}/category{{ config.system.param_sep }}{{ category|e('url') }}">{{ category|e }}</a>{% if not loop.last %}<span class="sep">, </span>{% endif %}
                                 {% endfor %}
                                 </span>
                             </small>
                         </header>
                         
                         {% if related_image is not empty %}
-                            <a class="image" aria-label="{{ related.title }}" href="{{ related.url }}">
-                                {{ related_image.cropResize(64,64).loading('lazy').attribute('decoding','async').html|raw }}
+                            <a class="image" aria-label="{{ related.title|e('html_attr') }}" href="{{ related.url }}">
+                                {{ related_image.cropResize(64,64).loading('lazy').decoding('async').html|raw }}
                             </a>
                         {% endif %}
                     {% endif %}

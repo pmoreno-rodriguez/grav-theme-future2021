@@ -8,16 +8,16 @@
   <article class="post">
     <header>
       <div class="title">
-        <h1>{{ title }}</h1>
+        <h1>{{ title|e }}</h1>
         {% if subtitle %}
-          <p>{{ subtitle }}</p>
+          {{ subtitle|markdown }}
         {% endif %}
       </div>
     </header>
 
   {% if show_image and image %}
       <span class="image featured">
-        {{ image.cropZoom(img_width, img_height).loading('lazy').attribute('decoding','async').html(title, title)|raw }}
+        {{ image.cropZoom(img_width, img_height).loading('lazy').decoding('async').html(title, title)|raw }}
       </span>
   {% endif %}
 

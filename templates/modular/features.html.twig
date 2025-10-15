@@ -22,7 +22,7 @@
   </header>
   
   {% if show_image and image %}
-    {{ image.cropZoom(img_width,img_height).loading('lazy').attribute('decoding','async').html(title, title, 'image featured')|raw }}
+    {{ image.cropZoom(img_width,img_height).loading('lazy').decoding('async').html(title, title, 'image featured')|raw }}
   {% endif %}
 
   {{ page.content|raw }}

@@ -1,7 +1,14 @@
 {% set logo = theme_var('custom_logo_mobile') ?: theme_var('custom_logo') %}
-  {% if logo %}
-    {% set logo_file = (logo|first).name %}
-    <img src="{{ url('theme://images/logo/' ~ logo_file) }}" alt="{{ site.title|raw }}" class="{{ logo_class }}"/>
+
+{% if logo %}
+  {% set logo_file = (logo|first).name %}
+  {% set extension = logo_file|split('.')|last %}
+
+  {% if extension == 'svg' %}
+      {% include('@images/logo/' ~ logo_file) %}
   {% else %}
-    {% include('@images/grav-logo.svg') %}
+      <img src="{{ url('theme://images/logo/' ~ logo_file) }}" alt="{{ site.title|e }}" class="{{ logo_class }}" />
   {% endif %}
+{% else %}
+  {% include('@images/grav-logo.svg') %}
+{% endif %}

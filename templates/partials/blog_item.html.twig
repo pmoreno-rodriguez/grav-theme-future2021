@@ -23,15 +23,15 @@
           {% if page.header.continue_link is not sameas(false) %}
             <a href="{{ page.url }}" aria-label="{{ title }}"></a>
           {% endif %}
-          <a href="{{ page.header.link }}" aria-label="{{ title }}">{{ title }}</a>
+          <a href="{{ page.header.link }}" aria-label="{{ title|e('html_attr') }}">{{ title|e }}</a>
         </{{ Htag }}>
       {% else %}
        <{{ Htag }} itemprop="headline">
-          <a href="{{ page.url }}" aria-label="{{ title }}">{{ title }}</a>
+          <a href="{{ page.url }}" aria-label="{{ title|e('html_attr') }}">{{ title|e }}</a>
         </{{ Htag }}>
       {% endif %}
       {% if subtitle %}
-        <p itemprop="alternativeHeadline">{{ subtitle|raw }}</p>
+        <p itemprop="alternativeHeadline">{{ subtitle|markdown(false) }}</p>
       {% endif %}
     </div>
     <div class="meta">
@@ -52,8 +52,8 @@
     </div>
   </header>
   {% if show_image and image %}
-  <a class="image featured" href="{{ page.url }}" title="{{ title|raw }}" rel="nofollow">
-    {{ image.cropZoom(img_width,img_height).loading('lazy').attribute('decoding','async').html(title, title)|raw }}
+  <a class="image featured" href="{{ page.url }}" title="{{ title|e('html_attr') }}" rel="nofollow">
+    {{ image.cropZoom(img_width,img_height).loading('lazy').decoding('async').html(title, title)|raw }}
   </a>
   {% endif %}
   <div itemprop="articleBody">
@@ -106,17 +106,23 @@
      </ul>
     {% endif %}
     <ul class="share">
-      {% set share = [
-      { 'name': 'facebook', 'icon': 'fa-facebook', 'enabled': header_var('shareicons.facebook')|defined(true), 'url': 'https://www.facebook.com/sharer/sharer.php?', 'params': {'u': page.url(true)} },
-      { 'name': 'twitter', 'icon': 'fa-twitter', 'enabled': header_var('shareicons.twitter')|defined(true), 'url': 'https://twitter.com/intent/tweet?', 'params': {'text': page.title, 'url': page.url(true)} },
-      { 'name': 'whatsapp', 'icon': 'fa-whatsapp', 'enabled': header_var('shareicons.whatsapp')|defined(true), 'url': 'https://wa.me/?', 'params': {'text': page.title ~ '. ' ~ page.url(true)}, 'action': 'share/whatsapp/share' },
-      { 'name': 'telegram', 'icon': 'fa-telegram', 'enabled': header_var('shareicons.telegram')|defined(true), 'url': 'https://t.me/share/url?', 'params': {'url': page.url(true), 'text': page.title} },
-      ] %}
-      {% for item in share %}
-          {% if item.enabled|defined(true) %}
-              <li><a class="icon brands {{ item.icon }}" target="_blank" href="{{- item.url -}}{{- item.params|url_encode-}}" {% if item.action is defined %}data-action="{{ item.action }}"{% endif %} aria-label="{{ 'FUTURE.MISC.SHARE_ON'|t }} {{ item.name|capitalize }}" title="{{ 'FUTURE.MISC.SHARE_ON'|t }} {{item.name|capitalize }}"></a></li>
-          {% endif %}
-      {% endfor %}
+    {% set page_title_encoded = title|url_encode %}
+    {% set page_url_encoded = page.url(true)|url_encode %}
+    {% set share_text = (title ~ ' - ' ~ (page.summary|striptags|slice(0, 100)))|url_encode %}
+    
+    {% set share = [
+    { 'name': 'facebook', 'icon': 'fa-facebook', 'enabled': header_var('shareicons.facebook')|defined(true), 'url': 'https://www.facebook.com/sharer/sharer.php?u=' ~ page_url_encoded },
+    { 'name': 'twitter', 'icon': 'fa-twitter', 'enabled': header_var('shareicons.twitter')|defined(true), 'url': 'https://twitter.com/intent/tweet?text=' ~ page_title_encoded ~ '&url=' ~ page_url_encoded },
+    { 'name': 'whatsapp', 'icon': 'fa-whatsapp', 'enabled': header_var('shareicons.whatsapp')|defined(true), 'url': 'https://wa.me/?text=' ~ share_text ~ '%20' ~ page_url_encoded },
+    { 'name': 'telegram', 'icon': 'fa-telegram', 'enabled': header_var('shareicons.telegram')|defined(true), 'url': 'https://t.me/share/url?url=' ~ page_url_encoded ~ '&text=' ~ page_title_encoded },
+    { 'name': 'linkedin', 'icon': 'fa-linkedin', 'enabled': header_var('shareicons.linkedin')|defined(true), 'url': 'https://www.linkedin.com/sharing/share-offsite/?url=' ~ page_url_encoded },
+    ] %}
+    
+    {% for item in share %}
+    {% if item.enabled|defined(true) %}
+    <li><a class="icon brands {{ item.icon }}" target="_blank" rel="noopener noreferrer" href="{{ item.url }}" aria-label="{{ 'FUTURE.MISC.SHARE_ON'|t }} {{ item.name|capitalize }}" title="{{ 'FUTURE.MISC.SHARE_ON'|t }} {{ item.name|capitalize }}"></a></li>
+    {% endif %}
+    {% endfor %}
     </ul>
   </footer>
 </article>

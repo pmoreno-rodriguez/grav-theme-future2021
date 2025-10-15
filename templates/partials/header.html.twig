@@ -6,9 +6,9 @@
        {% if logoImageHeader == 'image' %}
         {% include 'partials/logo.html.twig' with {'logo_class': 'logo-img'} %}
       {% elseif logoImageHeader == 'both' %}
-        {% include 'partials/logo.html.twig' with {'logo_class': 'logo-img'} %}{{ site.title }}
+        {% include 'partials/logo.html.twig' with {'logo_class': 'logo-img'} %}{{ site.title|e }}
       {% else %}
-        {{ site.title }}
+        {{ site.title|e }}
       {% endif %}
       </a>
     </div>

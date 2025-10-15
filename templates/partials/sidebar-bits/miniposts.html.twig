@@ -2,52 +2,47 @@
 {% set miniposts_enabled = theme_var('miniposts')|defined(false) %}
 {% set miniposts_category = theme_var('miniposts_category')|default('minipost') %}
 {% set miniposts_number = theme_var('miniposts_number')|defined(3) %}
-
 {% if miniposts_enabled is same as true %}
-<!-- Mini Posts -->
-<section>
-  <header class="">
-    <h3>{{ 'FUTURE.FEATURED'|t }}</h3>
-  </header>
-  <div class="mini-posts">
-    {% for p in page.evaluate({'@taxonomy.category':miniposts_category}).order('header.order', 'asc').slice(0,miniposts_number) %}
-    {% set datestamp = include('partials/page-bits/date.html.twig', { 'page': p } ) %}
-    {% if p.header.metadata.author %}
-      {% set author = p.header.metadata.author %}
-    {% elseif p.header.author %}
-      {% set author = p.header.author %}
-    {% else %}
-        {% set author = p.taxonomy.author[0] %}
-    {% endif %}
-    {% set title = p.title|raw %}
-    {% set avatar = p.media[p.header.avatarImage].url|e  %}
-    {% set image = p.media[p.header.primaryImage] ?: p.media.all|filter((v, k) => k != p.header.avatarImage and (v.type == 'image' or v.type == 'vector'))|first %}
-    
-    {# Define if the primary image and the attributes of width and height are shown #}
-    {% set show_image = p.header.show_pageimage|defined(true) %}
-    {% set img_width = p.header.image_width|default(1038) %}
-    {% set img_height = p.header.image_height|default(437) %}
-
-      <article class="mini-post">
-        <header>
-          <h3>
-            <a href="{{ p.url }}" aria-label="{{ title }}">{{ title }}</a>
-          </h3> 
-          
-          <time class="published" itemprop="datePublished" datetime="{{ datestamp }}">{{ datestamp }}</time>
-
-        {% if avatar %}
-          <a href="{{ p.url }}" class="author" title="{{ author }}"><img src="{{ avatar }}" alt="{{ author }}"/></a>
-        {% endif %}
+    <!-- Mini Posts -->
+    <section>
+        <header class="">
+            <h3>{{ 'FUTURE.FEATURED'|t }}</h3>
         </header>
-        {% if show_image and image %}
-        <a href="{{ p.url }}" class="image" title="{{ title|raw }}" rel="nofollow">
-            {{ image.cropZoom(img_width,img_height).loading('lazy').attribute('decoding','async').html(title,title)|raw}}
-        </a>
-        {% endif %}
-      </article>
-    {% endfor %}
-  </div>
-</section>
-<!-- End of featured Section -->
+        <div class="mini-posts">
+            {% for p in page.evaluate({'@taxonomy.category':miniposts_category}).order('header.order', 'asc').slice(0,miniposts_number) %}
+                {% set datestamp = include('partials/page-bits/date.html.twig', { 'page': p } ) %}
+                {% if p.header.metadata.author %}
+                    {% set author = p.header.metadata.author %}
+                {% elseif p.header.author %}
+                    {% set author = p.header.author %}
+                {% else %}
+                    {% set author = p.taxonomy.author[0] %}
+                {% endif %}
+                {% set title = p.title %}
+                {% set avatar = p.media[p.header.avatarImage].url %}
+                {% set image = p.media[p.header.primaryImage] ?: p.media.all|filter((v, k) => k != p.header.avatarImage and (v.type == 'image' or v.type == 'vector'))|first %}
+                {# Define if the primary image and the attributes of width and height are shown #}
+                {% set show_image = p.header.show_pageimage|defined(true) %}
+                {% set img_width = p.header.image_width|default(1038) %}
+                {% set img_height = p.header.image_height|default(437) %}
+                <article class="mini-post">
+                    <header>
+                        <h3>
+                            <a href="{{ p.url }}" aria-label="{{ title|e('html_attr') }}">{{ title|e }}</a>
+                        </h3>
+                        <time class="published" itemprop="datePublished" datetime="{{ datestamp|e('html_attr') }}">{{ datestamp|e }}</time>
+                        {% if avatar %}
+                            <a href="{{ p.url }}" class="author" title="{{ author|e('html_attr') }}"><img src="{{ avatar }}" alt="{{ author|e('html_attr') }}"/></a>
+                        {% endif %}
+                    </header>
+                    {% if show_image and image %}
+                        <a href="{{ p.url }}" class="image" title="{{ title|e('html_attr') }}" rel="nofollow">
+                            {{ image.cropZoom(img_width,img_height).loading('lazy').decoding('async').html(title,title)|raw}}
+                        </a>
+                    {% endif %}
+                </article>
+            {% endfor %}
+        </div>
+    </section>
+    <!-- End of featured Section -->
 {% endif %}

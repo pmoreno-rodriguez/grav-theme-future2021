@@ -15,7 +15,7 @@
 {% elseif uri.param('archives_month') %}
     {% set listing_title = 'FUTURE.BLOG.LISTING_TITLE_MONTH'|t ~ uri.param('archives_month')|replace({'_': ' '}) %}
 {% else %}
-    {% set listing_title = page.header.subtitle|raw %}
+    {% set listing_title = page.header.subtitle %}
 {% endif %}
 
 {% block menu %}
@@ -26,13 +26,13 @@
 <article class="heading">
     {% if image %}
     <span class="image featured">
-      {{ image.cropZoom(1038,437).loading('lazy').attribute('decoding','async').html(title, title)|raw }}
+      {{ image.cropZoom(1038,437).loading('lazy').decoding('async').html(title, title)|raw }}
     </span>
     {% endif %}
     <div class="title">
-      <h1 itemprop="headline">{{ title }}</h1>
+      <h1 itemprop="headline">{{ title|e }}</h1>
       {% if listing_title %}
-        <p>{{ listing_title|raw }}</p>
+        {{ listing_title|markdown }}
       {% endif %}
     </div>
     
@@ -44,7 +44,7 @@
 </article>
   {% for child in collection %}
     {% set datestamp = include('partials/page-bits/date.html.twig', { 'page': child }) %}
-    {% include 'partials/blog_item.html.twig' with {blog: page, page:child, 'title': child.title|raw, 'subtitle': child.header.subtitle|raw, 'listing': true, 'truncate':true} %}
+    {% include 'partials/blog_item.html.twig' with {blog: page, page:child, 'title': child.title, 'subtitle': child.header.subtitle, 'listing': true, 'truncate':true} %}
   {% endfor %}
 
   {% if show_pagination and config.plugins.pagination.enabled and collection.params.pagination %}

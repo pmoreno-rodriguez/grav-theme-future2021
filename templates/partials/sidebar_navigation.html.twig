@@ -22,11 +22,11 @@
     {% if theme_var('custommenus.enabled') %}
       {% for mitem in theme_var('custommenu') %}
         <li>
-          <a href="{{ mitem.url }}" target="{{ mitem.target }}">
+          <a href="{{ mitem.url|e }}" target="{{ mitem.target }}">
             {% if mitem.icon %}
-              <i class="fa fa-{{ mitem.icon }}"></i>
+              <i class="fa fa-{{ mitem.icon|e('html_attr') }}"></i>
             {% endif %}
-            <span>{{ mitem.text }}</span>
+            <span>{{ mitem.text|e }}</span>
           </a>
         </li>
       {% endfor %}

@@ -1,3 +1,4 @@
+{% set version = (grav.theme.getBlueprint()).get('version') %}
 <!--
   Future Imperfect by HTML5 UP
   html5up.net | @ajlkn
@@ -5,15 +6,14 @@
 
   Ported to Grav by Pedro Moreno <https://github.com/pmoreno-rodriguez>
   https://github.com/pmoreno-rodriguez/grav-theme-future2021
+
+  {% if version %}
+      Grav theme version: v{{ version }}
+  {% endif %} 
 -->
 
 {# Define global variables #}
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
-{% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
-{% set favicon = theme_config.favicon ? theme_config.favicon|first : { type:'image/png', path: url('theme://images/favicon.png') } %}
-
-{# Set Google Fonts source - Local or Remote#}
-{% set google_fonts = theme_var('google_fonts_local') ? '-local.css' : '-remote.css' %}
 
 {# Set site language and datestamp for pages #}
 {% set lang = grav.language.getActive ?: grav.config.site.default_lang %}
@@ -35,45 +35,40 @@
 {% set img_height = header_var('image_height')|default(437) %}
 
 {# Set title and subtitle #}
-{% set title = page.title|raw %}
-{% set subtitle = page.header.subtitle|raw %}
+{% set title = page.title %}
+{% set subtitle = page.header.subtitle %}
+
+{# Canonical URL #}
+{% set canonical_url = page.url(true, true) %}
+
+{# Description #}
+{% set meta_description = (not page.home() and page.summary|striptags|trim)
+    ? page.summary|striptags|trim|truncate(150)
+    : (site.metadata.description|striptags|trim|truncate(150) ?: site.title|e) %}
 
 <!DOCTYPE html>
 <html lang="{{ lang }}">
+  
   <head>
     {% block head deferred %}
-      <title>{% if page.title %}{{ page.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
-      <meta charset="utf-8"/>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes"/>
-      {% include 'partials/metadata.html.twig' %}
-      <link rel="icon" type="{{ favicon.type }}" href="{{ url( favicon.path ) }}"/>
-      <link rel="canonical" href="{{ page.url(true, true) }}"/>
-    {% endblock head %}
-
+      {% include 'partials/head/favicon.html.twig' %}
+      {% include 'partials/head/seo.html.twig' %}
+    {% endblock %}
+    
     {% block stylesheets %}
-      {% do assets.addCss('theme://assets/css/main'~compress) %}
-      {% do assets.addCss('theme://assets/css/fontawesome-all.min.css',{'rel':'preload','as':'style','onload':'this.rel="stylesheet"'}) %}
-      {% do assets.addCss('theme://assets/css/misc.css', 10) %}
-      {% do assets.addCss('theme://assets/css/custom.css', 15) %}
-      {% do assets.addCss('theme://assets/css/google-fonts' ~ google_fonts, {'priority': 20}) %}
+      {% include 'partials/head/stylesheets.html.twig' %}
     {% endblock %}
-
+    
     {% block javascripts %}
-      {% do assets.add('jquery',101) %}
-      {% do assets.addJs('theme://assets/js/browser.min.js', {group:'bottom'}) %}
-      {% do assets.addJs('theme://assets/js/breakpoints.min.js', {group:'bottom'}) %}
-      {% do assets.addJs('theme://assets/js/util.js', {group:'bottom'}) %}
-      {% do assets.addJs('theme://assets/js/main.js', {group:'bottom'}) %}
-      {% do assets.addJs('theme://assets/js/custom.js', {group:'bottom'}) %}
+      {% include 'partials/head/javascripts.html.twig' %}
     {% endblock %}
-
+    
     {% block assets deferred %}
-        {{ assets.css()|raw }}
-        {{ assets.js()|raw }}
+      {{ assets.css()|raw }}
+      {{ assets.js()|raw }}
     {% endblock %}
-
   </head>
+
   <body class="{% block body_classes %}{{ page.header.body_classes }}{% endblock %} is-preload">
     <!-- Wrapper -->
     <div id="wrapper">
