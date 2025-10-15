@@ -65,6 +65,34 @@ To install this theme, just download the zip version of this repository and unzi
 You should now have all the theme files under
 
     /your/site/grav/user/themes/future2021
+
+## Dependencies
+
+Although the theme does not have specific dependencies to function, **it is highly recommended to install the following plugins for a complete experience**:
+
+- **[Archives](https://github.com/getgrav/grav-plugin-archives)** - For archive functionality
+- **[Breadcrumbs](https://github.com/getgrav/grav-plugin-breadcrumbs)** - For breadcrumb navigation
+- **[Feed](https://github.com/getgrav/grav-plugin-feed)** - For RSS/Atom feeds
+- **[Form](https://github.com/getgrav/grav-plugin-form)** - For contact forms and form handling
+- **[LangSwitcher](https://github.com/getgrav/grav-plugin-langswitcher)** - For multilingual site support
+- **[Page Toc](https://github.com/sommerregen/grav-plugin-page-toc)** - For table of contents generation
+- **[Pagination](https://github.com/getgrav/grav-plugin-pagination)** - For paginated content
+- **[Reading Time](https://github.com/getgrav/grav-plugin-readingtime)** - For estimated reading time display
+- **[Recent Posts](https://github.com/getgrav/grav-plugin-recent-posts)** - For displaying recent posts in sidebar
+- **[Related Pages](https://github.com/getgrav/grav-plugin-relatedpages)** - For related content suggestions
+- **[Shortcode Core](https://github.com/getgrav/grav-plugin-shortcode-core)** - Core shortcode functionality
+- **[Shortcode Owl Carousel](https://github.com/getgrav/grav-plugin-shortcode-owl-carousel)** - For carousel/slider functionality
+- **[SimpleSearch](https://github.com/getgrav/grav-plugin-simplesearch)** - For search functionality
+- **[Taxonomy List](https://github.com/getgrav/grav-plugin-taxonomylist)** - For taxonomy-based content organization
+
+You can install these plugins via GPM with the following command:
+
+```bash
+bin/gpm install archives breadcrumbs feed form langswitcher page-toc pagination readingtime recent-posts relatedpages shortcode-core shortcode-owl-carousel simplesearch taxonomylist
+```
+
+Or install them individually through the Grav Admin Panel.
+
 ## Default Options
 
 Future2021 comes with a few default options that can be set site-wide.  These options are:
@@ -99,6 +127,7 @@ custommenus.enabled:          # Enable/Disable custom menus in top menu
 To make modifications, you can copy the `user/themes/future2021/future2021.yaml` file to `user/config/themes/` folder and modify, or you can use the admin plugin.
 
 > NOTE: Do not modify the `user/themes/future2021/future2021.yaml` file directly or your changes will be lost with any updates
+
 ## Custom Logos
 
 To add a custom logo, you should put the log into the `user/themes/future2021/images/logo` folder.  Standard image formats are support (`.png`,`.jpg`, `.gif`, `.svg`, etc.).  Then reference the logo via the YAML like so:
@@ -110,6 +139,7 @@ custom_logo_mobile:
     - name: 'my-custom-mobile-logo.png'    
 ```
 Alternatively, you can you use the drag-n-drop "Custom Logo" field in the Future2021 theme options.
+
 ## Portfolio Options
 
 | Option | Type | Default | Description |
