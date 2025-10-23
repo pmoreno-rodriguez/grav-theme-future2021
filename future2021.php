@@ -24,7 +24,8 @@ class Future2021 extends Theme
         {
             return [
                 'onShortcodeHandlers' => ['onShortcodeHandlers', 0],
-                'onTwigSiteVariables' => ['onTwigSiteVariables', 0]
+                'onTwigSiteVariables' => ['onTwigSiteVariables', 0],
+                'onTwigLoader' => ['onTwigLoader', 0]
             ];
         }
         public function onTwigSiteVariables()
