@@ -2,7 +2,7 @@
 ## 10/23/2025
 
 1. [](#bugfix)
-     * Fixed Twig template loading by adding `onTwigLoader` event to `getSubscribedEvents`
+   * Fixed Twig template loading by adding `onTwigLoader` event to `getSubscribedEvents`
 
 # v2.2.0
 ## 10/15/2025
