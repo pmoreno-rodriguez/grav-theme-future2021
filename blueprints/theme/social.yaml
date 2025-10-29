@@ -12,7 +12,27 @@ form:
         0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
-    social_style:
+    social:
+      name: social
+      label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICONS_LIST
+      type: list
+      style: vertical
+      collapsed: true
+      max: 5
+      fields:
+        .name:
+          type: text
+          label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICON_NAME
+          size: medium
+        .url:
+          type: text
+          label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICON_URL
+          size: large
+        .icon:
+          type: iconpicker
+          label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICON_ICON
+          size: medium
+        .social_style:
           type: select
           label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_STYLE
           description: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_STYLE_DESCRIPTION
@@ -22,20 +42,3 @@ form:
             regular: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_STYLE_REGULAR
             solid: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_STYLE_SOLID
             brands: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_STYLE_BRANDS
-    social:
-      name: social
-      label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICONS_LIST
-      type: list
-      style: vertical
-      collapsed: false
-      max: 5
-      fields:
-        .name:
-          type: text
-          label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICON_NAME
-        .url:
-          type: text
-          label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICON_URL
-        .icon:
-          type: iconpicker
-          label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICON_ICON

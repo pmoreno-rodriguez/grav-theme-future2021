@@ -1,6 +1,5 @@
 {# Set style for media icons - Fontawesome #}
-{% set social_style = theme_var('social_style')|defined('brands') %}
 
 {% for item in theme_config.social %}
-  <li><a href="{{ item.url }}" class="icon {{ social_style }} {{item.icon}}" aria-label="{{item.name|e('html_attr')}}"><span class="label">{{item.name|e}}</span></a></li>
+  <li><a href="{{ item.url }}" class="icon {{ item.social_style|defined('brands') }} {{ item.icon }}" aria-label="{{ item.name|e('html_attr') }}"><span class="label">{{ item.name|e }}</span></a></li>
 {% endfor %}
