@@ -16,6 +16,8 @@ form:
     footer.button_text:
       type: text
       label: FUTURE.ADMIN.THEME.FOOTER_BUTTON_TEXT
+      size: medium
     footer.button_url:
       type: text
       label: FUTURE.ADMIN.THEME.FOOTER_BUTTON_URL
+      size: medium
