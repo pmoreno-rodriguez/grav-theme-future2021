@@ -17,8 +17,7 @@
 <div class="wrapper-carousel-{{ owl_id }}">
      <div class="carousel-{{ owl_id }}">
          <div class="owl-carousel owl-theme" id="{{ owl_id }}">
-             {{ owl_items|regex_replace('(^\n?<p>|<\/p>$)','')|raw }}
+             {{ owl_items|regex_replace('(^\n?<p>|<\/p>$)', '')|raw }}
          </div>
      </div>
 </div>
-

@@ -32,7 +32,7 @@
    Description
    ------------------------- #}
 {# Description #}
-{% set meta_description = page.home() 
+{% set meta_description = page.home()
     ? (site.metadata.description ?: site.title)
     : (page.summary ?: site.metadata.description ?: site.title) %}
 
@@ -71,23 +71,23 @@
    ------------------------- #}
 <script type="application/ld+json">
 {{ {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": page.url(true)
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': page.url(true),
   },
-  "headline": title|e,
-  "image": image ? (uri.base ~ image.url) : '',
-  "datePublished": page.date|date('c'),
-  "inLanguage": grav.language.getActive ?: 'es',
-  "wordCount": page.content|wordcount,
-  "author": {
-    "@type": "Person",
-    "name": page.taxonomy.author[0] ?? 'Unknown'
+  headline: title|e,
+  image: image ? (uri.base ~ image.url) : '',
+  datePublished: page.date|date('c'),
+  inLanguage: grav.language.getActive ?: 'es',
+  wordCount: page.content|wordcount,
+  author: {
+    '@type': 'Person',
+    name: page.taxonomy.author[0] ?? 'Unknown',
   },
-  "description": description
-} | json_encode(constant('JSON_UNESCAPED_UNICODE') b-or constant('JSON_UNESCAPED_SLASHES')) | raw }}
+  description: description,
+}|json_encode(constant('JSON_UNESCAPED_UNICODE') b-or constant('JSON_UNESCAPED_SLASHES'))|raw }}
 </script>
 
 {# -------------------------

@@ -1,6 +1,6 @@
 {% extends 'partials/base.html.twig' %}
 
-{% set columns = page.header.layout == 'standard' ? 'col-4 col-6-medium col-12-small' : 'col-6 col-12-small'  %}
+{% set columns = page.header.layout == 'standard' ? 'col-4 col-6-medium col-12-small' : 'col-6 col-12-small' %}
 
 {# Set portfolio options #}
 {% set gallery = page.header.images %}
@@ -8,103 +8,103 @@
 {% set thumb_h = page.header.thumb_height|default(450) %}
 
 {% block stylesheets %}
-	{{ parent() }}
-	{% do assets.addCss('theme://assets/css/glightbox.min.css') %}
-	{% set styling %}
-		button.gclose.gbtn, button.gnext.gbtn, button.gprev.gbtn {
-				box-shadow: none !important;
-			}
-		
-	{% endset %}
+    {{ parent() }}
+    {% do assets.addCss('theme://assets/css/glightbox.min.css') %}
+    {% set styling %}
+        button.gclose.gbtn, button.gnext.gbtn, button.gprev.gbtn {
+                box-shadow: none !important;
+            }
+
+    {% endset %}
 {% do assets.addInlineCss(styling) %}
 {% endblock %}
 
 {% block menu %}
-	{% include 'partials/sidebar_right.html.twig' %}
+    {{ include('partials/sidebar_right.html.twig') }}
 {% endblock %}
 
 {% block content %}
 
-	<article class="post">
-		<header>
-			<div class="title">
-				<h2>{{ title|e }}</h2>
-				{% if subtitle %}
-					{{ subtitle|markdown }}
-				{% endif %}
-			</div>
-		</header>
-		{% if show_image and image %}
-			<span class="image featured">
-				{{ image.cropZoom(img_width,img_height).loading('lazy').decoding('async').html(title, title)|raw }}
-			</span>
-		{% endif %}
+    <article class="post">
+        <header>
+            <div class="title">
+                <h2>{{ title|e }}</h2>
+                {% if subtitle %}
+                    {{ subtitle|markdown }}
+                {% endif %}
+            </div>
+        </header>
+        {% if show_image and image %}
+            <span class="image featured">
+                {{ image.cropZoom(img_width, img_height).loading('lazy').decoding('async').html(title, title)|raw }}
+            </span>
+        {% endif %}
 
-		{{ page.content|raw}}
+        {{ page.content|raw }}
 
-		<!-- Portfolio -->
-		{% block portfolio %}
-			<section>
-				<div class="row aln-center">
-				{% for item in gallery %}
-					{% set item_image = page.media[item.image] %}
-					{% set item_title = item.title %}
-					{% set item_desc = item.description %}
-					{% set thumbnail = item_image.cropZoom(thumb_w, thumb_h).loading('lazy').decoding('async').attribute('itemprop','http://schema.org/image').html(item_title,item_title,'portfolio_content-image') %}
-					<div class="{{columns}} portfolio_container" itemprop="associatedMedia" itemscope itemtype="http://schema.org/MediaObject">
-						<div class="portfolio_content">
-							<a href="{{item_image.url}}" class="glightbox" data-height="{{page.header.height}}" data-width="{{page.header.width}}" data-title="{{item_title}}" data-description="{{item_desc|e}}" data-desc-position="{{item.descPosition}}" data-zoomable="{{page.header.zoomable}}" data-draggable="{{page.header.draggable}}" data-type="image">
-							<div class="portfolio_content-overlay"></div>
-								{{ thumbnail|raw }}
-							<div class="portfolio_content-details {{page.header.overlay_hover_effect}}">
-								<h3 class="portfolio_content-title">{{item_title|e}}</h3>
-								<p class="portfolio_content-text">{{ item_desc|striptags|trim|truncate(75)|raw }}</p>
-							</div>
-							</a>
-						</div>
-					</div>
-				{% endfor %}
-				</div>
-			</section>
-		{% endblock %}
-	</article>
+        <!-- Portfolio -->
+        {% block portfolio %}
+            <section>
+                <div class="row aln-center">
+                {% for item in gallery %}
+                    {% set item_image = page.media[item.image] %}
+                    {% set item_title = item.title %}
+                    {% set item_desc = item.description %}
+                    {% set thumbnail = item_image.cropZoom(thumb_w, thumb_h).loading('lazy').decoding('async').attribute('itemprop', 'http://schema.org/image').html(item_title, item_title, 'portfolio_content-image') %}
+                    <div class="{{ columns }} portfolio_container" itemprop="associatedMedia" itemscope itemtype="http://schema.org/MediaObject">
+                        <div class="portfolio_content">
+                            <a href="{{ item_image.url }}" class="glightbox" data-height="{{ page.header.height }}" data-width="{{ page.header.width }}" data-title="{{ item_title }}" data-description="{{ item_desc|e }}" data-desc-position="{{ item.descPosition }}" data-zoomable="{{ page.header.zoomable }}" data-draggable="{{ page.header.draggable }}" data-type="image">
+                            <div class="portfolio_content-overlay"></div>
+                                {{ thumbnail|raw }}
+                            <div class="portfolio_content-details {{ page.header.overlay_hover_effect }}">
+                                <h3 class="portfolio_content-title">{{ item_title|e }}</h3>
+                                <p class="portfolio_content-text">{{ item_desc|striptags|trim|truncate(75)|raw }}</p>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+                </div>
+            </section>
+        {% endblock %}
+    </article>
 
-	{% if show_sidebar == false %}
-		<section id="footer" class="align-center">
-			{% include 'partials/sidebar-bits/footer.html.twig' %}
-		</section>
-	{% endif %}
+    {% if show_sidebar == false %}
+        <section id="footer" class="align-center">
+            {{ include('partials/sidebar-bits/footer.html.twig') }}
+        </section>
+    {% endif %}
 {% endblock %}
 
 {% block sidebar %}
 {% if show_sidebar == true %}
-	{% include 'partials/sidebar_left.html.twig' %}
+    {{ include('partials/sidebar_left.html.twig') }}
 {% endif %}
 {% endblock %}
 {# Add Glightbox scripts and initialize #}
 {% block javascripts %}
-	{{ parent() }}
-	{% set script %}
-	const lightbox = GLightbox({
-	    closeButton: {{ page.header.close_button }},
-	    touchFollowAxis: {{ page.header.touch_axis }},
-	    touchNavigation: {{ page.header.touch_navigation }},
-	    keyboardNavigation:	{{ page.header.keyboard_navigation }},
-	    loop: {{ page.header.loop }},
-	    openEffect: '{{ page.header.open_effect }}',
-	    closeEffect: '{{ page.header.close_effect }}',
-	    slideEffect: '{{ page.header.slide_effect }}',
-	    closeOnOutsideClick: {{ page.header.closeOutside }},
-	    dragToleranceX: {{ page.header.draggableX }},
-	    dragToleranceY: {{ page.header.draggableY }},
-	    preload: {{ page.header.preload }},
-	    dragAutoSnap: {{ page.header.dragAuto }},
-	    moreText: '{{ page.header.more_text|e('js') }}',
-		{% if page.header.startAt is defined %}startAt: {{ page.header.startAt }},{% endif %}
-	    moreLength: {{page.header.more_length}}
-	});
-	{% endset %}
+    {{ parent() }}
+    {% set script %}
+    const lightbox = GLightbox({
+        closeButton: {{ page.header.close_button }},
+        touchFollowAxis: {{ page.header.touch_axis }},
+        touchNavigation: {{ page.header.touch_navigation }},
+        keyboardNavigation:    {{ page.header.keyboard_navigation }},
+        loop: {{ page.header.loop }},
+        openEffect: '{{ page.header.open_effect }}',
+        closeEffect: '{{ page.header.close_effect }}',
+        slideEffect: '{{ page.header.slide_effect }}',
+        closeOnOutsideClick: {{ page.header.closeOutside }},
+        dragToleranceX: {{ page.header.draggableX }},
+        dragToleranceY: {{ page.header.draggableY }},
+        preload: {{ page.header.preload }},
+        dragAutoSnap: {{ page.header.dragAuto }},
+        moreText: '{{ page.header.more_text|e('js') }}',
+        {% if page.header.startAt is defined %}startAt: {{ page.header.startAt }},{% endif %}
+        moreLength: {{ page.header.more_length }}
+    });
+    {% endset %}
 
-	{% do assets.addJs('theme://assets/js/glightbox.min.js', {group:'bottom'}) %}
-	{% do assets.addInlineJs(script,{'group':'bottom'}) %}
+    {% do assets.addJs('theme://assets/js/glightbox.min.js', {group: 'bottom'}) %}
+    {% do assets.addInlineJs(script, {group: 'bottom'}) %}
 {% endblock %}

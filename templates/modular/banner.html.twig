@@ -7,21 +7,21 @@
 <section id="banner">
   <div class="content">
     <header>
-      <h2>{{ title}}</h2>
+      <h2>{{ title }}</h2>
       {% if subtitle %}
         <p>{{ subtitle }}</p>
       {% endif %}
     </header>
 
-    {{page.content|raw}}
+    {{ page.content|raw }}
 
     <ul class="actions">
-      <li><a href="{{page.header.buttonurl}}" class="button">{{page.header.buttontext|raw}}</a></li>
+      <li><a href="{{ page.header.buttonurl }}" class="button">{{ page.header.buttontext|raw }}</a></li>
     </ul>
   </div>
   {% if image %}
     <span class="image object fit">
-      {{image.loading('lazy').decoding('async').html(title,title)|raw}}
+      {{ image.loading('lazy').decoding('async').html(title, title)|raw }}
     </span>
   {% endif %}
 </section>

@@ -1,3 +1,4 @@
+{% spaceless %}
 {% set version = (grav.theme.getBlueprint()).get('version') %}
 <!--
   Future Imperfect by HTML5 UP
@@ -9,7 +10,7 @@
 
   {% if version %}
       Grav theme version: v{{ version }}
-  {% endif %} 
+  {% endif %}
 -->
 
 {# Define global variables #}
@@ -37,24 +38,24 @@
 {# Set title and subtitle #}
 {% set title = page.title %}
 {% set subtitle = page.header.subtitle %}
-
+{% endspaceless %}
 <!DOCTYPE html>
 <html lang="{{ lang }}">
-  
+
   <head>
     {% block head deferred %}
-      {% include 'partials/head/favicon.html.twig' %}
-      {% include 'partials/head/seo.html.twig' %}
+      {{ include('partials/head/favicon.html.twig') }}
+      {{ include('partials/head/seo.html.twig') }}
     {% endblock %}
-    
+
     {% block stylesheets %}
-      {% include 'partials/head/stylesheets.html.twig' %}
+      {{ include('partials/head/stylesheets.html.twig') }}
     {% endblock %}
-    
+
     {% block javascripts %}
-      {% include 'partials/head/javascripts.html.twig' %}
+      {{ include('partials/head/javascripts.html.twig') }}
     {% endblock %}
-    
+
     {% block assets deferred %}
       {{ assets.css()|raw }}
       {{ assets.js()|raw }}
@@ -66,7 +67,7 @@
     <div id="wrapper">
 
       {% block header %}
-        {% include 'partials/header.html.twig' %}
+        {{ include('partials/header.html.twig') }}
       {% endblock %}
 
       {% block body %}

@@ -9,10 +9,10 @@
           <time class="published" datetime="{{ datestamp }}">{{ datestamp }}</time>
       </div>
     </header>
-    <p>{{'FUTURE.FORM_SUMMARY'|t}}</p>
+    <p>{{ 'FUTURE.FORM_SUMMARY'|t }}</p>
 
     {{ content|raw }}
 
-    {% include "forms/data.html.twig" %}
+    {{ include('forms/data.html.twig') }}
   </article>
 {% endblock %}

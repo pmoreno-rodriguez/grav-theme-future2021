@@ -9,8 +9,8 @@
             <h3>{{ 'FUTURE.FEATURED'|t }}</h3>
         </header>
         <div class="mini-posts">
-            {% for p in page.evaluate({'@taxonomy.category':miniposts_category}).order('header.order', 'asc').slice(0,miniposts_number) %}
-                {% set datestamp = include('partials/page-bits/date.html.twig', { 'page': p } ) %}
+            {% for p in page.evaluate({'@taxonomy.category': miniposts_category}).order('header.order', 'asc').slice(0, miniposts_number) %}
+                {% set datestamp = include('partials/page-bits/date.html.twig', {page: p}) %}
                 {% if p.header.metadata.author %}
                     {% set author = p.header.metadata.author %}
                 {% elseif p.header.author %}
@@ -37,7 +37,7 @@
                     </header>
                     {% if show_image and image %}
                         <a href="{{ p.url }}" class="image" title="{{ title|e('html_attr') }}" rel="nofollow">
-                            {{ image.cropZoom(img_width,img_height).loading('lazy').decoding('async').html(title,title)|raw}}
+                            {{ image.cropZoom(img_width, img_height).loading('lazy').decoding('async').html(title, title)|raw }}
                         </a>
                     {% endif %}
                 </article>

@@ -15,14 +15,14 @@
 
   {% if sidebar == false %}
     <section id="footer" class="align-center">
-      {% include 'partials/sidebar-bits/footer.html.twig' %}
+      {{ include('partials/sidebar-bits/footer.html.twig') }}
     </section>
   {% endif %}
-  
+
 {% endblock %}
 
 {% block sidebar %}
 {% if sidebar == true %}
-    {% include 'partials/sidebar_left.html.twig' %}
+    {{ include('partials/sidebar_left.html.twig') }}
 {% endif %}
 {% endblock %}

@@ -1,7 +1,7 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block menu %}
-  {% include 'partials/sidebar_right.html.twig' %}
+  {{ include('partials/sidebar_right.html.twig') }}
 {% endblock %}
 
 {% block content %}
@@ -12,9 +12,7 @@
       </div>
       <div class="meta"></div>
     </header>
-    {% include 'partials/messages.html.twig' %}
-    {% include 'partials/reset-form.html.twig' %}
+    {{ include('partials/messages.html.twig') }}
+    {{ include('partials/reset-form.html.twig') }}
 </article>
 {% endblock %}
-
-

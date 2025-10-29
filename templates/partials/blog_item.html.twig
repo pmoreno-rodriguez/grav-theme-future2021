@@ -2,7 +2,7 @@
 {% set Htag = listing ? 'h2' : 'h1' %}
 
 {# Set avatar image and primary image #}
-{% set avatar = page.media[page.header.avatarImage].url|e  %}
+{% set avatar = page.media[page.header.avatarImage].url|e %}
 {% set image = page.media[page.header.primaryImage] ?: page.media.all|filter((v, k) => k != page.header.avatarImage and (v.type == 'image' or v.type == 'vector'))|first %}
 
 {# Set page author #}
@@ -37,9 +37,9 @@
     <div class="meta">
       {# Support for reading time plugin #}
       {% if config.plugins.readingtime.enabled %}
-        <span class="reading-time"><i class="fas fa-book-reader"></i> {{ page.content|readingtime}}</span>
+        <span class="reading-time"><i class="fas fa-book-reader"></i> {{ page.content|readingtime }}</span>
       {% endif %}
-      
+
       <time class="published" itemprop="datePublished" datetime="{{ datestamp }}">{{ datestamp }}</time>
 
       {% if author %}
@@ -53,7 +53,7 @@
   </header>
   {% if show_image and image %}
   <a class="image featured" href="{{ page.url }}" title="{{ title|e('html_attr') }}" rel="nofollow">
-    {{ image.cropZoom(img_width,img_height).loading('lazy').decoding('async').html(title, title)|raw }}
+    {{ image.cropZoom(img_width, img_height).loading('lazy').decoding('async').html(title, title)|raw }}
   </a>
   {% endif %}
   <div itemprop="articleBody">
@@ -75,9 +75,9 @@
   <footer>
     <ul class="actions">
       {% if truncate and page.summary != page.content %}
-        <li><a href="{{ page.url }}" class="button" rel="nofollow">{{'FUTURE.BLOG.ITEM.CONTINUE_READING'|t}}</a></li>
+        <li><a href="{{ page.url }}" class="button" rel="nofollow">{{ 'FUTURE.BLOG.ITEM.CONTINUE_READING'|t }}</a></li>
       {% elseif truncate %}
-        <li><a href="{{ page.url }}" class="button" rel="nofollow">{{'FUTURE.BLOG.ITEM.CONTINUE_READING'|t}}</a></li>
+        <li><a href="{{ page.url }}" class="button" rel="nofollow">{{ 'FUTURE.BLOG.ITEM.CONTINUE_READING'|t }}</a></li>
       {% endif %}
 
       {% if show_prev_next %}
@@ -85,12 +85,12 @@
           <li>
             <a class="button" href="{{ page.prevSibling.url }}" rel="prev">
               <i class="fa fa-chevron-left"></i>
-              {{'FUTURE.BLOG.ITEM.PREV_POST'|t}}</a>
+              {{ 'FUTURE.BLOG.ITEM.PREV_POST'|t }}</a>
           </li>
         {% endif %}
         {% if not page.isFirst %}
           <li>
-            <a class="button" href="{{ page.nextSibling.url }}" rel="next">{{'FUTURE.BLOG.ITEM.NEXT_POST'|t}}
+            <a class="button" href="{{ page.nextSibling.url }}" rel="next">{{ 'FUTURE.BLOG.ITEM.NEXT_POST'|t }}
               <i class="fa fa-chevron-right"></i>
             </a>
           </li>
@@ -109,15 +109,15 @@
     {% set page_title_encoded = title|url_encode %}
     {% set page_url_encoded = page.url(true)|url_encode %}
     {% set share_text = (title ~ ' - ' ~ (page.summary|striptags|slice(0, 100)))|url_encode %}
-    
+
     {% set share = [
-    { 'name': 'facebook', 'icon': 'fa-facebook', 'enabled': header_var('shareicons.facebook')|defined(true), 'url': 'https://www.facebook.com/sharer/sharer.php?u=' ~ page_url_encoded },
-    { 'name': 'twitter', 'icon': 'fa-twitter', 'enabled': header_var('shareicons.twitter')|defined(true), 'url': 'https://twitter.com/intent/tweet?text=' ~ page_title_encoded ~ '&url=' ~ page_url_encoded },
-    { 'name': 'whatsapp', 'icon': 'fa-whatsapp', 'enabled': header_var('shareicons.whatsapp')|defined(true), 'url': 'https://wa.me/?text=' ~ share_text ~ '%20' ~ page_url_encoded },
-    { 'name': 'telegram', 'icon': 'fa-telegram', 'enabled': header_var('shareicons.telegram')|defined(true), 'url': 'https://t.me/share/url?url=' ~ page_url_encoded ~ '&text=' ~ page_title_encoded },
-    { 'name': 'linkedin', 'icon': 'fa-linkedin', 'enabled': header_var('shareicons.linkedin')|defined(true), 'url': 'https://www.linkedin.com/sharing/share-offsite/?url=' ~ page_url_encoded },
+    {name: 'facebook', icon: 'fa-facebook', enabled: header_var('shareicons.facebook')|defined(true), url: 'https://www.facebook.com/sharer/sharer.php?u=' ~ page_url_encoded},
+    {name: 'twitter', icon: 'fa-twitter', enabled: header_var('shareicons.twitter')|defined(true), url: 'https://twitter.com/intent/tweet?text=' ~ page_title_encoded ~ '&url=' ~ page_url_encoded},
+    {name: 'whatsapp', icon: 'fa-whatsapp', enabled: header_var('shareicons.whatsapp')|defined(true), url: 'https://wa.me/?text=' ~ share_text ~ '%20' ~ page_url_encoded},
+    {name: 'telegram', icon: 'fa-telegram', enabled: header_var('shareicons.telegram')|defined(true), url: 'https://t.me/share/url?url=' ~ page_url_encoded ~ '&text=' ~ page_title_encoded},
+    {name: 'linkedin', icon: 'fa-linkedin', enabled: header_var('shareicons.linkedin')|defined(true), url: 'https://www.linkedin.com/sharing/share-offsite/?url=' ~ page_url_encoded},
     ] %}
-    
+
     {% for item in share %}
     {% if item.enabled|defined(true) %}
     <li><a class="icon brands {{ item.icon }}" target="_blank" rel="noopener noreferrer" href="{{ item.url }}" aria-label="{{ 'FUTURE.MISC.SHARE_ON'|t }} {{ item.name|capitalize }}" title="{{ 'FUTURE.MISC.SHARE_ON'|t }} {{ item.name|capitalize }}"></a></li>

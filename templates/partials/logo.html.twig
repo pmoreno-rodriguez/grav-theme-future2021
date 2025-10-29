@@ -5,10 +5,10 @@
   {% set extension = logo_file|split('.')|last %}
 
   {% if extension == 'svg' %}
-      {% include('@images/logo/' ~ logo_file) %}
+      {{ include(('@images/logo/' ~ logo_file)) }}
   {% else %}
       <img src="{{ url('theme://images/logo/' ~ logo_file) }}" alt="{{ site.title|e }}" class="{{ logo_class }}" />
   {% endif %}
 {% else %}
-  {% include('@images/grav-logo.svg') %}
+  {{ include(('@images/grav-logo.svg')) }}
 {% endif %}

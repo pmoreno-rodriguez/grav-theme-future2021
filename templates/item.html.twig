@@ -2,30 +2,30 @@
 
 {% set blog = page.find(header_var('blog_url')|defined(theme_var('blog_page'))) %}
 {% set show_breadcrumbs = header_var('show_breadcrumbs')|defined(true) %}
-{% set show_sidebar = header_var('show_sidebar')|defined(false)  %}
+{% set show_sidebar = header_var('show_sidebar')|defined(false) %}
 
 {% block menu %}
-	{% include 'partials/sidebar_right.html.twig' %}
+    {{ include('partials/sidebar_right.html.twig') }}
 {% endblock %}
 
 {% block content %}
-	{% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
-		<div class="heading">
-			{% include 'partials/breadcrumbs.html.twig' %}
-		</div>
-	{% endif %}
+    {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
+        <div class="heading">
+            {{ include('partials/breadcrumbs.html.twig') }}
+        </div>
+    {% endif %}
 
-	{% include 'partials/blog_item.html.twig' with {'listing': false, 'truncate':false, datestamp} %}
+    {{ include('partials/blog_item.html.twig', {listing: false, truncate: false, datestamp: datestamp}) }}
 
-	{% if show_sidebar == false %}
-		<section id="footer" class="align-center">
-			{% include 'partials/sidebar-bits/footer.html.twig' %}
-		</section>
-	{% endif %}
+    {% if show_sidebar == false %}
+        <section id="footer" class="align-center">
+            {{ include('partials/sidebar-bits/footer.html.twig') }}
+        </section>
+    {% endif %}
 {% endblock %}
 
 {% block sidebar %}
 {% if show_sidebar == true %}
-	{% include 'partials/sidebar_left.html.twig' %}
+    {{ include('partials/sidebar_left.html.twig') }}
 {% endif %}
 {% endblock %}

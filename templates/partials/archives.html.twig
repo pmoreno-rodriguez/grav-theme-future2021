@@ -1,8 +1,8 @@
 <ul class="alt">
 
-{% for month,items in archives_data %}
+{% for month, items in archives_data %}
     <li>
-    	<a href="{{ base_url }}/{{ config.plugins.archives.taxonomy_names.month }}{{ config.system.param_sep }}{{ month|date('M_Y')|lower|e('url') }}">
+        <a href="{{ base_url }}/{{ config.plugins.archives.taxonomy_names.month }}{{ config.system.param_sep }}{{ month|date('M_Y')|lower|e('url') }}">
         {% if archives_show_count %}
         <span class="label label-circle">{{ items|length }}</span>
         {% endif %}

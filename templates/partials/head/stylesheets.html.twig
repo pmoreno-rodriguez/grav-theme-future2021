@@ -3,12 +3,12 @@
 {# Set CSS compression based on production mode #}
 {% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
 
-{# Set Google Fonts source - Local or Remote#}
+{# Set Google Fonts source - Local or Remote #}
 {% set google_fonts = theme_var('google_fonts_local') ? '-local.css' : '-remote.css' %}
 
 {# Add stylesheets to assets #}
-{% do assets.addCss('theme://assets/css/main'~compress) %}
-{% do assets.addCss('theme://assets/css/fontawesome-all.min.css',{'rel':'preload','as':'style','onload':'this.rel="stylesheet"'}) %}
+{% do assets.addCss('theme://assets/css/main' ~ compress) %}
+{% do assets.addCss('theme://assets/css/fontawesome-all.min.css', {rel: 'preload', as: 'style', onload: 'this.rel="stylesheet"'}) %}
 {% do assets.addCss('theme://assets/css/misc.css', 10) %}
 {% do assets.addCss('theme://assets/css/custom.css', 15) %}
-{% do assets.addCss('theme://assets/css/google-fonts' ~ google_fonts, {'priority': 20}) %}
+{% do assets.addCss('theme://assets/css/google-fonts' ~ google_fonts, {priority: 20}) %}

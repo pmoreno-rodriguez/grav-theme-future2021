@@ -7,26 +7,26 @@
 
 {# Set page title by taxonomy #}
 {% if uri.param('category') %}
-	{% set listing_title = 'FUTURE.BLOG.LISTING_TITLE_CATEGORY'|t ~ uri.param('category') %}
+    {% set listing_title = 'FUTURE.BLOG.LISTING_TITLE_CATEGORY'|t ~ uri.param('category') %}
 {% elseif uri.param('tag') %}
-	{% set listing_title = 'FUTURE.BLOG.LISTING_TITLE_TAG'|t ~ uri.param('tag') %}
+    {% set listing_title = 'FUTURE.BLOG.LISTING_TITLE_TAG'|t ~ uri.param('tag') %}
 {% elseif uri.param('author') %}
-	{% set listing_title = 'FUTURE.BLOG.LISTING_TITLE_AUTHOR'|t ~ uri.param('author') %}
+    {% set listing_title = 'FUTURE.BLOG.LISTING_TITLE_AUTHOR'|t ~ uri.param('author') %}
 {% elseif uri.param('archives_month') %}
-    {% set listing_title = 'FUTURE.BLOG.LISTING_TITLE_MONTH'|t ~ uri.param('archives_month')|replace({'_': ' '}) %}
+    {% set listing_title = 'FUTURE.BLOG.LISTING_TITLE_MONTH'|t ~ uri.param('archives_month')|replace({_: ' '}) %}
 {% else %}
     {% set listing_title = page.header.subtitle %}
 {% endif %}
 
 {% block menu %}
-  {% include 'partials/sidebar_right.html.twig' %}
+  {{ include('partials/sidebar_right.html.twig') }}
 {% endblock %}
 
 {% block content %}
 <article class="heading">
     {% if image %}
     <span class="image featured">
-      {{ image.cropZoom(1038,437).loading('lazy').decoding('async').html(title, title)|raw }}
+      {{ image.cropZoom(1038, 437).loading('lazy').decoding('async').html(title, title)|raw }}
     </span>
     {% endif %}
     <div class="title">
@@ -35,31 +35,31 @@
         {{ listing_title|markdown }}
       {% endif %}
     </div>
-    
+
     {{ page.content|raw }}
-    
+
     {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
-      {% include 'partials/breadcrumbs.html.twig' %}
+      {{ include('partials/breadcrumbs.html.twig') }}
     {% endif %}
 </article>
   {% for child in collection %}
-    {% set datestamp = include('partials/page-bits/date.html.twig', { 'page': child }) %}
-    {% include 'partials/blog_item.html.twig' with {blog: page, page:child, 'title': child.title, 'subtitle': child.header.subtitle, 'listing': true, 'truncate':true} %}
+    {% set datestamp = include('partials/page-bits/date.html.twig', {page: child}) %}
+    {{ include('partials/blog_item.html.twig', {blog: page, page: child, title: child.title, subtitle: child.header.subtitle, listing: true, truncate: true}) }}
   {% endfor %}
 
   {% if show_pagination and config.plugins.pagination.enabled and collection.params.pagination %}
-    {% include 'partials/pagination.html.twig' with {'base_url': page.url, 'pagination': collection.params.pagination} %}
+    {{ include('partials/pagination.html.twig', {base_url: page.url, pagination: collection.params.pagination}) }}
   {% endif %}
 
   {% if show_sidebar == false %}
     <section id="footer" class="align-center">
-      {% include 'partials/sidebar-bits/footer.html.twig' %}
+      {{ include('partials/sidebar-bits/footer.html.twig') }}
     </section>
   {% endif %}
 {% endblock %}
 
 {% block sidebar %}
 {% if show_sidebar == true %}
-    {% include 'partials/sidebar_left.html.twig' %}
+    {{ include('partials/sidebar_left.html.twig') }}
 {% endif %}
 {% endblock %}

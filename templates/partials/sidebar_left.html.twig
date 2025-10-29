@@ -1,27 +1,27 @@
 <section id="sidebar">
-  
+
   {% block intro %}
-    {% include 'partials/sidebar-bits/intro.html.twig' %}
+    {{ include('partials/sidebar-bits/intro.html.twig') }}
   {% endblock %}
 
-  {% if page.header.toc_enabled == true and config.plugins["page-toc"].enabled %}
+  {% if page.header.toc_enabled == true and config.plugins['page-toc'].enabled %}
       <div class="page-toc-sticky">
-      {% include 'components/page-toc.html.twig' %}
+      {{ include('components/page-toc.html.twig') }}
       </div>
     {% endif %}
 
   {% block miniposts %}
-    {% include 'partials/sidebar-bits/miniposts.html.twig' %}
+    {{ include('partials/sidebar-bits/miniposts.html.twig') }}
   {% endblock %}
 
   {% block latest %}
-    {% include 'partials/sidebar-bits/recentposts.html.twig' %}
+    {{ include('partials/sidebar-bits/recentposts.html.twig') }}
   {% endblock %}
-  
+
   {% block footer %}
 
-    {% include 'partials/sidebar-bits/footer.html.twig' %}
-    
+    {{ include('partials/sidebar-bits/footer.html.twig') }}
+
   {% endblock %}
 
 </section>

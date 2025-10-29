@@ -1,9 +1,9 @@
 {% extends 'partials/base.html.twig' %}
 
-{% set sidebar = theme_var('sidebar')|defined(true)  %}
+{% set sidebar = theme_var('sidebar')|defined(true) %}
 
 {% block menu %}
-  {% include 'partials/sidebar_right.html.twig' %}
+  {{ include('partials/sidebar_right.html.twig') }}
 {% endblock %}
 
 {% block content %}
@@ -18,13 +18,13 @@
 
   {% if sidebar == false %}
     <section id="footer" class="align-center">
-      {% include 'partials/sidebar-bits/footer.html.twig' %}
+      {{ include('partials/sidebar-bits/footer.html.twig') }}
     </section>
   {% endif %}
 {% endblock %}
 
 {% block sidebar %}
 {% if sidebar == true %}
-    {% include 'partials/sidebar_left.html.twig' %}
+    {{ include('partials/sidebar_left.html.twig') }}
 {% endif %}
 {% endblock %}

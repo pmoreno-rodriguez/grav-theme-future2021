@@ -2,7 +2,7 @@
 <ul class="posts">
 {% for related_path, score in related_pages %}
     {% set related = grav['pages'].get(related_path) %}
-    {% set related_image = related.media.images[related.header.primaryImage] ?: related.media.all|filter((v, k) => k != related.header.avatarImage and (v.type == 'image' ))|first %}
+    {% set related_image = related.media.images[related.header.primaryImage] ?: related.media.all|filter((v, k) => k != related.header.avatarImage and (v.type == 'image'))|first %}
 
     {% if related %}
             <li>
@@ -18,10 +18,10 @@
                                 </span>
                             </small>
                         </header>
-                        
+
                         {% if related_image is not empty %}
                             <a class="image" aria-label="{{ related.title|e('html_attr') }}" href="{{ related.url }}">
-                                {{ related_image.cropResize(64,64).loading('lazy').decoding('async').html|raw }}
+                                {{ related_image.cropResize(64, 64).loading('lazy').decoding('async').html|raw }}
                             </a>
                         {% endif %}
                     {% endif %}

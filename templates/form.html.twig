@@ -32,7 +32,7 @@
 {% endblock %}
 
 {% block menu %}
-  {% include 'partials/sidebar_right.html.twig' %}
+  {{ include('partials/sidebar_right.html.twig') }}
 {% endblock %}
 
 {% block content %}
@@ -44,6 +44,6 @@
       <div class="meta"></div>
     </header>
     {{ content|raw }}
-    {% include "forms/form.html.twig" %}
+    {{ include('forms/form.html.twig') }}
   </article>
 {% endblock %}

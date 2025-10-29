@@ -1,5 +1,5 @@
 <section id="contact">
   {{ page.content|raw }}
-  {% include "forms/form.html.twig" with { form: forms('contact-form')} %}
+  {{ include('forms/form.html.twig', {form: forms('contact-form')}) }}
 </section>
 <br>

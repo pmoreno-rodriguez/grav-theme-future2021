@@ -1,12 +1,12 @@
 {% set datestamp = include('partials/page-bits/date.html.twig') %}
-{% set size = file.size/1024 %}
-{% set unit = "Kb" %}
+{% set size = file.size / 1024 %}
+{% set unit = 'Kb' %}
 {% if size > 1023 %}
-    {% set size = size/1024 %}
-    {% set unit = "Mb" %}
+    {% set size = size / 1024 %}
+    {% set unit = 'Mb' %}
 {% endif %}
 <td>
-    {{ file.filename|regex_replace(['/-/','/_/'], [' ',' ']) }}
+    {{ file.filename|regex_replace(['/-/', '/_/'], [' ', ' ']) }}
 </td>
 <td>
     {{ size|number_format(2, '.', ',') }}{{ unit }}

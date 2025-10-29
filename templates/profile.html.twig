@@ -34,11 +34,11 @@
 {% do form.setAllData(grav.user.toArray) %}
 
 {% block menu %}
-	{% include 'partials/sidebar_right.html.twig' %}
+    {{ include('partials/sidebar_right.html.twig') }}
 {% endblock %}
 
 {% block content %}
-    {% include 'partials/messages.html.twig' %}
+    {{ include('partials/messages.html.twig') }}
     {{ page.content|raw }}
-    {% include 'forms/form.html.twig' %}
+    {{ include('forms/form.html.twig') }}
 {% endblock %}

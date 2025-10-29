@@ -11,7 +11,7 @@
 {% set subtitle = page.header.subtitle|raw %}
 
 {# Set columns for features page #}
-{% set columns = page.header.layout == 'standard' ? 'col-4 col-6-medium col-12-small' : 'col-6 col-12-small'  %}
+{% set columns = page.header.layout == 'standard' ? 'col-4 col-6-medium col-12-small' : 'col-6 col-12-small' %}
 
 <section id="features">
   <header>
@@ -20,30 +20,30 @@
       <p>{{ subtitle }}</p>
     {% endif %}
   </header>
-  
+
   {% if show_image and image %}
-    {{ image.cropZoom(img_width,img_height).loading('lazy').decoding('async').html(title, title, 'image featured')|raw }}
+    {{ image.cropZoom(img_width, img_height).loading('lazy').decoding('async').html(title, title, 'image featured')|raw }}
   {% endif %}
 
   {{ page.content|raw }}
 
   <div class="row gtr-uniform">
     {% for feature in page.header.features %}
-      <div class="{{columns}}">
+      <div class="{{ columns }}">
         <article class="box">
           {% if feature.image %}
-            <span class="image fit"><img src="{{page.media[feature.image].url}}" alt="{{feature.title}}"/></span>
+            <span class="image fit"><img src="{{ page.media[feature.image].url }}" alt="{{ feature.title }}"/></span>
           {% endif %}
           <header>
             {% if feature.title %}
-              <h3>{{feature.title|raw}}</h3>
+              <h3>{{ feature.title|raw }}</h3>
             {% endif %}
             {% if feature.text %}
-              <p>{{feature.text|raw}}</p>
+              <p>{{ feature.text|raw }}</p>
             {% endif %}
             {% if feature.buttonurl %}
               <p>
-                <a href="{{feature.buttonurl}}" class="button fit" target={% if feature.buttonurl_target %} "_blank" {% endif%}>{{feature.buttontext|raw}}</a>
+                <a href="{{ feature.buttonurl }}" class="button fit" target={% if feature.buttonurl_target %} "_blank" {% endif %}>{{ feature.buttontext|raw }}</a>
               </p>
             {% endif %}
           </header>

@@ -7,7 +7,7 @@
         </header>
         <ul class="menulink">
             <li>
-                {% for tax,value in taxlist[taxonomy] %}
+                {% for tax, value in taxlist[taxonomy] %}
                     {% if value is not empty %}
                         {% set active = uri.param(taxonomy) == tax ? 'active' : '' %}
                         <a class="tags {{ active }}" rel="nofollow" href="{{ base_url }}/{{ taxonomy|e('url') }}{{ config.system.param_sep }}{{ tax|url_encode }}">{{ tax|e }}</a>

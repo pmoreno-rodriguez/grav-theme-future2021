@@ -5,7 +5,7 @@
 
     {% if thumb %}
     <div class="search-image">
-        <a href="{{ page.url }}">{{ thumb.loading('lazy').decoding('async').html(title,title)|raw }}</a>
+        <a href="{{ page.url }}">{{ thumb.loading('lazy').decoding('async').html(title, title)|raw }}</a>
     </div>
     {% endif %}
     <div class="search-item">
@@ -15,7 +15,7 @@
         <div class="search-details">
             <span class="search-date">{{ datestamp }}</span>
         </div>
-        {{ page.summary|striptags|truncate(300, true)|raw }} 
+        {{ page.summary|striptags|truncate(300, true)|raw }}
     </div>
 
 </section>

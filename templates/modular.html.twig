@@ -8,7 +8,7 @@
 {% endmacro %} #}
 
 {% block menu %}
-  {% include 'partials/sidebar_right.html.twig' %}
+  {{ include('partials/sidebar_right.html.twig') }}
 {% endblock %}
 
 {% block content %}
@@ -24,11 +24,11 @@
 
     {% if show_image and image %}
     <span class="image featured">
-      {{ image.cropZoom(img_width,img_height).loading('lazy').decoding('async').html(title, title)|raw }}
+      {{ image.cropZoom(img_width, img_height).loading('lazy').decoding('async').html(title, title)|raw }}
     </span>
     {% endif %}
 
-    {{ page.content|raw}}
+    {{ page.content|raw }}
 
     {% for module in page.collection() %}
       {{ module.content|raw }}
@@ -36,10 +36,8 @@
   </article>
 {% endblock %}
 
-
 {% block sidebar %}
 {% if show_sidebar == true %}
-    {% include 'partials/sidebar_left.html.twig' %}
+    {{ include('partials/sidebar_left.html.twig') }}
 {% endif %}
 {% endblock %}
-

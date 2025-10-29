@@ -37,10 +37,10 @@
 {% endblock %}
 
 {% block menu %}
-  {% include 'partials/sidebar_right.html.twig' %}
+  {{ include('partials/sidebar_right.html.twig') }}
 {% endblock %}
 
 {% block content %}
-    {% include 'partials/messages.html.twig' %}
-    {% include 'partials/forgot-form.html.twig' %}
+    {{ include('partials/messages.html.twig') }}
+    {{ include('partials/forgot-form.html.twig') }}
 {% endblock %}

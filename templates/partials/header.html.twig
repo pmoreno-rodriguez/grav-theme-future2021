@@ -1,21 +1,21 @@
 <header id="header">
-    
+
     <div class="logo">
-      
+
       <a href="{{ home_url }}" class="">
        {% if logoImageHeader == 'image' %}
-        {% include 'partials/logo.html.twig' with {'logo_class': 'logo-img'} %}
+        {{ include('partials/logo.html.twig', {logo_class: 'logo-img'}) }}
       {% elseif logoImageHeader == 'both' %}
-        {% include 'partials/logo.html.twig' with {'logo_class': 'logo-img'} %}{{ site.title|e }}
+        {{ include('partials/logo.html.twig', {logo_class: 'logo-img'}) }}{{ site.title|e }}
       {% else %}
         {{ site.title|e }}
       {% endif %}
       </a>
     </div>
-  
+
   <nav class="dropdown">
     {% block header_navigation %}
-      {% include 'partials/navigation.html.twig' %}
+      {{ include('partials/navigation.html.twig') }}
     {% endblock %}
   </nav>
   <nav class="main">
@@ -32,11 +32,11 @@
         {% endif %}
 
         {% if icon_lang and config.plugins.langswitcher.enabled and system.languages.supported is not null %}
-          {% include 'partials/langswitcher.html.twig' %}
+          {{ include('partials/langswitcher.html.twig') }}
         {% endif %}
 
         {% if config.plugins.simplesearch.enabled and icon_search %}
-          {% include 'partials/simplesearch_searchbox.html.twig' %}
+          {{ include('partials/simplesearch_searchbox.html.twig') }}
         {% endif %}
         <li class="menu">
           <a class="fa-bars" href="#menu">Menu</a>
