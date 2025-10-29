@@ -1,3 +1,10 @@
+# v2.2.2
+## 10/29/2025
+
+1. [](#improved)
+   * `social_style` has been added to the social icon options in the theme settings
+   * Standardized Twig template formatting using [CS fixer tool](https://github.com/VincentLanglet/Twig-CS-Fixer)
+
 # v2.2.1
 ## 10/23/2025
 
