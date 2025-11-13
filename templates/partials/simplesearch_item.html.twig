@@ -1,7 +1,7 @@
 <section class="search-row">
 
     {% set title = page.title %}
-    {% set thumb = page.media[page.header.primaryImage] ?: page.media.all|filter((v, k) => k != page.header.avatarImage and (v.type == 'image' or v.type == 'vector'))|first %}
+    {% set thumb = page.media[page.header.primaryImage] ?: page.media[page.header.featured_image] ?: page.media.all|filter((v, k) => k != page.header.avatarImage and (v.type == 'image' or v.type == 'vector'))|first %}
 
     {% if thumb %}
     <div class="search-image">

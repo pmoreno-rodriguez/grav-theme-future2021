@@ -114,17 +114,17 @@ form:
                       ordering@: header.subtitle
                       size: large
                       type: pagemediaselect
-                      label: FUTURE.ADMIN.DEFAULT.PRIMARY_IMAGE.LABEL
+                      label: FUTURE.ADMIN.DEFAULT.FEATURED_IMAGE.LABEL
                       help: FUTURE.ADMIN.DEFAULT.FEATURED_IMAGE.HELP
                       preview_images: true
                     header.image_width:
                       type: number
-                      label: FUTURE.ADMIN.DEFAULT.PRIMARY_IMAGE.WIDTH
+                      label: FUTURE.ADMIN.DEFAULT.FEATURED_IMAGE.WIDTH
                       size: small
                       default: 1000
                     header.image_height:
                       type: number
-                      label: FUTURE.ADMIN.DEFAULT.PRIMARY_IMAGE.HEIGHT
+                      label: FUTURE.ADMIN.DEFAULT.FEATURED_IMAGE.HEIGHT
                       size: small
                       default: 300  
         advanced:

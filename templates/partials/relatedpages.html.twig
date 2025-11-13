@@ -2,8 +2,7 @@
 <ul class="posts">
 {% for related_path, score in related_pages %}
     {% set related = grav['pages'].get(related_path) %}
-    {% set related_image = related.media.images[related.header.primaryImage] ?: related.media.all|filter((v, k) => k != related.header.avatarImage and (v.type == 'image'))|first %}
-
+    {% set related_image = related.media[related.header.featured_image] ?: related.media[related.header.primaryImage] ?: related.media.all|filter((v, k) => k != related.header.avatarImage and (v.type == 'image' or v.type == 'vector'))|first %}
     {% if related %}
             <li>
                 <article>

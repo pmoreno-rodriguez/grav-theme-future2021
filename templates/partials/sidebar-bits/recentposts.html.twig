@@ -11,7 +11,7 @@
   <ul class="posts">
     {% for p in blog.collection.order('date', 'desc').slice(0, recent_number) %}
     {% set datestamp = include('partials/page-bits/date.html.twig', {page: p}) %}
-    {% set image = p.media[p.header.primaryImage] ?: p.media.all|filter((v, k) => k != p.header.avatarImage and (v.type == 'image' or v.type == 'vector'))|first %}
+    {% set image = p.media[p.header.featured_image] ?: p.media[p.header.primaryImage] ?: p.media.all|filter((v, k) => k != p.header.avatarImage and (v.type == 'image' or v.type == 'vector'))|first %}
     {% set title = p.title %}
       <li>
         <article>

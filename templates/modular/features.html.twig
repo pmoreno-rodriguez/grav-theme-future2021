@@ -1,7 +1,7 @@
 {# Define if sidebar is shown in the page #}
 {% set show_image = header_var('show_pageimage')|defined(true) %}
 
-{# Define if the primary image and the attributes of width and height are shown #}
+{# Define if the featured image and the attributes of width and height are shown #}
 {% set image = page.media[page.header.primaryImage] ?: page.media.all|filter((v) => (v.type == 'image' or v.type == 'vector'))|first %}
 {% set img_width = header_var('image_width')|default(1038) %}
 {% set img_height = header_var('image_height')|default(437) %}

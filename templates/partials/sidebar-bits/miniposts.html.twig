@@ -20,8 +20,8 @@
                 {% endif %}
                 {% set title = p.title %}
                 {% set avatar = p.media[p.header.avatarImage].url %}
-                {% set image = p.media[p.header.primaryImage] ?: p.media.all|filter((v, k) => k != p.header.avatarImage and (v.type == 'image' or v.type == 'vector'))|first %}
-                {# Define if the primary image and the attributes of width and height are shown #}
+                {% set image = p.media[p.header.featured_image] ?: p.media[p.header.primaryImage] ?: p.media.all|filter((v, k) => k != p.header.avatarImage and (v.type == 'image' or v.type == 'vector'))|first %}
+                {# Define if the fetured image and the attributes of width and height are shown #}
                 {% set show_image = p.header.show_pageimage|defined(true) %}
                 {% set img_width = p.header.image_width|default(1038) %}
                 {% set img_height = p.header.image_height|default(437) %}
