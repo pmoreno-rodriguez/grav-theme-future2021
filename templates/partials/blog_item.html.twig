@@ -1,9 +1,8 @@
 {# For SEO purposes, we avoid displaying more than one H1 tag. #}
 {% set Htag = listing ? 'h2' : 'h1' %}
 
-{# Set avatar image and primary image #}
+{# Set avatar image #}
 {% set avatar = page.media[page.header.avatarImage].url|e %}
-{% set image = page.media[page.header.primaryImage] ?: page.media.all|filter((v, k) => k != page.header.avatarImage and (v.type == 'image' or v.type == 'vector'))|first %}
 
 {# Set page author #}
 {% if page.header.metadata.author %}
