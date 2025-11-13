@@ -1,0 +1,287 @@
+FUTURE:
+  ADMIN:
+    THEME:
+      GENERAL: Configuración General
+      DROPDOWN_MENU: Menu Desplegable
+      PRODUCTION_MODE: Modo Producción
+      PRODUCTION_MODE_HELP: Si está activado, Future cargará con CSS minificado
+      HEADER: Sección de encabezado
+      FAVICON: Elige tu propio favicon
+      CUSTOM_LOGO: Logo personalizado
+      CUSTOM_LOGO_DESCRIPTION: Este logo se usará en lugar del log por defecto `theme://images/grav-logo.svg`
+      CUSTOM_LOGO_MOBILE: Logo personalizado para dispositivos móviles
+      TYPE_LOGO_HEADER: 'Mostrar logo/texto en el encabezado'
+      TYPE_LOGO_HEADER_HELP: Elige cómo quieres que aparezca el logo en el encabezado.
+      TYPE_LOGO_HEADER_IMAGE: Imagen
+      TYPE_LOGO_HEADER_TEXT: Texto
+      TYPE_LOGO_HEADER_BOTH: Ambos
+      SLOGAN: Slogan
+      CUSTOM_CSS: Cargar CSS personalizado
+      CUSTOM_CSS_HELP: Carga los estilos CSS personalizados desde theme://assets/css/custom.css
+      CUSTOM_JS: Cargar JS personalizado
+      CUSTOM_JS_HELP: Carga JS personalizado desde theme://assets/css/custom.js
+      MENU:
+        TITLE: Configuración del Menú Superior
+        LANGSWITCHER: Habilitar icono Idioma
+        LANGSWITCHER_HELP: Con el complemento Langswitcher habilitado y la configuración multilingüe en su sitio, puede habilitar o deshabilitar la funcionalidad de cambiar de idioma, que aparece en el menú superior.
+        SEARCH: Habilitar icono Buscar
+        SEARCH_HELP: Con el complemento SimpleSearch habilitado, puede habilitar o deshabilitar el bloque de búsqueda en el menú superior.
+        LOGIN: Habilitar icono Login
+        LOGIN_HELP: Puede habilitar o deshabilitar el icono de inicio de sesión en el menú superior para mostrar el estado de la sesión.
+      BLOG_DEFAULTS: Opciones de Blog
+      BLOG_PAGE: Página de Blog
+      BLOG_PAGE_HELP: Ruta de la página de Blog cuando funciona con el blog de barra lateral
+      SIDEBAR: Mostrar barra lateral en página no editables
+      SIDEBAR_HELP: Mostrar barra lateral en páginas como Offline, SimpleSearch Results, Error, etc.
+      GOOGLE_FONTS:
+        LOCAL: Usar fuentes de Google alojadas localmente
+      MINIPOSTS: Activar Miniposts en la barra lateral
+      MINIPOSTS_NUMBER: Número de miniposts a mostrar
+      MINIPOSTS_NUMBER_DESCRIPTION: Número de miniposts que se mostrarán en la barra lateral
+      MINIPOSTS_CATEGORY: Categoría para miniposts
+      MINIPOSTS_CATEGORY_DESCRIPTION: Establezca un nombre para la categoría de miniposts.<br />`Deberá incluir este nombre en Opciones->Taxonomía->Categoría`
+      RECENT_POSTS_ENABLED: Mostrar publicaciones recientes en la barra lateral
+      RECENT_POSTS_NUMBER: Número de publicaciones recientes
+      RECENT_POSTS_NUMBER_DESCRIPTION: Número de publicaciones recientes que se mostrarán en la barra lateral
+      FOOTER: Pie de página
+      FOOTER_TITLE: Título del pie de página
+      FOOTER_DESCRIPTION: Descripción del pie de página
+      FOOTER_COPYRIGHT: Texto del Copyright
+      FOOTER_BUTTON_TEXT: Texto del botón
+      FOOTER_BUTTON_URL: URL del botón
+      FOOTER_SOCIAL_ENABLE: Habilitar iconos
+      FOOTER_SOCIAL_STYLE: Estilos de iconos
+      FOOTER_SOCIAL_STYLE_DESCRIPTION: 'Busque los iconos en <a href="https://fontawesome.com/v5/search" target="_blank">https://fontawesome.com/v5/search</a>'
+      FOOTER_SOCIAL_STYLE_REGULAR: Regular
+      FOOTER_SOCIAL_STYLE_SOLID: Solid
+      FOOTER_SOCIAL_STYLE_BRANDS: Brands
+      FOOTER_SOCIAL_ICONS: Iconos Redes Sociales
+      FOOTER_SOCIAL_ICONS_LIST: Lista de Iconos
+      FOOTER_SOCIAL_ICON_NAME: Nombre de Red Social
+      FOOTER_SOCIAL_ICON_URL: URL Link to Social
+      FOOTER_SOCIAL_ICON_ICON: Icono de Red Social
+      CUSTOM_MENU_TITLE: 'Entradas de menú personalizados'
+      CUSTOM_MENU_ENABLE: 'Habilitar entradas de menú personalizados'
+      CUSTOM_MENU_ENABLE_HELP: 'Determina si se muestra alguna entrada de menú personalizada definida en la barra de menú.'
+      CUSTOM_MENU_ITEM_TEXT: 'Texto'
+      CUSTOM_MENU_ITEM_TEXT_DESCRIPTION: 'Etiqueta de texto para entrada de menú.'
+      CUSTOM_MENU_ITEM_ICON: 'Icono'
+      CUSTOM_MENU_ITEM_ICON_DESCRIPTION: 'Icono Font Awesome para entrada de menú.'
+      CUSTOM_MENU_ITEM_URL: 'URL'
+      CUSTOM_MENU_ITEM_URL_DESCRIPTION: 'URL para entrada de menú.'
+      CUSTOM_MENU_ITEM_TARGET: 'Destino'
+      CUSTOM_MENU_ITEM_TARGET_BLANK: 'Abrir en nueva ventana'
+      CUSTOM_MENU_ITEM_TARGET_PARENT: 'Abrir en el marco principal'
+      CUSTOM_MENU_ITEM_TARGET_SELF: 'Abrir en el mismo marco en el que se hizo clic'
+      CUSTOM_MENU_ITEM_TARGET_TOP: 'Abrir en todo el cuerpo de la ventana'
+    DEFAULT:
+      HEADINGS_SECTION: Opciones de encabezados
+      CONTENT: Contenido
+      IMAGE_OPTIONS: Opciones de imagen
+      FEATURED_IMAGE: 
+        LABEL: Imagen principal
+        HELP: Establece la imagen principal de la página
+        WIDTH: Ancho
+        HEIGHT: Alto
+      SHOW_PAGEIMAGE: Mostrar imagen
+      SHOW_PAGEIMAGE_HELP: Habilitar la imagen principal si está definida o la primera de las imágenes de la página.
+      SHOW_SIDEBAR: Mostrar Barra Lateral
+      TOC_ENABLED: Activar TOC en páginas largas
+      TOC_ENABLED_HELP: Activa la Tabla de Contenidos en páginas largas. Es necesario tener instalado el plugin Page Toc.
+      BODY_CLASSES: 'Puede crear nuevas clases CSS para el body y añadirlas aquí.'
+    MODULAR:
+      BANNER:
+        BANNER_TAB: Banner
+        BANNER_SUBTITLE: Subtítulo
+        BANNER_BUTTON_TEXT: Texto del botón
+        BANNER_BUTTON_URL: URL del botón
+        BANNER_IMAGE: Imagen
+        BANNER_IMAGE_DESCRIPTION: Seleccione una imagen
+      FEATURES:
+        FEATURES_TAB: Funciones
+        FEATURES_LAYOUT: Diseño
+        FEATURES_LAYOUT_TWOCOLS: Medio   = 2 / 1 columnas
+        FEATURES_LAYOUT_THREECOLS: Estándar  = 3 / 2 / 1 columnas
+        FEATURES_HEADER: Funciones
+        FEATURES_IMAGE: Imagen
+        FEATURES_TITLE: Título
+        FEATURES_TEXT: Texto
+        FEATURES_BUTTON_TEXT: Texto del botón
+        FEATURES_BUTTON_URL: URL del botón
+        FEATURES_BUTTON_URL_TARGET: Abrir la URL en una nueva ventana
+
+    BLOG:
+      BLOG_TAB: Configuración del Blog
+      BLOG_CONFIGURATION: Configuración
+      BLOG_ROUTE: Ruta del Blog
+      BLOG_ROUTE_HELP: La ruta a la página principal del blog que contiene la configuración "Mostrar..."
+      BLOG_CONTENT_TITLE: Definición de Contenido
+      BLOG_CONTENT_ITEMS: Artículos
+      BLOG_CONTENT_ITEMS_LIMIT: Límite máximo de artículos
+      BLOG_CONTENT_ITEMS_ORDER_BY: Ordenar por
+      BLOG_CONTENT_ITEMS_ORDER_BY_DATE: Fecha
+      BLOG_CONTENT_ITEMS_ORDER_BY_TITLE: Título
+      BLOG_CONTENT_ITEMS_ORDER_BY_FOLDER: Carpeta
+      BLOG_CONTENT_ITEMS_ORDER_BY_DEFAULT: Por defecto
+      BLOG_CONTENT_ITEMS_ORDER_DIR: Orden
+      BLOG_CONTENT_ITEMS_ORDER_DIR_ASC: Ascendente
+      BLOG_CONTENT_ITEMS_ORDER_DIR_DESC: Descendente
+      BLOG_CONTENT_ITEMS_BREADCRUMBS: Mostrar Migas de Pan
+      BLOG_CONTENT_ITEMS_SHOWPAGINATION: Mostrar paginación
+      BLOG_CONTENT_ITEMS_PAGINATION: Paginación
+      BLOG_CONTENT_ITEMS_URL_TAXONOMY_FILTERS: Filtros de taxonomía por URL
+      BLOG_CONTENT_SHAREICONS_TITLE: Iconos de Redes Sociales
+      BLOG_CONTENT_SHAREICONS: Mostrar iconos de Redes Sociales
+      BLOG_CONTENT_SHAREICONS_HELP: Seleccione qué iconos de redes sociales desea mostrar en los artículos
+    ITEM:
+      ITEM_TAB: Artículo de Blog
+      ITEM_OPTIONS: Opciones
+      ITEM_SUMMARY: Resumen de Artículo
+      ITEM_SUMMARY_ENABLED: Activar Resumen
+      ITEM_SUMMARY_FORMAT: Formato de Resumen
+      ITEM_SUMMARY_FORMAT_SHORT: Utilizar la primera aparición de delimitador o tamaño
+      ITEM_SUMMARY_FORMAT_LONG: Se ignorará el delimitador de resumen
+      ITEM_SUMMARY_SIZE: Tamaño
+      ITEM_SUMMARY_DELIMITER: Delimitador de Resumen
+      ITEM_ORDER: Orden del Minipost
+      ITEM_SUBTITLE: Subtítulo
+      ITEM_AVATAR: Imagen de Avatar
+    PORTFOLIO:
+      TAB: Portafolio
+      TITLE: Imágenes de Portafolio
+      LAYOUT: 
+        LABEL: Diseño
+        TWOCOLS: Medio   = 2 / 1 columnas
+        THREECOLS: Estándar  = 3 / 2 / 1 columnas
+      THUMB_WIDTH: Ancho de Minitaura
+      THUMB_WIDTH_HELP: Fije el ancho para las miniaturas
+      THUMB_HEIGHT: Alto de Miniatura
+      THUMB_HEIGHT_HELP: Fije el alto para las miniaturas
+      IMAGES: 
+        LABEL: Imágenes
+        IMAGE: Imagen
+        IMAGE_TITLE: Título
+        IMAGE_DESCRIPTION: Descripción
+        DESCPOSITION: 
+          LABEL: Posición de Descripción
+          HELP: Posición global para la descripción de las diapositivas, puede definir una posición específica en cada diapositiva (inferior, superior, izquierda, derecha).
+          BOTTOM: Abajo
+          TOP: Arriba
+          LEFT: Izquierda
+          RIGHT: Derecha
+        IMAGE_THUMB: Miniatura
+      OPTIONS:
+        TAB: Opciones Portafolio
+        EFFECTS_TITLE: Apariencia y efectos
+        ACTIONS_TITLE: Acciones
+        STYLING_TITLE: Estilos
+        BEHAVIOR_TITLE: Comportamiento
+        OVERLAY_HOVER_EFFECT:
+          LABEL: Efecto de superposición al pasar el ratón
+          HELP: Establece el efecto de superposición cuando el ratón está sobre una imagen
+          FADEIN_BOTTOM: Fundido inferior
+          FADEIN_TOP: Fundido superior
+          FADEIN_LEFT: Fundido desde la izquierda
+          FADEIN_RIGHT: Fundido desde la derecha
+          FADEIN_TOP_RIGHT: Fundido superior derecha
+          FADEIN_TOP_LEFT: Fundido superior izquierda
+          FADEIN_BOTTOM_RIGHT: Fundido inferior derecha
+          FADEIN_BOTTOM_LEFT: Fundido inferior izquierda
+        OPEN_EFFECT:
+          LABEL: Efecto de apertura
+          ZOOM: Zoom
+          FADE: Desvanecer
+          NONE: Ninguno
+        CLOSE_EFFECT:
+          LABEL: Efecto de cierre
+          ZOOM: Zoom
+          FADE: Desvanecimiento
+          NONE: Ninguno
+        SLIDE_EFFECT:
+          LABEL: Efecto de diapositiva
+          SLIDE: Deslizar
+          ZOOM: Zoom
+          FADE: Desvanecer
+          NONE: Ninguno
+        MORE_TEXT: Texto `Ver más`
+        MORE_TEXT_HELP: Texto `Ver más` personalizado (para dispositivos móviles)
+        MORE_TEXT_DEFAULT: Ver más
+        MORE_LENGTH: Número de caracteres `Ver más`
+        MORE_LENGTH_HELP: Número de caracteres a mostrar en la descripción antes de agregar el enlace `Ver más` (solo para móviles), si es 0 mostrará la descripción completa.
+        CLOSE_BUTTON: Botón Cerrar
+        CLOSE_BUTTON_HELP: Mostrar u ocultar el botón de cerrar
+        TOUCH_NAVIGATION: Navegación táctil
+        TOUCH_NAVIGATION_HELP: Activa o desactiva la navegación táctil (deslizar)
+        TOUCH_AXIS: Seguir eje
+        TOUCH_AXIS_HELP: La imagen sigue el eje cuando se arrastra en el móvil.
+        KEYBOARD: Navegación con teclado
+        KEYBOARD_HELP: Activa o desactiva la navegación por teclado
+        CLOSE_OUTSIDE: Cerrar al pulsar fuera
+        CLOSE_OUTSIDE_HELP: Cierra el cuadro de luz al hacer clic fuera de la diapositiva activa.
+        MORE_STARTAT: 'Comenzar en:'
+        MORE_STARTAT_HELP: Iniciar lightbox en el índice definido (0 es la primera diapositiva). Si no se define, se muestra la imagen en la que se hizo clic
+        WIDTH: Ancho
+        WIDTH_HELP: 'Ancho predeterminado para elementos en línea e iframes, puede definir un tamaño específico en cada diapositiva. Puede usar cualquier unidad, por ejemplo, 90% o 100vw para ancho completo'
+        HEIGHT: Alto
+        HEIGHT_HELP: 'Altura predeterminada para elementos en línea e iframes, puede definir un tamaño específico en cada diapositiva. Puede usar cualquier unidad, por ejemplo, 90% o 100vh Para elementos en línea, puede establecer la altura en automático'
+        LOOP: Bucle
+        LOOP_HELP: Reproduce las diapositivas en bucle al llegar al final
+        ZOOMABLE: Ampliable
+        ZOOMABLE_HELP: Habilite o deshabilite las imágenes con zoom, también puede usar `data-zoomable="false"` en nodos individuales.
+        DRAGGABLE: Arrastrable
+        DRAGGABLE_HELP: Habilite o deshabilite el arrastre del mouse para ir a la diapositiva anterior y siguiente (solo imágenes y contenido en línea), también puede usar `data-draggable="false"` en nodos individuales.
+        DRAGGABLE_X: Tolerancia de arrastre X
+        DRAGGABLE_X_HELP: Usado con arrastrable. Número de píxeles que el usuario tiene que arrastrar para ir a la diapositiva anterior o siguiente.
+        DRAGGABLE_Y: Tolerancia de arrastre Y
+        DRAGGABLE_Y_HELP: Usado con arrastrable. Número de píxeles que el usuario tiene que arrastrar hacia arriba o hacia abajo para cerrar el cuadro de luz (establezca 0 para deshabilitar el arrastre vertical).
+        DRAG_AUTO_SNAP: Arrastre automático
+        DRAG_AUTO_SNAP_HELP: Si es verdadero, la diapositiva cambiará automáticamente a anterior/siguiente o se cerrará si se alcanza dragToleranceX o dragToleranceY; de lo contrario, esperará hasta que se suelte el mouse.
+        PRELOAD: Precarga
+        PRELOAD_HELP: Activa o desactiva la precarga.
+
+  BLOG:
+    LISTING_TITLE_CATEGORY: 'Publicaciones en la categoría: '
+    LISTING_TITLE_TAG: 'Publicaciones con la etiqueta: '
+    LISTING_TITLE_AUTHOR: 'Publicaciones escritas por: '
+    LISTING_TITLE_MONTH: 'Publicaciones del mes: '
+    ITEM:
+      CONTINUE_READING: Continuar leyendo...
+      NEXT_POST: Siguiente
+      PREV_POST: Anterior
+    PAGINATION:
+      PREVIOUS: Anterior
+      NEXT: Siguiente
+  DOWNLOADS:
+    TH_NAME: Nombre
+    TH_SIZE: Tamaño
+    TH_MODIFIED: Modificado
+    TH_DOWNLOAD: Descarga
+    TD_BUTTON: Descargar
+  SIDEBAR:
+    SIMPLE_SEARCH:
+      HEADLINE: Buscar
+    RELATED_POSTS:
+      HEADLINE: Entradas Relacionadas
+    RANDOM_ARTICLE:
+      HEADLINE: Artículo Aleatorio
+      FEELING_LUCKY: Voy a tener suerte!
+    SOME_TEXT_WIDGET:
+      HEADLINE: Algunos Widget de Texto
+    TAGS:
+      HEADLINE: Etiquetas
+    POPULAR_TAGS:
+      HEADLINE: Etiquetas Populares
+    RECENT_POSTS:
+      HEADLINE: Últimas entradas
+    ARCHIVES:
+      HEADLINE: Archivos
+    SYNDICATE:
+      HEADLINE: Distribuir
+    LANGSWITCHER:
+      HEADLINE: Cambiar idioma
+  FEATURED: Destacados
+  PRIVACY: Al usar este formulario estás de acuerdo con nuestra
+  FORM_SUMMARY: Aquí está el resumen de lo que nos escribió
+  MISC:
+    SHARE_ON: Compartir en
+    BACK_TO_TOP: Volver arriba

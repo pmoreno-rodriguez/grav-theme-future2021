@@ -1,0 +1,284 @@
+FUTURE:
+  ADMIN:
+    THEME:
+      GENERAL: Allgemeine Einstellungen
+      DROPDOWN_MENU: Dropdown-Menü
+      PRODUCTION_MODE: Produktionsmodus
+      PRODUCTION_MODE_HELP: Wenn aktiviert, wird Future mit minimiertem CSS geladen
+      HEADER: Kopfzeile
+      FAVICON: Wählen Sie Ihr eigenes Favicon
+      CUSTOM_LOGO: Benutzerdefiniertes Logo
+      CUSTOM_LOGO_DESCRIPTION: Dieses Logo wird anstelle des Standardlogos `theme://images/grav-logo.svg` verwendet
+      CUSTOM_LOGO_MOBILE: Benutzerdefiniertes Logo für Mobilgeräte
+      TYPE_LOGO_HEADER: 'Logo/Text in der Kopfzeile anzeigen'
+      TYPE_LOGO_HEADER_HELP: Wählen Sie aus, wie das Logo in der Kopfzeile angezeigt werden soll
+      TYPE_LOGO_HEADER_IMAGE: Bild
+      TYPE_LOGO_HEADER_TEXT: Text
+      TYPE_LOGO_HEADER_BOTH: Beide
+      SLOGAN: Motto
+      CUSTOM_CSS: Benutzerdefiniertes CSS laden
+      CUSTOM_CSS_HELP: Benutzerdefinierte CSS-Stile aus theme://assets/css/custom.css laden
+      CUSTOM_JS: Benutzerdefiniertes JS laden
+      CUSTOM_JS_HELP: Benutzerdefiniertes JS aus theme://assets/css/custom.js laden
+      MENU:
+        TITLE: Menü-Konfiguration
+        LANGSWITCHER: Sprachauswahl aktivieren
+        LANGSWITCHER_HELP: Sprachauswahl bei mehrsprachigen Seiten im oberen Menü de-/aktivieren (erfordert Langswitcher-Plugin).
+        SEARCH: Suchfeld aktivieren
+        SEARCH_HELP: Suchfeld im oberen Menü de-/aktivieren (erfordert Simplesearch-Plugin).
+        LOGIN: Login-Symbol aktivieren
+        LOGIN_HELP: Login-Symbol im oberen Menü de-/aktivieren um den Login-Status zu sehen.
+      BLOG_DEFAULTS: Blog-Optionen
+      BLOG_PAGE: Blog-Seite
+      BLOG_PAGE_HELP: Der Pfad zur Blog-Seite wenn die Blog-Seitenleiste aktiv ist
+      SIDEBAR: Seitenleiste auf nicht bearbeitbaren Seiten anzeigen
+      SIDEBAR_HELP: Seitenleiste auf Seiten wie Offline, SimpleSearch-Ergebnisse, Fehler usw. anzeigen.
+      GOOGLE_FONTS:
+        LOCAL: Verwenden Sie lokal gehostete Google Fonts
+      MINIPOSTS: Miniposts in der Seitenleiste zeigen
+      MINIPOSTS_NUMBER: Anzahl der anzuzeigenden Miniposts
+      MINIPOSTS_NUMBER_DESCRIPTION: Anzahl der in der Seitenleiste anzuzeigenden Miniposts
+      MINIPOSTS_CATEGORY: Kategorie für Miniposts
+      MINIPOSTS_CATEGORY_DESCRIPTION: Legen Sie einen Namen für die Miniposts-Kategorie fest.<br />`Sie müssen diesen Namen in Optionen->Taxonomie->Kategorie einfügen`
+      RECENT_POSTS_ENABLED: Letzte Beiträge in der Seitenleiste anzeigen
+      RECENT_POSTS_NUMBER: Anzahl der letzten Beiträge
+      RECENT_POSTS_NUMBER_DESCRIPTION: Anzahl der letzten Beiträge, die in der Seitenleiste angezeigt werden
+      FOOTER: Fusszeile
+      FOOTER_TITLE: Fusszeilentitel
+      FOOTER_DESCRIPTION: Fusszeilentext
+      FOOTER_COPYRIGHT: Copyright-Text
+      FOOTER_BUTTON_TEXT: Schaltflächentext
+      FOOTER_BUTTON_URL: Schaltflächen-URL
+      FOOTER_SOCIAL_ENABLE: Symbole aktivieren
+      FOOTER_SOCIAL_STYLE: Icon-Stile
+      FOOTER_SOCIAL_STYLE_DESCRIPTION: Suchen Sie nach den Symbolen unter <a href="https://fontawesome.com/v5/search" target="_blank">https://fontawesome.com/v5/search</a>
+      FOOTER_SOCIAL_STYLE_REGULAR: Regular
+      FOOTER_SOCIAL_STYLE_SOLID: Solid
+      FOOTER_SOCIAL_STYLE_BRANDS: Brands
+      FOOTER_SOCIAL_ICONS: Symbole für soziale Medien
+      FOOTER_SOCIAL_ICONS_LIST: Liste der Symbole
+      FOOTER_SOCIAL_ICON_NAME: Name des sozialen Netzwerks
+      FOOTER_SOCIAL_ICON_URL: URL-Link zum sozialen Netzwerk
+      FOOTER_SOCIAL_ICON_ICON: Symbol des sozialen Netzwerks
+      CUSTOM_MENU_TITLE: Benutzerdefinierte Menüpunkte
+      CUSTOM_MENU_ENABLE: Benutzerdefinierte Menüpunkte aktivieren
+      CUSTOM_MENU_ENABLE_HELP: Legt fest, ob definierte benutzerdefinierte Menüeinträge in der Menüleiste angezeigt werden.
+      CUSTOM_MENU_ITEM_TEXT: Text
+      CUSTOM_MENU_ITEM_TEXT_DESCRIPTION: Textbeschriftung für Menüpunkt.
+      CUSTOM_MENU_ITEM_ICON: Symbol
+      CUSTOM_MENU_ITEM_ICON_DESCRIPTION: FontAwesome-Symbol für Menüelement.
+      CUSTOM_MENU_ITEM_URL: URL
+      CUSTOM_MENU_ITEM_URL_DESCRIPTION: URL für Menüpunkt.
+      CUSTOM_MENU_ITEM_TARGET: Ziel
+      CUSTOM_MENU_ITEM_TARGET_BLANK: In neuem Fenster öffnen
+      CUSTOM_MENU_ITEM_TARGET_PARENT: In übergeordnetem Frame öffnen
+      CUSTOM_MENU_ITEM_TARGET_SELF: In selbem Frame öffnen
+      CUSTOM_MENU_ITEM_TARGET_TOP: In vollem Fensterkörper öffnen
+    DEFAULT:
+      HEADINGS_SECTION: Header-Optionen
+      CONTENT: Inhalt
+      IMAGE_OPTIONS: Bildoptionen
+      FEATURED_IMAGE: 
+        LABEL: Hauptbild
+        HELP: Das Hauptbild, das auf der Seite angezeigt wird
+        WIDTH: Breite
+        HEIGHT: Höhe
+      SHOW_PAGEIMAGE: Show Image
+      SHOW_PAGEIMAGE_HELP: Hauptbild anzeigen, falls definiert, oder das erste Bild der Medienseite.
+      SHOW_SIDEBAR: Seitenleiste anzeigen
+      TOC_ENABLED: Inhaltsverzeichnis auf großen Seiten aktivieren
+      TOC_ENABLED_HELP: Inhaltsverzeichnis auf großen Seiten aktivieren. Das Page Toc-Plugin ist erforderlich
+      BODY_CLASSES: 'Sie können neue CSS-Klassen für den body erstellen und hier hinzufügen.'
+    MODULAR:
+      BANNER:
+        BANNER_TAB: Banner
+        BANNER_SUBTITLE: Bildbeschriftung
+        BANNER_BUTTON_TEXT: Schaltflächentext
+        BANNER_BUTTON_URL: Schaltflächen-URL
+        BANNER_IMAGE: Bild
+        BANNER_IMAGE_DESCRIPTION: Wählen Sie ein Bild aus
+      FEATURES:
+        FEATURES_TAB: Funktionen
+        FEATURES_LAYOUT: Layout
+        FEATURES_LAYOUT_TWOCOLS: Mittel   = 2 / 1 Spalten
+        FEATURES_LAYOUT_THREECOLS: Standard  = 3 / 2 / 1 Spalten
+        FEATURES_HEADER: Funktionen
+        FEATURES_IMAGE: Bild
+        FEATURES_TITLE: Titel
+        FEATURES_TEXT: Text
+        FEATURES_BUTTON_TEXT: Schaltflächentext
+        FEATURES_BUTTON_URL: Schaltflächen-URL
+        FEATURES_BUTTON_URL_TARGET: Öffnen Sie die URL in einem neuen Fenster
+
+    BLOG:
+      BLOG_TAB: Blog-Einstellungen
+      BLOG_CONFIGURATION: Konfiguration
+      BLOG_ROUTE: Blogroute
+      BLOG_ROUTE_HELP: Die Route zur Hauptseite des Blogs, die die Konfiguration "Show ..." enthält
+      BLOG_CONTENT_TITLE: Inhaltseinstellungen
+      BLOG_CONTENT_ITEMS: Artikel
+      BLOG_CONTENT_ITEMS_LIMIT: Maximale Artikel-Anzahl
+      BLOG_CONTENT_ITEMS_ORDER_BY: Sortieren nach
+      BLOG_CONTENT_ITEMS_ORDER_BY_DATE: Datum
+      BLOG_CONTENT_ITEMS_ORDER_BY_TITLE: Titel
+      BLOG_CONTENT_ITEMS_ORDER_BY_FOLDER: Verzeichnis
+      BLOG_CONTENT_ITEMS_ORDER_BY_DEFAULT: Standard
+      BLOG_CONTENT_ITEMS_ORDER_DIR: Reihenfolge
+      BLOG_CONTENT_ITEMS_ORDER_DIR_ASC: Aufsteigend
+      BLOG_CONTENT_ITEMS_ORDER_DIR_DESC: Absteigend
+      BLOG_CONTENT_ITEMS_BREADCRUMBS: Brotkrümelnavigation anzeigen
+      BLOG_CONTENT_ITEMS_SHOWPAGINATION: Paginierung anzeigen
+      BLOG_CONTENT_ITEMS_PAGINATION: Paginierung
+      BLOG_CONTENT_ITEMS_URL_TAXONOMY_FILTERS: Taxonomie filtern nach URL
+    ITEM:
+      ITEM_TAB: Blog-Artikel
+      ITEM_OPTIONS: Optionen
+      ITEM_SUMMARY: Artikelzusammenfassung
+      ITEM_SUMMARY_ENABLED: Zusammenfassung aktivieren
+      ITEM_SUMMARY_FORMAT: Zusammenfassungsformat
+      ITEM_SUMMARY_FORMAT_SHORT: Verwenden Sie das erste Vorkommen des Trennzeichens oder der Größe
+      ITEM_SUMMARY_FORMAT_LONG: Zusammenfassungsbegrenzer wird ignoriert
+      ITEM_SUMMARY_SIZE: Größe
+      ITEM_SUMMARY_DELIMITER: Zusammenfassungsbegrenzer
+      ITEM_ORDER: Minipost-Reihenfolge
+      ITEM_SUBTITLE: Untertitel
+      ITEM_AVATAR: Avatar-Bild
+    PORTFOLIO:
+      TAB: Portfolio
+      TITLE: Portfolio-Bilder
+      LAYOUT: 
+        LABEL: Layout
+        TWOCOLS: Mittel   = 2 / 1 Spalten
+        THREECOLS: Standard  = 3 / 2 / 1 Spalten
+      THUMB_WIDTH: Breite der Miniaturansicht
+      THUMB_WIDTH_HELP: Breite der Miniaturansicht einstellen
+      THUMB_HEIGHT: Höhe der Miniaturansicht
+      THUMB_HEIGHT_HELP: Höhe der Miniaturansicht einstellen
+      IMAGES: 
+        LABEL: Bilder
+        IMAGE: Bild
+        IMAGE_TITLE: Titel
+        IMAGE_DESCRIPTION: Beschreibung
+        DESCPOSITION: 
+          LABEL: Position der Beschreibung
+          HELP: Sie können eine spezifische Position angeben (unten, oben, links, rechts)
+          BOTTOM: Unten
+          TOP: Oben
+          LEFT: Links
+          RIGHT: Rechts
+        IMAGE_THUMB: Miniaturansicht
+      OPTIONS:
+        TAB: Portfolio-Optionen
+        EFFECTS_TITLE: Erscheinung & Effekte
+        ACTIONS_TITLE: Aktionen
+        STYLING_TITLE: Aussehen
+        BEHAVIOR_TITLE: Verhalten
+        OVERLAY_HOVER_EFFECT:
+          LABEL: Overlay-Effekt beim Hover
+          HELP: Legen Sie den Hover-Effekt fest, wenn sich die Maus über einem Bild befindet
+          FADEIN_BOTTOM: Unten einblenden
+          FADEIN_TOP: Oben einblenden
+          FADEIN_LEFT: Links einblenden
+          FADEIN_RIGHT: Rechts einblenden
+          FADEIN_TOP_RIGHT: Oben rechts einblenden
+          FADEIN_TOP_LEFT: Oben links einblenden
+          FADEIN_BOTTOM_RIGHT: Unten rechts einblenden
+          FADEIN_BOTTOM_LEFT: Unten links einblenden
+        OPEN_EFFECT:
+          LABEL: Effekt beim Öffnen
+          ZOOM: zoomen
+          FADE: einblenden
+          NONE: keiner
+        CLOSE_EFFECT:
+          LABEL: Effekt beim Schließen
+          ZOOM: zoomen
+          FADE: ausblenden
+          NONE: keiner
+        SLIDE_EFFECT:
+          LABEL: Effekt beim Verschieben
+          SLIDE: verschieben
+          ZOOM: zoomen
+          FADE: ausblenden
+          NONE: keiner
+        MORE_TEXT: Mehr Text
+        MORE_TEXT_HELP: Mehr Text für Beschreibungen auf Mobilgeräten
+        MORE_TEXT_DEFAULT: Mehr Text
+        MORE_LENGTH: Text-Länge
+        MORE_LENGTH_HELP: Anzahl der anzuzeigenden Zeichen bevor der Mehr-Text-Link eingebettet wird (nur auf Mobilgeräten), 0 zeigt den gesamten Text an.
+        CLOSE_BUTTON: Schließen
+        CLOSE_BUTTON_HELP: Den Schließen-Button anzeigen oder ausblenden.
+        TOUCH_NAVIGATION: Touch-Navigation
+        TOUCH_NAVIGATION_HELP: Die Touch-Navigation de-/aktivieren (swipen).
+        TOUCH_AXIS: Achse der Touch-Navigation
+        TOUCH_AXIS_HELP: Bildfolge-Achse beim Schieben auf Mobilgeräten.
+        KEYBOARD: Tastatur-Navigation
+        KEYBOARD_HELP: Die Tastatur-Navigation de-/aktivieren.
+        CLOSE_OUTSIDE: Außerhalb schließen
+        CLOSE_OUTSIDE_HELP: Die Lightbox schließen wenn außerhalb der aktiven Fläche geklickt wird.
+        MORE_STARTAT: Beginnen bei
+        MORE_STARTAT_HELP: Lightbox bei definiertem Index starten (0 wählt das erste Bild).
+        WIDTH: Breite
+        WIDTH_HELP: Standard-Breite für Inline-Elemente und -iframes. Es kann eine spezifische Breite für jede Diashow eingestellt werden. Sie können beliebige Einheiten verwenden, z.B. 90% oder 100vw für die volle Breite.
+        HEIGHT: Höhe
+        HEIGHT_HELP: Standard-Höhe für Inline-Elemente und -iframes. Es kann eine spezifische Höhe für jede Diashow eingestellt werden. Sie können beliebige Einheiten verwenden, z.B. 90% oder 100vh. Für Inline-Elemente kann auch auto gesetzt werden.
+        LOOP: Schleife
+        LOOP_HELP: Am Ende der Diashow von vorne beginnen.
+        ZOOMABLE: Zoombar
+        ZOOMABLE_HELP: Zoom de-/aktivieren. Sie können auch `data-zoomable="false"` für individuelle Knoten definieren.
+        DRAGGABLE: Verschiebbar
+        DRAGGABLE_HELP: Verschieben via Maus de-/aktivieren (nur Bilder und Inline-Elemente). Sie können auch `data-draggable="false"` für individuelle Knoten definieren.
+        DRAGGABLE_X: Verschiebe-Toleranz in X-Richtung
+        DRAGGABLE_X_HELP: Anzahl der Pixel, um die links/rechts geschoben werden muss um vor oder zurück zu gehen.
+        DRAGGABLE_Y: Verschiebe-Toleranz in Y-Richtung
+        DRAGGABLE_Y_HELP: Anzahl der Pixel, um die oben/unten geschoben werden muss um die Lightbox zu schließen. 0 deaktiviert das Verschieben in Y-Richtung.
+        DRAG_AUTO_SNAP: Auto-Einrasten beim Verschieben
+        DRAG_AUTO_SNAP_HELP: Wenn aktiv wird direkt auf das Erreichen der X-/Y-Toleranz reagiert, andernfalls wird auf das Loslassen der Maustaste gewartet.
+        PRELOAD: Vorladen
+        PRELOAD_HELP: Vorladen de-/aktivieren
+
+  BLOG:
+    LISTING_TITLE_CATEGORY: 'Beiträge in der Kategorie: '
+    LISTING_TITLE_TAG: 'Beiträge mit Tag: '
+    LISTING_TITLE_AUTHOR: 'Beiträge des Autors: '
+    LISTING_TITLE_MONTH: 'Beiträge des Monats: '
+    ITEM:
+      CONTINUE_READING: Weiterlesen...
+      NEXT_POST: Nächster Eintrag
+      PREV_POST: Vorheriger Eintrag
+    PAGINATION:
+      PREVIOUS: Vorherige
+      NEXT: Nächste
+  DOWNLOADS:
+      TH_NAME: Name
+      TH_SIZE: Größe
+      TH_MODIFIED: Geändert
+      TH_DOWNLOAD: Herunterladen
+      TD_BUTTON: Herunterladen
+  SIDEBAR:
+    SIMPLE_SEARCH:
+      HEADLINE: Suche
+    RELATED_POSTS:
+      HEADLINE: Verwandte Einträge
+    RANDOM_ARTICLE:
+      HEADLINE: Zufälliger Artikel
+      FEELING_LUCKY: Ich habe Glück!
+    SOME_TEXT_WIDGET:
+      HEADLINE: Ein Text-Widget
+    TAGS:
+      HEADLINE: Schlagworte
+    POPULAR_TAGS:
+      HEADLINE: beliebte Schlagworte
+    RECENT_POSTS:
+      HEADLINE: Kürzliche Beiträge
+    ARCHIVES:
+      HEADLINE: Letzte Einträge
+    SYNDICATE:
+      HEADLINE: Verteilen
+    LANGSWITCHER:
+      HEADLINE: Langswitcher
+  FEATURED: Hervorgehoben
+  PRIVACY: Durch die Nutzung dieses Formulars stimmen Sie unseren Bedingungen zu
+  FORM_SUMMARY: Hier ist die Zusammenfassung dessen, was Sie uns geschrieben haben
+  MISC:
+    SHARE_ON: Teilen auf
+    BACK_TO_TOP: Nach oben

@@ -1,0 +1,287 @@
+FUTURE:
+  ADMIN:
+    THEME:
+      GENERAL: General Settings
+      DROPDOWN_MENU: Dropdown menu
+      PRODUCTION_MODE: Production Mode
+      PRODUCTION_MODE_HELP: When enabled, Future will render with minified CSS
+      HEADER: Header
+      FAVICON: Choose your own favicon
+      CUSTOM_LOGO: Custom Logo
+      CUSTOM_LOGO_DESCRIPTION: Will be used instead of default logo `theme://images/grav-logo.svg`
+      CUSTOM_LOGO_MOBILE: Mobile Custom Logo
+      TYPE_LOGO_HEADER: 'Show logo/text in header'
+      TYPE_LOGO_HEADER_HELP: Choose how to display the logo in the header
+      TYPE_LOGO_HEADER_IMAGE: Image
+      TYPE_LOGO_HEADER_TEXT: Text
+      TYPE_LOGO_HEADER_BOTH: Both
+      SLOGAN: Slogan
+      CUSTOM_CSS: Load Custom CSS
+      CUSTOM_CSS_HELP: Load custom CSS styles from theme://assets/css/custom.css
+      CUSTOM_JS: Load Custom JS
+      CUSTOM_JS_HELP: Load custom JS from theme://assets/css/custom.js
+      MENU:
+        TITLE: Top Menu Configuration
+        LANGSWITCHER: Enable Langswitcher icon
+        LANGSWITCHER_HELP: With Langswitcher plugin enabled and multi-language setup in your site, you can enable or disable the langswitcher functionality appearing in the top menu.
+        SEARCH: Enable Search icon
+        SEARCH_HELP: With SimpleSearch plugin enabled you can enable or disable the search block in top menu.
+        LOGIN: Enable Login icon
+        LOGIN_HELP: You can enable or disable Login icon in top menu, to show login status.
+      BLOG_DEFAULTS: Blog Defaults
+      BLOG_PAGE: Blog Page
+      BLOG_PAGE_HELP: The route to the blog page when working with blog sidebar
+      SIDEBAR: Show sidebar on non-editable pages
+      SIDEBAR_HELP: Show sidebar on pages like Offline, SimpleSearch Results, Error, etc.
+      GOOGLE_FONTS:
+        LOCAL: Use locally hosted Google Fonts
+      MINIPOSTS: Show miniposts in sidebar
+      MINIPOSTS_NUMBER: Miniposts number to show
+      MINIPOSTS_NUMBER_DESCRIPTION: Number of miniposts that will be showed in sidebar
+      MINIPOSTS_CATEGORY: Miniposts category
+      MINIPOSTS_CATEGORY_DESCRIPTION: Set name to miniposts category.<br />`You must include this name in Options->Taxonomy->Category`
+      RECENT_POSTS_ENABLED: Show Recent posts in sidebar
+      RECENT_POSTS_NUMBER: Recent posts number
+      RECENT_POSTS_NUMBER_DESCRIPTION: Number of Recent posts that will be showed in sidebar
+      FOOTER: Footer
+      FOOTER_TITLE: Footer Title
+      FOOTER_DESCRIPTION: Footer Description
+      FOOTER_COPYRIGHT: Copyright Text
+      FOOTER_BUTTON_TEXT: Button Text
+      FOOTER_BUTTON_URL: Button URL
+      FOOTER_SOCIAL_ENABLE: Enable Icons
+      FOOTER_SOCIAL_STYLE: Icon Styles
+      FOOTER_SOCIAL_STYLE_DESCRIPTION: Look for the icons at <a href="https://fontawesome.com/v5/search" target="_blank">https://fontawesome.com/v5/search</a>
+      FOOTER_SOCIAL_STYLE_REGULAR: Regular
+      FOOTER_SOCIAL_STYLE_SOLID: Solid
+      FOOTER_SOCIAL_STYLE_BRANDS: Brands
+      FOOTER_SOCIAL_ICONS: Social Media Icons
+      FOOTER_SOCIAL_ICONS_LIST: List of icons
+      FOOTER_SOCIAL_ICON_NAME: Social Name
+      FOOTER_SOCIAL_ICON_URL: URL Link to Social
+      FOOTER_SOCIAL_ICON_ICON: Icon to Social
+      CUSTOM_MENU_TITLE: 'Custom Menu Items'
+      CUSTOM_MENU_ENABLE: 'Enable Custom Menu Items'
+      CUSTOM_MENU_ENABLE_HELP: 'Determines if any defined custom menu entries are displayed in the menubar.'
+      CUSTOM_MENU_ITEM_TEXT: 'Text'
+      CUSTOM_MENU_ITEM_TEXT_DESCRIPTION: 'Text label for menu item.'
+      CUSTOM_MENU_ITEM_ICON: 'Icon'
+      CUSTOM_MENU_ITEM_ICON_DESCRIPTION: 'Font Awesome icon for menu item.'
+      CUSTOM_MENU_ITEM_URL: 'URL'
+      CUSTOM_MENU_ITEM_URL_DESCRIPTION: 'URL for menu item.'
+      CUSTOM_MENU_ITEM_TARGET: 'Target'
+      CUSTOM_MENU_ITEM_TARGET_BLANK: 'Open in a new window'
+      CUSTOM_MENU_ITEM_TARGET_PARENT: 'Open in the parent frame'
+      CUSTOM_MENU_ITEM_TARGET_SELF: 'Open in the same frame as clicked'
+      CUSTOM_MENU_ITEM_TARGET_TOP: 'Open in the full body of the window'
+    DEFAULT:
+      HEADINGS_SECTION: Headings options
+      CONTENT: Content
+      IMAGE_OPTIONS: Image options
+      FEATURED_IMAGE: 
+        LABEL: Featured image
+        HELP: The main image displayed on the page
+        WIDTH: Width
+        HEIGHT: Height
+      SHOW_PAGEIMAGE: Show Image
+      SHOW_PAGEIMAGE_HELP: Enable featured image if it is defined or the first image of the media page.
+      SHOW_SIDEBAR: Show Sidebar
+      TOC_ENABLED: Enable TOC on large pages
+      TOC_ENABLED_HELP: Enable Table of Contents on large pages. Page Toc plugin is required
+      BODY_CLASSES: 'You can create new CSS classes for the body and add them here'
+    MODULAR:
+      BANNER:
+        BANNER_TAB: Banner
+        BANNER_SUBTITLE: Subtitle
+        BANNER_BUTTON_TEXT: Button Text
+        BANNER_BUTTON_URL: Button URL
+        BANNER_IMAGE: Image
+        BANNER_IMAGE_DESCRIPTION: Select one image
+      FEATURES:
+        FEATURES_TAB: Features
+        FEATURES_LAYOUT: Layout
+        FEATURES_LAYOUT_TWOCOLS: Medium   = 2 / 1 columns
+        FEATURES_LAYOUT_THREECOLS: Standard  = 3 / 2 / 1 columns
+        FEATURES_HEADER: Features
+        FEATURES_IMAGE: Image
+        FEATURES_TITLE: Title
+        FEATURES_TEXT: Text
+        FEATURES_BUTTON_TEXT: Button Text
+        FEATURES_BUTTON_URL: Button URL
+        FEATURES_BUTTON_URL_TARGET: Open URL in a new window
+
+    BLOG:
+      BLOG_TAB: Blog Config
+      BLOG_CONFIGURATION: Configuration
+      BLOG_ROUTE: Blog Route
+      BLOG_ROUTE_HELP: The route to the main blog page that contains the "Show ..." configuration
+      BLOG_CONTENT_TITLE: Content Definition
+      BLOG_CONTENT_ITEMS: Items
+      BLOG_CONTENT_ITEMS_LIMIT: Max Item Count
+      BLOG_CONTENT_ITEMS_ORDER_BY: Order By
+      BLOG_CONTENT_ITEMS_ORDER_BY_DATE: Date
+      BLOG_CONTENT_ITEMS_ORDER_BY_TITLE: Title
+      BLOG_CONTENT_ITEMS_ORDER_BY_FOLDER: Folder
+      BLOG_CONTENT_ITEMS_ORDER_BY_DEFAULT: Default
+      BLOG_CONTENT_ITEMS_ORDER_DIR: Order
+      BLOG_CONTENT_ITEMS_ORDER_DIR_ASC: Ascending
+      BLOG_CONTENT_ITEMS_ORDER_DIR_DESC: Descending
+      BLOG_CONTENT_ITEMS_BREADCRUMBS: Show Breadcrumbs
+      BLOG_CONTENT_ITEMS_SHOWPAGINATION: Show Pagination
+      BLOG_CONTENT_ITEMS_PAGINATION: Pagination
+      BLOG_CONTENT_ITEMS_URL_TAXONOMY_FILTERS: URL Taxonomy Filters
+      BLOG_CONTENT_SHAREICONS_TITLE: Social Media Icons
+      BLOG_CONTENT_SHAREICONS: Select Social Media Icons
+      BLOG_CONTENT_SHAREICONS_HELP: Select which social media icons you want to display on articles
+    ITEM:
+      ITEM_TAB: Blog Item
+      ITEM_OPTIONS: Options
+      ITEM_SUMMARY: Summary Item
+      ITEM_SUMMARY_ENABLED: Enabled Summary
+      ITEM_SUMMARY_FORMAT: Summary Format
+      ITEM_SUMMARY_FORMAT_SHORT: Use the first occurence of delimter or size
+      ITEM_SUMMARY_FORMAT_LONG: Summary delimiter will be ignored
+      ITEM_SUMMARY_SIZE: Size
+      ITEM_SUMMARY_DELIMITER: Summary Delimiter
+      ITEM_ORDER: Minipost Order
+      ITEM_SUBTITLE: Subtitle
+      ITEM_AVATAR: Avatar Image
+    PORTFOLIO:
+      TAB: Portfolio
+      TITLE: Portfolio Images
+      LAYOUT: 
+        LABEL: Layout
+        TWOCOLS: Medium   = 2 / 1 columns
+        THREECOLS: Standard  = 3 / 2 / 1 columas
+      THUMB_WIDTH: Thumbnail Width
+      THUMB_WIDTH_HELP: Set width for thumbnails
+      THUMB_HEIGHT: Thumbnail Height
+      THUMB_HEIGHT_HELP: Set height for thumbnails
+      IMAGES: 
+        LABEL: Images
+        IMAGE: Image
+        IMAGE_TITLE: Title
+        IMAGE_DESCRIPTION: Description
+        DESCPOSITION: 
+          LABEL: Description position
+          HELP: Global position for slides description, you can define a specific position on each slide (bottom, top, left, right)
+          BOTTOM: Bottom
+          TOP: Top
+          LEFT: Left
+          RIGHT: Right
+        IMAGE_THUMB: Thumbnail
+      OPTIONS:
+        TAB: Portfolio Options
+        EFFECTS_TITLE: Appearance & Effects
+        ACTIONS_TITLE: Actions
+        STYLING_TITLE: Styling
+        BEHAVIOR_TITLE: Behaviors
+        OVERLAY_HOVER_EFFECT:
+          LABEL: Overlay effect on hover
+          HELP: Set the hover effect when the mouse is over an image
+          FADEIN_BOTTOM: Fade in bottom
+          FADEIN_TOP: Fade in top
+          FADEIN_LEFT: Fade in left
+          FADEIN_RIGHT: Fade in right
+          FADEIN_TOP_RIGHT: Fade in top right
+          FADEIN_TOP_LEFT: Fade in top left
+          FADEIN_BOTTOM_RIGHT: Fade in bottom right
+          FADEIN_BOTTOM_LEFT: Fade in bottom left
+        OPEN_EFFECT:
+          LABEL: Open Effect
+          ZOOM: Zoom
+          FADE: Fade
+          NONE: None
+        CLOSE_EFFECT:
+          LABEL: Close Effect
+          ZOOM: Zoom
+          FADE: Fade
+          NONE: None
+        SLIDE_EFFECT:
+          LABEL: Slide Effect
+          SLIDE: Slide
+          ZOOM: Zoom
+          FADE: Fade
+          NONE: None
+        MORE_TEXT: More Text
+        MORE_TEXT_HELP: More text for descriptions on mobile devices.
+        MORE_TEXT_DEFAULT: More text
+        MORE_LENGTH: More Length
+        MORE_LENGTH_HELP: Number of characters to display on the description before adding the moreText link (only for mobiles), if 0 it will display the entire description.
+        CLOSE_BUTTON: Close Button
+        CLOSE_BUTTON_HELP: Show or hide the close button
+        TOUCH_NAVIGATION: Touch Navigation
+        TOUCH_NAVIGATION_HELP: Enable or disable the touch navigation (swipe)
+        TOUCH_AXIS: Touch Follow Axis
+        TOUCH_AXIS_HELP: Image follow axis when dragging on mobile.
+        KEYBOARD: Keyboard Navigation
+        KEYBOARD_HELP: Enable or disable the keyboard navigation
+        CLOSE_OUTSIDE: Close with Outside Click
+        CLOSE_OUTSIDE_HELP: Close the lightbox when clicking outside the active slide.
+        MORE_STARTAT: 'Start At:'
+        MORE_STARTAT_HELP: Start lightbox at defined index (0 is the first slide). If it is not defined, the clicked image is shown
+        WIDTH: Width
+        WIDTH_HELP: 'Default width for inline elements and iframes, you can define a specific size on each slide. You can use any unit for example 90% or 100vw for full width'
+        HEIGHT: Height
+        HEIGHT_HELP: 'Default height for inline elements and iframes, you can define a specific size on each slide.You can use any unit for example 90% or 100vh For inline elements you can set the height to auto'
+        LOOP: Loop
+        LOOP_HELP: Loop slides on end
+        ZOOMABLE: Zoomable
+        ZOOMABLE_HELP: Enable or disable zoomable images you can also use `data-zoomable="false"` on individual nodes.
+        DRAGGABLE: Draggable
+        DRAGGABLE_HELP: Enable or disable mouse drag to go prev and next slide (only images and inline content), you can also use `data-draggable="false"` on individual nodes.
+        DRAGGABLE_X: Drag Tolerance X
+        DRAGGABLE_X_HELP: Used with draggable. Number of pixels the user has to drag to go to prev or next slide.
+        DRAGGABLE_Y: Drag Tolerance Y
+        DRAGGABLE_Y_HELP: Used with draggable. Number of pixels the user has to drag up or down to close the lightbox (Set 0 to disable vertical drag).
+        DRAG_AUTO_SNAP: Drag Auto-Snap
+        DRAG_AUTO_SNAP_HELP: If true the slide will automatically change to prev/next or close if dragToleranceX or dragToleranceY is reached, otherwise it will wait till the mouse is released.
+        PRELOAD: Preload
+        PRELOAD_HELP: Enable or disable preloading.
+
+  BLOG:
+    LISTING_TITLE_CATEGORY: 'Posts in Category: '
+    LISTING_TITLE_TAG: 'Posts with Tag: '
+    LISTING_TITLE_AUTHOR: 'Posts written by Author: '
+    LISTING_TITLE_MONTH: 'Post of the month: '
+    ITEM:
+      CONTINUE_READING: Continue reading...
+      NEXT_POST: Next Post
+      PREV_POST: Previous Post
+    PAGINATION:
+      PREVIOUS: Previous
+      NEXT: Next
+  DOWNLOADS:
+    TH_NAME: Name
+    TH_SIZE: Size
+    TH_MODIFIED: Modified
+    TH_DOWNLOAD: Download
+    TD_BUTTON: Download
+  SIDEBAR:
+    SIMPLE_SEARCH:
+      HEADLINE: Search
+    RELATED_POSTS:
+      HEADLINE: Related Posts
+    RANDOM_ARTICLE:
+      HEADLINE: Random Article
+      FEELING_LUCKY: I'm Feeling Lucky!
+    SOME_TEXT_WIDGET:
+      HEADLINE: Some Text Widget
+    TAGS:
+      HEADLINE: Tags
+    POPULAR_TAGS:
+      HEADLINE: Popular Tags
+    RECENT_POSTS:
+      HEADLINE: Recent posts
+    ARCHIVES:
+      HEADLINE: Archives
+    SYNDICATE:
+      HEADLINE: Syndicate
+    LANGSWITCHER:
+      HEADLINE: Langswitcher
+  FEATURED: Featured
+  PRIVACY: By using this form you agree our terms
+  FORM_SUMMARY: Here is the summary of what you wrote to us
+  MISC:
+    SHARE_ON: Share on
+    BACK_TO_TOP: Back to top
