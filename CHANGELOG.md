@@ -1,3 +1,12 @@
+# v3.0.0
+## 11/13/2025
+
+1.  [](#improved)
+    * Improved `blog.html.twig` template for better featured image handling
+    * Language translation files have been organized separately by language in the `languages` folder for improved maintainability
+    * Pass `featured_image` and `show_image` as parameters to blog_item partial template
+    * **Important Change:** Since version 1.2.1, `featured_image` is the primary field for page images. Existing pages using `primaryImage` will continue to work, but please update your frontmatter to `featured_image` for consistency.
+
 # v2.2.3
 ## 11/11/2025
 
