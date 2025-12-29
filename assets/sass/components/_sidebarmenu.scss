@@ -5,7 +5,7 @@
 
 #sidebarmenu {display: none;}
 
-@include breakpoints.breakpoint('<=medium') {
+@include breakpoints.breakpoint('<=large') {
 
 #sidebarmenu {
     display: block; }

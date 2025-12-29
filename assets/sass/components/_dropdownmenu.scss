@@ -89,7 +89,7 @@
             }
         }
     }
-    @include breakpoints.breakpoint('<=medium') {
+    @include breakpoints.breakpoint('<=large') {
         .dropdown {
             display: none; 
             } 
