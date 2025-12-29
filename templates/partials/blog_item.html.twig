@@ -19,7 +19,7 @@
     <div class="title">
       {% if page.header.link %}
         <{{ Htag }} itemprop="headline">
-          {% if page.header.continue_link is not sameas(false) %}
+          {% if page.header.continue_link is not same as(false) %}
             <a href="{{ page.url }}" aria-label="{{ title }}"></a>
           {% endif %}
           <a href="{{ page.header.link }}" aria-label="{{ title|e('html_attr') }}">{{ title|e }}</a>
@@ -56,7 +56,7 @@
   </a>
   {% endif %}
   <div itemprop="articleBody">
-    {% if page.header.continue_link is sameas(false) %}
+    {% if page.header.continue_link is same as(false) %}
       {{ page.content|raw }}
       {% if not truncate %}
         {% set show_prev_next = true %}
