@@ -1,3 +1,12 @@
+# v3.1.0
+## 12/29/2025
+
+1.  [](#new)
+    * French translation added (thanks to [em3link](https://github.com/em3link))
+2.  [](#improved)
+    * Twig `same as` syntax fixed for Grav 1.8 compatibility
+    * Responsive breakpoint for sidebar menu updated
+
 # v3.0.0
 ## 11/13/2025
 
