@@ -6,12 +6,6 @@ Future Imperfect theme by HTML5UP ported from scratch to Grav. Version 2021
 
 Future Imperfect by HTML5UP, features a clean, minimalistic design, styling for all basic page elements and HTML5/CSS3 code designed for quick and easy customization.
 
-### ❤️ Support This Project
-
-If you find this theme useful, consider supporting its development:
-
-[![Donate with PayPal](https://www.paypalobjects.com/en_US/ES/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=A2H2GMZDJDKCC)
-
 ## Features
 Redesigned from scratch (version 2021)
 
@@ -48,11 +42,11 @@ Redesigned from scratch (version 2021)
 * Recent posts partial template
 * Related posts partial template
 
-# Installation
+## Installation
 
 Installing the Future 2021 theme can be done in one of two ways. Our GPM (Grav Package Manager) installation method enables you to quickly and easily install the theme with a simple terminal command, while the manual method enables you to do so via a zip file.
 
-## GPM Installation (Preferred)
+### GPM Installation (Preferred)
 
 The simplest way to install this theme is via the [Grav Package Manager (GPM)](https://learn.getgrav.org/17/cli-console/grav-cli-gpm) through your system's Terminal (also called the command line).  From the root of your Grav install type:
 
@@ -60,7 +54,7 @@ The simplest way to install this theme is via the [Grav Package Manager (GPM)](h
 
 This will install the Future2021 theme into your `/user/themes` directory within Grav. Its files can be found under `/your/site/grav/user/themes/future2021`.
 
-## Manual Installation
+### Manual Installation
 
 To install this theme, just download the zip version of this repository and unzip it under `/your/site/grav/user/themes`. Then, rename the folder to `future2021`. You can find these files either on [GitHub](https://github.com/pmoreno-rodriguez/grav-theme-future2021) or via [GetGrav.org](http://getgrav.org/downloads/themes).
 
@@ -68,7 +62,7 @@ You should now have all the theme files under
 
     /your/site/grav/user/themes/future2021
 
-## Dependencies
+### Dependencies
 
 Although the theme does not have specific dependencies to function, **it is highly recommended to install the following plugins for a complete experience**:
 
@@ -94,6 +88,17 @@ bin/gpm install archives breadcrumbs feed form langswitcher page-toc pagination 
 ```
 
 Or install them individually through the Grav Admin Panel.
+
+### Post Installation
+
+Enable the **Future2021** theme, either via the Admin plugin at admin/themes or in the system.yaml file under pages.theme.
+
+```
+pages:
+  theme: future2021
+```
+
+Do not directly edit the future2021.yaml file found in the theme folder. Copy the future2021.yaml file to user/config/themes and edit the new file there.
 
 ## Default Options
 
@@ -168,18 +173,26 @@ Alternatively, you can you use the drag-n-drop "Custom Logo" field in the Future
 | dragAutoSnap | boolean | `false` | If true the slide will automatically change to prev/next or close if dragToleranceX or dragToleranceY is reached, otherwise it will wait till the mouse is released. |
 | preload | boolean | `true` | Enable or disable preloading. |
 
-# Downloads template
+## Downloads template
 
 Future2021 theme includes a simple template to manage downloads of files uploaded to a page. These files are automatically found and processed by Grav using `page.media.all` and displayed in a table with four columns: name, size, modification date and download button.
 
-# Demo page
+## Demo page
 
 [https://future2021.pmdesign.dev](https://future2021.pmdesign.dev)
 
-# Documentation 
+## Documentation 
 
 You can read extra documentation of Future2021 Theme at [https://pmoreno-rodriguez.github.io/#/./gravthemes/future2021/index](https://pmoreno-rodriguez.github.io/#/./gravthemes/future2021/index). This is [Spanish document site for Future2021 Theme](https://pmdesign.dev/temas/future2021)
 
-# Future plans
+## Future plans
 
 - Create a Flex Directory for authors and avatars.
+
+## ☕ Support This Project
+If you find this project useful and would like to support its development,
+you can buy me a coffee on Ko-fi:
+
+👉 **[Support me on Ko-fi](https://ko-fi.com/pmoreno)**
+
+Thank you for supporting open-source software! 🙌
