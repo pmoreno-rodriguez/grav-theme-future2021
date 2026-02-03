@@ -1,0 +1,34 @@
+title: Contact Module
+
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+
+        content:
+          fields:
+            header.contact_section:
+              type: section
+              underline: true
+              ordering@: -98
+              title: FUTURE.ADMIN.MODULAR.CONTACT.CONTACT_SECTION
+            header.form_id:
+              type: text
+              label: FUTURE.ADMIN.MODULAR.CONTACT.FORM_ID
+              ordering@: header.contact_section
+              size: medium
+              default: contact-form
+              help: FUTURE.ADMIN.MODULAR.CONTACT.FORM_ID_HELP
+
+            _ContentOptions:
+              fields:                  
+                _ContentToggles:
+                  fields:
+                    header.show_sidebar:
+                      unset@: true
+                    header.toc_enabled:
+                      unset@: true
+
+            

@@ -1,5 +1,15 @@
 <section id="contact">
+  {% if page.header.title %}
+    <header>
+      <h2>{{ page.header.title|raw }}</h2>
+      {% if page.header.subtitle %}
+        <p>{{ page.header.subtitle|raw }}</p>
+      {% endif %}
+    </header>
+  {% endif %}
+
   {{ page.content|raw }}
-  {{ include('forms/form.html.twig', {form: forms('contact-form')}) }}
+
+  {{ include('forms/form.html.twig', {form: forms(page.header.form_id ?? 'contact-form')}) }}
 </section>
 <br>
