@@ -1,0 +1,63 @@
+title: Text
+
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+
+        content:
+          fields:
+            _ContentOptions:
+              fields:
+                _ContentToggles:
+                  fields:
+                    header.show_sidebar:
+                      unset@: true
+                    header.toc_enabled:
+                      unset@: true
+
+        text:
+          type: tab
+          title: FUTURE.ADMIN.MODULAR.TEXT.TEXT_TAB
+          fields:
+
+            header.layout:
+              type: select
+              label: FUTURE.ADMIN.MODULAR.TEXT.TEXT_LAYOUT
+              default: one-column
+              size: medium
+              options:
+                one-column: FUTURE.ADMIN.MODULAR.TEXT.TEXT_LAYOUT_ONE_COL
+                two-columns: FUTURE.ADMIN.MODULAR.TEXT.TEXT_LAYOUT_TWO_COLS
+                three-columns: FUTURE.ADMIN.MODULAR.TEXT.TEXT_LAYOUT_THREE_COLS
+            header.texts:
+              name: texts
+              type: list
+              label: FUTURE.ADMIN.MODULAR.TEXT.TEXT_HEADER
+              fields:
+
+                .title:
+                  type: text
+                  label: FUTURE.ADMIN.MODULAR.TEXT.TEXT_TITLE
+
+                .content:
+                  type: markdown
+                  autofocus: true
+                  label: FUTURE.ADMIN.MODULAR.TEXT.TEXT_CONTENT
+                  rows: 10
+
+                .class:
+                  type: select
+                  label: FUTURE.ADMIN.MODULAR.TEXT.TEXT_CLASS
+                  default: none
+                  options:
+                    none: FUTURE.ADMIN.MODULAR.TEXT.TEXT_CLASS_DEFAULT
+                    primary: FUTURE.ADMIN.MODULAR.TEXT.TEXT_CLASS_PRIMARY
+                    secondary: FUTURE.ADMIN.MODULAR.TEXT.TEXT_CLASS_SECONDARY
+                    success: FUTURE.ADMIN.MODULAR.TEXT.TEXT_CLASS_SUCCESS
+                    info: FUTURE.ADMIN.MODULAR.TEXT.TEXT_CLASS_INFO
+                    warning: FUTURE.ADMIN.MODULAR.TEXT.TEXT_CLASS_WARNING
+                    danger: FUTURE.ADMIN.MODULAR.TEXT.TEXT_CLASS_DANGER
+                    alt: FUTURE.ADMIN.MODULAR.TEXT.TEXT_CLASS_ALT

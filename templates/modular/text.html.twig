@@ -1,0 +1,37 @@
+{# Set columns for text page #}
+{% set columns = 
+    page.header.layout == 'one-column' ? 'col-12' :
+    (page.header.layout == 'two-columns' ? 'col-6 col-12-small' :
+    'col-4 col-6-medium col-12-small')
+%}
+
+<section id="text">
+  <header>
+    <h2>{{ page.title|raw }}</h2>
+    {% if page.header.subtitle %}
+      <p>{{ page.header.subtitle|raw }}</p>
+    {% endif %}
+  </header>
+
+  {{ page.content|raw }}
+
+  <div class="row gtr-uniform">
+    {% for text_item in page.header.texts %}
+      <div class="{{ columns }}">
+        <article class="box{% if text_item.class and text_item.class != 'none' %} {{ text_item.class }}{% endif %}">
+          <header>
+            {% if text_item.title %}
+              <h3>{{ text_item.title|raw }}</h3>
+            {% endif %}
+          </header>
+            {% if text_item.content %}
+            <div class="content">
+                {{ text_item.content|markdown }}
+            </div>
+            {% endif %}
+        </article>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+<br>

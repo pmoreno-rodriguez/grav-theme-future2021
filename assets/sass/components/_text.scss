@@ -1,0 +1,36 @@
+@use "../libs/functions";
+
+/* Text */
+
+#text {
+    .box {
+        > :last-child,
+            > :last-child > :last-child,
+            > :last-child > :last-child > :last-child {
+                margin-bottom: 0;
+                padding: 0em; }
+        .content {
+            font-family: functions.font(family);
+            font-weight: functions.font(weight);
+            font-size: inherit;
+            letter-spacing: functions.font(no-kerning);
+            line-height: inherit;
+            margin: 1em 0;
+            text-transform: initial;
+            padding: 0 1em;
+        }
+        h3 {
+            margin-top: 0em;
+            padding: 1em 0;
+        }
+        div {
+            margin: 0;
+            padding: 0 1em;
+        }
+    }
+    .box header {
+        flex: none;
+        padding: 0em 1em;
+    }
+
+}
