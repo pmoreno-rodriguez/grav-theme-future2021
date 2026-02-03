@@ -4,7 +4,7 @@
     <h2>{{ theme_config.footer.title|e }}</h2>
     {{ theme_config.footer.description|markdown }}
     <ul class="actions {% if show_sidebar == false %}special{% endif %}">
-      <li><a href="{{ theme_config.footer.button_url|e('url') }}"
+      <li><a href="{{ theme_config.footer.button_url|e('html_attr') }}"
             class="button"
             aria-label="{{ theme_config.footer.title|e('html_attr') }}"
             rel="noopener noreferrer">{{ theme_config.footer.button_text|e }}</a></li>
