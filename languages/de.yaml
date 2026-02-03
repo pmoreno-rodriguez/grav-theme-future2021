@@ -126,7 +126,7 @@ FUTURE:
         TEXT_CLASS_INFO: Info
         TEXT_CLASS_WARNING: Warnung
         TEXT_CLASS_DANGER: Gefahr
-        TEXT_CLASS_ALT: Alternative
+        TEXT_CLASS_ALT: Kein
       CONTACT:
         CONTACT_SECTION: Formularoptionen für Kontakt
         FORM_ID: Formular-ID
