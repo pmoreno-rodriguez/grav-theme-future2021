@@ -1,7 +1,8 @@
 title: Generic Page
+
 '@extends':
-    type: default
-    context: blueprints://pages
+  type: default
+  context: blueprints://pages
 
 form:
   fields:
@@ -9,22 +10,27 @@ form:
       type: tabs
       active: 1
       fields:
+
         content:
           type: tab
           fields:
+
             header.title:
               replace@: true
             content:
-              replace@ true
+              replace@: true
             header.media_order:
               replace@: true
+
             _Headings_Section:
               type: section
               underline: true
               title: FUTURE.ADMIN.DEFAULT.HEADINGS_SECTION
+
             _Headings:
               type: columns
               fields:
+
                 _Title:
                   type: column
                   fields:
@@ -33,6 +39,7 @@ form:
                       autofocus: true
                       style: vertical
                       label: PLUGIN_ADMIN.TITLE
+
                 _Subtitle:
                   type: column
                   fields:
@@ -40,19 +47,22 @@ form:
                       type: text
                       style: vertical
                       label: FUTURE.ADMIN.ITEM.ITEM_SUBTITLE
+
             _Content_Section:
               type: section
               underline: true
               title: FUTURE.ADMIN.DEFAULT.CONTENT
+
             _ContentOptions:
               type: column
               fields:
+
                 _ContentToggles:
                   type: columns
                   fields:
+
                     header.show_sidebar:
                       type: toggle
-                      outerclasses: size-1-2
                       toggleable: true
                       label: FUTURE.ADMIN.DEFAULT.SHOW_SIDEBAR
                       default: 0
@@ -62,9 +72,9 @@ form:
                         0: PLUGIN_ADMIN.DISABLED
                       validate:
                         type: bool
+
                     header.toc_enabled:
                       type: toggle
-                      outerclasses: size-1-2
                       toggleable: true
                       label: FUTURE.ADMIN.DEFAULT.TOC_ENABLED
                       help: FUTURE.ADMIN.DEFAULT.TOC_ENABLED_HELP
@@ -75,32 +85,37 @@ form:
                         0: PLUGIN_ADMIN.DISABLED
                       validate:
                         type: bool
+
                 _Content:
-                  type: columns
+                  type: column
                   fields:
                     content:
                       type: markdown
                       validate:
                         type: textarea
+
             _Media_Section:
               type: section
               underline: true
-              title: FUTURE.ADMIN.DEFAULT.IMAGE_OPTIONS      
+              title: FUTURE.ADMIN.DEFAULT.IMAGE_OPTIONS
+
             _MediaOptions:
               type: columns
               fields:
+
                 _MediaContent:
                   type: column
                   fields:
                     header.media_order:
                       type: pagemedia
                       label: PLUGIN_ADMIN.PAGE_MEDIA
+
                 _ImageOptions:
                   type: column
                   fields:
+
                     header.show_pageimage:
                       type: toggle
-  
                       label: FUTURE.ADMIN.DEFAULT.SHOW_PAGEIMAGE
                       help: FUTURE.ADMIN.DEFAULT.SHOW_PAGEIMAGE_HELP
                       default: 1
@@ -110,29 +125,31 @@ form:
                         0: PLUGIN_ADMIN.NO
                       validate:
                         type: bool
+
                     header.featured_image:
-                      ordering@: header.subtitle
-                      size: large
                       type: pagemediaselect
                       label: FUTURE.ADMIN.DEFAULT.FEATURED_IMAGE.LABEL
                       help: FUTURE.ADMIN.DEFAULT.FEATURED_IMAGE.HELP
                       preview_images: true
+
                     header.image_width:
                       type: number
                       label: FUTURE.ADMIN.DEFAULT.FEATURED_IMAGE.WIDTH
                       size: small
                       default: 1000
+
                     header.image_height:
                       type: number
                       label: FUTURE.ADMIN.DEFAULT.FEATURED_IMAGE.HEIGHT
                       size: small
-                      default: 300  
+                      default: 300
+
         advanced:
           fields:
             columns:
               fields:
                 column1:
-                   fields:
-                     header.body_classes:
-                       markdown: true
-                       description: FUTURE.ADMIN.DEFAULT.BODY_CLASSES
+                  fields:
+                    header.body_classes:
+                      markdown: true
+                      description: FUTURE.ADMIN.DEFAULT.BODY_CLASSES
