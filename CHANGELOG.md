@@ -1,3 +1,15 @@
+# v3.2.0
+## 02/03/2026
+
+1. [](#new)
+    * Added new modular "text" template with flexible layouts (1, 2, or 3 columns) and box classes
+2. [](#improved)
+    * Improved contact template functionality
+    * Enhanced banner and features templates for improved design and presentation
+    * Fixed logo.html.twig to allow users to disable the default logo display
+    * Enhanced SCSS styles for boxes, including button positioning, link styling, and other improvements
+    * Updated translations for new features
+
 # v3.1.0
 ## 12/29/2025
 
