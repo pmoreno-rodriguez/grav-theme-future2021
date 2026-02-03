@@ -1548,13 +1548,17 @@ hr.major {
   border: solid 1px rgba(160, 160, 160, 0.3);
   margin-bottom: 2em;
   padding: 0em;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 
 .box > :last-child,
 .box > :last-child > :last-child,
 .box > :last-child > :last-child > :last-child {
   margin-bottom: 0;
-  padding: 0.5em;
+  padding: 1em;
 }
 
 .box.primary {
@@ -1567,6 +1571,12 @@ hr.major {
   color: #ffffff !important;
 }
 
+.box.primary a, .box.primary strong {
+  color: white;
+  border-bottom: 1px dotted white;
+  text-decoration: none;
+}
+
 .box.secondary {
   background-color: #6c757d;
   box-shadow: none;
@@ -1575,6 +1585,12 @@ hr.major {
 
 .box.secondary h1, .box.secondary h2, .box.secondary h3, .box.secondary h4, .box.secondary h5, .box.secondary h6 {
   color: #f4f4f4 !important;
+}
+
+.box.secondary a, .box.secondary strong {
+  color: white;
+  border-bottom: 1px dotted white;
+  text-decoration: none;
 }
 
 .box.success {
@@ -1587,6 +1603,12 @@ hr.major {
   color: #f4f4f4 !important;
 }
 
+.box.success a, .box.success strong {
+  color: white;
+  border-bottom: 1px dotted white;
+  text-decoration: none;
+}
+
 .box.info {
   background-color: #209cee;
   box-shadow: none;
@@ -1595,6 +1617,12 @@ hr.major {
 
 .box.info h1, .box.info h2, .box.info h3, .box.info h4, .box.info h5, .box.info h6 {
   color: #f4f4f4 !important;
+}
+
+.box.info a, .box.info strong {
+  color: white;
+  border-bottom: 1px dotted white;
+  text-decoration: none;
 }
 
 .box.warning {
@@ -1607,6 +1635,12 @@ hr.major {
   color: #3c3b3b !important;
 }
 
+.box.warning a, .box.warning strong {
+  color: black;
+  border-bottom: 1px dotted black;
+  text-decoration: none;
+}
+
 .box.danger {
   background-color: #ff3860;
   box-shadow: none;
@@ -1617,10 +1651,32 @@ hr.major {
   color: #f4f4f4 !important;
 }
 
+.box.danger a, .box.danger strong {
+  color: white;
+  border-bottom: 1px dotted white;
+  text-decoration: none;
+}
+
 .box.alt {
   border: 0;
   border-radius: 0;
   padding: 0;
+}
+
+.box header {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1em;
+}
+
+.box header .box-footer {
+  margin-top: auto;
+  padding: 1em;
+}
+
+.box header header p:last-child {
+  margin-bottom: 0;
 }
 
 /* Button */
@@ -3122,7 +3178,7 @@ table.alt tfoot {
 
 #banner h2 {
   margin-top: -0.125em;
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 #banner .content {
@@ -3209,6 +3265,40 @@ table.alt tfoot {
 #features header h3 {
   margin-top: 0em;
   padding: 0 1em;
+}
+
+/* Text */
+#text .box > :last-child,
+#text .box > :last-child > :last-child,
+#text .box > :last-child > :last-child > :last-child {
+  margin-bottom: 0;
+  padding: 0em;
+}
+
+#text .box .content {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: inherit;
+  letter-spacing: 0em;
+  line-height: inherit;
+  margin: 1em 0;
+  text-transform: initial;
+  padding: 0 1em;
+}
+
+#text .box h3 {
+  margin-top: 0em;
+  padding: 1em 0;
+}
+
+#text .box div {
+  margin: 0;
+  padding: 0 1em;
+}
+
+#text .box header {
+  flex: none;
+  padding: 0em 1em;
 }
 
 /* Logo */

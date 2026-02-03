@@ -50,6 +50,7 @@
 	@include meta.load-css('components/portfolio');
 	@include meta.load-css('components/banner');
 	@include meta.load-css('components/features');
+	@include meta.load-css('components/text');
 	@include meta.load-css('components/logo');
 	@include meta.load-css('components/dropdownmenu');
 	@include meta.load-css('components/sidebarmenu');
