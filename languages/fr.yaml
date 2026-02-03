@@ -120,6 +120,7 @@ FUTURE:
         TEXT_CONTENT: Contenu
         TEXT_CLASS: Classe de boîte
         TEXT_CLASS_DEFAULT: Défaut
+        TEXT_CLASS_NONE: Aucun
         TEXT_CLASS_PRIMARY: Primaire
         TEXT_CLASS_SECONDARY: Secondaire
         TEXT_CLASS_SUCCESS: Succès

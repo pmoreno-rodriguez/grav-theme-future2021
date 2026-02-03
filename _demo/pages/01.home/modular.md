@@ -1,8 +1,12 @@
 ---
-title: Welcome
+title: Home
 content:
     items: '@self.modular'
-    order: {  }
+    order:
+        '01._features': ''
+        '02._banner': ''
+        '03._text': ''
+        '04._contact': ''
 sidebar: true
 show_pageimage: true
 image_width: 1038

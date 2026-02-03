@@ -120,6 +120,7 @@ FUTURE:
         TEXT_CONTENT: Contenido
         TEXT_CLASS: Clase de Caja
         TEXT_CLASS_DEFAULT: Por defecto
+        TEXT_CLASS_NONE: Ninguno
         TEXT_CLASS_PRIMARY: Primaria
         TEXT_CLASS_SECONDARY: Secundaria
         TEXT_CLASS_SUCCESS: Éxito

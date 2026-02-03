@@ -18,7 +18,11 @@
   <div class="row gtr-uniform">
     {% for text_item in page.header.texts %}
       <div class="{{ columns }}">
-        <article class="box{% if text_item.class and text_item.class != 'none' %} {{ text_item.class }}{% endif %}">
+        {% set box_class = 
+            text_item.class == 'none' ? 'box alt' :
+            (text_item.class and text_item.class != 'default' ? 'box ' ~ text_item.class : 'box')
+        %}
+        <article class="{{ box_class }}">
           <header>
             {% if text_item.title %}
               <h3>{{ text_item.title|raw }}</h3>

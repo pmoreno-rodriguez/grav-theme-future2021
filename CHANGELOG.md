@@ -9,6 +9,7 @@
     * Fixed logo.html.twig to allow users to disable the default logo display
     * Enhanced SCSS styles for boxes, including button positioning, link styling, and other improvements
     * Updated translations for new features
+    * Updated demo content to showcase new text template with various box styles
 3. [](#bugfix)
     * Fixed URL encoding issue in footer button link to properly support anchor URLs like '#'
 

@@ -120,6 +120,7 @@ FUTURE:
         TEXT_CONTENT: Content
         TEXT_CLASS: Box Class
         TEXT_CLASS_DEFAULT: Default
+        TEXT_CLASS_NONE: None
         TEXT_CLASS_PRIMARY: Primary
         TEXT_CLASS_SECONDARY: Secondary
         TEXT_CLASS_SUCCESS: Success

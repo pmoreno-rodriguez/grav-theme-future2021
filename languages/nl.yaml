@@ -120,6 +120,7 @@ FUTURE:
         TEXT_CONTENT: Inhoud
         TEXT_CLASS: Box-klasse
         TEXT_CLASS_DEFAULT: Standaard
+        TEXT_CLASS_NONE: Geen
         TEXT_CLASS_PRIMARY: Primair
         TEXT_CLASS_SECONDARY: Secundair
         TEXT_CLASS_SUCCESS: Succes

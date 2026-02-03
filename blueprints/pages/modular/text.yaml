@@ -53,11 +53,11 @@ form:
                   label: FUTURE.ADMIN.MODULAR.TEXT.TEXT_CLASS
                   default: none
                   options:
-                    none: FUTURE.ADMIN.MODULAR.TEXT.TEXT_CLASS_DEFAULT
+                    default: FUTURE.ADMIN.MODULAR.TEXT.TEXT_CLASS_DEFAULT
                     primary: FUTURE.ADMIN.MODULAR.TEXT.TEXT_CLASS_PRIMARY
                     secondary: FUTURE.ADMIN.MODULAR.TEXT.TEXT_CLASS_SECONDARY
                     success: FUTURE.ADMIN.MODULAR.TEXT.TEXT_CLASS_SUCCESS
                     info: FUTURE.ADMIN.MODULAR.TEXT.TEXT_CLASS_INFO
                     warning: FUTURE.ADMIN.MODULAR.TEXT.TEXT_CLASS_WARNING
                     danger: FUTURE.ADMIN.MODULAR.TEXT.TEXT_CLASS_DANGER
-                    alt: FUTURE.ADMIN.MODULAR.TEXT.TEXT_CLASS_ALT
+                    none: FUTURE.ADMIN.MODULAR.TEXT.TEXT_CLASS_NONE
