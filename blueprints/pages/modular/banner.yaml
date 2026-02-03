@@ -1,41 +1,38 @@
 title: Banner
+
 '@extends': default
 
 form:
   fields:
     tabs:
       fields:
+
         content:
-          type: tab
           fields:
-            header.options:
+            _ContentOptions:
               fields:
-                header.content:
+                _ContentToggles:
                   fields:
-                    image_section:
+                    header.show_sidebar:
                       unset@: true
-                    header.primaryImage:
+                    header.toc_enabled:
                       unset@: true
-                    header.show_pageimage:
-                      unset@: true
-                    header.image_width: 
-                      unset@: true
-                    header.image_height:
-                      unset@: true
+
         banner:
           type: tab
           title: FUTURE.ADMIN.MODULAR.BANNER.BANNER_TAB
           fields:
+
             header.buttontext:
               type: text
               label: FUTURE.ADMIN.MODULAR.BANNER.BANNER_BUTTON_TEXT
+
             header.buttonurl:
               type: text
               label: FUTURE.ADMIN.MODULAR.BANNER.BANNER_BUTTON_URL
+
             header.image:
               type: pagemediaselect
               label: FUTURE.ADMIN.MODULAR.BANNER.BANNER_IMAGE
               preview_images: true
               description: FUTURE.ADMIN.MODULAR.BANNER.BANNER_IMAGE_DESCRIPTION
-
-        

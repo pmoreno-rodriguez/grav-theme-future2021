@@ -17,7 +17,7 @@
   <header>
     <h2>{{ title }}</h2>
     {% if subtitle %}
-      <p>{{ subtitle }}</p>
+      <p>{{ subtitle|raw }}</p>
     {% endif %}
   </header>
 
@@ -32,7 +32,7 @@
       <div class="{{ columns }}">
         <article class="box">
           {% if feature.image %}
-            <span class="image fit"><img src="{{ page.media[feature.image].url }}" alt="{{ feature.title }}"/></span>
+            <span class="image fit"><img src="{{ page.media[feature.image].url }}" alt="{{ feature.title|e }}"/></span>
           {% endif %}
           <header>
             {% if feature.title %}
@@ -41,12 +41,12 @@
             {% if feature.text %}
               <p>{{ feature.text|raw }}</p>
             {% endif %}
-            {% if feature.buttonurl %}
-              <p>
-                <a href="{{ feature.buttonurl }}" class="button fit" target={% if feature.buttonurl_target %} "_blank" {% endif %}>{{ feature.buttontext|raw }}</a>
-              </p>
-            {% endif %}
           </header>
+          {% if feature.buttonurl %}
+            <div class="box-footer">
+              <a href="{{ feature.buttonurl }}" class="button fit" target={% if feature.buttonurl_target %} "_blank" {% endif %}>{{ feature.buttontext|raw }}</a>
+            </div>
+          {% endif %}
         </article>
       </div>
     {% endfor %}
