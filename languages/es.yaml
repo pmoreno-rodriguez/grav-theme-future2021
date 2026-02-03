@@ -109,7 +109,28 @@ FUTURE:
         FEATURES_BUTTON_TEXT: Texto del botón
         FEATURES_BUTTON_URL: URL del botón
         FEATURES_BUTTON_URL_TARGET: Abrir la URL en una nueva ventana
-
+      TEXT:
+        TEXT_TAB: Texto
+        TEXT_LAYOUT: Diseño
+        TEXT_LAYOUT_ONE_COL: Una Columna
+        TEXT_LAYOUT_TWO_COLS: Dos Columnas
+        TEXT_LAYOUT_THREE_COLS: Tres Columnas
+        TEXT_HEADER: Bloques de Texto
+        TEXT_TITLE: Título
+        TEXT_CONTENT: Contenido
+        TEXT_CLASS: Clase de Caja
+        TEXT_CLASS_DEFAULT: Por defecto
+        TEXT_CLASS_PRIMARY: Primaria
+        TEXT_CLASS_SECONDARY: Secundaria
+        TEXT_CLASS_SUCCESS: Éxito
+        TEXT_CLASS_INFO: Información
+        TEXT_CLASS_WARNING: Advertencia
+        TEXT_CLASS_DANGER: Peligro
+        TEXT_CLASS_ALT: Alternativa
+      CONTACT:
+        CONTACT_SECTION: Opciones del formulario de contacto
+        FORM_ID: ID del formulario
+        FORM_ID_HELP: ID del formulario a usar. Por defecto se usa 'contact-form' para compatibilidad con versiones anteriores.
     BLOG:
       BLOG_TAB: Configuración del Blog
       BLOG_CONFIGURATION: Configuración

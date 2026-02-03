@@ -109,7 +109,28 @@ FUTURE:
         FEATURES_BUTTON_TEXT: Knoptekst
         FEATURES_BUTTON_URL: Knop-UrL
         FEATURES_BUTTON_URL_TARGET: Open URL in een nieuw venster
-
+      TEXT:
+        TEXT_TAB: Tekst
+        TEXT_LAYOUT: Opmaak
+        TEXT_LAYOUT_ONE_COL: Eén kolom
+        TEXT_LAYOUT_TWO_COLS: Twee kolommen
+        TEXT_LAYOUT_THREE_COLS: Drie kolommen
+        TEXT_HEADER: Tekstblokken
+        TEXT_TITLE: Titel
+        TEXT_CONTENT: Inhoud
+        TEXT_CLASS: Box-klasse
+        TEXT_CLASS_DEFAULT: Standaard
+        TEXT_CLASS_PRIMARY: Primair
+        TEXT_CLASS_SECONDARY: Secundair
+        TEXT_CLASS_SUCCESS: Succes
+        TEXT_CLASS_INFO: Info
+        TEXT_CLASS_WARNING: Waarschuwing
+        TEXT_CLASS_DANGER: Gevaar
+        TEXT_CLASS_ALT: Alternatief
+      CONTACT:
+        CONTACT_SECTION: Contactformulier opties
+        FORM_ID: Formulier ID
+        FORM_ID_HELP: ID van het te gebruiken formulier. Standaard 'contact-form' voor backward compatibility.
     BLOG:
       BLOG_TAB: Weblog
       BLOG_CONFIGURATION: Weblogconfiguratie
