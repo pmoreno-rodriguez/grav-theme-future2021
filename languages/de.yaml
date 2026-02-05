@@ -152,6 +152,9 @@ FUTURE:
       BLOG_CONTENT_ITEMS_SHOWPAGINATION: Paginierung anzeigen
       BLOG_CONTENT_ITEMS_PAGINATION: Paginierung
       BLOG_CONTENT_ITEMS_URL_TAXONOMY_FILTERS: Taxonomie filtern nach URL
+      BLOG_CONTENT_SHAREICONS_TITLE: Social-Media-Symbole
+      BLOG_CONTENT_SHAREICONS: Social-Media-Symbole auswählen
+      BLOG_CONTENT_SHAREICONS_HELP: Wählen Sie aus, welche Social-Media-Symbole auf Artikeln angezeigt werden sollen
     ITEM:
       ITEM_TAB: Blog-Artikel
       ITEM_OPTIONS: Optionen
