@@ -1,3 +1,11 @@
+# v3.2.1
+## 02/05/2026
+
+1. [](#improved)
+    * Completed Deutsch translations for blog share icon labels
+2. [](#bugfix)
+    * Added LinkedIn share icon checkbox for item pages
+
 # v3.2.0
 ## 02/03/2026
 
