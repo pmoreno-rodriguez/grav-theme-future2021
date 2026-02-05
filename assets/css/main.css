@@ -1561,6 +1561,11 @@ hr.major {
   padding: 1em;
 }
 
+.box a:hover {
+  color: #ba2e5d !important;
+  border-bottom-color: #ba2e5d;
+}
+
 .box.primary {
   background-color: #ba2e5d;
   box-shadow: none;
@@ -1575,6 +1580,11 @@ hr.major {
   color: white;
   border-bottom: 1px dotted white;
   text-decoration: none;
+}
+
+.box.primary a:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.8);
 }
 
 .box.secondary {
@@ -1593,6 +1603,11 @@ hr.major {
   text-decoration: none;
 }
 
+.box.secondary a:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.8);
+}
+
 .box.success {
   background-color: #48c774;
   box-shadow: none;
@@ -1607,6 +1622,11 @@ hr.major {
   color: white;
   border-bottom: 1px dotted white;
   text-decoration: none;
+}
+
+.box.success a:hover {
+  color: #e0ffe0 !important;
+  border-bottom-color: #e0ffe0;
 }
 
 .box.info {
@@ -1625,6 +1645,11 @@ hr.major {
   text-decoration: none;
 }
 
+.box.info a:hover {
+  color: #d0f0ff !important;
+  border-bottom-color: #d0f0ff;
+}
+
 .box.warning {
   background-color: #ffdd57;
   box-shadow: none;
@@ -1641,6 +1666,11 @@ hr.major {
   text-decoration: none;
 }
 
+.box.warning a:hover {
+  color: rgba(0, 0, 0, 0.7) !important;
+  border-bottom-color: rgba(0, 0, 0, 0.7);
+}
+
 .box.danger {
   background-color: #ff3860;
   box-shadow: none;
@@ -1655,6 +1685,11 @@ hr.major {
   color: white;
   border-bottom: 1px dotted white;
   text-decoration: none;
+}
+
+.box.danger a:hover {
+  color: #ffdddd !important;
+  border-bottom-color: #ffdddd;
 }
 
 .box.alt {
@@ -1675,7 +1710,7 @@ hr.major {
   padding: 1em;
 }
 
-.box header header p:last-child {
+.box header p:last-child {
   margin-bottom: 0;
 }
 

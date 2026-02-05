@@ -1,145 +1,176 @@
 @use "../libs/functions";
-
 ///
 /// Future Imperfect by HTML5 UP
 /// html5up.net | @ajlkn
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
-
 /* Box */
-
-	.box {
-		border: solid 1px functions.palette(border);
-		margin-bottom: functions.size(element-margin);
-		padding: 0em;
-		display: flex;                
-		flex-direction: column;
-		width: 100%;
-		height: 100%; 
-
-		> :last-child,
-		> :last-child > :last-child,
-		> :last-child > :last-child > :last-child {
-			margin-bottom: 0;
-			padding: 1em;
-		}
-
-		&.primary {
-			background-color: functions.palette(accent);
-			box-shadow: none;
-			color: functions.palette(bg) !important;
-
-			h1,h2,h3,h4,h5,h6 {
-				color: functions.palette(bg) !important;
-			}
-
-			a, strong {
-				color: white;
-				border-bottom: 1px dotted white;
-				text-decoration: none;
-			}
-		}
-
-		&.secondary {
-			background-color: functions.palette(secondary);
-			box-shadow: none;
-			color: functions.palette(bg-alt) !important;
-
-			h1,h2,h3,h4,h5,h6 {
-				color: functions.palette(bg-alt) !important;
-			}
-
-			a, strong {
-				color: white;
-				border-bottom: 1px dotted white;
-				text-decoration: none;
-			}
-			
-		}
-
-		&.success {
-			background-color: functions.palette(success);
-			box-shadow: none;
-			color: functions.palette(bg-alt) !important;
-
-			h1,h2,h3,h4,h5,h6 {
-				color: functions.palette(bg-alt) !important;
-			}
-
-			a, strong {
-				color: white;
-				border-bottom: 1px dotted white;
-				text-decoration: none;
-			}
-		}
-
-		&.info {
-			background-color: functions.palette(info);
-			box-shadow: none;
-			color: functions.palette(bg-alt) !important;
-
-			h1,h2,h3,h4,h5,h6 {
-				color: functions.palette(bg-alt) !important;
-			}
-
-			a, strong {
-				color: white;
-				border-bottom: 1px dotted white;
-				text-decoration: none;
-			}
-		}
-
-		&.warning {
-			background-color: functions.palette(warning);
-			box-shadow: none;
-			color: functions.palette(fg-bold) !important;
-
-			h1,h2,h3,h4,h5,h6 {
-				color: functions.palette(fg-bold) !important;
-			}
-
-			a, strong {
-				color: black;
-				border-bottom: 1px dotted black;
-				text-decoration: none;
-			}
-		}
-
-		&.danger {
-			background-color: functions.palette(danger);
-			box-shadow: none;
-			color: functions.palette(bg-alt) !important;
-
-			h1,h2,h3,h4,h5,h6 {
-				color: functions.palette(bg-alt) !important;
-			}
-
-			a, strong {
-				color: white;
-				border-bottom: 1px dotted white;
-				text-decoration: none;
-			}
-		}
-
-		&.alt {
-			border: 0;
-			border-radius: 0;
-			padding: 0;
-		}
-
-		header {
-			display: flex;            
-			flex-direction: column;
-			flex: 1; 
-			padding: 1em; 
-
-		.box-footer {
-			margin-top: auto;
-			padding: 1em;
-		}
-
-		header p:last-child {
-			margin-bottom: 0;
-		}
-	}
+.box {
+    border: solid 1px functions.palette(border);
+    margin-bottom: functions.size(element-margin);
+    padding: 0em;
+    display: flex;                
+    flex-direction: column;
+    width: 100%;
+    height: 100%; 
+    
+    > :last-child,
+    > :last-child > :last-child,
+    > :last-child > :last-child > :last-child {
+        margin-bottom: 0;
+        padding: 1em;
+    }
+    
+    a:hover {
+        color: #ba2e5d !important;
+        border-bottom-color: #ba2e5d;
+    }
+    
+    &.primary {
+        background-color: functions.palette(accent);
+        box-shadow: none;
+        color: functions.palette(bg) !important;
+        
+        h1, h2, h3, h4, h5, h6 {
+            color: functions.palette(bg) !important;
+        }
+        
+        a, strong {
+            color: white;
+            border-bottom: 1px dotted white;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: rgba(255, 255, 255, 0.8) !important;
+            border-bottom-color: rgba(255, 255, 255, 0.8);
+        }
+    }
+    
+    &.secondary {
+        background-color: functions.palette(secondary);
+        box-shadow: none;
+        color: functions.palette(bg-alt) !important;
+        
+        h1, h2, h3, h4, h5, h6 {
+            color: functions.palette(bg-alt) !important;
+        }
+        
+        a, strong {
+            color: white;
+            border-bottom: 1px dotted white;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: rgba(255, 255, 255, 0.8) !important;
+            border-bottom-color: rgba(255, 255, 255, 0.8);
+        }
+    }
+    
+    &.success {
+        background-color: functions.palette(success);
+        box-shadow: none;
+        color: functions.palette(bg-alt) !important;
+        
+        h1, h2, h3, h4, h5, h6 {
+            color: functions.palette(bg-alt) !important;
+        }
+        
+        a, strong {
+            color: white;
+            border-bottom: 1px dotted white;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: #e0ffe0 !important;
+            border-bottom-color: #e0ffe0;
+        }
+    }
+    
+    &.info {
+        background-color: functions.palette(info);
+        box-shadow: none;
+        color: functions.palette(bg-alt) !important;
+        
+        h1, h2, h3, h4, h5, h6 {
+            color: functions.palette(bg-alt) !important;
+        }
+        
+        a, strong {
+            color: white;
+            border-bottom: 1px dotted white;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: #d0f0ff !important;
+            border-bottom-color: #d0f0ff;
+        }
+    }
+    
+    &.warning {
+        background-color: functions.palette(warning);
+        box-shadow: none;
+        color: functions.palette(fg-bold) !important;
+        
+        h1, h2, h3, h4, h5, h6 {
+            color: functions.palette(fg-bold) !important;
+        }
+        
+        a, strong {
+            color: black;
+            border-bottom: 1px dotted black;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: rgba(0, 0, 0, 0.7) !important;
+            border-bottom-color: rgba(0, 0, 0, 0.7);
+        }
+    }
+    
+    &.danger {
+        background-color: functions.palette(danger);
+        box-shadow: none;
+        color: functions.palette(bg-alt) !important;
+        
+        h1, h2, h3, h4, h5, h6 {
+            color: functions.palette(bg-alt) !important;
+        }
+        
+        a, strong {
+            color: white;
+            border-bottom: 1px dotted white;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: #ffdddd !important;
+            border-bottom-color: #ffdddd;
+        }
+    }
+    
+    &.alt {
+        border: 0;
+        border-radius: 0;
+        padding: 0;
+    }
+    
+    header {
+        display: flex;            
+        flex-direction: column;
+        flex: 1; 
+        padding: 1em; 
+        
+        .box-footer {
+            margin-top: auto;
+            padding: 1em;
+        }
+        
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
