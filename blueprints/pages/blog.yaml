@@ -107,11 +107,13 @@ form:
                   twitter: true
                   whatsapp: true
                   telegram: true
+                  linkedin: true
               options:
                   facebook: Facebook
                   twitter: Twitter
                   whatsapp: Whatsapp
                   telegram: Telegram
+                  linkedin: Linkedin
               use: keys
 
           import@:
