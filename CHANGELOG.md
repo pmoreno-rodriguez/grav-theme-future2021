@@ -5,6 +5,7 @@
     * Improved TOC rendering logic and inline TOC support to avoid empty containers
     * Replaced `header_var()` usage with explicit `page.header.*` access in theme templates
     * Unified default values between blueprints and Twig templates
+    * Updated translations and added shadow effect to box styles
 
 # v3.2.1
 ## 02/05/2026
