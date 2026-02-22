@@ -6,9 +6,10 @@ image_width: 1000
 image_height: 300
 layout: two-columns
 texts:
-    - title: "Default Box Style"
-      content: "This is an example of text in a **default** box with standard border styling."
+    - title: "Default Box Style (Shadow)"
+      content: "This is an example of text in a **default** box with shadow styling applied."
       class: default
+      shadow: true
     - title: "Primary Box Example"
       content: "This is an example of text in a **primary** box with markdown support. It demonstrates how the primary styling enhances important content."
       class: primary
@@ -18,9 +19,14 @@ texts:
     - title: "Success Box"
       content: "Highlighting positive information or confirmations with success styling."
       class: success
-    - title: "Warning Box"
-      content: "Use this for cautions, alerts, or important notes that need attention."
+    - title: "Warning Box (Shadow)"
+      content: "Use this for cautions, alerts, or important notes that need attention. Now with shadow effect."
       class: warning
+      shadow: true
+    - title: "Light Box with Shadow"
+      content: "This is a new example using the **light** box style combined with shadow. Ideal for subtle content with extra depth."
+      class: light
+      shadow: true
     - title: "Info Box"
       content: "General information presented in an info-styled box for clarity."
       class: info
