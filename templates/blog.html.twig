@@ -1,9 +1,9 @@
 {% extends 'partials/base.html.twig' %}
 
 {% set collection = page.collection() %}
-{% set blog = page.find(header_var('blog_url')|defined(theme_var('blog_page'))) %}
-{% set show_breadcrumbs = header_var('show_breadcrumbs')|defined(true) %}
-{% set show_pagination = header_var('show_pagination')|defined(true) %}
+{% set blog = page.find(page.header.blog_url|defined(theme_var('blog_page')|default('/blog'))) %}
+{% set show_breadcrumbs = page.header.show_breadcrumbs|defined(true) %}
+{% set show_pagination = page.header.show_pagination|defined(true) %}
 
 {# Set page title by taxonomy #}
 {% if uri.param('category') %}
@@ -41,6 +41,8 @@
     {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
       {{ include('partials/breadcrumbs.html.twig') }}
     {% endif %}
+
+    {{ include('partials/page-toc-inline.html.twig') }}
 </article>
   {% for child in collection %}
     {% set datestamp = include('partials/page-bits/date.html.twig', {page: child}) %}

@@ -5,10 +5,13 @@
   {% endblock %}
 
   {% if page.header.toc_enabled == true and config.plugins['page-toc'].enabled %}
+    {% set table_of_contents = toc_items(page.content) %}
+    {% if table_of_contents.children is not empty %}
       <div class="page-toc-sticky">
-      {{ include('components/page-toc.html.twig') }}
+        {{ include('components/page-toc.html.twig', { table_of_contents: table_of_contents }) }}
       </div>
     {% endif %}
+  {% endif %}
 
   {% block miniposts %}
     {{ include('partials/sidebar-bits/miniposts.html.twig') }}

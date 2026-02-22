@@ -40,6 +40,8 @@
             </span>
         {% endif %}
 
+        {{ include('partials/page-toc-inline.html.twig') }}
+
         {{ page.content|raw }}
 
         <!-- Portfolio -->

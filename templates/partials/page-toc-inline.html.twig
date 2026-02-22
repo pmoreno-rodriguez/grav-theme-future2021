@@ -1,0 +1,9 @@
+{% if page.header.toc_enabled == true and config.plugins['page-toc'].enabled %}
+  {% set table_of_contents = toc_items(page.content) %}
+  {% if table_of_contents.children is not empty %}
+    {% set toc_wrapper_class = show_sidebar == true ? 'page-toc-mobile-main' : 'page-toc-inline-main' %}
+    <div class="{{ toc_wrapper_class }}">
+      {{ include('components/page-toc.html.twig', { table_of_contents: table_of_contents }) }}
+    </div>
+  {% endif %}
+{% endif %}

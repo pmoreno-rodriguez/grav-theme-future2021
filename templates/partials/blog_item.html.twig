@@ -55,6 +55,11 @@
     {{ image.cropZoom(img_width, img_height).loading('lazy').decoding('async').html(title, title)|raw }}
   </a>
   {% endif %}
+
+  {% if not listing %}
+    {{ include('partials/page-toc-inline.html.twig') }}
+  {% endif %}
+
   <div itemprop="articleBody">
     {% if page.header.continue_link is same as(false) %}
       {{ page.content|raw }}
@@ -62,9 +67,9 @@
         {% set show_prev_next = true %}
       {% endif %}
     {% elseif truncate and page.summary != page.content %}
-      {{ page.summary|raw }}
+      {{ page.summary|striptags('<p><br>')|raw }}
     {% elseif truncate %}
-      {{ page.content|truncate(550)|raw }}
+      {{ page.content|truncate(550)|striptags('<p><br>')|raw }}
     {% else %}
       {{ page.content|raw }}
       {% set show_prev_next = true %}
@@ -110,11 +115,11 @@
     {% set share_text = (title ~ ' - ' ~ (page.summary|striptags|slice(0, 100)))|url_encode %}
 
     {% set share = [
-    {name: 'facebook', icon: 'fa-facebook', enabled: header_var('shareicons.facebook')|defined(true), url: 'https://www.facebook.com/sharer/sharer.php?u=' ~ page_url_encoded},
-    {name: 'twitter', icon: 'fa-twitter', enabled: header_var('shareicons.twitter')|defined(true), url: 'https://twitter.com/intent/tweet?text=' ~ page_title_encoded ~ '&url=' ~ page_url_encoded},
-    {name: 'whatsapp', icon: 'fa-whatsapp', enabled: header_var('shareicons.whatsapp')|defined(true), url: 'https://wa.me/?text=' ~ share_text ~ '%20' ~ page_url_encoded},
-    {name: 'telegram', icon: 'fa-telegram', enabled: header_var('shareicons.telegram')|defined(true), url: 'https://t.me/share/url?url=' ~ page_url_encoded ~ '&text=' ~ page_title_encoded},
-    {name: 'linkedin', icon: 'fa-linkedin', enabled: header_var('shareicons.linkedin')|defined(true), url: 'https://www.linkedin.com/sharing/share-offsite/?url=' ~ page_url_encoded},
+    {name: 'facebook', icon: 'fa-facebook', enabled: page.header.shareicons.facebook|defined(true), url: 'https://www.facebook.com/sharer/sharer.php?u=' ~ page_url_encoded},
+    {name: 'twitter', icon: 'fa-twitter', enabled: page.header.shareicons.twitter|defined(true), url: 'https://twitter.com/intent/tweet?text=' ~ page_title_encoded ~ '&url=' ~ page_url_encoded},
+    {name: 'whatsapp', icon: 'fa-whatsapp', enabled: page.header.shareicons.whatsapp|defined(true), url: 'https://wa.me/?text=' ~ share_text ~ '%20' ~ page_url_encoded},
+    {name: 'telegram', icon: 'fa-telegram', enabled: page.header.shareicons.telegram|defined(true), url: 'https://t.me/share/url?url=' ~ page_url_encoded ~ '&text=' ~ page_title_encoded},
+    {name: 'linkedin', icon: 'fa-linkedin', enabled: page.header.shareicons.linkedin|defined(true), url: 'https://www.linkedin.com/sharing/share-offsite/?url=' ~ page_url_encoded},
     ] %}
 
     {% for item in share %}
