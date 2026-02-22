@@ -18,11 +18,12 @@
   <div class="row gtr-uniform">
     {% for text_item in page.header.texts %}
       <div class="{{ columns }}">
-        {% set box_class = 
-            text_item.class == 'none' ? 'box alt' :
-            (text_item.class and text_item.class != 'default' ? 'box ' ~ text_item.class : 'box')
+        {% set box_class =
+            (text_item.class == 'none' ? 'box alt' :
+            (text_item.class and text_item.class != 'default' ? 'box ' ~ text_item.class : 'box'))
+            ~ (text_item.shadow ? ' shadow' : '')
         %}
-        <article class="{{ box_class }}">
+        <article class="{{ box_class|trim }}">
           <header>
             {% if text_item.title %}
               <h3>{{ text_item.title|raw }}</h3>

@@ -128,6 +128,8 @@ FUTURE:
         TEXT_CLASS_WARNING: Warning
         TEXT_CLASS_DANGER: Danger
         TEXT_CLASS_ALT: None
+        TEXT_CLASS_LIGHT: Light
+        TEXT_CLASS_SHADOW: Shadow effect
       CONTACT:
         CONTACT_SECTION: Contact Form Options
         FORM_ID: Form ID

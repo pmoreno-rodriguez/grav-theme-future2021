@@ -60,4 +60,16 @@ form:
                     info: FUTURE.ADMIN.MODULAR.TEXT.TEXT_CLASS_INFO
                     warning: FUTURE.ADMIN.MODULAR.TEXT.TEXT_CLASS_WARNING
                     danger: FUTURE.ADMIN.MODULAR.TEXT.TEXT_CLASS_DANGER
+                    light: FUTURE.ADMIN.MODULAR.TEXT.TEXT_CLASS_LIGHT
                     none: FUTURE.ADMIN.MODULAR.TEXT.TEXT_CLASS_NONE
+
+                .shadow:
+                  type: toggle
+                  label: FUTURE.ADMIN.MODULAR.TEXT.TEXT_CLASS_SHADOW
+                  highlight: 0
+                  default: 0
+                  options:
+                    1: PLUGIN_ADMIN.ENABLED
+                    0: PLUGIN_ADMIN.DISABLED
+                  validate:
+                    type: bool
