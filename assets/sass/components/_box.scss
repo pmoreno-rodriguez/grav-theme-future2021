@@ -8,18 +8,11 @@
 .box {
     border: solid 1px functions.palette(border);
     margin-bottom: functions.size(element-margin);
-    padding: 0em;
+    padding: 1em;
     display: flex;                
     flex-direction: column;
     width: 100%;
     height: 100%; 
-    
-    > :last-child,
-    > :last-child > :last-child,
-    > :last-child > :last-child > :last-child {
-        margin-bottom: 0;
-        padding: 1em;
-    }
     
     a:hover {
         color: #ba2e5d !important;
@@ -150,6 +143,20 @@
             color: #ffdddd !important;
             border-bottom-color: #ffdddd;
         }
+    }
+
+    &.light {
+        background-color: functions.palette(border-bg);
+        box-shadow: none;
+        color: functions.palette(fg) !important;
+
+        h1, h2, h3, h4, h5, h6 {
+            color: functions.palette(fg-bold) !important;
+        }
+    }
+
+    &.shadow {
+        box-shadow: 0 0.5rem 1.2rem -0.6rem functions.palette(border);
     }
     
     &.alt {

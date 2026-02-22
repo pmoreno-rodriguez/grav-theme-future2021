@@ -41,6 +41,54 @@
 				}
 			}
 		}
+
+		&.check,
+		&.times,
+		&.arrow,
+		&.caret,
+		&.star,
+		&.plus {
+			list-style: none;
+			padding-left: 0;
+
+			li {
+				position: relative;
+				padding-left: 1.5em;
+
+				&:before {
+					content: '\f00c';
+					font-family: 'Font Awesome 5 Free';
+					font-weight: 900;
+					position: absolute;
+					left: 0;
+					top: 0.1em;
+				}
+			}
+		}
+
+		&.check li:before {
+			content: '\f00c';
+		}
+
+		&.times li:before {
+			content: '\f00d';
+		}
+
+		&.arrow li:before {
+			content: '\f061';
+		}
+
+		&.caret li:before {
+			content: '\f0da';
+		}
+
+		&.star li:before {
+			content: '\f005';
+		}
+
+		&.plus li:before {
+			content: '\f067';
+		}
 	}
 
 	dl {
