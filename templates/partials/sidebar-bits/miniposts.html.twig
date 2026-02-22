@@ -1,5 +1,5 @@
 {# Configuring miniposts with variables defined in the theme #}
-{% set miniposts_enabled = theme_var('miniposts')|defined(false) %}
+{% set miniposts_enabled = theme_var('miniposts')|defined(true) %}
 {% set miniposts_category = theme_var('miniposts_category')|default('minipost') %}
 {% set miniposts_number = theme_var('miniposts_number')|defined(3) %}
 {% if miniposts_enabled is same as true %}

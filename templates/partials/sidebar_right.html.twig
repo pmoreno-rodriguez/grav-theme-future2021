@@ -1,4 +1,4 @@
-{% set blog = page.find(header_var('blog_url')|defined(theme_var('blog_page'))) %}
+{% set blog = page.find(page.header.blog_url|defined(theme_var('blog_page')|default('/blog'))) %}
 {% set new_base_url = blog.url == '/' ? '' : blog.url %}
 
 {% if uri.params %}

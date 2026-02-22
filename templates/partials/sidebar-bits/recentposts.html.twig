@@ -1,4 +1,4 @@
-{% set blog = page.find(header_var('blog_url')|defined(theme_var('blog_page'))) %}
+{% set blog = page.find(page.header.blog_url|defined(theme_var('blog_page')|default('/blog'))) %}
 {# Set the number or recent posts will be displayed in sidebar #}
 {% set recent_enabled = theme_var('recent_posts_enabled')|defined(false) %}
 {% set recent_number = theme_var('recent_posts_number')|defined(5) %}
