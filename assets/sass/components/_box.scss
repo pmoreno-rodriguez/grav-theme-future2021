@@ -21,7 +21,9 @@
     
     &.primary {
         background-color: functions.palette(accent);
-        box-shadow: none;
+        &:not(.shadow) {
+            box-shadow: none;
+        }
         color: functions.palette(bg) !important;
         
         h1, h2, h3, h4, h5, h6 {
@@ -42,7 +44,9 @@
     
     &.secondary {
         background-color: functions.palette(secondary);
-        box-shadow: none;
+        &:not(.shadow) {
+            box-shadow: none;
+        }
         color: functions.palette(bg-alt) !important;
         
         h1, h2, h3, h4, h5, h6 {
@@ -63,7 +67,9 @@
     
     &.success {
         background-color: functions.palette(success);
-        box-shadow: none;
+        &:not(.shadow) {
+            box-shadow: none;
+        }
         color: functions.palette(bg-alt) !important;
         
         h1, h2, h3, h4, h5, h6 {
@@ -84,7 +90,9 @@
     
     &.info {
         background-color: functions.palette(info);
-        box-shadow: none;
+        &:not(.shadow) {
+            box-shadow: none;
+        }
         color: functions.palette(bg-alt) !important;
         
         h1, h2, h3, h4, h5, h6 {
@@ -105,7 +113,9 @@
     
     &.warning {
         background-color: functions.palette(warning);
-        box-shadow: none;
+        &:not(.shadow) {
+            box-shadow: none;
+        }
         color: functions.palette(fg-bold) !important;
         
         h1, h2, h3, h4, h5, h6 {
@@ -126,7 +136,9 @@
     
     &.danger {
         background-color: functions.palette(danger);
-        box-shadow: none;
+        &:not(.shadow) {
+            box-shadow: none;
+        }
         color: functions.palette(bg-alt) !important;
         
         h1, h2, h3, h4, h5, h6 {
@@ -147,7 +159,9 @@
 
     &.light {
         background-color: functions.palette(border-bg);
-        box-shadow: none;
+        &:not(.shadow) {
+            box-shadow: none;
+        }
         color: functions.palette(fg) !important;
 
         h1, h2, h3, h4, h5, h6 {
@@ -156,7 +170,7 @@
     }
 
     &.shadow {
-        box-shadow: 0 0.5rem 1.2rem -0.6rem functions.palette(border);
+        box-shadow: 0 0.5rem 1.2rem -0.6rem functions.palette(border-dropdown);
     }
     
     &.alt {

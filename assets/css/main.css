@@ -1561,7 +1561,13 @@ hr.major {
 
 .box.primary {
   background-color: #ba2e5d;
+}
+
+.box.primary:not(.shadow) {
   box-shadow: none;
+}
+
+.box.primary {
   color: #ffffff !important;
 }
 
@@ -1582,7 +1588,13 @@ hr.major {
 
 .box.secondary {
   background-color: #6c757d;
+}
+
+.box.secondary:not(.shadow) {
   box-shadow: none;
+}
+
+.box.secondary {
   color: #f4f4f4 !important;
 }
 
@@ -1603,7 +1615,13 @@ hr.major {
 
 .box.success {
   background-color: #48c774;
+}
+
+.box.success:not(.shadow) {
   box-shadow: none;
+}
+
+.box.success {
   color: #f4f4f4 !important;
 }
 
@@ -1624,7 +1642,13 @@ hr.major {
 
 .box.info {
   background-color: #209cee;
+}
+
+.box.info:not(.shadow) {
   box-shadow: none;
+}
+
+.box.info {
   color: #f4f4f4 !important;
 }
 
@@ -1645,7 +1669,13 @@ hr.major {
 
 .box.warning {
   background-color: #ffdd57;
+}
+
+.box.warning:not(.shadow) {
   box-shadow: none;
+}
+
+.box.warning {
   color: #3c3b3b !important;
 }
 
@@ -1666,7 +1696,13 @@ hr.major {
 
 .box.danger {
   background-color: #ff3860;
+}
+
+.box.danger:not(.shadow) {
   box-shadow: none;
+}
+
+.box.danger {
   color: #f4f4f4 !important;
 }
 
@@ -1687,7 +1723,13 @@ hr.major {
 
 .box.light {
   background-color: rgba(160, 160, 160, 0.075);
+}
+
+.box.light:not(.shadow) {
   box-shadow: none;
+}
+
+.box.light {
   color: #2e2e2e !important;
 }
 
@@ -1696,7 +1738,7 @@ hr.major {
 }
 
 .box.shadow {
-  box-shadow: 0 0.5rem 1.2rem -0.6rem rgba(160, 160, 160, 0.3);
+  box-shadow: 0 0.5rem 1.2rem -0.6rem rgba(0, 0, 0, 0.15);
 }
 
 .box.alt {
@@ -4261,6 +4303,21 @@ CSS Styles for Page Toc Plugin
 @media screen and (max-width: 1280px) {
   .page-toc-mobile {
     display: none;
+  }
+}
+.page-toc-inline-main {
+  display: block;
+  margin: 0 0 1.5em 0;
+}
+
+.page-toc-inline-main .page-toc {
+  margin-bottom: 1.5em;
+}
+
+@media screen and (max-width: 736px) {
+  .page-toc-inline-main .page-toc > ul {
+    -moz-columns: 1;
+         columns: 1;
   }
 }
 /*
