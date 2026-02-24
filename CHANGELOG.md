@@ -1,3 +1,9 @@
+# v3.4.0
+## 02/24/2026
+
+1. [](#new)
+    * Added page index option to default template blueprint and translations
+
 # v3.3.0
 ## 02/22/2026
 
