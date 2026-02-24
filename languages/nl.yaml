@@ -88,6 +88,8 @@ FUTURE:
       SHOW_SIDEBAR: Zijbalk weergeven
       TOC_ENABLED: Inhoudsopgave activeren op grote pagina's.
       TOC_ENABLED_HELP: Inhoudsopgave activeren op grote pagina's. Page TOC plugin moet geïnstalleerd zijn. 
+      PAGE_INDEX_ENABLED: 'Pagina-index inschakelen'
+      PAGE_INDEX_ENABLED_HELP: 'Toont een lijst van zichtbare subpagina’s als index.'
       BODY_CLASSES: 'Je kunt nieuwe css-klassen maken voor de body en die hier toevoegen.'
     MODULAR:
       BANNER:
@@ -261,7 +263,8 @@ FUTURE:
         DRAG_AUTO_SNAP_HELP: Indien waar verspringt de diavoorstelling direct naar vorige of volgende dia of wordt de diavoorstelling gesloten, zodra Sleeptolerantie X of Sleeptolerantie Y is bereikt. Anders wordt gewacht op loslaten van de muisknop.
         PRELOAD: Voorladen
         PRELOAD_HELP: Voorladen in- of uitschakelen
-
+  DEFAULT:
+    PAGE_INDEX_TITLE: 'Pagina-index'
   BLOG:
     LISTING_TITLE_CATEGORY: 'Berichten in categorie: '
     LISTING_TITLE_TAG: 'Berichten met label: '

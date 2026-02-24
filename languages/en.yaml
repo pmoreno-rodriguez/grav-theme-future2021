@@ -88,6 +88,8 @@ FUTURE:
       SHOW_SIDEBAR: Show Sidebar
       TOC_ENABLED: Enable TOC on large pages
       TOC_ENABLED_HELP: Enable Table of Contents on large pages. Page Toc plugin is required
+      PAGE_INDEX_ENABLED: 'Enable Page Index'
+      PAGE_INDEX_ENABLED_HELP: 'Show a list of visible child pages as an index.'
       BODY_CLASSES: 'You can create new CSS classes for the body and add them here'
     MODULAR:
       BANNER:
@@ -262,7 +264,8 @@ FUTURE:
         DRAG_AUTO_SNAP_HELP: If true the slide will automatically change to prev/next or close if dragToleranceX or dragToleranceY is reached, otherwise it will wait till the mouse is released.
         PRELOAD: Preload
         PRELOAD_HELP: Enable or disable preloading.
-
+  DEFAULT:
+    PAGE_INDEX_TITLE: 'Page Index'
   BLOG:
     LISTING_TITLE_CATEGORY: 'Posts in Category: '
     LISTING_TITLE_TAG: 'Posts with Tag: '

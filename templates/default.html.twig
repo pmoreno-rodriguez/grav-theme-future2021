@@ -23,7 +23,30 @@
 
     {{ include('partials/page-toc-inline.html.twig') }}
 
+
     {{ page.content|raw }}
+
+    {# Índice de subpáginas si está activado #}
+    {% if header.page_index and page.children|length > 0 %}
+      <section class="page-index">
+        <h2>{{ 'FUTURE.DEFAULT.PAGE_INDEX_TITLE'|t }}</h2>
+        <div class="box light">
+          <dl>
+            {% for child in page.children.visible %}
+              {% set child_subtitle = child.header.subtitle %}
+              <dt>
+                <a href="{{ child.url }}">{{ child.title|e }}</a>
+              </dt>
+              {% if child_subtitle %}
+                <dd>
+                  {{ child_subtitle|markdown(false) }}
+                </dd>
+              {% endif %}
+            {% endfor %}
+          </dl>
+        </div>
+      </section>
+    {% endif %}
 
   </article>
 

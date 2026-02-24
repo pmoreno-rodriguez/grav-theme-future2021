@@ -88,6 +88,8 @@ FUTURE:
       SHOW_SIDEBAR: Afficher le bandeau latéral
       TOC_ENABLED: Activer la table des matières sur les pages larges
       TOC_ENABLED_HELP: "Activer la table des matières sur les pages larges. Le plugin « Page Toc » est requis"
+      PAGE_INDEX_ENABLED: 'Activer l’index de page'
+      PAGE_INDEX_ENABLED_HELP: 'Affiche une liste des sous-pages visibles comme index.'
       BODY_CLASSES: "Vous pouvez créer de nouvelles classes CSS pour le body et les ajouter ici"
     MODULAR:
       BANNER:
@@ -262,7 +264,8 @@ FUTURE:
         DRAG_AUTO_SNAP_HELP: Si activé le diaporama va automatiquement passer à la diapositive précédente/suivante ou se fermer dès que le seuil de tolérance est atteint, sinon le déclenchement se fera au relâchement de la souris.
         PRELOAD: Préchargement
         PRELOAD_HELP: Active ou désactive le préchargement.
-
+  DEFAULT:
+    PAGE_INDEX_TITLE: 'Index de la page'
   BLOG:
     LISTING_TITLE_CATEGORY: "Articles dans la catégorie : "
     LISTING_TITLE_TAG: "Articles avec l'étiquette : "

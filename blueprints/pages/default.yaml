@@ -86,6 +86,20 @@ form:
                       validate:
                         type: bool
 
+                    header.page_index:
+                      type: toggle
+                      label: FUTURE.ADMIN.DEFAULT.PAGE_INDEX_ENABLED
+                      help: FUTURE.ADMIN.DEFAULT.PAGE_INDEX_ENABLED_HELP
+                      outerclasses: size-1-2
+                      toggleable: true
+                      default: 0
+                      highlight: 0
+                      options:
+                        1: PLUGIN_ADMIN.ENABLED
+                        0: PLUGIN_ADMIN.DISABLED
+                      validate:
+                        type: bool
+
                 _Content:
                   type: column
                   fields:

@@ -88,6 +88,8 @@ FUTURE:
       SHOW_SIDEBAR: Mostrar Barra Lateral
       TOC_ENABLED: Activar TOC en páginas largas
       TOC_ENABLED_HELP: Activa la Tabla de Contenidos en páginas largas. Es necesario tener instalado el plugin Page Toc.
+      PAGE_INDEX_ENABLED: 'Activar índice de página'
+      PAGE_INDEX_ENABLED_HELP: 'Muestra un listado de subpáginas visibles como índice.'
       BODY_CLASSES: 'Puede crear nuevas clases CSS para el body y añadirlas aquí.'
     MODULAR:
       BANNER:
@@ -262,7 +264,8 @@ FUTURE:
         DRAG_AUTO_SNAP_HELP: Si es verdadero, la diapositiva cambiará automáticamente a anterior/siguiente o se cerrará si se alcanza dragToleranceX o dragToleranceY; de lo contrario, esperará hasta que se suelte el mouse.
         PRELOAD: Precarga
         PRELOAD_HELP: Activa o desactiva la precarga.
-
+  DEFAULT:
+    PAGE_INDEX_TITLE: 'Índice de la página'
   BLOG:
     LISTING_TITLE_CATEGORY: 'Publicaciones en la categoría: '
     LISTING_TITLE_TAG: 'Publicaciones con la etiqueta: '

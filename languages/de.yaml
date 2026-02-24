@@ -88,6 +88,8 @@ FUTURE:
       SHOW_SIDEBAR: Seitenleiste anzeigen
       TOC_ENABLED: Inhaltsverzeichnis auf großen Seiten aktivieren
       TOC_ENABLED_HELP: Inhaltsverzeichnis auf großen Seiten aktivieren. Das Page Toc-Plugin ist erforderlich
+      PAGE_INDEX_ENABLED: 'Seitenindex aktivieren'
+      PAGE_INDEX_ENABLED_HELP: 'Zeigt eine Liste der sichtbaren Unterseiten als Index an.'
       BODY_CLASSES: 'Sie können neue CSS-Klassen für den body erstellen und hier hinzufügen.'
     MODULAR:
       BANNER:
@@ -262,7 +264,8 @@ FUTURE:
         DRAG_AUTO_SNAP_HELP: Wenn aktiv wird direkt auf das Erreichen der X-/Y-Toleranz reagiert, andernfalls wird auf das Loslassen der Maustaste gewartet.
         PRELOAD: Vorladen
         PRELOAD_HELP: Vorladen de-/aktivieren
-
+  DEFAULT:
+    PAGE_INDEX_TITLE: 'Seitenindex'
   BLOG:
     LISTING_TITLE_CATEGORY: 'Beiträge in der Kategorie: '
     LISTING_TITLE_TAG: 'Beiträge mit Tag: '
