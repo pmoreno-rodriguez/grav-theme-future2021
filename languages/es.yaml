@@ -90,6 +90,8 @@ FUTURE:
       TOC_ENABLED_HELP: Activa la Tabla de Contenidos en páginas largas. Es necesario tener instalado el plugin Page Toc.
       PAGE_INDEX_ENABLED: 'Activar índice de página'
       PAGE_INDEX_ENABLED_HELP: 'Muestra un listado de subpáginas visibles como índice.'
+      PAGE_INDEX_MAX_LEVEL: 'Nivel máximo de subpáginas'
+      PAGE_INDEX_MAX_LEVEL_HELP: 'Profundidad máxima de subpáginas a mostrar en el índice jerarquizado.'
       BODY_CLASSES: 'Puede crear nuevas clases CSS para el body y añadirlas aquí.'
     MODULAR:
       BANNER:

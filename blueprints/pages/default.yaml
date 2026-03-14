@@ -100,6 +100,16 @@ form:
                       validate:
                         type: bool
 
+                    header.max_subpage_level:
+                      type: number
+                      label: FUTURE.ADMIN.DEFAULT.PAGE_INDEX_MAX_LEVEL
+                      help: FUTURE.ADMIN.DEFAULT.PAGE_INDEX_MAX_LEVEL_HELP
+                      default: 3
+                      min: 1
+                      max: 10
+                      validate:
+                        type: int
+
                 _Content:
                   type: column
                   fields:

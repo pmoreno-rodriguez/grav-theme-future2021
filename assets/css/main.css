@@ -2497,6 +2497,12 @@ ul.plus li:before {
   content: "\f067";
 }
 
+ul.subpage-index-list {
+  list-style: none !important;
+  margin: 0;
+  padding-left: 0;
+}
+
 dl {
   margin: 0 0 2em 0;
 }

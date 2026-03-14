@@ -90,6 +90,8 @@ FUTURE:
       TOC_ENABLED_HELP: "Activer la table des matières sur les pages larges. Le plugin « Page Toc » est requis"
       PAGE_INDEX_ENABLED: 'Activer l’index de page'
       PAGE_INDEX_ENABLED_HELP: 'Affiche une liste des sous-pages visibles comme index.'
+      PAGE_INDEX_MAX_LEVEL: 'Niveaux de sous-pages max.'
+      PAGE_INDEX_MAX_LEVEL_HELP: 'Profondeur maximale des sous-pages à afficher dans l’index hiérarchique.'
       BODY_CLASSES: "Vous pouvez créer de nouvelles classes CSS pour le body et les ajouter ici"
     MODULAR:
       BANNER:
@@ -266,6 +268,8 @@ FUTURE:
         PRELOAD_HELP: Active ou désactive le préchargement.
   DEFAULT:
     PAGE_INDEX_TITLE: 'Index de la page'
+    PAGE_INDEX_MAX_LEVEL: 'Niveaux de sous-pages max.'
+    PAGE_INDEX_MAX_LEVEL_HELP: 'Profondeur maximale des sous-pages à afficher dans l’index hiérarchique.'
   BLOG:
     LISTING_TITLE_CATEGORY: "Articles dans la catégorie : "
     LISTING_TITLE_TAG: "Articles avec l'étiquette : "

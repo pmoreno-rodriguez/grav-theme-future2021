@@ -90,6 +90,8 @@ FUTURE:
       TOC_ENABLED_HELP: Inhoudsopgave activeren op grote pagina's. Page TOC plugin moet geïnstalleerd zijn. 
       PAGE_INDEX_ENABLED: 'Pagina-index inschakelen'
       PAGE_INDEX_ENABLED_HELP: 'Toont een lijst van zichtbare subpagina’s als index.'
+      PAGE_INDEX_MAX_LEVEL: 'Maximaal subpaginaniveau'
+      PAGE_INDEX_MAX_LEVEL_HELP: 'Maximale diepte van subpagina’s in de hiërarchische index.'
       BODY_CLASSES: 'Je kunt nieuwe css-klassen maken voor de body en die hier toevoegen.'
     MODULAR:
       BANNER:

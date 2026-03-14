@@ -89,6 +89,11 @@
 		&.plus li:before {
 			content: '\f067';
 		}
+		&.subpage-index-list {
+			list-style: none !important;
+			margin: 0;
+			padding-left: 0;
+		}
 	}
 
 	dl {

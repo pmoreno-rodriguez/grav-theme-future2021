@@ -90,6 +90,8 @@ FUTURE:
       TOC_ENABLED_HELP: Inhaltsverzeichnis auf großen Seiten aktivieren. Das Page Toc-Plugin ist erforderlich
       PAGE_INDEX_ENABLED: 'Seitenindex aktivieren'
       PAGE_INDEX_ENABLED_HELP: 'Zeigt eine Liste der sichtbaren Unterseiten als Index an.'
+      PAGE_INDEX_MAX_LEVEL: 'Maximale Unterseiten-Ebenen'
+      PAGE_INDEX_MAX_LEVEL_HELP: 'Maximale Tiefe der Unterseiten, die im hierarchischen Index angezeigt werden.'
       BODY_CLASSES: 'Sie können neue CSS-Klassen für den body erstellen und hier hinzufügen.'
     MODULAR:
       BANNER:

@@ -1,3 +1,22 @@
+
+{# MACRO TO LIST HIERARCHICAL SUBPAGES WITH LEVELS AND NUMERIC PREFIX #}
+{% macro render_subpages(page, level, max_level, prefix) %}
+  {# Only render if within allowed level #}
+  {% if level <= max_level %}
+    {% set children = page.children.visible|default(page.children) %}
+    {% if children|length > 0 %}
+      <ul class="subpage-index-list" style="padding-left: {{ (level - 1) * 15 }}px;">
+      {% for child in children %}
+        <li>
+          {{ prefix ~ loop.index }}. <a href="{{ child.url }}">{{ child.menu|e }}</a>
+          {{ _self.render_subpages(child, level + 1, max_level, prefix ~ loop.index ~ '.') }}
+        </li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+  {% endif %}
+{% endmacro %}
+
 {# MACRO FOR PAGE-TOC PLUGIN SUPPORT #}
 
 {% macro toc_loop(items) %}
