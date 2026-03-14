@@ -1,3 +1,9 @@
+# v3.5.0
+## 03/14/2026
+
+1. [](#new)
+    * Hierarchical subpage index: show child pages as a structured, numbered index (configurable depth)
+
 # v3.4.0
 ## 02/24/2026
 
