@@ -1,3 +1,9 @@
+# v3.6.0
+## 04/24/2026
+
+1. [](#new)
+    * Added floating social icons feature: configurable floating icons for social media, with new blueprint section and backward compatibility for previous social list configuration.
+
 # v3.5.0
 ## 03/14/2026
 
