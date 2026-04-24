@@ -1,5 +1,5 @@
 # v3.6.1
- ## 04/24/2026
+## 04/24/2026
 
 1. [](#bugfix)
     * Restored the social field name in the blueprint for admin compatibility
