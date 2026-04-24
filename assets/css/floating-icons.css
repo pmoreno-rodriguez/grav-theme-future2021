@@ -1,0 +1,50 @@
+/* Floating icons (bottom right, above back-to-top) */
+#floating-icons-wrapper {
+  position: fixed;
+  bottom: 90px;
+  right: 30px;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-end;
+}
+.floating-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5em;
+  height: 1.5em;
+  min-width: 1.5em;
+  min-height: 1.5em;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1.5em;
+  background: var(--floating-icon-bg, #25D366);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  transition: background 0.25s, box-shadow 0.2s, transform 0.2s, filter 0.25s;
+  text-decoration: none;
+  opacity: 0.95;
+}
+.floating-icon:hover {
+  color: #fff !important;
+  background: linear-gradient(rgba(255,255,255,0.12), rgba(255,255,255,0.12)), var(--floating-icon-bg, #25D366);
+  box-shadow: 0 6px 20px 0 rgba(0,0,0,0.22);
+  transform: translateY(-2px) scale(1.10);
+  filter: none;
+}
+@media (max-width: 736px) {
+  #floating-icons-wrapper {
+    right: 16px;
+    bottom: 80px;
+    gap: 8px;
+    align-items: flex-end;
+  }
+  .floating-icon {
+    width: 1.5em;
+    height: 1.5em;
+    min-width: 1.5em;
+    min-height: 1.5em;
+    font-size: 1.5em;
+  }
+}

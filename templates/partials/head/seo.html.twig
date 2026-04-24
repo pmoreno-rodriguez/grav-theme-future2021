@@ -60,9 +60,12 @@
 <meta property="og:site_name" content="{{ site.title|e }}">
 <meta name="twitter:card" content="summary_large_image">
 {# Twitter site handle #}
-{% if theme_config.social is defined and theme_config.social is not null %}
- {% for item in theme_config.social if item.name|lower == 'twitter' %}
+{% set social_items = theme_config.social_icons|default(theme_config.social|default([])) %}
+{% if social_items is not empty %}
+ {% for item in social_items %}
+  {% if item.name|lower == 'twitter' %}
 <meta name="twitter:site" content="{{ item.url }}">
+  {% endif %}
  {% endfor %}
 {% endif %}
 

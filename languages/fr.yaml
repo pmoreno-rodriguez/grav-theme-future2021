@@ -49,6 +49,7 @@ FUTURE:
       FOOTER_COPYRIGHT: Texte du copyright
       FOOTER_BUTTON_TEXT: Texte du bouton
       FOOTER_BUTTON_URL: URL du bouton
+      FOOTER_SOCIAL_ICONS_SECTION: Icônes de réseaux sociaux
       FOOTER_SOCIAL_ENABLE: Activer les icônes
       FOOTER_SOCIAL_STYLE: Styles des icônes
       FOOTER_SOCIAL_STYLE_DESCRIPTION: Rechercher les icônes sur <a href="https://fontawesome.com/v5/search" target="_blank">https://fontawesome.com/v5/search</a>
@@ -60,6 +61,26 @@ FUTURE:
       FOOTER_SOCIAL_ICON_NAME: "Nom de l'application"
       FOOTER_SOCIAL_ICON_URL: "URL vers l'application"
       FOOTER_SOCIAL_ICON_ICON: "Icône de l'application"
+      FLOATING_ICONS:
+        TITLE: Icônes flottantes
+        ENABLE: Activer les icônes flottantes
+        LIST: Liste des icônes flottantes
+        ICON_NAME: Nom de l'icône
+        ICON_URL: URL de l'icône
+        ICON_URL_HELP: |
+          <strong>Exemples d'URL :</strong><br>
+          - WhatsApp : https://wa.me/34600000000<br>
+          - Telegram : https://t.me/utilisateur<br>
+          - Téléphone : tel:+34600000000<br>
+          - Email : mailto:mail@domaine.com<br>
+          - Lien web : https://votresite.com<br>
+        ICON_ICON: Icône
+        ICON_COLOR: Couleur
+        ICON_STYLE: Style d'icône
+        ICON_STYLE_DESCRIPTION: "Choisissez le type d'icône : brands, solid ou regular"
+        ICON_STYLE_REGULAR: Regular
+        ICON_STYLE_SOLID: Solide
+        ICON_STYLE_BRANDS: Marques
       CUSTOM_MENU_TITLE: Menu Personnalisé
       CUSTOM_MENU_ENABLE: Activer les éléments de menu personnalisés
       CUSTOM_MENU_ENABLE_HELP: Si activé, affiche les éléments personnalisés dans le menu

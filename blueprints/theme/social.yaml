@@ -1,44 +1,99 @@
 form:
   validation: loose
   fields:
-
-    enable_social:
-      type: toggle
-      label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ENABLE
-      highlight: 1
-      default: 1
-      options:
-        1: PLUGIN_ADMIN.ENABLED
-        0: PLUGIN_ADMIN.DISABLED
-      validate:
-        type: bool
-    social:
-      name: social
-      label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICONS_LIST
-      type: list
-      style: vertical
-      collapsed: true
-      max: 5
+    social_section:
+      type: section
+      title: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICONS_SECTION
+      underline: true
       fields:
-        .name:
-          type: text
-          label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICON_NAME
-          size: medium
-        .url:
-          type: text
-          label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICON_URL
-          size: large
-        .icon:
-          type: iconpicker
-          label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICON_ICON
-          size: medium
-        .social_style:
-          type: select
-          label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_STYLE
-          description: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_STYLE_DESCRIPTION
-          default: brands
-          size: medium
+        enable_social:
+          type: toggle
+          label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ENABLE
+          highlight: 1
+          default: 1
           options:
-            regular: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_STYLE_REGULAR
-            solid: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_STYLE_SOLID
-            brands: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_STYLE_BRANDS
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+        social_icons:
+          name: social
+          label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICONS_LIST
+          type: list
+          style: vertical
+          collapsed: true
+          max: 5
+          fields:
+            .name:
+              type: text
+              label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICON_NAME
+              size: medium
+            .url:
+              type: text
+              label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICON_URL
+              size: large
+            .icon:
+              type: iconpicker
+              label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICON_ICON
+              size: medium
+            .social_style:
+              type: select
+              label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_STYLE
+              description: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_STYLE_DESCRIPTION
+              default: brands
+              size: medium
+              options:
+                regular: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_STYLE_REGULAR
+                solid: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_STYLE_SOLID
+                brands: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_STYLE_BRANDS
+    floating_icons:
+      type: section
+      title: FUTURE.ADMIN.THEME.FLOATING_ICONS.TITLE
+      underline: true
+      fields:
+        floating_icons_enabled:
+          type: toggle
+          label: FUTURE.ADMIN.THEME.FLOATING_ICONS.ENABLE
+          highlight: 1
+          default: 0
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+        floating_icons:
+          name: floating_icons
+          label: FUTURE.ADMIN.THEME.FLOATING_ICONS.LIST
+          type: list
+          style: vertical
+          collapsed: true
+          max: 4
+          fields:
+            .name:
+              type: text
+              label: FUTURE.ADMIN.THEME.FLOATING_ICONS.ICON_NAME
+              size: medium
+            .url:
+              type: text
+              label: FUTURE.ADMIN.THEME.FLOATING_ICONS.ICON_URL
+              size: large
+              description: FUTURE.ADMIN.THEME.FLOATING_ICONS.ICON_URL_HELP
+            .icon:
+              type: iconpicker
+              label: FUTURE.ADMIN.THEME.FLOATING_ICONS.ICON_ICON
+              size: medium
+            .color:
+              type: colorpicker
+              label: FUTURE.ADMIN.THEME.FLOATING_ICONS.ICON_COLOR
+              size: small
+              default: '#25D366'
+            .icon_style:
+              type: select
+              label: FUTURE.ADMIN.THEME.FLOATING_ICONS.ICON_STYLE
+              description: FUTURE.ADMIN.THEME.FLOATING_ICONS.ICON_STYLE_DESCRIPTION
+              default: brands
+              size: medium
+              options:
+                regular: FUTURE.ADMIN.THEME.FLOATING_ICONS.ICON_STYLE_REGULAR
+                solid: FUTURE.ADMIN.THEME.FLOATING_ICONS.ICON_STYLE_SOLID
+                brands: FUTURE.ADMIN.THEME.FLOATING_ICONS.ICON_STYLE_BRANDS

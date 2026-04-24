@@ -49,6 +49,7 @@ FUTURE:
       FOOTER_COPYRIGHT: Tekst copyright
       FOOTER_BUTTON_TEXT: Knoptekst
       FOOTER_BUTTON_URL: Knop-URL
+      FOOTER_SOCIAL_ICONS_SECTION: Sociale Media-iconen
       FOOTER_SOCIAL_ENABLE: Iconen inschakelen
       FOOTER_SOCIAL_STYLE: Icoonstijlen
       FOOTER_SOCIAL_STYLE_DESCRIPTION: Zoek naar iconen op <a href="https://fontawesome.com/v5/search" target="_blank">https://fontawesome.com/v5/search</a>
@@ -60,6 +61,26 @@ FUTURE:
       FOOTER_SOCIAL_ICON_NAME: Sociaal medium naam
       FOOTER_SOCIAL_ICON_URL: URL link naar sociale medium
       FOOTER_SOCIAL_ICON_ICON: Icoon naar sociale medium
+      FLOATING_ICONS:
+        TITLE: Zwevende iconen
+        ENABLE: Zwevende iconen inschakelen
+        LIST: Lijst van zwevende iconen
+        ICON_NAME: Icoonnaam
+        ICON_URL: Icoon-URL
+        ICON_URL_HELP: |
+          <strong>URL-voorbeelden:</strong><br>
+          - WhatsApp: https://wa.me/34600000000<br>
+          - Telegram: https://t.me/gebruiker<br>
+          - Telefoon: tel:+34600000000<br>
+          - E-mail: mailto:mail@domein.com<br>
+          - Weblink: https://jouwwebsite.com<br>
+        ICON_ICON: Icoon
+        ICON_COLOR: Kleur
+        ICON_STYLE: Icoonstijl
+        ICON_STYLE_DESCRIPTION: "Kies het type icoon: brands, solid of regular"
+        ICON_STYLE_REGULAR: Regulier
+        ICON_STYLE_SOLID: Solide
+        ICON_STYLE_BRANDS: Merken
       CUSTOM_MENU_TITLE: 'Aangepaste menuonderdelen'
       CUSTOM_MENU_ENABLE: 'Aangepaste menuonderdelen inschakelen'
       CUSTOM_MENU_ENABLE_HELP: 'Bepaalt of aangepaste menuonderdelen in het hoofdmenu worden weergegeven.'

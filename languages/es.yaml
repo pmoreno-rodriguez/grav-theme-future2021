@@ -49,6 +49,7 @@ FUTURE:
       FOOTER_COPYRIGHT: Texto del Copyright
       FOOTER_BUTTON_TEXT: Texto del botón
       FOOTER_BUTTON_URL: URL del botón
+      FOOTER_SOCIAL_ICONS_SECTION: Iconos Redes Sociales
       FOOTER_SOCIAL_ENABLE: Habilitar iconos
       FOOTER_SOCIAL_STYLE: Estilos de iconos
       FOOTER_SOCIAL_STYLE_DESCRIPTION: 'Busque los iconos en <a href="https://fontawesome.com/v5/search" target="_blank">https://fontawesome.com/v5/search</a>'
@@ -60,6 +61,26 @@ FUTURE:
       FOOTER_SOCIAL_ICON_NAME: Nombre de Red Social
       FOOTER_SOCIAL_ICON_URL: URL Link to Social
       FOOTER_SOCIAL_ICON_ICON: Icono de Red Social
+      FLOATING_ICONS:
+        TITLE: Iconos flotantes
+        ENABLE: Habilitar iconos flotantes
+        LIST: Lista de iconos flotantes
+        ICON_NAME: Nombre del icono
+        ICON_URL: URL del icono
+        ICON_URL_HELP: |
+          <strong>Ejemplos de URL:</strong><br>
+          - WhatsApp: https://wa.me/34600000000<br>
+          - Telegram: https://t.me/usuario<br>
+          - Teléfono: tel:+34600000000<br>
+          - Email: mailto:correo@dominio.com<br>
+          - Enlace web: https://tusitio.com<br>
+        ICON_ICON: Icono
+        ICON_COLOR: Color
+        ICON_STYLE: Estilo de icono
+        ICON_STYLE_DESCRIPTION: "Elige el tipo de icono: brands, solid o regular"
+        ICON_STYLE_REGULAR: Regular
+        ICON_STYLE_SOLID: Sólido
+        ICON_STYLE_BRANDS: Marcas
       CUSTOM_MENU_TITLE: 'Entradas de menú personalizados'
       CUSTOM_MENU_ENABLE: 'Habilitar entradas de menú personalizados'
       CUSTOM_MENU_ENABLE_HELP: 'Determina si se muestra alguna entrada de menú personalizada definida en la barra de menú.'

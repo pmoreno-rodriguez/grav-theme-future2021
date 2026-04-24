@@ -49,6 +49,7 @@ FUTURE:
       FOOTER_COPYRIGHT: Copyright Text
       FOOTER_BUTTON_TEXT: Button Text
       FOOTER_BUTTON_URL: Button URL
+      FOOTER_SOCIAL_ICONS_SECTION: Social Media Icons
       FOOTER_SOCIAL_ENABLE: Enable Icons
       FOOTER_SOCIAL_STYLE: Icon Styles
       FOOTER_SOCIAL_STYLE_DESCRIPTION: Look for the icons at <a href="https://fontawesome.com/v5/search" target="_blank">https://fontawesome.com/v5/search</a>
@@ -60,6 +61,26 @@ FUTURE:
       FOOTER_SOCIAL_ICON_NAME: Social Name
       FOOTER_SOCIAL_ICON_URL: URL Link to Social
       FOOTER_SOCIAL_ICON_ICON: Icon to Social
+      FLOATING_ICONS:
+        TITLE: Floating icons
+        ENABLE: Enable floating icons
+        LIST: Floating icons list
+        ICON_NAME: Icon name
+        ICON_URL: Icon URL
+        ICON_URL_HELP: |
+          <strong>URL examples:</strong><br>
+          - WhatsApp: https://wa.me/34600000000<br>
+          - Telegram: https://t.me/username<br>
+          - Phone: tel:+34600000000<br>
+          - Email: mailto:mail@domain.com<br>
+          - Web link: https://yourwebsite.com<br>
+        ICON_ICON: Icon
+        ICON_COLOR: Color
+        ICON_STYLE: Icon style
+        ICON_STYLE_DESCRIPTION: "Choose icon type: brands, solid or regular"
+        ICON_STYLE_REGULAR: Regular
+        ICON_STYLE_SOLID: Solid
+        ICON_STYLE_BRANDS: Brands
       CUSTOM_MENU_TITLE: 'Custom Menu Items'
       CUSTOM_MENU_ENABLE: 'Enable Custom Menu Items'
       CUSTOM_MENU_ENABLE_HELP: 'Determines if any defined custom menu entries are displayed in the menubar.'

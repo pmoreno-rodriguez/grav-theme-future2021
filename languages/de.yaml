@@ -49,6 +49,7 @@ FUTURE:
       FOOTER_COPYRIGHT: Copyright-Text
       FOOTER_BUTTON_TEXT: Schaltflächentext
       FOOTER_BUTTON_URL: Schaltflächen-URL
+      FOOTER_SOCIAL_ICONS_SECTION: Social-Media-Symbole
       FOOTER_SOCIAL_ENABLE: Symbole aktivieren
       FOOTER_SOCIAL_STYLE: Icon-Stile
       FOOTER_SOCIAL_STYLE_DESCRIPTION: Suchen Sie nach den Symbolen unter <a href="https://fontawesome.com/v5/search" target="_blank">https://fontawesome.com/v5/search</a>
@@ -60,6 +61,26 @@ FUTURE:
       FOOTER_SOCIAL_ICON_NAME: Name des sozialen Netzwerks
       FOOTER_SOCIAL_ICON_URL: URL-Link zum sozialen Netzwerk
       FOOTER_SOCIAL_ICON_ICON: Symbol des sozialen Netzwerks
+      FLOATING_ICONS:
+        TITLE: Schwebende Symbole
+        ENABLE: Schwebende Symbole aktivieren
+        LIST: Liste der schwebenden Symbole
+        ICON_NAME: Symbolname
+        ICON_URL: Symbol-URL
+        ICON_URL_HELP: |
+          <strong>URL-Beispiele:</strong><br>
+          - WhatsApp: https://wa.me/34600000000<br>
+          - Telegram: https://t.me/benutzername<br>
+          - Telefon: tel:+34600000000<br>
+          - E-Mail: mailto:mail@domain.com<br>
+          - Weblink: https://ihrewebseite.com<br>
+        ICON_ICON: Symbol
+        ICON_COLOR: Farbe
+        ICON_STYLE: Symbolstil
+        ICON_STYLE_DESCRIPTION: "Wählen Sie den Symboltyp: brands, solid oder regular"
+        ICON_STYLE_REGULAR: Regular
+        ICON_STYLE_SOLID: Solid
+        ICON_STYLE_BRANDS: Brands
       CUSTOM_MENU_TITLE: Benutzerdefinierte Menüpunkte
       CUSTOM_MENU_ENABLE: Benutzerdefinierte Menüpunkte aktivieren
       CUSTOM_MENU_ENABLE_HELP: Legt fest, ob definierte benutzerdefinierte Menüeinträge in der Menüleiste angezeigt werden.

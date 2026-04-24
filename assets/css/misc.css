@@ -1,40 +1,54 @@
 /* Styles for Back to Top button */
 
 #back-to-top {
-    display: inline-block;
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.5em;
-    line-height: 1.5em;
-    background-color: #ab1d35;
-    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 1.5em;
     height: 1.5em;
-    text-align: center;
+    min-width: 1.5em;
+    min-height: 1.5em;
     border-radius: 4px;
+    color: #fff;
+    font-size: 1.5em;
+    background: var(--floating-icon-bg, #ab1d35);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    transition: background 0.25s, box-shadow 0.2s, transform 0.2s, filter 0.25s, opacity .5s, visibility .5s;
+    text-decoration: none;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1001;
     position: fixed;
     bottom: 30px;
     right: 30px;
-    transition: background-color .3s,
-      opacity .5s, visibility .5s;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 1000;
   }
   #back-to-top:hover {
+    color: #fff !important;
+    background: linear-gradient(rgba(255,255,255,0.12), rgba(255,255,255,0.12)), var(--floating-icon-bg, #ab1d35);
+    box-shadow: 0 6px 20px 0 rgba(0,0,0,0.22);
+    transform: translateY(-2px) scale(1.10);
+    filter: none;
     cursor: pointer;
-    background-color: #333;
-    color:#fff !important;
   }
   #back-to-top:active,
   #back-to-top:visited {
-    background-color: #ab1d35 !important;
+    background: var(--floating-icon-bg, #ab1d35) !important;
     color: #fff;
   }
   #back-to-top.show {
-    opacity: 1;
+    opacity: 0.95;
     visibility: visible;
+  }
+  @media (max-width: 736px) {
+    #back-to-top {
+        right: 16px;
+        bottom: 16px;
+        width: 1.5em;
+        height: 1.5em;
+        min-width: 1.5em;
+        min-height: 1.5em;
+        font-size: 1.5em;
+    }
   }
 
 /* Styles to show Font Awesome 5 Free in shortcode core notices */

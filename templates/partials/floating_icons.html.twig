@@ -1,0 +1,11 @@
+{# Floating icons partial for bottom right corner, above back-to-top #}
+{% if theme_config.floating_icons_enabled and theme_config.floating_icons %}
+  <div id="floating-icons-wrapper">
+    {% for item in theme_config.floating_icons %}
+      {% set icon_style = item.icon_style|default('brands') %}
+      <a href="{{ item.url }}" class="floating-icon" style="--floating-icon-bg: {{ item.color|default('#25D366') }}" target="_blank" rel="noopener" aria-label="{{ item.name|e('html_attr') }}" title="{{ item.name|e('html_attr') }}">
+        <span class="icon {{ icon_style }} {{ item.icon }}" alt="{{ item.name|e('html_attr') }}"></span>
+      </a>
+    {% endfor %}
+  </div>
+{% endif %}

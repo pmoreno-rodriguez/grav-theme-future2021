@@ -12,3 +12,6 @@
 {% do assets.addCss('theme://assets/css/misc.css', 10) %}
 {% do assets.addCss('theme://assets/css/custom.css', 15) %}
 {% do assets.addCss('theme://assets/css/google-fonts' ~ google_fonts, {priority: 20}) %}
+{% if theme_var('floating_icons_enabled') %}
+  {% do assets.addCss('theme://assets/css/floating-icons.css', 25) %}
+{% endif %}
