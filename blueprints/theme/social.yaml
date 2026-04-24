@@ -16,7 +16,7 @@ form:
             0: PLUGIN_ADMIN.DISABLED
           validate:
             type: bool
-        social_icons:
+        social:
           name: social
           label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_ICONS_LIST
           type: list
