@@ -1,3 +1,9 @@
+# v3.6.2
+## 06/08/2026
+
+1. [](#bugfix)
+    * **Blog:** Fixed an issue where social share icons configurations from the main blog page were not properly inherited by individual article views (`item.html.twig`).
+
 # v3.6.1
 ## 04/24/2026
 

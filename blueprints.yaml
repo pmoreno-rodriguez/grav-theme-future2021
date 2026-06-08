@@ -1,13 +1,13 @@
 name: Future 2021
 slug: future2021
 type: theme
-version: 3.6.1
+version: 3.6.2
 description: Grav Future Imperfect by HTML5 UP (Version 2021)
-icon:  microchip
+icon: microchip
 author:
   name: Pedro Moreno
   email: pmoreno@pmdesign.dev
-  url: 
+  url:
 homepage: https://github.com/pmoreno-rodriguez/grav-theme-future2021
 demo: https://future2021.pmdesign.dev
 docs: https://github.com/pmoreno-rodriguez/grav-theme-future2021/blob/main/README.md
@@ -16,7 +16,7 @@ bugs: https://github.com/pmoreno-rodriguez/grav-theme-future2021/issues
 license: CC-BY-3.0
 
 dependencies:
-  - { name: grav, version: '>=1.7.49.5' }
+  - { name: grav, version: ">=1.7.49.5" }
 
 form:
   validation: loose
