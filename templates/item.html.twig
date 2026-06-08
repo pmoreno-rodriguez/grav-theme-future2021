@@ -15,7 +15,7 @@
         </div>
     {% endif %}
 
-    {{ include('partials/blog_item.html.twig', {listing: false, truncate: false, datestamp: datestamp}) }}
+    {{ include('partials/blog_item.html.twig', {listing: false, truncate: false, datestamp: datestamp, blog: blog}) }}
 
     {% if show_sidebar == false %}
         <section id="footer" class="align-center">

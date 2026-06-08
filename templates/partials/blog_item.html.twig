@@ -113,13 +113,14 @@
     {% set page_title_encoded = title|url_encode %}
     {% set page_url_encoded = page.url(true)|url_encode %}
     {% set share_text = (title ~ ' - ' ~ (page.summary|striptags|slice(0, 100)))|url_encode %}
+    {% set share_config = blog.header.shareicons|defined(page.header.shareicons) %}
 
     {% set share = [
-    {name: 'facebook', icon: 'fa-facebook', enabled: page.header.shareicons.facebook|defined(true), url: 'https://www.facebook.com/sharer/sharer.php?u=' ~ page_url_encoded},
-    {name: 'twitter', icon: 'fa-twitter', enabled: page.header.shareicons.twitter|defined(true), url: 'https://twitter.com/intent/tweet?text=' ~ page_title_encoded ~ '&url=' ~ page_url_encoded},
-    {name: 'whatsapp', icon: 'fa-whatsapp', enabled: page.header.shareicons.whatsapp|defined(true), url: 'https://wa.me/?text=' ~ share_text ~ '%20' ~ page_url_encoded},
-    {name: 'telegram', icon: 'fa-telegram', enabled: page.header.shareicons.telegram|defined(true), url: 'https://t.me/share/url?url=' ~ page_url_encoded ~ '&text=' ~ page_title_encoded},
-    {name: 'linkedin', icon: 'fa-linkedin', enabled: page.header.shareicons.linkedin|defined(true), url: 'https://www.linkedin.com/sharing/share-offsite/?url=' ~ page_url_encoded},
+    {name: 'facebook', icon: 'fa-facebook', enabled: share_config.facebook|defined(true), url: 'https://www.facebook.com/sharer/sharer.php?u=' ~ page_url_encoded},
+    {name: 'twitter', icon: 'fa-twitter', enabled: share_config.twitter|defined(true), url: 'https://twitter.com/intent/tweet?text=' ~ page_title_encoded ~ '&url=' ~ page_url_encoded},
+    {name: 'whatsapp', icon: 'fa-whatsapp', enabled: share_config.whatsapp|defined(true), url: 'https://wa.me/?text=' ~ share_text ~ '%20' ~ page_url_encoded},
+    {name: 'telegram', icon: 'fa-telegram', enabled: share_config.telegram|defined(true), url: 'https://t.me/share/url?url=' ~ page_url_encoded ~ '&text=' ~ page_title_encoded},
+    {name: 'linkedin', icon: 'fa-linkedin', enabled: share_config.linkedin|defined(true), url: 'https://www.linkedin.com/sharing/share-offsite/?url=' ~ page_url_encoded},
     ] %}
 
     {% for item in share %}
