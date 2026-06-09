@@ -1,3 +1,9 @@
+# v3.7.0
+## 06/09/2026
+
+1. [](#improved)
+    * refactor: modernize theme main PHP class and improve code architecture
+
 # v3.6.3
 ## 06/09/2026
 
