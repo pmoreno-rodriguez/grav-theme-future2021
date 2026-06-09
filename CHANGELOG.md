@@ -1,3 +1,9 @@
+# v3.6.3
+## 06/09/2026
+
+1. [](#bugfix)
+    * fix: control custom assets loading via PHP theme config only
+
 # v3.6.2
 ## 06/08/2026
 
