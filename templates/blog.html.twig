@@ -49,11 +49,11 @@
     {% set childImage = child.media[child.header.featured_image] ?: child.media[child.header.primaryImage] ?: child.media.all|filter((v, k) => k != child.header.avatarImage and (v.type == 'image' or v.type == 'vector'))|first %}
     {% set childTitle = child.title %}
     {% set child_showImage = child.header.show_pageimage|defined(true) %}
-    {{ include('partials/blog_item.html.twig', 
-        {blog: page, 
-        page: child, 
-        title: child.title, 
-        subtitle: child.header.subtitle, 
+    {{ include('partials/blog_item.html.twig',
+        {blog: page,
+        page: child,
+        title: child.title,
+        subtitle: child.header.subtitle,
         show_image: child_showImage,
         image: childImage,
         listing: true, truncate: true})

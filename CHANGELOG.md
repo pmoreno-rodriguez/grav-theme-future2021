@@ -1,3 +1,13 @@
+# v3.8.0
+## 07/11/2026
+
+1. [](#new)
+    * Added Grav 1.7|2.0 compatibility flags
+2. [](#improved)
+    * Updated Twig templates for Twig 3 compatibility.
+    * Refactored date template to remove unsupported plugin dependencies until they have proper Grav 2.x support.
+    * Fixed trailing whitespace in templates using Twig CS Fixer.
+
 # v3.7.0
 ## 06/09/2026
 

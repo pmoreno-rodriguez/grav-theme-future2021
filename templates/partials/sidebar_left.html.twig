@@ -8,7 +8,7 @@
     {% set table_of_contents = toc_items(page.content) %}
     {% if table_of_contents.children is not empty %}
       <div class="page-toc-sticky">
-        {{ include('components/page-toc.html.twig', { table_of_contents: table_of_contents }) }}
+        {{ include('components/page-toc.html.twig', {table_of_contents: table_of_contents}) }}
       </div>
     {% endif %}
   {% endif %}
