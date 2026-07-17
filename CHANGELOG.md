@@ -1,3 +1,10 @@
+# v3.9.0
+## 07/17/2026
+
+1. [](#improved)
+    * Removed inherited forms templates from plugin (use plugin defaults)
+    * Enhanced formdata template with better form data handling and error states
+
 # v3.8.0
 ## 07/11/2026
 
