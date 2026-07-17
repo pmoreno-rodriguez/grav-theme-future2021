@@ -1,4 +1,9 @@
 {% extends 'partials/base.html.twig' %}
+
+{% if form is null %}
+    {% set form = grav.session.getFlashObject('form') %}
+{% endif %}
+
 {% block content %}
   <article class="post">
     <header>
@@ -9,10 +14,19 @@
           <time class="published" datetime="{{ datestamp }}">{{ datestamp }}</time>
       </div>
     </header>
-    <p>{{ 'FUTURE.FORM_SUMMARY'|t }}</p>
 
-    {{ content|raw }}
+    {{ page.content|raw }}
 
-    {{ include('forms/data.html.twig') }}
+    {% if form %}
+      {% include 'partials/form-messages.html.twig' %}
+      <div>
+        <p>{{ 'PLUGIN_FORM.DATA_SUMMARY'|t }}</p>
+        {% include "forms/data.html.twig" ignore missing %}
+      </div>
+    {% else %}
+      <div class="alert alert-warning" role="alert">
+        <p>{{ 'PLUGIN_FORM.NO_FORM_DATA'|t }}</p>
+      </div>
+    {% endif %}
   </article>
 {% endblock %}
