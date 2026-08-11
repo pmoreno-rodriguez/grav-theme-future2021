@@ -53,7 +53,7 @@
         </ul>
     </div>
   {% endif %}
-  {% if icon_lang and config.plugins.langswitcher.enabled and system.languages.supported is not null %}
+  {% if icon_lang and config.plugins.langswitcher.enabled and system.languages.supported is not null and langswitcher.languages %}
   <!-- Langswitcher -->
   <div class="sidebar-content lang start">
     <header>

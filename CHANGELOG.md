@@ -1,3 +1,9 @@
+# v3.9.1
+## 08/11/2026
+
+1. [](#bugfix)
+    * Fixed langswitcher rendering empty container when plugin active but no languages configured
+
 # v3.9.0
 ## 07/17/2026
 
