@@ -1,3 +1,12 @@
+# v3.10.0
+## 09/07/2026
+
+1. [](#new)
+    * Added horizontal scroll and decoupled dropdown positioning to header navigation to prevent overflow issues ([#69](https://github.com/pmoreno-rodriguez/grav-theme-future2021/issues/69))
+2. [](#improved)
+    * Added Markdown support for social and floating icons style descriptions in blueprints
+    * Updated translations for all supported languages (de, en, es, fr, nl)
+
 # v3.9.1
 ## 08/11/2026
 
