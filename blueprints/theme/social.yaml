@@ -40,6 +40,7 @@ form:
               type: select
               label: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_STYLE
               description: FUTURE.ADMIN.THEME.FOOTER_SOCIAL_STYLE_DESCRIPTION
+              markdown: true
               default: brands
               size: medium
               options:
@@ -78,6 +79,7 @@ form:
               label: FUTURE.ADMIN.THEME.FLOATING_ICONS.ICON_URL
               size: large
               description: FUTURE.ADMIN.THEME.FLOATING_ICONS.ICON_URL_HELP
+              markdown: true
             .icon:
               type: iconpicker
               label: FUTURE.ADMIN.THEME.FLOATING_ICONS.ICON_ICON

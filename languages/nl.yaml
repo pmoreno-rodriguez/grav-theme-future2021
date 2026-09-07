@@ -68,12 +68,12 @@ FUTURE:
         ICON_NAME: Icoonnaam
         ICON_URL: Icoon-URL
         ICON_URL_HELP: |
-          <strong>URL-voorbeelden:</strong><br>
-          - WhatsApp: https://wa.me/34600000000<br>
-          - Telegram: https://t.me/gebruiker<br>
-          - Telefoon: tel:+34600000000<br>
-          - E-mail: mailto:mail@domein.com<br>
-          - Weblink: https://jouwwebsite.com<br>
+          **URL-voorbeelden:**
+          - WhatsApp: `https://wa.me/34600000000`
+          - Telegram: `https://t.me/gebruiker`
+          - Telefoon: `tel:+34600000000`
+          - E-mail: `mailto:mail@domein.com`
+          - Weblink: `https://jouwwebsite.com`
         ICON_ICON: Icoon
         ICON_COLOR: Kleur
         ICON_STYLE: Icoonstijl

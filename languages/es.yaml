@@ -68,12 +68,12 @@ FUTURE:
         ICON_NAME: Nombre del icono
         ICON_URL: URL del icono
         ICON_URL_HELP: |
-          <strong>Ejemplos de URL:</strong><br>
-          - WhatsApp: https://wa.me/34600000000<br>
-          - Telegram: https://t.me/usuario<br>
-          - Teléfono: tel:+34600000000<br>
-          - Email: mailto:correo@dominio.com<br>
-          - Enlace web: https://tusitio.com<br>
+          **Ejemplos de URL:**
+          - WhatsApp: `https://wa.me/34600000000`
+          - Telegram: `https://t.me/usuario`
+          - Teléfono: `tel:+34600000000`
+          - Email: `mailto:correo@dominio.com`
+          - Enlace web: `https://tusitio.com`
         ICON_ICON: Icono
         ICON_COLOR: Color
         ICON_STYLE: Estilo de icono

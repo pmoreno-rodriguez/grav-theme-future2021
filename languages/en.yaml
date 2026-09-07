@@ -68,12 +68,12 @@ FUTURE:
         ICON_NAME: Icon name
         ICON_URL: Icon URL
         ICON_URL_HELP: |
-          <strong>URL examples:</strong><br>
-          - WhatsApp: https://wa.me/34600000000<br>
-          - Telegram: https://t.me/username<br>
-          - Phone: tel:+34600000000<br>
-          - Email: mailto:mail@domain.com<br>
-          - Web link: https://yourwebsite.com<br>
+          **URL examples:**
+          - WhatsApp: `https://wa.me/34600000000`
+          - Telegram: `https://t.me/username`
+          - Phone: `tel:+34600000000`
+          - Email: `mailto:mail@domain.com`
+          - Web link: `https://yourwebsite.com`
         ICON_ICON: Icon
         ICON_COLOR: Color
         ICON_STYLE: Icon style
