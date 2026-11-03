@@ -21,9 +21,11 @@
             </h3>
             <time class="published" itemprop="datePublished" datetime="{{ datestamp }}">{{ datestamp }}</time>
           </header>
-          <a href="{{ p.url }}" class="image" aria-label="{{ title|e('html_attr') }}">
-            {{ image.cropResize(64, 64).quality(60).loading('lazy').decoding('async').html(title, title)|raw }}
-          </a>
+          {% if image %}
+            <a href="{{ p.url }}" class="image" aria-label="{{ title|e('html_attr') }}">
+              {{ image.cropResize(64, 64).quality(60).loading('lazy').decoding('async').html(title, title)|raw }}
+            </a>
+          {% endif %}
         </article>
       </li>
     {% endfor %}
