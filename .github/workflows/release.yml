@@ -1,0 +1,88 @@
+name: Create Release
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Create GitHub Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Read version from blueprints.yaml
+        id: version
+        shell: bash
+        run: |
+          VERSION=$(grep -E '^version:' blueprints.yaml | head -n 1 | sed -E 's/^version:[[:space:]]*//')
+
+          if [ -z "$VERSION" ]; then
+            echo "::error::No version found in blueprints.yaml"
+            exit 1
+          fi
+
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "Version: $VERSION"
+
+      - name: Extract changelog entry
+        id: changelog
+        shell: bash
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+
+          awk -v version="$VERSION" '
+            $0 == "# v" version {
+              found=1
+              next
+            }
+            found && /^# v/ {
+              exit
+            }
+            found {
+              print
+            }
+          ' CHANGELOG.md > release-notes.md
+
+          if [ ! -s release-notes.md ]; then
+            echo "::error::No changelog entry found for version $VERSION"
+            exit 1
+          fi
+
+          echo "Changelog entry found for version $VERSION:"
+          echo "----------------------------------------"
+          cat release-notes.md
+          echo "----------------------------------------"
+
+      - name: Check if tag already exists
+        shell: bash
+        run: |
+          TAG="V${{ steps.version.outputs.version }}"
+
+          if git rev-parse "$TAG" >/dev/null 2>&1; then
+            echo "::error::Tag $TAG already exists. Release will not be created."
+            exit 1
+          fi
+
+          echo "Tag $TAG does not exist. Continuing."
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          TAG="V$VERSION"
+
+          gh release create "$TAG" \
+            --target main \
+            --title "V $VERSION" \
+            --notes-file release-notes.md
