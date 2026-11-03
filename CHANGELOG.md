@@ -1,3 +1,9 @@
+# v3.10.1
+## 11/03/2026
+
+1. [](#improved)
+    * Enhanced recent posts sidebar partial with conditional image rendering for cleaner fallback behavior when featured images are not available
+
 # v3.10.0
 ## 09/07/2026
 
